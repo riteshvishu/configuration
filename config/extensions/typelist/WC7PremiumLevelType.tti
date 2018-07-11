@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="WC7PremiumLevelType"
+  name="WC7PremiumLevelType">
+  <typecode
+    code="TotalManualPremium"
+    desc="Total Manual Premium"
+    name="Total Manual Premium"
+    priority="100">
+    <categorylist
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode
+    code="SubjectPremium"
+    desc="Subject Premium"
+    name="Subject Premium"
+    priority="200">
+    <category
+      code="FL"
+      typelist="Jurisdiction"/>
+    <category
+      code="HI"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode
+    code="TotalSubjectPremium"
+    desc="Total Subject Premium"
+    name="Total Subject Premium"
+    priority="300">
+    <categorylist
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode
+    code="TotalModifiedPremium"
+    desc="Total Modified Premium"
+    name="Total Modified Premium"
+    priority="400">
+    <categorylist
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode
+    code="TotalStandardPremium"
+    desc="Total Standard Premium"
+    name="Total Standard Premium"
+    priority="500">
+    <categorylist
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode
+    code="EstimatedAnnualPremium"
+    desc="Estimated Annual Premium"
+    name="Estimated Annual Premium"
+    priority="600">
+    <categorylist
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode
+    code="TotalAmountDue"
+    desc="Total Amount Due"
+    name="Total Amount Due"
+    priority="700">
+    <categorylist
+      typelist="Jurisdiction"/>
+  </typecode>
+</typelist>

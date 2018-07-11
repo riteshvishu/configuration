@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<entity
+    xmlns="http://guidewire.com/datamodel"
+    entity="DiagnosticRatingWorksheet"
+    type="effdated"
+    desc="A rating worksheet for capturing diagnostic data in the case of a problem during rating."
+    abstract="false"
+    effDatedBranchType="PolicyPeriod"
+    exportable="true"
+    extendable="true"
+    final="false"
+    platform="false"
+    loadable="false"
+  subpackage="rating"
+    table="diagratingworksheet">
+  <implementsEntity
+        name="RatingWorksheet"/>
+  <foreignkey
+        name="PolicyLine"
+        fkentity="PolicyLine"
+        nullok="false"/>
+  <column name="Reason" type="shorttext" desc="Short message describing reason this worksheet was created" nullok="false"/>
+  <column name="DiagnosticCapture" type="longtext" desc="Longer text description for capturing cause, e.g. statcktrace" nullok="true"/>
+  <array
+      name="EntityReferences"
+      arrayentity="DiagRatingWorksheetRef"
+      owner="true"
+      cascadeDelete="true"
+      desc="List of entities related to rating"/>
+</entity>

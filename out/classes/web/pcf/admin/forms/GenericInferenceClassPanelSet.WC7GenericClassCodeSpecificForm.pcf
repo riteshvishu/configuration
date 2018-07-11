@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <PanelSet
+    id="GenericInferenceClassPanelSet"
+    mode="WC7GenericClassCodeSpecificForm"
+    visible="formPattern.PolicyLinePatternRef.Code == &quot;WC7Line&quot;">
+    <Require
+      name="formPattern"
+      type="FormPattern"/>
+    <Variable
+      initialValue="gw.api.database.Query.make(WC7ClassCode).select().toTypedArray()"
+      name="classCodes"
+      type="WC7ClassCode[]"/>
+    <Variable
+      initialValue="10"
+      name="maxClassCodes"
+      type="int"/>
+    <Variable
+      initialValue="availableWC7ClassCodes()"
+      name="availableWC7ClassCodes"
+      recalculateOnRefresh="true"
+      type="WC7ClassCode[]"/>
+    <PanelRef
+      def="WC7FormClassCodeSelectionLV(formPattern)">
+      <TitleBar
+        title="displaykey.Web.Policy.WC7.Forms.WC7FormPatternClassCodes"/>
+      <Toolbar>
+        <ToolbarButton
+          available="availableWC7ClassCodes.Count &gt; 0"
+          hideIfReadOnly="true"
+          id="AddFormPatternClassCodeValue"
+          label="displaykey.Web.Generic.Add">
+          <MenuItem
+            id="dummyMenuItem"
+            label="displaykey.Web.Policy.WC7.ClassCode.AddClassCodes"
+            visible="true">
+            <MenuItemIterator
+              elementName="formPatternClassCodeValue"
+              id="formPatternClassCodeValues"
+              value="getLimitedNumberOfClassCodes()">
+              <MenuItem
+                action="addToWC7FormPatternClassCode(formPatternClassCodeValue)"
+                id="classCodeValueItem"
+                label="formPatternClassCodeValue"/>
+            </MenuItemIterator>
+            <MenuItem
+              action="WC7MoreFormClassCodesPopup.push(formPattern, availableWC7ClassCodes)"
+              id="moreClassCodes"
+              label="displaykey.Web.Policy.WC7.ClassCode.MoreClassCodes"
+              visible="true//availableWC7FormPatternClassCodes().Count &gt; maxClassCodes"/>
+          </MenuItem>
+        </ToolbarButton>
+        <RemoveButton
+          flags="any wc7FormPatternClassCode"
+          hideIfReadOnly="true"
+          id="RemoveFormPatternClassCodeValue"
+          iterator="WC7FormClassCodeSelectionLV.WC7FormPatternClassCode"
+          label="displaykey.Web.Generic.Remove"/>
+      </Toolbar>
+    </PanelRef>
+    <Code><![CDATA[function availableWC7FormPatternClassCodes() : WC7FormPatternClassCode[] {
+  var addedClassCodes =  formPattern.WC7FormPatternClassCodes.map(\ f -> f.Code).toSet()
+  return formPattern.WC7FormPatternClassCodes.where(\ c -> !addedClassCodes.contains(c.Code)).sortBy(\ c -> c.Code)
+}
+
+function addToWC7FormPatternClassCode(classCode : WC7ClassCode) {
+  var formPatternClassCode = new WC7FormPatternClassCode()
+  formPatternClassCode.Code= classCode.Code
+  formPatternClassCode.Classification = classCode.Classification
+  formPatternClassCode.Jurisdiction = classCode.Jurisdiction
+  formPattern.addToWC7FormPatternClassCodes(formPatternClassCode)
+}
+
+function availableWC7ClassCodes() : WC7ClassCode[] {
+  if (formPattern.WC7FormPatternClassCodes.IsEmpty) {
+    return classCodes
+  } else {
+    var addedFormPatternClassCodes = formPattern.WC7FormPatternClassCodes
+    return classCodes.where(\ cc -> !(addedFormPatternClassCodes.hasMatch(\ fpcc -> fpcc.Code == cc.Code and fpcc.Classification == cc.Classification and fpcc.Jurisdiction == cc.Jurisdiction )))
+  }
+}
+
+function getLimitedNumberOfClassCodes() : WC7ClassCode[] {
+  var sortedClassCodes = availableWC7ClassCodes.toList().sortBy(\cc -> cc.Code)
+  if (sortedClassCodes.Count > maxClassCodes) {
+    sortedClassCodes = sortedClassCodes.subList(0, maxClassCodes)
+  }
+  return sortedClassCodes.toTypedArray()
+}]]></Code>
+  </PanelSet>
+</PCF>

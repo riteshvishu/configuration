@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentTemplateDescriptor
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://www.guidewire.com/schema/policycenter/document-template.xsd"
+
+  id="SampleWCQuoteLetter.rtf"
+  name="Sample Policy Quote"
+  description="Sample policy file with tables"
+  type="quote"
+  scope="all"
+  lob="WC"
+  state="CA"
+  mime-type="application/rtf"
+  date-effective="2003-03-15"
+  date-expires="2020-03-15"
+  keywords="CA, policy"
+  required-symbols="PolicyPeriod">
+
+  <ContextObject name="Job" type="Job">
+    <DefaultObjectValue>PolicyPeriod.Job</DefaultObjectValue>
+  </ContextObject>
+  <ContextObject name="WCLine" type="WorkersCompLine">
+    <DefaultObjectValue>PolicyPeriod.WorkersCompLine as WorkersCompLine</DefaultObjectValue>
+  </ContextObject>  
+  <ContextObject name="Policy" type="Policy">
+    <DefaultObjectValue>PolicyPeriod.Policy</DefaultObjectValue>
+  </ContextObject>
+  <ContextObject name="Account" type="Account">
+    <DefaultObjectValue>PolicyPeriod.Policy.Account</DefaultObjectValue>
+  </ContextObject>
+
+  <FormFieldGroup name="default">
+    <DisplayValues>
+      <NullDisplayValue>None</NullDisplayValue>
+    </DisplayValues>
+    
+    <FormField name="AccountName">PolicyPeriod.PrimaryNamedInsured.DisplayName</FormField>
+    <FormField name="AccountAddress">PolicyPeriod.PrimaryNamedInsured.AccountContactRole.AccountContact.Contact.PrimaryAddress.DisplayName</FormField>
+    <FormField name="UnderwritingCompany">PolicyPeriod.UWCompany.Name</FormField>
+    <FormField name="ProductType">Policy.Product</FormField>
+    <FormField name="JobNumber">Job.JobNumber</FormField>
+    <FormField name="PerEffDate">PolicyPeriod.PeriodStart.format("medium")</FormField>
+    <FormField name="PerExpDate">PolicyPeriod.PeriodEnd.format("medium")</FormField>
+    
+    <FormField name="WCStates">PolicyPeriod.LocationStates.join( ", " )</FormField>
+    <FormField name="OtherStates">WCLine.WCOtherStatesInsurance.WCOtherStatesOptTerm.Value</FormField>
+
+    <FormField name="BasicPremium">PolicyPeriod.TotalCostRPT</FormField>
+    <FormField name="TaxesAndSurcharges">PolicyPeriod.AllCosts.TaxSurcharges.AmountSum(PolicyPeriod.PreferredSettlementCurrency)</FormField>
+    <FormField name="TotalPremium">PolicyPeriod.TotalCostRPT</FormField>
+
+
+  </FormFieldGroup>
+
+</DocumentTemplateDescriptor>

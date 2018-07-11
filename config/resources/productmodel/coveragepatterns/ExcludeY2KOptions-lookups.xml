@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<import>
+  <ExclusionLookup public-id="zcphcm73j60ov3uejd4oq4l6lnb">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <ExclusionPatternCode>ExcludeY2KOptions</ExclusionPatternCode>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </ExclusionLookup>
+  <CovTermLookup public-id="zt1h0u2c64efe1347d2jbk9csa9">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>ExcludeY2KExposureType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="zi6j4uo661qp352f0utdtgcdbv9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z1lii9d485htcamhporrl0rvtlb</CovTermOptCode>
+    <CovTermPatternCode>ExcludeY2KExposureType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zrojivor2ahbj107o3d7947jcaa">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zrrhmash5fa7advpvalkg7dpv38</CovTermOptCode>
+    <CovTermPatternCode>ExcludeY2KExposureType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zj9hoq00llscs4a6emriie1alob">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zhfhopgmlrade4i105ec8veqf4b</CovTermOptCode>
+    <CovTermPatternCode>ExcludeY2KExposureType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+</import>

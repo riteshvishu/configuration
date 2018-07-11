@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="ProducerCodeCurrency"
+  type="joinarray"
+  desc="The producer code to currency availability relationship."
+  exportable="true"
+  extendable="false"
+  subpackage="product"
+  platform="false"
+  loadable="false"
+  table="producercodecurrency">
+  <typekey
+    name="Currency"
+    typelist="Currency"
+    desc="The allowed Currency of this producer code."
+    createhistogram="true"
+    nullok="false"/>
+  <foreignkey
+    name="ProducerCode"
+    desc="The ProducerCode."
+    columnName="ProducerCodeID"
+    exportable="true"
+    fkentity="ProducerCode"
+    nullok="false"/>
+  <index
+    name="producercurrencyu1"
+    desc="Ensures that the ProducerCode/Currency join rows are unique."
+    unique="true">
+    <indexcol
+      name="Currency"
+      keyposition="1"/>
+    <indexcol
+      name="ProducerCodeID"
+      keyposition="2"/>
+  </index>
+</entity>

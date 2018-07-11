@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<typelist desc="Types of interest" name="InterestType">
+  <typecode
+    code="Tenant"
+    desc="Tenant"
+    name="Tenant"/>
+  <typecode
+    code="Owner"
+    desc="Owner"
+    name="Owner"/>
+</typelist>

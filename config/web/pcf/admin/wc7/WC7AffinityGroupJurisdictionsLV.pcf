@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <ListViewPanel
+    id="WC7AffinityGroupJurisdictionsLV">
+    <ExposeIterator
+      valueType="WC7AffinityGroupJurisdiction"
+      widget="WC7AffinityGroupJurisdictionsLV"/>
+    <Require
+      name="wc7AffinityGroup"
+      type="WC7AffinityGroup"/>
+    <RowIterator
+      checkBoxVisible="true"
+      editable="true"
+      elementName="wc7AffinityGroupJurisdiction"
+      hasCheckBoxes="true"
+      hideCheckBoxesIfReadOnly="true"
+      toAdd="wc7AffinityGroup.addToJurisdictions(wc7AffinityGroupJurisdiction)"
+      toRemove="wc7AffinityGroup.removeFromJurisdictions(wc7AffinityGroupJurisdiction)"
+      value="wc7AffinityGroup.Jurisdictions">
+      <IteratorSort
+        sortBy="wc7AffinityGroupJurisdiction.Jurisdiction"
+        sortOrder="1"/>
+      <Row>
+        <Cell
+          align="left"
+          editable="true"
+          id="Jurisdiction"
+          label="displaykey.Web.Admin.WC7AffinityGroupDetail.Jurisdictions.Jurisdiction"
+          required="true"
+          value="wc7AffinityGroupJurisdiction.Jurisdiction">
+          <PostOnChange
+            onChange="checkDuplicateJurisdictions(wc7AffinityGroup)"/>
+        </Cell>
+      </Row>
+    </RowIterator>
+    <Code><![CDATA[function checkDuplicateJurisdictions(affinityGroup : WC7AffinityGroup) {
+  // Check that the given jurisdiction doesn not already exists on affinity group
+  affinityGroup.Jurisdictions
+    .partition(\ jur -> "${jur.Jurisdiction}")  
+    .filterByValues(\ l -> l.Count > 1)
+    .eachValue(\ dup -> { 
+       util.LocationUtil.addRequestScopedErrorMessage(displaykey.Web.Admin.JurisdictionExists(dup.first().Jurisdiction.Description))                           
+    })
+}]]></Code>
+  </ListViewPanel>
+</PCF>

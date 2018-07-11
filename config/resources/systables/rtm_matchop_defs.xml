@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<import xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MatchOpDefinition.xsd">
+  <RateTableMatchOpDefinition public-id="rtm:ExactMatchOpDef">
+    <AllowedParameterTypes>Integer,Decimal,Date,Boolean,String</AllowedParameterTypes>
+    <ImplClass>gw.rating.rtm.matchop.ExactMatchOpFactory</ImplClass>
+    <NumberOfParameters>1</NumberOfParameters>
+    <OpCode>ExactMatch</OpCode>
+    <OpDesc>Exact match of two values.</OpDesc>
+    <OpName>Exact Match</OpName>
+  </RateTableMatchOpDefinition>
+  <RateTableMatchOpDefinition public-id="rtm:RangeMatchOpDefMaxExcl">
+    <AllowedParameterTypes>Integer,Decimal,Date</AllowedParameterTypes>
+    <ImplClass>gw.rating.rtm.matchop.RangeMatchOpMaxExclFactory</ImplClass>
+    <NumberOfParameters>2</NumberOfParameters>
+    <OpCode>RangeMatchMaxExcl</OpCode>
+    <OpDesc>Matches a value in a numeric range with min value included and max value excluded, i.e. [min,max)</OpDesc>
+    <OpName>Range Match with Excluded Max</OpName>
+  </RateTableMatchOpDefinition>
+  <RateTableMatchOpDefinition public-id="rtm:RangeMatchOpDefMaxIncl">
+    <AllowedParameterTypes>Integer,Decimal,Date</AllowedParameterTypes>
+    <ImplClass>gw.rating.rtm.matchop.RangeMatchOpMaxInclFactory</ImplClass>
+    <NumberOfParameters>2</NumberOfParameters>
+    <OpCode>RangeMatchMaxIncl</OpCode>
+    <OpDesc>Matches a value in a numeric range with both min and max values included, i.e. [min,max]</OpDesc>
+    <OpName>Range Match with Included Max</OpName>
+  </RateTableMatchOpDefinition>
+  <RateTableMatchOpDefinition public-id="rtm:LongestSubstringMatchOpDef">
+    <AllowedParameterTypes>String</AllowedParameterTypes>
+    <ImplClass>gw.rating.rtm.matchop.LongestSubstringMatchOpFactory</ImplClass>
+    <NumberOfParameters>1</NumberOfParameters>
+    <OpCode>LongestSubstringMatch</OpCode>
+    <OpDesc>Matches the value which is the longest initial substring of the target</OpDesc>
+    <OpName>Longest Substring Match</OpName>
+  </RateTableMatchOpDefinition>
+  <RateTableMatchOpDefinition public-id="rtm:GreaterThanOrEqualMatchOpDef">
+    <AllowedParameterTypes>Integer,Decimal,Date</AllowedParameterTypes>
+    <ImplClass>gw.rating.rtm.matchop.GreaterThanOrEqualMatchOpFactory</ImplClass>
+    <NumberOfParameters>1</NumberOfParameters>
+    <OpCode>GreaterThanOrEqual</OpCode>
+    <OpDesc>Matches values greater than or equal the input</OpDesc>
+    <OpName>Greater Than Or Equal Match</OpName>
+  </RateTableMatchOpDefinition>
+  <RateTableMatchOpDefinition public-id="rtm:GreaterThanMatchOpDef">
+    <AllowedParameterTypes>Integer,Decimal,Date</AllowedParameterTypes>
+    <ImplClass>gw.rating.rtm.matchop.GreaterThanMatchOpFactory</ImplClass>
+    <NumberOfParameters>1</NumberOfParameters>
+    <OpCode>GreaterThan</OpCode>
+    <OpDesc>Matches values greater than the input</OpDesc>
+    <OpName>Greater Than Match</OpName>
+  </RateTableMatchOpDefinition>
+  <RateTableMatchOpDefinition public-id="rtm:LessThanOrEqualMatchOpDef">
+    <AllowedParameterTypes>Integer,Decimal,Date</AllowedParameterTypes>
+    <ImplClass>gw.rating.rtm.matchop.LessThanOrEqualMatchOpFactory</ImplClass>
+    <NumberOfParameters>1</NumberOfParameters>
+    <OpCode>LessThanOrEqual</OpCode>
+    <OpDesc>Matches values less than or equal to the input</OpDesc>
+    <OpName>Less Than Or Equal Match</OpName>
+  </RateTableMatchOpDefinition>
+  <RateTableMatchOpDefinition public-id="zvni89apo8pjh3ofce930m677qb">
+    <AllowedParameterTypes>Integer, Decimal</AllowedParameterTypes>
+    <ImplClass>gw.rating.rtm.matchop.InterpolatedMatchOpFactory</ImplClass>
+    <NumberOfParameters>1</NumberOfParameters>
+    <OpCode>Interpolate</OpCode>
+    <OpDesc>Interpolates factors based on two matching rows that surround the match value</OpDesc>
+    <OpName>Interpolated Match</OpName>
+  </RateTableMatchOpDefinition>
+</import>

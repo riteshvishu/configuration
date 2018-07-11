@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<import>
+  <CoverageLookup public-id="zflim8sc940vt97t86o2rn40rqb">
+    <Availability>Available</Availability>
+    <CoveragePatternCode>WC7OtherStatesInsurance</CoveragePatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CoverageLookup>
+  <CovTermLookup public-id="zf4gko756shaf6jhqqckgfnbjh9">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>WC7OtherStatesOpt</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="z09g67i6dsg931q2af4bjf8p3d8">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>WC7IncludedStates</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="zgoiiq871tumnbn9va0f523m7ra">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>WC7ExcludedStates</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+</import>

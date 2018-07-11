@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" abstract="true" desc="A WorkersComp unit of price for a period of time that should not be broken up any further." effDatedBranchType="PolicyPeriod" entity="WC7Cost" exportable="true" extendable="true" final="false" loadable="false" platform="false" table="wc7cost" type="effdated">
+  <implementsInterface iface="gw.lob.wc7.financials.WC7CostMethods" impl="gw.lob.wc7.financials.WC7CostMethodsImpl"/>
+  <implementsEntity adapter="gw.lob.wc7.financials.WC7CostAdapter" name="Cost"/>
+  <column desc="The order in which this cost was rated." name="CalcOrder" nullok="false" type="integer"/>
+  <column desc="The order in which this cost is displayed." name="DisplayOrder" nullok="false" type="integer"/>
+  <column columnName="WC7StatCode" desc="The statistic code for classifying premiums and surcharges that are not attributable to a specific employment class code, such as experience modification, premium for increased employer liability limits, expense constant, taxes, etc." name="StatCode" nullok="true" type="shorttext"/>
+  <typekey columnName="WC7PremiumLevelType" name="PremiumLevelType" nullok="true" typelist="WC7PremiumLevelType"/>
+  <foreignkey fkentity="WC7WorkersCompLine" name="WC7WorkersCompLine" nullok="false"/>
+  <array arrayentity="WC7Transaction" cascadeDelete="true" getterScriptability="doesNotExist" name="Transactions" setterScriptability="hidden"/>
+  <onetoone cascadeDelete="true" desc="The associated rating worksheet" fkentity="WC7RatingWorksheet" name="WC7RatingWorksheet" nullok="true" owner="true"/>
+</entity>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<import>
+  <QuestionSetLookup public-id="zu5g46s8c6rsheq3etm5mi9ul5a">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <QuestionSetCode>WC7WorkersCompLocation</QuestionSetCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </QuestionSetLookup>
+  <QuestionLookup public-id="ze5h606vn5s2v39ajl9qi5mjo29">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <QuestionCode>WC7MaxEmployees</QuestionCode>
+    <StartEffectiveDate>2012-08-30 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </QuestionLookup>
+  <QuestionLookup public-id="zggjc1he6tne215ckn2rp06cdn9">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <QuestionCode>WC7NumShifts</QuestionCode>
+    <StartEffectiveDate>2012-08-30 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </QuestionLookup>
+  <QuestionLookup public-id="zs5ig2drapr9jc6k02onel6vlva">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <QuestionCode>WC7UndergroundParking</QuestionCode>
+    <StartEffectiveDate>2012-08-30 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </QuestionLookup>
+  <QuestionLookup public-id="z0vjili2kh4f3fg7t142tnn7sra">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <QuestionCode>WC7HighFloor</QuestionCode>
+    <StartEffectiveDate>2012-08-30 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </QuestionLookup>
+  <QuestionLookup public-id="ztqjob4rn31o699nb2oip62u62b">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <QuestionCode>WC7LowFloor</QuestionCode>
+    <StartEffectiveDate>2012-08-30 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </QuestionLookup>
+</import>

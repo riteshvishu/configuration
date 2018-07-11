@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<extension
+  xmlns="http://guidewire.com/datamodel"
+  entityName="PolicyLocation">
+  <column
+    desc="Address Line 1 Kanji"
+    getterScriptability="doesNotExist"
+    name="AddressLine1KanjiInternal"
+    nullok="true"
+    setterScriptability="doesNotExist"
+    type="addressline"/>
+  <column
+    desc="Address Line 2 Kanji"
+    getterScriptability="doesNotExist"
+    name="AddressLine2KanjiInternal"
+    nullok="true"
+    setterScriptability="doesNotExist"
+    type="addressline"/>
+  <column
+    desc="City Kanji"
+    getterScriptability="doesNotExist"
+    name="CityKanjiInternal"
+    nullok="true"
+    setterScriptability="doesNotExist"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="60"/>
+  </column>
+  <column
+    desc="CEDEX: Special business mail delivery flag (France)"
+    name="CEDEXInternal"
+    nullok="true"
+    type="bit"/>
+  <column
+    desc="CEDEX: Special business mail delivery bureau (France)"
+    name="CEDEXBureauInternal"
+    nullok="true"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="2"/>
+  </column>
+</extension>

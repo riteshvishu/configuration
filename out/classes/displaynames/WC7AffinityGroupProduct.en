@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7AffinityGroupProduct">
+  <Columns>
+    <Column
+      beanPath="WC7AffinityGroupProduct.productcode"
+      name="productcode"/>
+  </Columns>
+  <DisplayName><![CDATA[productcode]]></DisplayName>
+</Entity>

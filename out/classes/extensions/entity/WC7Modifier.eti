@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7Modifier"
+  type="effdated"
+  desc="A line-level modifier for Workers' Comp"
+  effDatedBranchType="PolicyPeriod"
+  exportable="true"
+  extendable="true"
+  final="false"
+  loadable="false"
+  table="wc7modifier">
+  <implementsEntity
+    name="Modifier"
+    adapter="gw.lob.wc7.WC7ModifierAdapter"/>
+  <implementsInterface
+    iface="gw.api.copier.EffDatedCopyable"
+    impl="gw.api.copier.EffDatedCopier"/>
+  <implementsInterface
+    iface="gw.api.logicalmatch.EffDatedLogicalMatcher"
+    impl="gw.lob.wc7.WC7ModifierMatcher"/>
+  <foreignkey
+    name="WC7Jurisdiction"
+    fkentity="WC7Jurisdiction"
+    nullok="false"/>
+  <array
+    name="WC7RateFactors"
+    desc="Individual components of the rating factor"
+    arrayentity="WC7RateFactor"
+    cascadeDelete="true"
+    owner="false"/>
+</entity>

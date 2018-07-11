@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <Popup
+    beforeCommit="policyOwnerOfficer.resetContactAndRoles(duplicateContactsPopupHelper.existingPCContactWithABContactMatch)"
+    canEdit="true"
+    countsAsWork="false"
+    id="WC7NewOwnerOfficerPopup"
+    returnType="WC7PolicyOwnerOfficer"
+    startInEditMode="true"
+    title="displaykey.Web.Contact.NewContact(entity.PolicyOwnerOfficer.Type.TypeInfo.DisplayName)">
+    <LocationEntryPoint
+      signature="WC7NewOwnerOfficerPopup(line: WC7Line, contactType : ContactType, clausePattern : gw.api.productmodel.ClausePattern)"/>
+    <Variable
+      name="line"
+      type="WC7Line"/>
+    <Variable
+      name="contactType"
+      type="ContactType"/>
+    <Variable
+      initialValue="createNewOwnerOfficer()"
+      name="policyOwnerOfficer"
+      type="WC7PolicyOwnerOfficer"/>
+    <Variable
+      initialValue="line.WC7PolicyOwnerOfficers.map(\ p -&gt; p.AccountContactRole.AccountContact.Contact)"
+      name="existingContacts"
+      type="Contact[]"/>
+    <Variable
+      initialValue="new gw.pcf.duplicatecontacts.DuplicateContactsPopupHelper(policyOwnerOfficer.AccountContactRole.AccountContact.Contact, existingContacts)"
+      name="duplicateContactsPopupHelper"/>
+    <Variable
+      initialValue="null"
+      name="clausePattern"
+      type="gw.api.productmodel.ClausePattern"/>
+    <Variable
+      initialValue="policyOwnerOfficer.isIncluded()"
+      name="isIncluded"
+      type="boolean"/>
+    <Variable
+      initialValue="isIncluded ? displaykey.Java.ProductModel.Name.Condition : displaykey.Java.ProductModel.Name.Exclusion"
+      name="scheduleLabel"
+      type="String"/>
+    <Variable
+      initialValue="policyOwnerOfficer typeis WC7IncludedOwnerOfficer ? policyOwnerOfficer : null"
+      name="includedOwnerOfficer"
+      type="WC7IncludedOwnerOfficer"/>
+    <Screen
+      editable="true"
+      id="ContactDetailScreen">
+      <Toolbar>
+        <ToolbarButton
+          action="duplicateContactsPopupHelper.checkForDuplicatesOrUpdate(\ -&gt; CurrentLocation.pickValueAndCommit(policyOwnerOfficer))"
+          id="ForceDupCheckUpdate"
+          label="displaykey.Button.OK"
+          visible="duplicateContactsPopupHelper.ShowButton"/>
+        <EditButtons
+          pickValue="policyOwnerOfficer"
+          updateVisible="not duplicateContactsPopupHelper.ShowButton"/>
+        <ToolbarButton
+          action="duplicateContactsPopupHelper.push()"
+          id="CheckForDuplicates"
+          label="displaykey.Web.Contact.CheckForDuplicates"
+          visible="duplicateContactsPopupHelper.ShowButton"/>
+      </Toolbar>
+      <DetailViewPanel>
+        <InputColumn
+          id="OwnerOfficerDV">
+          <Input
+            id="ScheduleParent"
+            label="scheduleLabel"
+            value="getParentClause()"/>
+          <RangeInput
+            align="left"
+            editable="true"
+            id="State"
+            label="displaykey.Web.Policy.WC.InclExcl.State"
+            required="true"
+            value="policyOwnerOfficer.Jurisdiction"
+            valueRange="policyOwnerOfficer.Branch.WC7Line.WC7Jurisdictions.map(\j -&gt; j.Jurisdiction)">
+            <PostOnChange/>
+          </RangeInput>
+          <RangeInput
+            editable="isClassCodeEditable(includedOwnerOfficer)"
+            id="ClassCode"
+            label="displaykey.Web.Policy.WC.InclExcl.ClassCode"
+            required="true"
+            value="includedOwnerOfficer.WC7ClassCode"
+            valueRange="includedOwnerOfficer.WC7WorkersCompLine.getClassCodesForWC7CoveredEmployees(gw.api.util.StateJurisdictionMappingUtil.getStateMappingForJurisdiction(includedOwnerOfficer.Jurisdiction))"
+            visible="isIncluded"/>
+          <TextInput
+            editable="true"
+            id="Ownership"
+            label="displaykey.Web.Policy.WC.InclExcl.Ownership"
+            value="policyOwnerOfficer.WC7OwnershipPct"/>
+          <TypeKeyInput
+            editable="true"
+            filter="Relationship.TF_WC7OWNEROFFICERRELATIONSHIP.TypeKeys.contains(VALUE)"
+            id="Relationship"
+            label="displaykey.Web.Policy.WC.InclExcl.Relationship"
+            value="policyOwnerOfficer.RelationshipTitle"/>
+        </InputColumn>
+      </DetailViewPanel>
+      <PanelRef
+        def="NewPolicyContactRoleDetailsCV(policyOwnerOfficer, false)"/>
+    </Screen>
+    <Code><![CDATA[function createNewOwnerOfficer() : WC7PolicyOwnerOfficer {
+  var ownerOfficerCondition : gw.api.productmodel.ConditionPattern = "WC7SoleProprietorsPartnersOfficersAndOthersCovCond"
+  var ownerOfficerExclusion : gw.api.productmodel.ExclusionPattern = "WC7PartnersOfficersAndOthersExclEndorsementExcl"
+  
+  var resultOwnerOfficer : WC7PolicyOwnerOfficer = null
+  if (clausePattern == ownerOfficerCondition){
+    resultOwnerOfficer = line.addNewIncludedOwnerOfficerOfContactType(contactType, line.WC7SoleProprietorsPartnersOfficersAndOthersCovCond)
+  } else if (clausePattern == ownerOfficerExclusion){
+    resultOwnerOfficer = line.addNewExcludedOwnerOfficerOfContactType(contactType, line.WC7PartnersOfficersAndOthersExclEndorsementExcl)
+  }
+  return resultOwnerOfficer
+}
+
+function getParentClause() : gw.api.domain.Clause {
+  var clauseValue : gw.api.domain.Clause = null
+  if (policyOwnerOfficer typeis entity.WC7IncludedOwnerOfficer){
+    clauseValue = policyOwnerOfficer.OwnerOfficerCondition
+  } else if (policyOwnerOfficer typeis entity.WC7ExcludedOwnerOfficer){
+    clauseValue = policyOwnerOfficer.OwnerOfficerExclusion
+  }
+  return clauseValue
+}
+
+function isClassCodeEditable(anIncludedOwnerOfficer : WC7IncludedOwnerOfficer) : boolean {
+  return (anIncludedOwnerOfficer.Jurisdiction != null) and 
+    (anIncludedOwnerOfficer.WC7WorkersCompLine.getClassCodesForWC7CoveredEmployees(gw.api.util.StateJurisdictionMappingUtil.getStateMappingForJurisdiction(anIncludedOwnerOfficer.Jurisdiction)).HasElements)  
+}]]></Code>
+  </Popup>
+</PCF>

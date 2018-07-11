@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<!-- Generated WSDL for gw.internal.webservice.studio.StudioService web service -->
+<wsdl:definitions targetNamespace="http://guidewire.com/pl/ws/gw/internal/webservice/studio/StudioService" name="StudioService" xmlns:gwsoap="http://guidewire.com/ws/soapheaders" xmlns:gwwsdl="http://guidewire.com/pl/wsdl" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://guidewire.com/pl/ws/gw/internal/webservice/studio/StudioService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://guidewire.com/pl/ws/gw/internal/webservice/studio/StudioService" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://guidewire.com/ws/soapheaders" schemaLocation="../../../../../../gw/xsd/guidewire/soapheaders.xsd"/>
+      <!-- ping() -->
+      <xs:element name="ping">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="pingResponse">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="WsiAuthenticationException">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="WebServiceException">
+        <xs:complexType/>
+      </xs:element>
+      <!-- checkForHandshakeFile() : boolean -->
+      <xs:element name="checkForHandshakeFile">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="checkForHandshakeFileResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- evaluateGosu(byte[]) : byte[][] -->
+      <xs:element name="evaluateGosu">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="code" type="xs:hexBinary" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="evaluateGosuResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" minOccurs="0" gw:viewas="array" xmlns:gw="http://guidewire.com/xsd">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="Entry" type="xs:hexBinary" nillable="true"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- refresh(String) -->
+      <xs:element name="refresh">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="strTypeName" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="refreshResponse">
+        <xs:complexType/>
+      </xs:element>
+      <!-- isServerMutable() : boolean -->
+      <xs:element name="isServerMutable">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="isServerMutableResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- call(String, String, String, String) : String -->
+      <xs:element name="call">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="strServiceClass" type="xs:string" minOccurs="0"/>
+            <xs:element name="strMethodName" type="xs:string" minOccurs="0"/>
+            <xs:element name="strParamTypes" type="xs:string" minOccurs="0"/>
+            <xs:element name="strArgValuesArray" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="callResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:portType name="StudioServicePortType">
+    <wsdl:operation name="ping">
+      <wsdl:input name="ping" message="tns:ping"/>
+      <wsdl:output name="pingResponse" message="tns:pingResponse"/>
+      <!-- If a login error occurs -->
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+      <wsdl:fault name="WebServiceException" message="tns:WebServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="checkForHandshakeFile">
+      <wsdl:input name="checkForHandshakeFile" message="tns:checkForHandshakeFile"/>
+      <wsdl:output name="checkForHandshakeFileResponse" message="tns:checkForHandshakeFileResponse"/>
+      <!-- If a login error occurs -->
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+      <wsdl:fault name="WebServiceException" message="tns:WebServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="evaluateGosu">
+      <wsdl:input name="evaluateGosu" message="tns:evaluateGosu"/>
+      <wsdl:output name="evaluateGosuResponse" message="tns:evaluateGosuResponse"/>
+      <!-- If a login error occurs -->
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+      <wsdl:fault name="WebServiceException" message="tns:WebServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="refresh">
+      <wsdl:input name="refresh" message="tns:refresh"/>
+      <wsdl:output name="refreshResponse" message="tns:refreshResponse"/>
+      <!-- If a login error occurs -->
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+      <wsdl:fault name="WebServiceException" message="tns:WebServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="isServerMutable">
+      <wsdl:input name="isServerMutable" message="tns:isServerMutable"/>
+      <wsdl:output name="isServerMutableResponse" message="tns:isServerMutableResponse"/>
+      <!-- If a login error occurs -->
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+      <wsdl:fault name="WebServiceException" message="tns:WebServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="call">
+      <wsdl:input name="call" message="tns:call"/>
+      <wsdl:output name="callResponse" message="tns:callResponse"/>
+      <!-- If a login error occurs -->
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+      <wsdl:fault name="WebServiceException" message="tns:WebServiceException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StudioServiceSoap12Binding" type="tns:StudioServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ping">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="ping">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pingResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap12:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkForHandshakeFile">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="checkForHandshakeFile">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="checkForHandshakeFileResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap12:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="evaluateGosu">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="evaluateGosu">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="evaluateGosuResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap12:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="refresh">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="refresh">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="refreshResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap12:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isServerMutable">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="isServerMutable">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isServerMutableResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap12:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="call">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="call">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="callResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap12:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="StudioServiceSoap11Binding" type="tns:StudioServicePortType">
+    <soap11:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ping">
+      <soap11:operation style="document"/>
+      <wsdl:input name="ping">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pingResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap11:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkForHandshakeFile">
+      <soap11:operation style="document"/>
+      <wsdl:input name="checkForHandshakeFile">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="checkForHandshakeFileResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap11:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="evaluateGosu">
+      <soap11:operation style="document"/>
+      <wsdl:input name="evaluateGosu">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="evaluateGosuResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap11:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="refresh">
+      <soap11:operation style="document"/>
+      <wsdl:input name="refresh">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="refreshResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap11:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isServerMutable">
+      <soap11:operation style="document"/>
+      <wsdl:input name="isServerMutable">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isServerMutableResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap11:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="call">
+      <soap11:operation style="document"/>
+      <wsdl:input name="call">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="callResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap11:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StudioService">
+    <wsdl:port name="StudioServiceSoap12Port" binding="tns:StudioServiceSoap12Binding">
+      <soap12:address location="local:///gw/internal/webservice/studio/StudioService"/>
+    </wsdl:port>
+    <wsdl:port name="StudioServiceSoap11Port" binding="tns:StudioServiceSoap11Binding">
+      <soap11:address location="local:///gw/internal/webservice/studio/StudioService/soap11"/>
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:message name="ping">
+    <wsdl:part name="parameters" element="tns:ping"/>
+  </wsdl:message>
+  <wsdl:message name="pingResponse">
+    <wsdl:part name="parameters" element="tns:pingResponse"/>
+  </wsdl:message>
+  <wsdl:message name="WsiAuthenticationException">
+    <wsdl:part name="WsiAuthenticationException" element="tns:WsiAuthenticationException"/>
+  </wsdl:message>
+  <wsdl:message name="WebServiceException">
+    <wsdl:part name="WebServiceException" element="tns:WebServiceException"/>
+  </wsdl:message>
+  <wsdl:message name="checkForHandshakeFile">
+    <wsdl:part name="parameters" element="tns:checkForHandshakeFile"/>
+  </wsdl:message>
+  <wsdl:message name="checkForHandshakeFileResponse">
+    <wsdl:part name="parameters" element="tns:checkForHandshakeFileResponse"/>
+  </wsdl:message>
+  <wsdl:message name="evaluateGosu">
+    <wsdl:part name="parameters" element="tns:evaluateGosu"/>
+  </wsdl:message>
+  <wsdl:message name="evaluateGosuResponse">
+    <wsdl:part name="parameters" element="tns:evaluateGosuResponse"/>
+  </wsdl:message>
+  <wsdl:message name="refresh">
+    <wsdl:part name="parameters" element="tns:refresh"/>
+  </wsdl:message>
+  <wsdl:message name="refreshResponse">
+    <wsdl:part name="parameters" element="tns:refreshResponse"/>
+  </wsdl:message>
+  <wsdl:message name="isServerMutable">
+    <wsdl:part name="parameters" element="tns:isServerMutable"/>
+  </wsdl:message>
+  <wsdl:message name="isServerMutableResponse">
+    <wsdl:part name="parameters" element="tns:isServerMutableResponse"/>
+  </wsdl:message>
+  <wsdl:message name="call">
+    <wsdl:part name="parameters" element="tns:call"/>
+  </wsdl:message>
+  <wsdl:message name="callResponse">
+    <wsdl:part name="parameters" element="tns:callResponse"/>
+  </wsdl:message>
+  <wsdl:message name="gw-authentication">
+    <wsdl:part name="gw-authentication" element="gwsoap:authentication"/>
+  </wsdl:message>
+  <wsdl:message name="gw-locale">
+    <wsdl:part name="gw-locale" element="gwsoap:locale"/>
+  </wsdl:message>
+</wsdl:definitions>

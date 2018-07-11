@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<import>
+  <ModifierLookup public-id="zlhg0h49b43ub8cg6edso2v205b">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>AK</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="zt8i0ilrrtu9m5vnid6n2dhokob">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>CT</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="zmvgc7j1sivev3rbuoa1s0ia9da">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>DE</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="z69hoch7pobu9f9ucdcb57q8vdb">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>FL</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="zqaim9pej12j79jkl7ojt7khf19">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>HI</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="z0ciulj5rtfdu28cp39kboib0k8">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>IL</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="zm9hgmj2jutordq83hiisu3ujqb">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>MA</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="zsfjgikcm0brkfgsbfhif8v34n8">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>MD</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="z7giukdf45s3i5c0pj7tqu6f3ma">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>MN</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="zu9h6ugpd2oc7bjkho1lug2ijc8">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>MO</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="zqti8emqp3scl3tfvarhgluvpg8">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>MT</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="z1cjq4mj0ns3gfjpmg64sv16d8b">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>NE</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="z8rjq9072u6n658fmc4lgdkpgja">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>NJ</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="z73iearn5ci2fabku4vvaj28v8a">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>NM</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="znqjoie0goaba05cqe4ctks6bn8">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>NY</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="zhmhm95l8nd04evkif35m36mvva">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>OK</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="znohe5bu9je0c9e9lc7daa7jl1b">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>PA</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="z7njkaonds8l43s5ba1uudqjiu9">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>VA</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="zligiql670irq3nramdq4on8qeb">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>WI</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="z1mjqlca1casg1quknipg9jdhea">
+    <Availability>Available</Availability>
+    <ModifierPatternCode>WC7CPAPModifier</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>OR</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="zsvgi167vmbhj7iitjv360a3tr9">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <ModifierPatternCode>WC7DrugFreeWorkplc</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>FL</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="z1di2mgcpan696ue211i3f1cau9">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <ModifierPatternCode>WC7ScheduleMod</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zligsnvjtcv666726rnhkrknp9a">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <ModifierPatternCode>WC7CertifiedSafety</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>FL</State>
+  </ModifierLookup>
+  <ModifierLookup public-id="zdkimtm9rutkv3p2ldqt8d6c2ua">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <ModifierPatternCode>WC7ExpMod</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </ModifierLookup>
+  <ModifierLookup public-id="z2djgdn2v71m8dhindvg3t34gja">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>WC7CertifiedSafety</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>CA</State>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zpjj6n3f2233p6igbko2ma96pc8">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>WC7ManagedCare</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2013-03-01 00:00:00.000</StartEffectiveDate>
+    <State>MO</State>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="z9bik2tcr5f9j9agak89582slob">
+    <Availability>Unavailable</Availability>
+    <ModifierPatternCode>WC7ManagedCare</ModifierPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2013-01-01 00:00:00.000</StartEffectiveDate>
+  </ModifierLookup>
+  <RateFactorLookup public-id="z66j22pdijrnd7am5jqr0vo26r8">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <RateFactorPatternCode>z7jj2kbur3k1t0dljk5ksrhfaca</RateFactorPatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </RateFactorLookup>
+  <RateFactorLookup public-id="zgphmnstcb65ba2t7mlsv3f74u9">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <RateFactorPatternCode>z2pispoag180uabc3kq7bif122b</RateFactorPatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </RateFactorLookup>
+  <RateFactorLookup public-id="zqdhe2bkbfhjc8f1mts21jlcava">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <RateFactorPatternCode>zvbh0j57m8nne50qlvd8t91jk3a</RateFactorPatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </RateFactorLookup>
+  <RateFactorLookup public-id="zach60tn8v23e4ddm7q7b2ucq9b">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <RateFactorPatternCode>zcjj6tgnbnea2cmg4kvaa5g58g8</RateFactorPatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </RateFactorLookup>
+  <RateFactorLookup public-id="z04gav1n54nu10jqas28nv38ipa">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <RateFactorPatternCode>z9rjo1g2rk0rc9v3mukovi4o9hb</RateFactorPatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </RateFactorLookup>
+  <RateFactorLookup public-id="zgvjoab9grd9dag7d08eu90iebb">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <RateFactorPatternCode>zu5iiqsh9rf9s0dqdga48png4mb</RateFactorPatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </RateFactorLookup>
+  <RateFactorLookup public-id="z52gga5qem1ok1cs68vi16h6s3a">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <RateFactorPatternCode>zbuh614a92lcn7lui7drqhhp158</RateFactorPatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </RateFactorLookup>
+  <RateFactorLookup public-id="zb5hakv2hfpcd42ubs0rshnmsqb">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <RateFactorPatternCode>z80ga9gpiqpjo9c9lli6vufi8j8</RateFactorPatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </RateFactorLookup>
+  <RateFactorLookup public-id="z5si64b0t0h1j5m4546jcr59ei9">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <RateFactorPatternCode>zigj2ngv7hj7kauugaskur6hroa</RateFactorPatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </RateFactorLookup>
+</import>

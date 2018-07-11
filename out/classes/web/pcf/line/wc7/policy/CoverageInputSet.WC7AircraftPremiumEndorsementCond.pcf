@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <!-- The reason a specific input set is used for this coverage is that the
+coverage requires a list view of the schedule items. -->
+  <InputSet
+    id="CoverageInputSet"
+    mode="WC7AircraftPremiumEndorsementCond">
+    <Require
+      name="conditionPattern"
+      type="gw.api.productmodel.ClausePattern"/>
+    <Require
+      name="coverable"
+      type="Coverable"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <Variable
+      initialValue="coverable.PolicyLine as WC7Line"
+      name="theWC7Line"/>
+    <HiddenInput
+      id="ConditionPatternDisplayName"
+      value="conditionPattern.DisplayName"/>
+    <InputGroup
+      allowToggle="conditionPattern.allowToggle(coverable)"
+      childrenVisible="coverable.getCoverageConditionOrExclusion(conditionPattern) != null"
+      id="ConditionInputGroup"
+      label="conditionPattern.DisplayName"
+      onToggle="new gw.pcf.WC7CoverageInputSetUIHelper().toggleClause(theWC7Line, conditionPattern, VALUE)">
+      <ListViewInput
+        editable="openForEdit"
+        label="displaykey.Web.Policy.WC.AircraftSeatCharge"
+        labelAbove="true">
+        <Toolbar>
+          <IteratorButtons
+            iterator="WC7AircraftSeatSurchargeLV"/>
+        </Toolbar>
+        <ListViewPanel
+          id="WC7AircraftSeatSurchargeLV">
+          <RowIterator
+            editable="true"
+            elementName="wc7AircraftSeat"
+            hasCheckBoxes="true"
+            hideCheckBoxesIfReadOnly="true"
+            toCreateAndAdd="theWC7Line.createAndAddWC7AircraftSeat(theWC7Line.WC7AircraftPremiumEndorsementCond)"
+            toRemove="theWC7Line.removeFromWC7AircraftSeats( wc7AircraftSeat )"
+            type="WC7AircraftSeat"
+            value="theWC7Line.WC7AircraftSeats">
+            <IteratorSort
+              sortBy="wc7AircraftSeat.Jurisdiction"
+              sortOrder="1"/>
+            <IteratorSort
+              sortBy="wc7AircraftSeat.AircraftNumber"
+              sortOrder="2"/>
+            <IteratorSort
+              sortBy="wc7AircraftSeat.Description"
+              sortOrder="3"/>
+            <Row>
+              <RangeCell
+                editable="true"
+                id="state"
+                label="displaykey.Web.Policy.WC.AircraftSeatCharge.State"
+                required="true"
+                value="wc7AircraftSeat.Jurisdiction"
+                valueRange="theWC7Line.AircraftSeatsJurisdictions.sortBy(\ j -&gt; j.Code)"/>
+              <TextCell
+                editable="true"
+                id="WC7AircraftSeatDesc"
+                label="displaykey.Web.Policy.WC.AircraftSeatCharge.Description"
+                required="true"
+                value="wc7AircraftSeat.Description"/>
+              <TextCell
+                editable="true"
+                id="WC7AircraftNumber"
+                label="displaykey.Web.Policy.WC7.AircraftID"
+                value="wc7AircraftSeat.AircraftNumber"/>
+              <TextCell
+                editable="canEditAircraftSeat(wc7AircraftSeat) "
+                id="WC7AircraftSeatCount"
+                label="displaykey.Web.Policy.WC.AircraftSeatCharge.NumberOfSeats"
+                required="true"
+                value="wc7AircraftSeat.PassengerSeats"/>
+            </Row>
+          </RowIterator>
+        </ListViewPanel>
+      </ListViewInput>
+    </InputGroup>
+    <InputDivider
+      visible="openForEdit or coverable.getCoverageConditionOrExclusion(conditionPattern) != null"/>
+    <Code><![CDATA[function canEditAircraftSeat(wc7AircraftSeat : entity.WC7AircraftSeat) : boolean {
+  return gw.api.util.DateUtil.compareIgnoreTime(wc7AircraftSeat.EffectiveDate, theWC7Line.Branch.EditEffectiveDate) == 0
+}]]></Code>
+  </InputSet>
+</PCF>

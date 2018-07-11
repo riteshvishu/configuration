@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" desc="The premium discount rate calculated in the last promoted job (submission/policy change/issuance) for a rating period and jurisdiction used by premium reports." effDatedBranchType="PolicyPeriod" entity="WC7PremiumDiscount" exportable="true" extendable="false" loadable="false" platform="false" table="wc7premiumdiscount" type="effdated">
+  <column desc="The start date of the rating period that the discount was calculated for." name="StartDate" nullok="false" setterScriptability="all" type="datetime"/>
+  <column desc="The end date of the rating period that the discount was calculated for." name="EndDate" nullok="false" setterScriptability="all" type="datetime"/>
+  <column desc="Premium discount rate used for this rating period." name="DiscountRate" nullok="true" type="decimal">
+      <columnParam name="scale" value="4"/>
+      <columnParam name="precision" value="5"/>
+  </column>
+  <foreignkey columnName="WC7JurisdictionID" desc="The jurisdiction to which this rating period belongs." fkentity="WC7Jurisdiction" name="WC7Jurisdiction" nullok="false"/>
+</entity>

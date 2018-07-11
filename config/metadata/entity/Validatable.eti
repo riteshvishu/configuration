@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<delegate xmlns="http://guidewire.com/datamodel" subpackage="validation" name="Validatable" platform="true"/>

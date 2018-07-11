@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <Page
+    afterCancel="Admin.go()"
+    afterCommit="WC7AffinityGroupDetailPage.go(wc7AffinityGroup)"
+    beforeCommit="gw.admin.wc7.WC7AffinityGroupValidation.validate(wc7AffinityGroup)"
+    canEdit="true"
+    canVisit="perm.System.affinitygroupadmin"
+    id="WC7NewAffinityGroup"
+    parent="Admin()"
+    showUpLink="true"
+    startInEditMode="true"
+    title="displaykey.Web.Admin.WC7NewAffinityGroup">
+    <LocationEntryPoint
+      signature="WC7NewAffinityGroup()"/>
+    <Variable
+      initialValue="gw.admin.wc7.WC7AffinityGroupUtil.createNewAffinityGroup()"
+      name="wc7AffinityGroup"
+      type="WC7AffinityGroup"/>
+    <ScreenRef
+      def="WC7AffinityGroupDetailScreen(wc7AffinityGroup)"/>
+  </Page>
+</PCF>

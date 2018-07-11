@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<typelist
+  desc="Commercial Auto policy type"
+  name="BAPolicyType">
+  <typecode
+    code="BA"
+    desc="Business Auto"
+    name="Business Auto"
+    priority="1"/>
+  <typecode
+    code="garage"
+    desc="Garagekeepers"
+    name="Garagekeepers"
+    priority="2"/>
+  <typecode
+    code="motor"
+    desc="Motor Carrier and Truckers"
+    name="Motor Carrier and Truckers"
+    priority="3"/>
+</typelist>

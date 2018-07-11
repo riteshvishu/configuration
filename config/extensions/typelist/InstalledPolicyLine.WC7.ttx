@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<typelistextension
+  xmlns="http://guidewire.com/typelists"
+  name="InstalledPolicyLine">
+    <typecode code="WC7" desc="Workers' Comp Line (v7)" name="WC7Line"/>
+</typelistextension>

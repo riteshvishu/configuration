@@ -1,0 +1,3 @@
+<plugin name="IActivityEscalationPlugin">
+  <plugin-osgi servicepid="com.guidewire.pl.domain.escalation.internal.RulesBasedActivityEscalationPlugin" temporaryBundle="false"/>
+</plugin>

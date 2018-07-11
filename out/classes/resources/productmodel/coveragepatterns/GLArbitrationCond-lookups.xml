@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<import>
+  <ConditionLookup public-id="ze4ge7qr57bdravjb9sd2fpahi8">
+    <Availability>Available</Availability>
+    <ConditionPatternCode>GLArbitrationCond</ConditionPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </ConditionLookup>
+  <CovTermLookup public-id="zbuhik675q3mp9dbr11mq1qt579">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>GLArbitrationType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="zrchsrcj7562nb7mco99upq62tb">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z2igu55pdp3gj8tu9tfupf7kfha</CovTermOptCode>
+    <CovTermPatternCode>GLArbitrationType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z29h8rlbr3h4k9alt509si06ec9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z4ais5pclgujd6gtbk73sboftda</CovTermOptCode>
+    <CovTermPatternCode>GLArbitrationType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+</import>

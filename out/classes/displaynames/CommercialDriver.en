@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Entity
+  name="CommercialDriver">
+  <Columns>
+    <Column
+      beanPath="CommercialDriver.LastName"
+      name="LastName"
+      sortBeanPath="CommercialDriver.LastName"
+      sortOrder="1"/>
+    <Column
+      beanPath="CommercialDriver.FirstName"
+      name="FirstName"
+      sortBeanPath="CommercialDriver.FirstName"
+      sortOrder="2"/>
+  </Columns>
+  <DisplayName><![CDATA[
+var sb = new java.lang.StringBuffer()
+if (FirstName.HasContent) {
+  sb.append(FirstName).append(" ")
+}
+if (LastName.HasContent) {
+  sb.append(LastName)
+}
+return sb.toString()
+    
+  ]]></DisplayName>
+</Entity>

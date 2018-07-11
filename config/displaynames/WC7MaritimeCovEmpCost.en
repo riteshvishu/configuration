@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7MaritimeCovEmpCost">
+  <Columns>
+    <Column
+      beanPath="WC7MaritimeCovEmpCost.WC7MaritimeCov"
+      name="cov"/>
+    <Column
+      beanPath="WC7MaritimeCovEmpCost.WC7MaritimeCoveredEmployee"
+      name="emp"/>
+    <Column
+      beanPath="WC7MaritimeCovEmpCost.WC7MaritimeCovEmpCostType"
+      name="type"/>
+  </Columns>
+  <DisplayName><![CDATA[if (type == WC7MaritimeCovEmpCostType.TC_INCREASEDLIMITSFACTOR ) {
+ return type
+} 
+else if (type == WC7MaritimeCovEmpCostType.TC_SUPPLEMENTALDISEASE) {
+  return displaykey.EntityName.WC7SupplementalDiseaseMaritimeCovEmpCost(emp)
+}
+
+return displaykey.EntityName.WCCovEmpCost(cov.Pattern, emp)
+    
+  ]]></DisplayName>
+</Entity>

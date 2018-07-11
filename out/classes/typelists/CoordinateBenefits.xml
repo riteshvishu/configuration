@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<typelist
+  desc="Hawaii PIP Coordinage benefits"
+  name="CoordinateBenefits">
+  <typecode
+    code="decline"
+    desc="Decline"
+    name="Decline"
+    priority="1"/>
+  <typecode
+    code="health"
+    desc="Coordinate Health Benefits"
+    name="Coordinate Health Benefits"
+    priority="2"/>
+  <typecode
+    code="disability"
+    desc="Coordinate Disability Benefits"
+    name="Coordinate Disability Benefits"
+    priority="3"/>
+  <typecode
+    code="coordinateboth"
+    desc="Coordinate Health and Disability Benefits"
+    name="Coordinate Health and Disability Benefits"
+    priority="4"/>
+</typelist>

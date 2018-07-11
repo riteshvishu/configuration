@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7LineScheduleCondItem">
+  <Columns>
+    <Column
+      beanPath="WC7LineScheduleCondItem.Schedule"
+      name="pattern"/>
+  </Columns>
+  <DisplayName><![CDATA[pattern.DisplayName]]></DisplayName>
+</Entity>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<entity
+    xmlns="http://guidewire.com/datamodel"
+    entity="PARatingWorksheet"
+  subpackage="lob.pa"
+    type="effdated"
+    desc="A PersonalAuto rating worksheet"
+    abstract="false"
+    effDatedBranchType="PolicyPeriod"
+    exportable="true"
+    extendable="true"
+    final="false"
+    platform="false"
+    loadable="false"
+    table="paworksheet">
+  <implementsEntity
+    name="RatingWorksheet" />
+  <foreignkey
+    name="PACost"
+    fkentity="PACost"
+    nullok="false"/>
+</entity>

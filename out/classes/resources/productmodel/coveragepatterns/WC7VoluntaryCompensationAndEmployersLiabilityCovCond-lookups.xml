@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<import>
+  <ConditionLookup public-id="z4ph4a9lltoam4dfhi5e6c7gnja">
+    <Availability>Available</Availability>
+    <ConditionPatternCode>WC7VoluntaryCompensationAndEmployersLiabilityCovCond</ConditionPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ConditionLookup>
+</import>

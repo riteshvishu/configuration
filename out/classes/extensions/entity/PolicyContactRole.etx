@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<extension
+  xmlns="http://guidewire.com/datamodel"
+  entityName="PolicyContactRole">
+  <column
+    desc="Internal field for sharing and revisioning the role's company name in Kanji."
+    getterScriptability="doesNotExist"
+    name="CompanyNameKanjiInternal"
+    nullok="true"
+    setterScriptability="doesNotExist"
+    type="companyname">
+    <columnParam
+      name="logicalSize"
+      value="60"/>
+  </column>
+  <column
+    desc="Internal field for sharing and revisioning the role's first name in Kanji."
+    getterScriptability="doesNotExist"
+    name="FirstNameKanjiInternal"
+    nullok="true"
+    setterScriptability="doesNotExist"
+    type="firstname"/>
+  <column
+    desc="Internal field for sharing and revisioning the role's last name in Kanji."
+    getterScriptability="doesNotExist"
+    name="LastNameKanjiInternal"
+    nullok="true"
+    setterScriptability="doesNotExist"
+    type="lastname"/>
+  <column
+    desc="Particle for (French) name"
+    name="ParticleInternal"
+    nullok="true"
+    type="shorttext"/>
+</extension>

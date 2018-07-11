@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentTemplateDescriptor
+  id="PolicyQuote.gosu.rtf"
+  name="Policy Quote"
+  description="Sample policy file with tables"
+  type="quote"
+  scope="all"
+  lob=""
+  state="CA"
+  mime-type="application/rtf"
+  date-effective="2003-03-15"
+  date-expires="2020-03-15"
+  keywords="CA, policy"
+  required-symbols="PolicyPeriod">
+
+  <FormFieldGroup name="default">
+    <DisplayValues>
+      <NullDisplayValue>None</NullDisplayValue>
+    </DisplayValues>
+    <FormField name="Job">PolicyPeriod.Job.JobNumber</FormField>
+    <FormField name="AccountNumber">PolicyPeriod.Policy.Account.AccountNumber</FormField>
+    <FormField name="AccountName">PolicyPeriod.Policy.Account.AccountHolderContact.DisplayName</FormField>
+    <FormField name="AccountAddress1">PolicyPeriod.Policy.Account.AccountHolderContact.PrimaryAddress.AddressLine1</FormField>
+    <FormField name="AccountCity">PolicyPeriod.Policy.Account.AccountHolderContact.PrimaryAddress.City</FormField>
+    <FormField name="AccountState">PolicyPeriod.Policy.Account.AccountHolderContact.PrimaryAddress.State</FormField>
+    <FormField name="AccountPostal">PolicyPeriod.Policy.Account.AccountHolderContact.PrimaryAddress.PostalCode</FormField>
+    <FormField name="UnderwritingCompany">PolicyPeriod.UWCompany.Name</FormField>
+    <FormField name="PrimaryNamedInsured">PolicyPeriod.PrimaryNamedInsured.DisplayName</FormField>
+    <FormField name="PrimaryNamedInsuredAddress1">PolicyPeriod.PrimaryNamedInsured.AccountContactRole.AccountContact.Contact.PrimaryAddress.AddressLine1</FormField>
+    <FormField name="PNICity">PolicyPeriod.PrimaryNamedInsured.AccountContactRole.AccountContact.Contact.PrimaryAddress.City</FormField>
+    <FormField name="PNIState">PolicyPeriod.PrimaryNamedInsured.AccountContactRole.AccountContact.Contact.PrimaryAddress.State</FormField>
+    <FormField name="PNIPostal">PolicyPeriod.PrimaryNamedInsured.AccountContactRole.AccountContact.Contact.PrimaryAddress.PostalCode</FormField>
+    <FormField name="ProductType">PolicyPeriod.Policy.Product</FormField>
+    <FormField name="PerEffDate">PolicyPeriod.PeriodStart.format("medium")</FormField>
+    <FormField name="PerExpDate">PolicyPeriod.PeriodEnd.format("medium")</FormField>
+    <FormField name="BasicPremium">PolicyPeriod.TotalPremiumRPT</FormField>
+    <FormField name="TaxesAndSurcharges">PolicyPeriod.AllCosts.TaxSurcharges.AmountSum(PolicyPeriod.PreferredSettlementCurrency)</FormField>
+    <FormField name="TotalPremium">PolicyPeriod.TotalCostRPT</FormField>
+  </FormFieldGroup>
+
+</DocumentTemplateDescriptor>

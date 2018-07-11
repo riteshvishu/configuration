@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7AffinityGroupProducerCode"
+  type="joinarray"
+  desc="The producer code to affinity group availability relationship."
+  exportable="true"
+  extendable="false"
+  platform="false"
+  loadable="false"
+  table="wc7affingroupprodcode">
+  <foreignkey
+    name="ProducerCode"
+    desc="The ProducerCode."
+    columnName="ProducerCodeID"
+    fkentity="ProducerCode"
+    nullok="false"/>
+  <foreignkey
+    name="AffinityGroup"
+    desc="Affinity group granted to the producer code."
+    columnName="AffinityGroupID"
+    fkentity="WC7AffinityGroup"
+    nullok="false"/>
+  <index
+    name="pcodegroupu1"
+    desc="Ensures that the ProducerCode/Affinity Group join rows are unique."
+    unique="true">
+    <indexcol
+      name="ProducerCodeID"
+      keyposition="1"/>
+    <indexcol
+      name="AffinityGroupID"
+      keyposition="2"/>
+  </index>
+</entity>

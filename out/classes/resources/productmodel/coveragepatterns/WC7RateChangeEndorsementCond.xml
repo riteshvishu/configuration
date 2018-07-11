@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ConditionPattern
+  conditionSubtype="WC7LineScheduleCond"
+  coverageCategory="WC7WorkCompLineCategoryCond"
+  existence="Electable"
+  lookupTableName="WC7Cond"
+  owningEntityType="WC7WorkersCompLine"
+  priority="1720"
+  public-id="WC7RateChangeEndorsementCond"
+  referenceDateByType="PolicyTerm">
+  <CovTerms/>
+</ConditionPattern>

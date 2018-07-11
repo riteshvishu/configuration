@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7ManuscriptOption"
+  type="effdated"
+  desc="Workers' Comp Manuscript Data"
+  effDatedBranchType="PolicyPeriod"
+  exportable="true"
+  platform="false"
+  loadable="false"
+  table="wc7manuscriptoption">
+  <implementsInterface
+    iface="gw.api.copier.EffDatedCopyable"
+    impl="gw.api.copier.EffDatedCopier"/>
+  <column
+    name="Description"
+    type="longtext"
+    desc="The description of the manuscript endorsement"
+    nullok="true"/>
+  <column
+    name="Premium"
+    type="money"
+    desc="The cost associate with the manuscript endorsement"
+    nullok="true"/>
+  <foreignkey
+    name="WC7Line"
+    fkentity="WC7WorkersCompLine"
+    nullok="false"/>
+</entity>

@@ -1,0 +1,36 @@
+<dataConfig>
+  <dataSource type="FileDataSource" encoding="UTF-8"/>
+  <document>
+    <entity name="policy"
+            processor="XPathEntityProcessor"
+            forEach="/CONTAINER_ELEM/POLICY"
+            url="/opt/gwsolr/pc/solr/policy_active/workDir/policy.xml"
+            stream="true">
+      <field column="urn"                   xpath="/CONTAINER_ELEM/POLICY/URN"/>
+      <field column="periodID"              xpath="/CONTAINER_ELEM/POLICY/PERIODID"/>
+      <field column="policyPublicID"        xpath="/CONTAINER_ELEM/POLICY/POLICYPUBLICID"/>
+      <field column="periodStatus"          xpath="/CONTAINER_ELEM/POLICY/PERIODSTATUS"/>
+      <field column="policyNumber"          xpath="/CONTAINER_ELEM/POLICY/POLICYNUMBER"/>
+      <field column="fullName"              xpath="/CONTAINER_ELEM/POLICY/FULLNAME"/>
+      <field column="ANIfullName"           xpath="/CONTAINER_ELEM/POLICY/ANIFULLNAME"/>
+      <field column="companyName"           xpath="/CONTAINER_ELEM/POLICY/COMPANYNAME"/>
+      <field column="ANIcompanyName"        xpath="/CONTAINER_ELEM/POLICY/ANICOMPANYNAME"/>
+      <field column="addressLine1"          xpath="/CONTAINER_ELEM/POLICY/ADDRESSLINE1"/>
+      <field column="city"                  xpath="/CONTAINER_ELEM/POLICY/CITY"/>
+      <field column="state"                 xpath="/CONTAINER_ELEM/POLICY/STATE"/>
+      <field column="postalCode"            xpath="/CONTAINER_ELEM/POLICY/POSTALCODE"/>
+      <field column="product"               xpath="/CONTAINER_ELEM/POLICY/PRODUCT"/>
+      <field column="jurisdiction"          xpath="/CONTAINER_ELEM/POLICY/JURISDICTION"/>
+      <field column="officialId"            xpath="/CONTAINER_ELEM/POLICY/OFFICIALID"/>
+      <field column="phone"                 xpath="/CONTAINER_ELEM/POLICY/PHONE"/>
+      <field column="policyStart"           xpath="/CONTAINER_ELEM/POLICY/POLICYSTART"/>
+      <field column="policyEnd"             xpath="/CONTAINER_ELEM/POLICY/POLICYEND"/>
+      <field column="periodStart"           xpath="/CONTAINER_ELEM/POLICY/PERIODSTART"/>
+      <field column="periodEnd"             xpath="/CONTAINER_ELEM/POLICY/PERIODEND"/>
+      <field column="sliceDate"             xpath="/CONTAINER_ELEM/POLICY/SLICEDATE"/>
+      <field column="jobType"               xpath="/CONTAINER_ELEM/POLICY/JOBTYPE"/>
+      <field column="producer"              xpath="/CONTAINER_ELEM/POLICY/PRODUCER"/>
+      <field column="producerCodeOfService" xpath="/CONTAINER_ELEM/POLICY/PRODUCERCODEOFSERVICE"/>
+    </entity>
+  </document>
+</dataConfig>

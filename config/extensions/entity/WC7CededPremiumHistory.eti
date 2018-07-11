@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7CededPremiumHistory"
+  type="retireable"
+  desc="A Workers' Comp implementation of the RICededPremiumHistory delegate"
+  exportable="true"
+  extendable="true"
+  platform="false"
+  loadable="false"
+  table="wc7cededpremiumhistory">
+  <implementsEntity
+    name="RICededPremiumHistory"
+    adapter="gw.reinsurance.ceding.WC7CededPremiumHistoryAdapter"/>
+  <foreignkey
+    name="WC7CededPremium"
+    fkentity="WC7CededPremium"
+    nullok="false"/>
+</entity>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" desc="Workers' Comp Aircraft Seat Data" effDatedBranchType="PolicyPeriod" entity="WC7AircraftSeat" exportable="true" loadable="false" platform="false" table="wc7aircraftseat" type="effdated">
+  <implementsInterface iface="gw.api.copier.EffDatedCopyable" impl="gw.api.copier.EffDatedCopier"/>
+  <implementsInterface iface="gw.api.logicalmatch.EffDatedLogicalMatcher" impl="gw.lob.wc7.WC7AircraftSeatMatcher"/>
+  <implementsInterface iface="gw.lob.wc7.WC7RatingEffDated" impl="gw.lob.wc7.WC7AircraftSeatRatingEffDated"/>
+  <implementsInterface iface="gw.lob.wc7.WC7RatingEffDatedExposure" impl="gw.lob.wc7.WC7AircraftSeatRatingEffDated"/>
+  <column desc="Description" name="Description" nullok="true" type="shorttext"/>
+  <column desc="Aircraft N-Number" name="AircraftNumber" nullok="true" type="shorttext"/>
+  <column desc="Number of rateable passenger seats" name="PassengerSeats" nullok="true" type="positiveinteger"/>
+  <typekey name="Jurisdiction" nullok="true" typelist="Jurisdiction"/>
+  <foreignkey fkentity="WC7WorkersCompLine" name="WCLine" nullok="false"/>
+  <implementsInterface iface="gw.lob.wc7.schedule.WC7SpecificScheduledItem" impl="gw.lob.wc7.schedule.WC7AircraftSeatCondScheduledItemImpl"/>
+  <array arrayentity="WC7AircraftSeatCost" cascadeDelete="true" name="Costs"/>
+  <foreignkey columnName="WC7AirCraftScheduleCond" desc="The parent coverage for maritime covered employees" fkentity="WC7WorkersCompCond" name="AircraftSeatCondition" nullok="false" setterScriptability="doesNotExist"/>
+</entity>

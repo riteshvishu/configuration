@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7LineScheduleExcl"
+  desc="WC7 Line Exclusion with a schedule"
+  final="false"
+  supertype="WC7WorkersCompExcl">
+  <implementsInterface
+    iface="gw.api.productmodel.Schedule"
+    impl="gw.lob.wc7.schedule.WC7LineScheduleExclImpl"/>
+  <implementsEntity name="ScheduleAutoNumberSequence"/>
+  <array
+    arrayentity="WC7LineScheduleExclItem"
+    name="WC7LineScheduleExclItems"
+    cascadeDelete="true"
+    desc="Exclusion scheduled items"
+    setterScriptability="all"/>
+</subtype>

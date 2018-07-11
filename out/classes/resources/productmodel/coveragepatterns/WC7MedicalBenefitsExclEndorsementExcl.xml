@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ExclusionPattern
+  coverageCategory="WC7WorkCompLineCategoryExcl"
+  exclusionSubtype="WC7WorkersCompExcl"
+  existence="Electable"
+  lookupTableName="WC7LineExcl"
+  owningEntityType="WC7WorkersCompLine"
+  priority="1460"
+  public-id="WC7MedicalBenefitsExclEndorsementExcl"
+  referenceDateByType="PolicyTerm">
+  <CovTerms/>
+</ExclusionPattern>

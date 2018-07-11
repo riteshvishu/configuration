@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7EmployeeLeasingPlan"
+  autoSplit="false"
+  type="effdated"
+  desc="Details about the employee leasing plan."
+  effDatedBranchType="PolicyPeriod"
+  exportable="true"
+  final="false"
+  platform="false"
+  loadable="false"
+  table="wc7employeeleasingplan">
+  <implementsInterface
+    iface="gw.api.copier.EffDatedCopyable"
+    impl="gw.api.copier.EffDatedCopier"/>
+  <typekey
+    name="ProfessionalEmployeeType"
+    typelist="WC7ProfessionalEmployeeType"
+    desc="The type of employee for the employee leasing plan."
+    nullok="true"/>
+  <typekey
+    name="PolicyType"
+    typelist="WC7EmployeeLeasingPolicyType"
+    desc="The type of employee leasing policy."
+    nullok="true"/>
+  <foreignkey
+    name="WC7WorkersCompLine"
+    fkentity="WC7WorkersCompLine"
+    nullok="false"/>
+</entity>

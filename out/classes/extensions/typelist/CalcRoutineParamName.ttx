@@ -1,0 +1,443 @@
+<?xml version="1.0"?>
+<typelistextension
+  xmlns="http://guidewire.com/typelists"
+  desc="Used for defining the parameter names that can be set in a calculation parameter set"
+  name="CalcRoutineParamName">
+
+  <typecode
+    code="vehicle"
+    desc="Vehicle"
+    name="Vehicle"/>
+  <typecode
+    code="papipnj"
+    desc="PA PIP New Jersey Coverage"
+    name="PIPNJCoverage"/>
+  <typecode
+    code="building"
+    desc="Building"
+    name="Building"/>
+  <typecode
+    code="cpbldgcov"
+    desc="CP Building Coverage"
+    name="CPBldgCoverage"/>
+  <typecode
+    code="cpbppcov"
+    desc="CP Business Personal Property Coverage"
+    name="CPBPPCoverage"/>
+  <typecode
+    code="cpdeductfactorname"
+    desc="CP Deductible Factor Name"
+    name="CPDeductibleFactorName"/>
+  <typecode
+    code="driverassignmentinfo"
+    desc="Driver Assignment Information"
+    name="DriverAssignmentInfo"/>
+  <typecode
+    code="assigneddriver"
+    desc="Assigned Driver"
+    name="AssignedDriver"/>
+  <typecode
+    code="currentdriver"
+    desc="Current Driver"
+    name="CurrentDriver"/>
+  <typecode
+    code="wc7affinitygroup"
+    desc="Groups and Associations eligible for dividends or special rating."
+    name="WC7AffinityGroup"/>
+  <typecode
+    code="wc7affinitygroupjurisdiction"
+    desc="Jurisdictions that a particular affinity group is available to."
+    name="WC7AffinityGroupJurisdiction"/>
+  <typecode
+    code="wc7affinitygroupproducercode"
+    desc="The producer code to affinity group availability relationship."
+    name="WC7AffinityGroupProducerCode"/>
+  <typecode
+    code="wc7affinitygroupproduct"
+    desc="Products that a particular affinity group is available to.."
+    name="WC7AffinityGroupProduct"/>
+  <typecode
+    code="wc7affinitygrouptype"
+    desc="WC7AffinityGroupType"
+    name="WC7AffinityGroupType"/>
+  <typecode
+    code="wc7aircraftseat"
+    desc="Workers' Comp Aircraft Seat Data"
+    name="WC7AircraftSeat"/>
+  <typecode
+    code="wc7aircraftseatsurchargemaximum"
+    desc="Workers' Comp Aircraft Seat Maximum Surcharge Lookup Value"
+    name="WC7AircraftSeatSurchargeMaximum"/>
+  <typecode
+    code="wc7aircraftmaximumadjustment"
+    desc="Workers' Comp Amount to Adjust Aircraft Cost by to cap at Maximum Surcharge over Period"
+    name="WC7AircraftMaximumAdjustment"/>
+  <typecode
+    code="wc7cededpremium"
+    desc="A Workers' Comp implementation of the RICededPremium delegate"
+    name="WC7CededPremium"/>
+  <typecode
+    code="wc7cededpremiumhistory"
+    desc="A Workers' Comp implementation of the RICededPremiumHistory delegate"
+    name="WC7CededPremiumHistory"/>
+  <typecode
+    code="wc7cededpremiumtransaction"
+    desc="A Workers' Comp implementation of the RICededPremiumTransaction delegate"
+    name="WC7CededPremiumTransaction"/>
+  <typecode
+    code="wc7classcode"
+    desc="Workers' comp class codes.  Premium calculations are driven by class codes and both premium and losses are reported by class codes to rating bureaus."
+    name="WC7ClassCode"/>
+  <typecode
+    code="wc7classcodefeddomains"
+    desc="A type of class code (FELA, Maritime, etc)"
+    name="WC7ClassCodeFedDomains"/>
+  <typecode
+    code="wc7classcodeprogramtype"
+    desc="Types of programs"
+    name="WC7ClassCodeProgramType"/>
+  <typecode
+    code="wc7classcodetype"
+    desc="Types of class codes"
+    name="WC7ClassCodeType"/>
+  <typecode
+    code="wc7cost"
+    desc="A WorkersComp unit of price for a period of time that should not be broken up any further."
+    name="WC7Cost"/>
+  <typecode
+    code="wc7covempcost"
+    desc="A unit of price for a period of time, not to be broken up any further, for a Workers' Comp employee coverage"
+    name="WC7CovEmpCost"/>
+  <typecode
+    code="wc7coveredemployee"
+    desc="A Workers' Comp Covered Employee"
+    name="WC7CoveredEmployee"/>
+  <typecode
+    code="wc7coveredemployeebase"
+    desc="A Workers' Comp Covered Employee"
+    name="WC7CoveredEmployeeBase"/>
+  <typecode
+    code="wc7covprogramtype"
+    desc="WC Coverage program type"
+    name="WC7CovProgramType"/>
+  <typecode
+    code="wc7excludedlaborcontactdetail"
+    desc="The details about the labor contact (e.g. labor client or labor contractor) on an exclusion.  "
+    name="WC7ExcludedLaborContactDetail"/>
+  <typecode
+    code="wc7excludedownerofficer"
+    desc="A person who has a meaningful equity/ownership interest in an insuredbusiness entity.  "
+    name="WC7ExcludedOwnerOfficer"/>
+  <typecode
+    code="wc7excludedworkplace"
+    desc="Defines an exclusion for workplaces."
+    name="WC7ExcludedWorkplace"/>
+  <typecode
+    code="wc7exposureratingeffdate"
+    desc="The exposure's rating effective date"
+    name="WC7ExposureRatingEffDate"/>
+  <typecode
+    code="wc7exposureratingexpdate"
+    desc="The exposure's rating expiration date"
+    name="WC7ExposureRatingExpDate"/>
+  <typecode
+    code="wc7fedcoveredemployee"
+    desc="A Workers' Comp Federal Covered Employee"
+    name="WC7FedCoveredEmployee"/>
+  <typecode
+    code="wc7fedempliabact"
+    desc="Federal Employers Liability coverage Act type"
+    name="WC7FedEmpLiabAct"/>
+  <typecode
+    code="wc7formassociation"
+    desc="Associates a Workers' Comp waiver of subrogation entity with its related form."
+    name="WC7FormAssociation"/>
+  <typecode
+    code="wc7governinglaw"
+    desc="What kind of special coverage does this group of employees have?"
+    name="WC7GoverningLaw"/>
+  <typecode
+    code="wc7includedlaborcontactdetail"
+    desc="The details about the labor contact (e.g. labor client or labor contractor) on a condition.  "
+    name="WC7IncludedLaborContactDetail"/>
+  <typecode
+    code="wc7includedownerofficer"
+    desc="A person who has a meaningful equity/ownership interest in an insuredbusiness entity.  "
+    name="WC7IncludedOwnerOfficer"/>
+  <typecode
+    code="wc7jurisdiction"
+    desc="Container for jurisdiction-level elements: coverages, modifiers, etc."
+    name="WC7Jurisdiction"/>
+  <typecode
+    code="wc7jurisdictioncost"
+    desc="A unit of price for a period of time, not to be broken up any further, for a Workers' Comp jurisdiction"
+    name="WC7JurisdictionCost"/>
+  <typecode
+    code="wc7jurisdictioncosttype"
+    desc="The type of a WC Jurisdiction Cost."
+    name="WC7JurisdictionCostType"/>
+  <typecode
+    code="wc7jurisdictioncov"
+    desc="A jurisdiction-level coverage for Workers Comp'"
+    name="WC7JurisdictionCov"/>
+  <typecode
+    code="wc7jurisdictionmultiplier"
+    desc="Jurisdiction Multipliers"
+    name="WC7JurisdictionMultiplier"/>
+  <typecode
+    code="wc7laborcontact"
+    desc="A WC7PolicyContactRole for WC Labor containing WC7LaborContactDetails."
+    name="WC7LaborContact"/>
+  <typecode
+    code="wc7laborcontactdetail"
+    desc="The details about the WC labor contact (e.g. labor client or labor contractor).   "
+    name="WC7LaborContactDetail"/>
+  <typecode
+    code="wc7liabilityact"
+    desc="Liability acts"
+    name="WC7LiabilityAct"/>
+  <typecode
+    code="wc7lineschedulecond"
+    desc="WC7 Line Condition with a schedule"
+    name="WC7LineScheduleCond"/>
+  <typecode
+    code="wc7linescheduleconditem"
+    desc="WC7 Line level condition scheduled item"
+    name="WC7LineScheduleCondItem"/>
+  <typecode
+    code="wc7lineschedulecov"
+    desc="WC7 Line Coverage with a schedule"
+    name="WC7LineScheduleCov"/>
+  <typecode
+    code="wc7lineschedulecovitem"
+    desc="WC7 Line level coverage scheduled item"
+    name="WC7LineScheduleCovItem"/>
+  <typecode
+    code="wc7linescheduleexcl"
+    desc="WC7 Line Exclusion with a schedule"
+    name="WC7LineScheduleExcl"/>
+  <typecode
+    code="wc7linescheduleexclitem"
+    desc="WC7 Line level exclusion scheduled item"
+    name="WC7LineScheduleExclItem"/>
+  <typecode
+    code="wc7manuscriptoption"
+    desc="Workers' Comp Manuscript Data"
+    name="WC7ManuscriptOption"/>
+  <typecode
+    code="wc7maritimecoveredemployee"
+    desc="A Workers' Comp Maritime Covered Employee"
+    name="WC7MaritimeCoveredEmployee"/>
+  <typecode
+    code="wc7modifier"
+    desc="A line-level modifier for Workers' Comp"
+    name="WC7Modifier"/>
+  <typecode
+    code="wc7participatingplan"
+    desc="A Workers' Comp participating plan"
+    name="WC7ParticipatingPlan"/>
+  <typecode
+    code="wc7participatingplanid"
+    desc="The type of WC participating plan."
+    name="WC7ParticipatingPlanID"/>
+  <typecode
+    code="wc7personorg"
+    desc="Person or Organization?"
+    name="WC7PersonOrg"/>
+  <typecode
+    code="wc7policycontactrole"
+    desc="A PolicyContactRole specific to a WorkersComp policy line."
+    name="WC7PolicyContactRole"/>
+  <typecode
+    code="wc7policylaborclient"
+    desc="The third party labor contractor or professional employee organization(PEO) that staffs an insured entity with long-term workers.  "
+    name="WC7PolicyLaborClient"/>
+  <typecode
+    code="wc7policylaborcontractor"
+    desc="The insured entity that provides employees on a long term basis to workat/for a third party business entity.  "
+    name="WC7PolicyLaborContractor"/>
+  <typecode
+    code="wc7policyownerofficer"
+    desc="A person who has a meaningful equity/ownership interest in an insuredbusiness entity.  "
+    name="WC7PolicyOwnerOfficer"/>
+  <typecode
+    code="wc7ratefactor"
+    desc="A rate factor is a risk characteristic and its associated numeric value which might have an impact on premium. As used here rate factors are applied to base premium rather than rates. A common example of Rate Factors are the components of IRPM (individual risk premium modifier)."
+    name="WC7RateFactor"/>
+  <typecode
+    code="wc7ratingperiodstartdate"
+    desc="A date which marks the beginning of a new rating period. During a rating period the basis amounts for basis-scalable exposures are typically constant."
+    name="WC7RatingPeriodStartDate"/>
+  <typecode
+    code="wc7ratingstepext"
+    desc="A sample table storing additional steps for rating Workers Comp policies after the basic calculation of  manual premiums (premiums for each location/class code exposure unit).  "
+    name="WC7RatingStepExt"/>
+  <typecode
+    code="wc7retroratingletterofcredit"
+    desc="A Letter Of Credit"
+    name="WC7RetroRatingLetterOfCredit"/>
+  <typecode
+    code="wc7retrospectiveratingplan"
+    desc="A plan for retrospectively rating a policy line"
+    name="WC7RetrospectiveRatingPlan"/>
+  <typecode
+    code="wc7transaction"
+    desc="A transaction for the Workers' Comp line"
+    name="WC7Transaction"/>
+  <typecode
+    code="wc7voluntarycomp"
+    desc="Voluntary compensation type"
+    name="WC7VoluntaryComp"/>
+  <typecode
+    code="wc7waiverofsubro"
+    desc="A Workers' Comp Waiver of Subrogation"
+    name="WC7WaiverOfSubro"/>
+  <typecode
+    code="wc7waiverofsubrogation"
+    desc="The type of waiver of subro."
+    name="WC7WaiverOfSubrogation"/>
+  <typecode
+    code="wc7waiverminimumadjustment"
+    desc="The amount to adjust this waiver by"
+    name="WC7WaiverMinimumAdjustment"/>
+  <typecode
+    code="wc7workerkind"
+    desc="What kind of worker?"
+    name="WC7WorkerKind"/>
+  <typecode
+    code="wc7workerscompcond"
+    desc="A line-level condition for Workers' Comp"
+    name="WC7WorkersCompCond"/>
+  <typecode
+    code="wc7workerscompcov"
+    desc="A line-level coverage for Workers' Comp"
+    name="WC7WorkersCompCov"/>
+  <typecode
+    code="wc7workerscompexcl"
+    desc="A line-level exclusion for Workers' Comp"
+    name="WC7WorkersCompExcl"/>
+  <typecode
+    code="wc7workerscompline"
+    desc="Workers' Comp line of business."
+    name="WC7WorkersCompLine"/>
+  <typecode
+    code="classcodebasis"
+    desc="Class Code Basis"
+    name="ClassCodeBasis"/>
+  <typecode
+    code="wc7diseasecode"
+    desc="Supplementary Disease Code"
+    name="WC7DiseaseCode"/>
+  <typecode
+    code="wc7suppldiseaseexposure"
+    desc="Supplementary Disease Basis"
+    name="WC7SupplDiseaseExposure"/>
+  <typecode
+    code="wc7totalpayrollamount"
+    desc="Total payroll amount"
+    name="WC7TotalPayrollAmount"/>
+  <typecode
+    code="wc7totalpremiumamount"
+    desc="Total premium amount"
+    name="WC7TotalPremium"/>
+  <typecode
+    code="wc7modifierfactor"
+    desc="Modifier Factor"
+    name="WC7ModifierFactor"/>
+<typecode
+   code="wc7totalmanualpremium"
+   desc="Total Manual Premium"
+   name="WC7TotalManualPremium"/>
+ <typecode
+   code="wc7eachaccidentlimit"
+   desc="Each Accident Limit"
+   name="WC7EachAccidentLimit"/>
+ <typecode
+   code="wc7diseasepolicylimit"
+   desc="Disease Policy Limit"
+   name="WC7DiseasePolicyLimit"/>
+<typecode
+  code="wc7deductibleclasscode"
+  desc="Deductible classcode with highest total manual premium"
+  name="WC7DeductibleClassCode"/>
+<typecode
+  code="wc7classfactor"
+  desc="A class factor for Workers' Comp"
+  name="WC7ClassFactor"/>
+  <typecode
+    code="wc7subjectpremium"
+    desc="Subject premium"
+    name="WC7SubjectPremium"/>
+  <typecode
+    code="wc7minimumpremiumparam"
+    desc="Minimum Premium Parameter (writable)"
+    name="WC7MinimumPremiumParam"/>
+  <typecode
+    code="wc7expenseconstant"
+    desc="Expense Constant"
+    name="WC7ExpenseConstant"/>
+  <typecode
+    code="wc7stopgapflatcharge"
+    desc="Stop Gap Flat Charge"
+    name="WC7StopGapFlatCharge"/>
+  <typecode
+    code="wc7proratedminimumpremium"
+    desc="Minimum Premium that is prorated across all rating periods"
+    name="WC7ProratedMinimumPremium"/>
+  <typecode
+    code="wc7totalmodifiedpremium"
+    desc="Total Modified premium"
+    name="WC7TotalModifiedPremium"/>
+  <typecode
+    code="wc7benefitsdeductiblecov"
+    desc="Benefits Deductible Coverage"
+    name="WC7BenefitsDeductibleCov"/>
+  <typecode
+    code="wc7totalstandardpremium"
+    desc="Total Standard Premium for jurisdiction"
+    name="WC7TotalStandardPremium"/>
+  <typecode
+    code="wc7totalpremiumdiscountamount"
+    desc="Total Premium discount calculated for rating period"
+    name="WC7TotalPremiumDiscountAmount"/>
+  <typecode
+    code="wc7premiumdiscountamount"
+    desc="Premium Discount (writable param)calculated for each discount level"
+    name="WC7PremiumDiscountAmount"/>
+  <typecode
+    code="wc7standardpremiumforlevel"
+    desc="Portion of Standard Premium for a discount level"
+    name="WC7StandardPremiumForLevel"/>
+  <typecode
+    code="wc7premiumdiscountlevelamount"
+    desc="Premium Discount Level Amount"
+    name="WC7PremiumDiscountLevelAmount"/>
+  <typecode
+    code="proratedpremiumtotal"
+    desc="The total prorated premium amount"
+    name="ProratedPremiumTotal"/>
+  <typecode
+    code="wc7statcodeparam"
+    desc="Stat Code (writable)"
+    name="WC7StatCodeParam"/>
+  <typecode
+    code="wc7classcoderate"
+    desc="Class Code Rate"
+    name="WC7ClassCodeRate"/>
+  <typecode
+    code="wc7specificwaiverminimum"
+    desc="Specific Waiver Minimum"
+    name="WC7SpecificWaiverMinimum"/>
+  <typecode
+    code="wc7atomicenergyexposure"
+    desc="Atomic Energy Exposure"
+    name="WC7AtomicEnergyExposure"/>
+  <typecode
+    code="wc7ratingeffdate"
+    desc="The rating effective date"
+    name="WC7RatingEffDate"/>
+  <typecode
+    code="wc7ratingexpdate"
+    desc="The rating expiration date"
+    name="WC7RatingExpDate"/>
+</typelistextension>

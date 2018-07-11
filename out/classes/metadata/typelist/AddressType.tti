@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!-- ********************************************************************************************************************
+    CONTACT-RELATED TYPELISTS
+  ******************************************************************************************************************** -->
+<typelist xmlns="http://guidewire.com/typelists" desc="Types of mailing addresses" final="false" subpackage="contact" name="AddressType" platform="true"/>

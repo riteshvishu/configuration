@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<entity xmlns="http://guidewire.com/datamodel" subpackage="clusterinfo" entity="ClusterMemberData"
+        table="clustermemberdata" instrumentationtable="true" type="keyable" extendable="false" final="true" loadable="false"
+        cacheable="false" exportable="false" platform="true">
+  <column desc="Node logical name" name="LogicalName" type="shorttext" nullok="false" />
+  <column desc="Server ID" name="ServerId" type="shorttext" nullok="false" />
+  <column desc="UUID" name="Uuid" type="varchar" nullok="false">
+    <columnParam name="size" value="36"/>
+  </column>
+  <column desc="Data" name="Data" type="blob" nullok="true" getterScriptability="doesNotExist" setterScriptability="doesNotExist"/>
+  <column desc="Time server started" name="ServerStarted" type="datetime" nullok="false"/>
+  <column desc="Time connection started" name="ConnectionStarted" type="datetime" nullok="false"/>
+  <column desc="Time connection stopped" name="ConnectionStopped" type="datetime" nullok="true"/>
+  <column desc="Run level" name="RunLevel" type="shorttext" nullok="false" />
+  <column desc="Last update" name="LastUpdate" type="decimal" nullok="false">
+    <columnParam name="scale" value="0"/>
+    <columnParam name="precision" value="19"/>
+  </column>
+
+  <index desc="Index to speed up the selection of records of the running server (because records are not deleted after server goes down)" name="clustermember1">
+    <indexcol name="LastUpdate" keyposition="1"/>
+  </index>
+  <index desc="Index to quickly find node record by unique JGroups address (which is UUID)" name="clustermember2">
+    <indexcol name="UUID" keyposition="1"/>
+  </index>
+  <index desc="Index to select history for given server id" name="clustermember3">
+    <indexcol name="ServerId" keyposition="1"/>
+    <indexcol name="ServerStarted" keyposition="2" sortascending="false"/>
+  </index>
+</entity>

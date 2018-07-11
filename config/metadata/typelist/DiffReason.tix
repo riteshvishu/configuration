@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<internaltypelistextension xmlns="http://guidewire.com/typelists" desc="Reasons for calling PC Diff code" name="DiffReason">
+  <!-- pc diff reasons -->
+  <typecode code="FindDuplicates" desc="Determine changes to this branch that are duplicated at another effective time" name="FindDuplicates"/>
+  <typecode code="ExpirationDateCheck" desc="Determine changes to this branch that need to be checked to possibly move up their ExpirationDates" name="ExpirationDateCheck"/>
+</internaltypelistextension>

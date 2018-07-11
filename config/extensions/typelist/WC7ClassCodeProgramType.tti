@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="Types of programs"
+  name="WC7ClassCodeProgramType">
+  <typecode
+    code="ProgramI"
+    desc="Program I"
+    name="Program I"
+    priority="1"/>
+  <typecode
+    code="ProgramIIStateAct"
+    desc="Program II State Act"
+    name="Program II State Act"
+    priority="2"/>
+  <typecode
+    code="ProgramIIUSLH"
+    desc="Program II USLH"
+    name="Program II USLH"
+    priority="3"/>
+</typelist>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7CoordinatedPolicy">
+  <Columns>
+     <Column
+            beanPath="WC7CoordinatedPolicy.StatePerformed"
+            name="wcStatePerformed"/>
+    <Column
+      beanPath="WC7CoordinatedPolicy.LaborContractor.AccountContact.DisplayName"
+      name="wcLaborContractor"/>
+  </Columns>
+  <DisplayName><![CDATA[displaykey.EntityName.WC7CoordinatedPolicy(wcLaborContractor,wcStatePerformed )]]></DisplayName>
+</Entity>

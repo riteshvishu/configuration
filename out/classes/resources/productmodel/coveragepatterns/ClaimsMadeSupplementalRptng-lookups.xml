@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<import>
+  <ConditionLookup public-id="zbihk0evg6koh2rqdt0cllobh0b">
+    <Availability>Available</Availability>
+    <ConditionPatternCode>ClaimsMadeSupplementalRptng</ConditionPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </ConditionLookup>
+  <CovTermLookup public-id="z0ijm8eoci776fjjpgs2ae2b108">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>SupplementalReportingType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="z4dh253h6vlnr9skerbpiq7jug9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>za9isddl08ntp0apsi2n5koc8b9</CovTermOptCode>
+    <CovTermPatternCode>SupplementalReportingType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zcghctv21511n4btnehji4avdh8">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zkoiq4akdkcu20dms71gq1njls9</CovTermOptCode>
+    <CovTermPatternCode>SupplementalReportingType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+</import>

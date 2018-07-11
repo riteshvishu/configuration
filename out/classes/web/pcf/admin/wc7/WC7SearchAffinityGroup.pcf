@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <Page
+    afterCancel="Admin.go()"
+    canEdit="true"
+    id="WC7SearchAffinityGroup"
+    parent="Admin()"
+    showUpLink="true"
+    startInEditMode="true"
+    title="displaykey.Web.Admin.AffinityGroupSearch">
+    <LocationEntryPoint
+      signature="WC7SearchAffinityGroup()"/>
+    <Variable
+      initialValue="gw.admin.wc7.WC7AffinityGroupUtil.createNewAffinityGroup()"
+      name="wc7AffinityGroup"
+      type="WC7AffinityGroup"/>
+    <ScreenRef
+      def="WC7AffinityGroupSearchScreen()"/>
+  </Page>
+</PCF>

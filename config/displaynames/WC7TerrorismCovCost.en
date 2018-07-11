@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7TerrorismCovCost">
+  <Columns/>
+  <DisplayName><![CDATA[displaykey.EntityName.WC7TerrorismCovCost]]></DisplayName>
+</Entity>

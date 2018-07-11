@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ConditionPattern
+  conditionSubtype="WC7LineScheduleCond"
+  coverageCategory="WC7WorkCompLineCategoryCond"
+  existence="Electable"
+  lookupTableName="WC7Cond"
+  owningEntityType="WC7WorkersCompLine"
+  priority="1820"
+  public-id="WC7VoluntaryCompensationAndEmployersLiabilityCovCond"
+  referenceDateByType="PolicyTerm">
+  <AvailabilityScript/>
+  <ExistenceScript/>
+  <InitializeScript/>
+  <OnRemovalScript/>
+</ConditionPattern>

@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<xs:schema targetNamespace="http://lucene.guidewire.com/" version="1.0" xmlns:tns="http://lucene.guidewire.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception"/>
+  <xs:element name="close" type="tns:close"/>
+  <xs:element name="closeResponse" type="tns:closeResponse"/>
+  <xs:element name="delete" type="tns:delete"/>
+  <xs:element name="deleteResponse" type="tns:deleteResponse"/>
+  <xs:element name="doIndex" type="tns:doIndex"/>
+  <xs:element name="doIndexResponse" type="tns:doIndexResponse"/>
+  <xs:element name="getHost" type="tns:getHost"/>
+  <xs:element name="getHostResponse" type="tns:getHostResponse"/>
+  <xs:element name="getPort" type="tns:getPort"/>
+  <xs:element name="getPortResponse" type="tns:getPortResponse"/>
+  <xs:element name="getUrl" type="tns:getUrl"/>
+  <xs:element name="getUrlResponse" type="tns:getUrlResponse"/>
+  <xs:element name="index" type="tns:index"/>
+  <xs:element name="indexResponse" type="tns:indexResponse"/>
+  <xs:element name="search" type="tns:search"/>
+  <xs:element name="searchInternal" type="tns:searchInternal"/>
+  <xs:element name="searchInternalResponse" type="tns:searchInternalResponse"/>
+  <xs:element name="searchResponse" type="tns:searchResponse"/>
+  <xs:element name="setCommitInterval" type="tns:setCommitInterval"/>
+  <xs:element name="setCommitIntervalResponse" type="tns:setCommitIntervalResponse"/>
+  <xs:element name="setDebug" type="tns:setDebug"/>
+  <xs:element name="setDebugResponse" type="tns:setDebugResponse"/>
+  <xs:complexType name="getHost">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="getHostResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCommitInterval">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCommitIntervalResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="delete">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:luceneDeleteInfo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="luceneDeleteInfo">
+    <xs:sequence>
+      <xs:element name="urns" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="doIndex">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:indexInfo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="indexInfo">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:string" minOccurs="0"/>
+      <xs:element name="entityId" type="xs:string" minOccurs="0"/>
+      <xs:element name="claimPublicID" type="xs:string" minOccurs="0"/>
+      <xs:element name="claimNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="policyNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="accountNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="lossDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="reportedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="closeDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="createDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="contactPublicID" type="xs:string" minOccurs="0"/>
+      <xs:element name="contactType" type="xs:string" minOccurs="0"/>
+      <xs:element name="roles" type="xs:string" minOccurs="0"/>
+      <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+      <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+      <xs:element name="companyName" type="xs:string" minOccurs="0"/>
+      <xs:element name="phone1" type="xs:string" minOccurs="0"/>
+      <xs:element name="phone2" type="xs:string" minOccurs="0"/>
+      <xs:element name="phone3" type="xs:string" minOccurs="0"/>
+      <xs:element name="addressPublicID" type="xs:string" minOccurs="0"/>
+      <xs:element name="address" type="xs:string" minOccurs="0"/>
+      <xs:element name="city" type="xs:string" minOccurs="0"/>
+      <xs:element name="state" type="xs:string" minOccurs="0"/>
+      <xs:element name="postalCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="license" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="doIndexResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="setDebug">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setDebugResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="close">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="closeResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="searchInternal">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:searchInfo" minOccurs="0"/>
+      <xs:element name="arg1" type="tns:documentInfo" minOccurs="0"/>
+      <xs:element name="arg2" type="tns:documentInfo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="searchInfo">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:string" minOccurs="0"/>
+      <xs:element name="entityId" type="xs:string" minOccurs="0"/>
+      <xs:element name="claimNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="policyNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="accountNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="dateType" type="xs:string" minOccurs="0"/>
+      <xs:element name="dateRangeType" type="xs:string" minOccurs="0"/>
+      <xs:element name="dateRange" type="xs:string" minOccurs="0"/>
+      <xs:element name="startDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="endDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="role" type="xs:string" minOccurs="0"/>
+      <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+      <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+      <xs:element name="companyName" type="xs:string" minOccurs="0"/>
+      <xs:element name="address" type="xs:string" minOccurs="0"/>
+      <xs:element name="city" type="xs:string" minOccurs="0"/>
+      <xs:element name="state" type="xs:string" minOccurs="0"/>
+      <xs:element name="postalCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="phone" type="xs:string" minOccurs="0"/>
+      <xs:element name="license" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="documentInfo">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:string" minOccurs="0"/>
+      <xs:element name="entityId" type="xs:string" minOccurs="0"/>
+      <xs:element name="claimNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="policyNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="accountNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="date" type="xs:string" minOccurs="0"/>
+      <xs:element name="roles" type="xs:string" minOccurs="0"/>
+      <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+      <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+      <xs:element name="companyName" type="xs:string" minOccurs="0"/>
+      <xs:element name="address" type="xs:string" minOccurs="0"/>
+      <xs:element name="city" type="xs:string" minOccurs="0"/>
+      <xs:element name="state" type="xs:string" minOccurs="0"/>
+      <xs:element name="postalCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="phone" type="xs:string" minOccurs="0"/>
+      <xs:element name="license" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="searchInternalResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:documentInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="index">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:luceneIndexInfo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="luceneIndexInfo">
+    <xs:sequence>
+      <xs:element name="appId" type="xs:string" minOccurs="0"/>
+      <xs:element name="entityId" type="xs:string" minOccurs="0"/>
+      <xs:element name="claimInfo" type="tns:luceneClaimInfo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="luceneClaimInfo">
+    <xs:sequence>
+      <xs:element name="publicID" type="xs:string" minOccurs="0"/>
+      <xs:element name="claimNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="policyNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="lossDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="reportedDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="closeDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="createDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="contacts" type="tns:luceneContactInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="luceneContactInfo">
+    <xs:sequence>
+      <xs:element name="publicID" type="xs:string" minOccurs="0"/>
+      <xs:element name="contactType" type="xs:string" minOccurs="0"/>
+      <xs:element name="roles" type="xs:string" minOccurs="0"/>
+      <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+      <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+      <xs:element name="companyName" type="xs:string" minOccurs="0"/>
+      <xs:element name="phone1" type="xs:string" minOccurs="0"/>
+      <xs:element name="phone2" type="xs:string" minOccurs="0"/>
+      <xs:element name="phone3" type="xs:string" minOccurs="0"/>
+      <xs:element name="addresses" type="tns:luceneAddressInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="license" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="luceneAddressInfo">
+    <xs:sequence>
+      <xs:element name="publicID" type="xs:string" minOccurs="0"/>
+      <xs:element name="address" type="xs:string" minOccurs="0"/>
+      <xs:element name="city" type="xs:string" minOccurs="0"/>
+      <xs:element name="state" type="xs:string" minOccurs="0"/>
+      <xs:element name="postalCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="indexResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="getUrl">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="getUrlResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPort">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="getPortResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="search">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:searchInfo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="searchResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:documentInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

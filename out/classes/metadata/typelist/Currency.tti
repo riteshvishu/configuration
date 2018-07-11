@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!-- ********************************************************************************************************************
+    CURRENCY-RELATED TYPELISTS
+  ******************************************************************************************************************** -->
+<typelist xmlns="http://guidewire.com/typelists" desc="Types of Currencies." final="false" subpackage="currency" name="Currency" platform="true">
+      <!-- Priority determined by frequency of usage: http://www.xe.com/popularity.php -->
+</typelist>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" desc="State of a WorkItemSet" final="true" subpackage="workitemset" name="WorkItemSetState" platform="true">
+  <typecode code="Processing" desc="the WorkItemSet is being worked on, i.e. there is at least one WorkItem that has not been completed yet" name="Processing"/>
+  <typecode code="Completed" desc="all WorkItems have been processed. Some WorkItems may have been successful and others may have failed" name="Completed"/>
+  <typecode code="Canceling" desc="a WorkItemSet goes into this state when the user requests that we cease further processing. Workers will continue processing current WorkItems, but will not start new ones." name="Canceling"/>
+</typelist>

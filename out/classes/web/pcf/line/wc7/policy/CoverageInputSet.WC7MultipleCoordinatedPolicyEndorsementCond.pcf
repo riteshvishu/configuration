@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <!-- The reason a specific input set is used for this coverage is that the
+coverage requires a list view of the schedule items. -->
+  <InputSet
+    id="CoverageInputSet"
+    mode="WC7MultipleCoordinatedPolicyEndorsementCond">
+    <Require
+      name="conditionPattern"
+      type="gw.api.productmodel.ClausePattern"/>
+    <Require
+      name="coverable"
+      type="Coverable"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <Variable
+      initialValue="coverable.PolicyLine as WC7Line"
+      name="theWC7Line"/>
+    <HiddenInput
+      id="ConditionPatternDisplayName"
+      value="conditionPattern.DisplayName"/>
+    <InputGroup
+      allowToggle="conditionPattern.allowToggle(coverable)"
+      childrenVisible="coverable.getCoverageConditionOrExclusion(conditionPattern) != null"
+      id="ConditionInputGroup"
+      label="conditionPattern.DisplayName"
+      onToggle="new gw.pcf.WC7CoverageInputSetUIHelper().toggleClause(theWC7Line, conditionPattern, VALUE)">
+      <ListViewInput
+        editable="openForEdit"
+        labelAbove="true">
+        <Toolbar>
+          <AddButton
+            id="AddWC7PolicyLaborContractor"
+            iterator="WC7MultiplePolicyExistingLaborContactLV"
+            label="displaykey.Web.Generic.Add"
+            visible="openForEdit">
+            <AddMenuItemIterator
+              elementName="policyLaborContractor"
+              value="theWC7Line.WC7PolicyLaborContractorsCondition"
+              visible="true">
+              <IteratorSort
+                sortBy="policyLaborContractor.AccountContactRole.DisplayName"
+                sortOrder="1"/>
+              <AddMenuItem
+                id="PolicyLaborContractor"
+                iterator="WC7MultiplePolicyExistingLaborContactLV"
+                label="policyLaborContractor"
+                toCreateAndAdd="theWC7Line.createAndAddCoordinatedPolicy(theWC7Line.WC7MultipleCoordinatedPolicyEndorsementCond, policyLaborContractor)"
+                visible="true"/>
+            </AddMenuItemIterator>
+          </AddButton>
+          <IteratorButtons
+            iterator="WC7MultiplePolicyExistingLaborContactLV"/>
+        </Toolbar>
+        <ListViewPanel
+          id="WC7MultiplePolicyExistingLaborContactLV">
+          <RowIterator
+            editable="true"
+            elementName="wc7CoordinatedPolicy"
+            hasCheckBoxes="true"
+            hideCheckBoxesIfReadOnly="true"
+            toRemove="theWC7Line.removeFromMultipleCoordinatedPolicies( wc7CoordinatedPolicy )"
+            type="WC7CoordinatedPolicy"
+            value="theWC7Line.MultipleCoordinatedPolicies">
+            <Row>
+              <RangeCell
+                editable="true"
+                id="jurisdiction"
+                label="displaykey.Web.Policy.WC7.MultipleCoordinatedPolicies.State"
+                required="true"
+                value="wc7CoordinatedPolicy.StatePerformed"
+                valueRange="theWC7Line.getCurrentJurisdictions()"/>
+              <TextCell
+                id="LaborContractor"
+                label="displaykey.Web.Policy.WC7.MultipleCoordinatedPolicies.LaborContractor"
+                required="false"
+                value="wc7CoordinatedPolicy.LaborContractor.AccountContact.DisplayName"/>
+              <TextCell
+                editable="true"
+                id="ContractProject"
+                label="displaykey.Web.Policy.WC7.MultipleCoordinatedPolicies.ContractProject"
+                value="wc7CoordinatedPolicy.ContractProject"/>
+              <TextCell
+                editable="true"
+                id="PolicyNumber"
+                label="displaykey.Web.Policy.WC7.MultipleCoordinatedPolicies.PolicyNumber"
+                value="wc7CoordinatedPolicy.LaborContractorPolicyNumber"/>
+            </Row>
+          </RowIterator>
+        </ListViewPanel>
+      </ListViewInput>
+    </InputGroup>
+    <InputDivider
+      visible="openForEdit or coverable.getCoverageConditionOrExclusion(conditionPattern) != null"/>
+    <Code><![CDATA[function getAvailableLaborContractors() : LaborContractor[] {
+  var results : LaborContractor[] = {}
+  results = theWC7Line.WC7PolicyLaborContractors.map(\ pl -> pl.AccountContactRole as LaborContractor)
+  return results
+}]]></Code>
+  </InputSet>
+</PCF>

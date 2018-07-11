@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" desc="Jurisdiction Multipliers" effDatedBranchType="PolicyPeriod" entity="WC7JurisdictionMultiplier" exportable="true" extendable="true" loadable="false" platform="false" table="wc7jurisdictionmultiplier" type="effdated">
+  <column desc="Federal Excess Loss factor" name="FederalExcessLossFactor" nullok="true" type="decimal">
+    <columnParam name="scale" value="3"/>
+    <columnParam name="precision" value="12"/>
+  </column>
+  <column desc="The federal tax multiplier" name="FederalTaxMultiplier" nullok="true" type="decimal">
+    <columnParam name="scale" value="3"/>
+    <columnParam name="precision" value="12"/>
+  </column>
+  <column desc="Jurisdiction Excess Loss factor" name="JurisdictionExcessLossFactor" nullok="true" type="decimal">
+    <columnParam name="scale" value="3"/>
+    <columnParam name="precision" value="12"/>
+  </column>
+  <column desc="The Jurisdiction tax multiplier" name="JurisdictionTaxMultiplier" nullok="true" type="decimal">
+    <columnParam name="scale" value="3"/>
+    <columnParam name="precision" value="12"/>
+  </column>
+  <typekey name="Jurisdiction" nullok="true" typelist="Jurisdiction"/>
+  <foreignkey columnName="WC7RetrospectiveRatingPlanID" desc="The retro plan for which this jurisdiction multiplier applies" fkentity="WC7RetrospectiveRatingPlan" name="WC7RetrospectiveRatingPlan" nullok="false"/>
+</entity>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="The type of Employers liability increased limit cost: e.g. factor or charge"
+  name="WC7ELIncrLimitCostType"
+  final="false">
+  <typecode
+    code="incrlimitfactor"
+    desc="Increased Limit Factor"
+    name="Increased Limit Factor"/>
+  <typecode
+    code="incrlimitcharge"
+    desc="Increased Limit Charge"
+    name="Increased Limit Charge"/>
+</typelist>

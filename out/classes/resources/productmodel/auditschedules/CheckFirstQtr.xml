@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<SingleCheckingAuditSchedulePattern
+  auditMethod="Physical"
+  dueBusinessDayAdjustment="NextBusinessDay"
+  dueDelayAmount="30"
+  dueDelayDirection="After"
+  dueDelayUnit="CalendarDays"
+  endDateDelayAmount="90"
+  endDateDelayUnit="BusinessDays"
+  initBusinessDayAdjustment="NextBusinessDay"
+  initDelayAmount="30"
+  initDelayDirection="Before"
+  initDelayUnit="CalendarDays"
+  public-id="CheckFirstQtr"
+  series="false"
+  type="CheckingAudit"/>

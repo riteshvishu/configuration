@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<typelistextension xmlns="http://guidewire.com/typelists" desc="Types of foreign exchange rate markets." name="FXRateMarket">
+  <typecode code="static_table" name="StaticTable" desc="A static table of one-way rates."/>
+</typelistextension>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <WizardStepSet
+    id="LineWizardStepSet"
+    mode="WC7WorkersComp">
+    <Require
+      name="job"
+      type="Job"/>
+    <Require
+      name="policyPeriod"
+      type="PolicyPeriod"/>
+    <Require
+      name="jobWizardHelper"
+      type="web.job.JobWizardHelper"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <JobWizardStep
+      beforeSave="gw.policy.PolicyLocationValidation.validateLocationsStep(policyPeriod.PolicyLocations)"
+      id="Locations"
+      onChange="policyPeriod.WC7Line.recalculateGoverningClasscode();"
+      onEnter="if (openForEdit) { gw.web.productmodel.ProductModelSyncIssuesHandler.syncQuestions(policyPeriod.PolicyLocations, jobWizardHelper) }"
+      save="openForEdit"
+      screen="LocationsScreen(policyPeriod, openForEdit, jobWizardHelper, policyPeriod.WC7Line.SupportsNonSpecificLocations)"
+      title="displaykey.Web.LineWizardMenu.Locations"/>
+    <JobWizardStep
+      beforeSave="gw.lob.wc7.WC7LineValidation.validateWCStateCoveragesStep( policyPeriod.WC7Line )"
+      id="WC7WorkersCompStateCoverages"
+      onChange="policyPeriod.WC7Line.recalculateGoverningClasscode(); policyPeriod.WC7Line.syncWC7CoveredEmployeeVersions(); policyPeriod.WC7Line.syncWC7SupplementaryDiseaseExposureVersions();policyPeriod.WC7Line.syncWC7AtomicEnergyExposureVersions();"
+      onEnter="if (openForEdit) { policyPeriod.syncComputedValues(); gw.web.productmodel.ProductModelSyncIssuesHandler.sync(policyPeriod.WC7Line.AllCoverables, policyPeriod.WC7Line.AllModifiables, null, null, jobWizardHelper) }"
+      save="openForEdit"
+      screen="WC7StateCoverageScreen(policyPeriod, openForEdit, jobWizardHelper)"
+      title="displaykey.Web.Wizard.LineWizardStepGroup.StateCoverages"/>
+    <JobWizardStep
+      beforeSave="gw.lob.wc7.WC7LineValidation.validateWCLineCoveragesStep( policyPeriod.WC7Line )"
+      id="WC7WorkersCompLineCoverages"
+      onChange="policyPeriod.WC7Line.recalculateGoverningClasscode(); policyPeriod.WC7Line.syncWC7FedCoveredEmployeeVersions(); policyPeriod.WC7Line.syncWC7MaritimeCoveredEmployeeVersions(); policyPeriod.WC7Line.syncSpecificWaiversOfSubroVersions(); policyPeriod.WC7Line.clearIncludedStatesOrExcludedStatesForOtherStates();"
+      onEnter="if (openForEdit) { policyPeriod.syncComputedValues(); gw.web.productmodel.ProductModelSyncIssuesHandler.sync(policyPeriod.WC7Line.AllCoverables, policyPeriod.WC7Line.AllModifiables, null, null, jobWizardHelper) }"
+      save="openForEdit"
+      screen="WC7LineCoverageScreen(policyPeriod, openForEdit, jobWizardHelper)"
+      title="displaykey.Web.Wizard.LineWizardStepGroup.LineCoverages"/>
+    <!-- This step is shown for full (not quick) submissions and all other jobs. (This file is shared by all the
+         job wizards). Also, this step is only visible if questions are actually available for the line. -->
+    <JobWizardStep
+      beforeSave="gw.lob.wc7.WC7LineValidation.validateWCSupplementalStep( policyPeriod.WC7Line )"
+      id="WorkersCompSupplemental"
+      onEnter="if(openForEdit) { gw.web.productmodel.ProductModelSyncIssuesHandler.syncQuestions( {policyPeriod.WC7Line}, jobWizardHelper )}"
+      save="openForEdit"
+      screen="WC7SupplementalScreen(policyPeriod, openForEdit, jobWizardHelper)"
+      title="displaykey.Web.LineWizardMenu.PolicyLines.Supplemental"
+      visible="policyPeriod.WC7Line.hasSupplementalQuestions() and (!(job typeis Submission) or (job as Submission).FullMode)"/>
+    <JobWizardStep
+      beforeSave="gw.lob.wc7.WC7LineValidation.validateWorkersCompOptionsStep( policyPeriod.WC7Line )"
+      id="WorkersCompOptions"
+      onChange="policyPeriod.WC7Line.recalculateGoverningClasscode();"
+      save="openForEdit"
+      screen="WC7CoverageOptionsScreen(policyPeriod, openForEdit, jobWizardHelper)"
+      title="displaykey.Web.Policy.Merge.WorkersCompLine.WCOptions"/>
+  </WizardStepSet>
+</PCF>

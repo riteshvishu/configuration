@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<import>
+  <ConditionLookup public-id="z3piq9mdnud1acqn3jp19qel2sb">
+    <Availability>Available</Availability>
+    <ConditionPatternCode>WC7PendingRateChangeEndorsementCond</ConditionPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+  </ConditionLookup>
+</import>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ExclusionPattern
+  coverageCategory="WC7WorkCompLineCategoryExcl"
+  exclusionSubtype="WC7LineScheduleExcl"
+  existence="Electable"
+  lookupTableName="WC7LineExcl"
+  owningEntityType="WC7WorkersCompLine"
+  priority="1220"
+  public-id="WC7DomesticAndAgriculturalWorkersExclEndorsemeExcl"
+  referenceDateByType="PolicyTerm"/>

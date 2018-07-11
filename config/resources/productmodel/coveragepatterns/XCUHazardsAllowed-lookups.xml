@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<import>
+  <ConditionLookup public-id="zmpiielhcek0a0fn8m208l5hsob">
+    <Availability>Available</Availability>
+    <ConditionPatternCode>XCUHazardsAllowed</ConditionPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </ConditionLookup>
+  <CovTermLookup public-id="zanhiakrrlu8lbcjnl5bajqs418">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>XCULocationOperation</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="zohh4kc49fhj583iveotjedtag8">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z1gii6n4r4uj18dqsfg0fl3v2da</CovTermOptCode>
+    <CovTermPatternCode>XCULocationOperation</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zl3hmjec1144ods7suoqavnpd98">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zfoh4ladi01f8ep6lhboki6f4i9</CovTermOptCode>
+    <CovTermPatternCode>XCULocationOperation</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermLookup public-id="zd1jeeuhrd210a54pvlnphlava9">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>XCUHazard</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+</import>

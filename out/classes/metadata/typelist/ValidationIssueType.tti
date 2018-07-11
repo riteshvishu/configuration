@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" desc="Validation issues can be errors or warning" final="true" subpackage="validation" name="ValidationIssueType" platform="true">
+  <typecode code="error" desc="A validation error" name="Error"/>
+  <typecode code="warning" desc="A validation warning" name="Warning"/>
+</typelist>

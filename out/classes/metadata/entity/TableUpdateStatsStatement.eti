@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<entity xmlns="http://guidewire.com/datamodel" admin="true" cacheable="false" desc="Database parameter row." entity="TableUpdateStatsStatement"
+        exportable="false" final="true" extendable="false" instrumentationtable="true" subpackage="upgrader" loadable="false" platform="true" size="small" table="tableupdatestatsstatement" type="keyable">
+  <foreignkey columnName="TableUpdateStatsID" desc="Parent" fkentity="TableUpdateStats" name="TableUpdateStats" nullok="false"/>
+  <typekey default="Table" desc="Type of process running the operation." name="UpdateStatsType" nullok="false" typelist="TableUpdateStatsType"/>
+  <column desc="Object Name" name="ObjectName" nullok="false" type="shorttext"/>
+  <column desc="Update Statistics Statement" name="UpdateStatsStatement" nullok="false" type="longtext"/>
+  <index desc="index for update statistics instrumentation" name="updbn1" unique="false">
+    <indexcol keyposition="1" name="TableUpdateStatsID"/>
+    <indexcol keyposition="2" name="ObjectName"/>
+  </index>
+</entity>

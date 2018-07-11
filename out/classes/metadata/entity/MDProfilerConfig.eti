@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<subtype xmlns="http://guidewire.com/datamodel" desc="Profiler configuration for a message writer" entity="MDProfilerConfig" platform="true" final="true" supertype="ProfilerConfig" subpackage="messaging"/>

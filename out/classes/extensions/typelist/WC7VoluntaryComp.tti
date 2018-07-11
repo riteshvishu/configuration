@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  name="WC7VoluntaryComp"
+  desc="Voluntary compensation type"
+  final="false">
+  <typecode
+    code="Jurisdiction"
+    desc="Jurisdiction Act"
+    name="Jurisdiction Act"
+    priority="1"/>
+  <typecode
+    code="USLH"
+    desc="U.S.L. &amp; H."
+    name="U.S.L. &amp; H."
+    priority="2"/>
+</typelist>

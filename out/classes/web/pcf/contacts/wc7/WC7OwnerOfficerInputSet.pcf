@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <InputSet
+    id="WC7OwnerOfficerInputSet">
+    <Require
+      name="policyOwnerOfficer"
+      type="WC7PolicyOwnerOfficer"/>
+    <Variable
+      initialValue="policyOwnerOfficer.isIncluded()"
+      name="isIncluded"
+      type="boolean"/>
+    <Variable
+      initialValue="isIncluded ? displaykey.Java.ProductModel.Name.Condition : displaykey.Java.ProductModel.Name.Exclusion"
+      name="scheduleLabel"
+      type="String"/>
+    <Variable
+      initialValue="policyOwnerOfficer typeis WC7IncludedOwnerOfficer ? policyOwnerOfficer : null"
+      name="includedOwnerOfficer"
+      type="WC7IncludedOwnerOfficer"/>
+    <Input
+      id="ScheduleParent"
+      label="scheduleLabel"
+      value="getParentClause()"/>
+    <RangeInput
+      align="left"
+      editable="true"
+      id="State"
+      label="displaykey.Web.Policy.WC.InclExcl.State"
+      required="true"
+      value="policyOwnerOfficer.Jurisdiction"
+      valueRange="policyOwnerOfficer.Branch.WC7Line.WC7Jurisdictions.map(\j -&gt; j.Jurisdiction)">
+      <PostOnChange/>
+    </RangeInput>
+    <RangeInput
+      editable="isClassCodeEditable(includedOwnerOfficer)"
+      id="ClassCode"
+      label="displaykey.Web.Policy.WC.InclExcl.ClassCode"
+      required="true"
+      value="includedOwnerOfficer.WC7ClassCode"
+      valueRange="includedOwnerOfficer.WC7WorkersCompLine.getClassCodesForWC7CoveredEmployees(gw.api.util.StateJurisdictionMappingUtil.getStateMappingForJurisdiction(includedOwnerOfficer.Jurisdiction))"
+      visible="isIncluded"/>
+    <TextInput
+      editable="true"
+      id="Ownership"
+      label="displaykey.Web.Policy.WC.InclExcl.Ownership"
+      value="policyOwnerOfficer.WC7OwnershipPct"/>
+    <TypeKeyInput
+      editable="true"
+      filter="Relationship.TF_WC7OWNEROFFICERRELATIONSHIP.TypeKeys.contains(VALUE)"
+      id="Relationship"
+      label="displaykey.Web.Policy.WC.InclExcl.Relationship"
+      value="policyOwnerOfficer.RelationshipTitle"/>
+    <Code><![CDATA[function isClassCodeEditable(anIncludedOwnerOfficer : WC7IncludedOwnerOfficer) : boolean {
+  return (anIncludedOwnerOfficer.Jurisdiction != null) and 
+    (anIncludedOwnerOfficer.WC7WorkersCompLine.getClassCodesForWC7CoveredEmployees(gw.api.util.StateJurisdictionMappingUtil.getStateMappingForJurisdiction(anIncludedOwnerOfficer.Jurisdiction)).HasElements)
+}
+
+function getParentClause() : gw.api.domain.Clause {
+  var clauseValue : gw.api.domain.Clause = null
+  if (policyOwnerOfficer typeis entity.WC7IncludedOwnerOfficer){
+    clauseValue = policyOwnerOfficer.OwnerOfficerCondition
+  } else if (policyOwnerOfficer typeis entity.WC7ExcludedOwnerOfficer){
+    clauseValue = policyOwnerOfficer.OwnerOfficerExclusion
+  }
+  return clauseValue
+}]]></Code>
+  </InputSet>
+</PCF>

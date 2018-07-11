@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7MaritimeCoveredEmployee">
+  <Columns>
+    <Column
+      beanPath="WC7MaritimeCoveredEmployee.Location.LocationNum"
+      name="Location"/>
+    <Column
+      beanPath="WC7MaritimeCoveredEmployee.ClassCode"
+      name="ClassCode"/>
+  </Columns>
+  <DisplayName><![CDATA[return (ClassCode == null) ? 
+  displaykey.EntityName.WCFedCoveredEmployee.ByLocationOnly(Location) :
+  displaykey.EntityName.WCFedCoveredEmployee.ByLocationAndClass(Location, ClassCode)
+]]></DisplayName>
+</Entity>

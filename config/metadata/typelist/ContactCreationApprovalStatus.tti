@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<typelist
+        xmlns="http://guidewire.com/typelists"
+        name="ContactCreationApprovalStatus" platform="true"
+        desc="Approval status of contact for creation"
+        subpackage="contact"
+        tableName="contactapprovalstatus">
+    <typecode
+            name="Pending Approval"
+            desc="Pending Approval"
+            code="pending_approval"/>
+    <typecode
+            name="Approved"
+            desc="Approved"
+            code="approved"/>
+    <typecode
+            name="Rejected"
+            desc="Rejected"
+            code="rejected"/>
+</typelist>

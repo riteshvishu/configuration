@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<delegate xmlns="http://guidewire.com/datamodel" subpackage="admin" name="DecentralizedEntity" platform="true">
+  <fulldescription>
+    A delegate containing the foreign key for decentralized admin entities.
+  </fulldescription>
+  <!--DuckArbitrage - disabling decentralized admin. Uncomment code block to re-enable-->
+  <!--<foreignkey columnName="OrganizationID" desc="FK to organization" fkentity="Organization" name="Organization" nullok="true"/>  -->
+</delegate>

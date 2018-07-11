@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7LineScheduleExclItem"
+  table="wc7lineschedexclitem"
+  desc="WC7 Line level exclusion scheduled item"
+  exportable="true"
+  final="false"
+  loadable="false"
+  type="effdated"
+  platform="false"
+  effDatedBranchType="PolicyPeriod">
+  <implementsEntity
+    name="ScheduledItem"
+    adapter="gw.lob.wc7.schedule.WC7LineScheduleExclItemAdapter"/>
+  <implementsEntity
+    name="WC7ScheduledItem"/>
+  <implementsEntity
+    name="Coverable"
+    adapter="gw.lob.wc7.schedule.WC7LineScheduleExclItemAdapter"/>
+  <foreignkey
+    name="Schedule"
+    fkentity="WC7LineScheduleExcl"
+    nullok="false"/>
+</entity>

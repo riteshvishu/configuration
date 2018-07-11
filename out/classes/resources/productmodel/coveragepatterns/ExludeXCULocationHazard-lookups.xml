@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<import>
+  <CovTermLookup public-id="zqghc9fhgt4789rnotja3lfrm99">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>XCULocOps</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="zu8im33jqprs35lb6filvadt6ta">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zkcheqtc2dkdg0v79f1e6q75v7b</CovTermOptCode>
+    <CovTermPatternCode>XCULocOps</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z5vhur4oncuao4m47nqe4mi3pb9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z21g8bli85e3s7d2taoqe8vrcjb</CovTermOptCode>
+    <CovTermPatternCode>XCULocOps</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermLookup public-id="zp6go1c2a01h3clqqf4oei4j4a8">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>XCUHazardDesc</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermLookup>
+  <ExclusionLookup public-id="zh3jen4s60fss2v1e86hq5u1rm9">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <ExclusionPatternCode>ExludeXCULocationHazard</ExclusionPatternCode>
+    <JobType/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ExclusionLookup>
+</import>

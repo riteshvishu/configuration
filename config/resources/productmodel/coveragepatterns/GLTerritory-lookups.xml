@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<import>
+  <ConditionLookup public-id="z9lgo7043j4ksb9rb59qp66fsv9">
+    <Availability>Available</Availability>
+    <ConditionPatternCode>GLTerritory</ConditionPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </ConditionLookup>
+  <CovTermLookup public-id="ziujqv1g5uol8aej738qomm468a">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>TerritoryDefinition</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="zm8icgalfjrd79ald2hqra39n1a">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zqeg0u1k4k65c91a3jecmhh89ca</CovTermOptCode>
+    <CovTermPatternCode>TerritoryDefinition</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z51gq33a2bjcpd0lhnsmc3seh78">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zklh864fhr7pm5paa3hi1bvgjha</CovTermOptCode>
+    <CovTermPatternCode>TerritoryDefinition</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zmth251kb3q4ccrdcffhf8tajca">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zcjgchhv52fu4cvkrrcdtak4bna</CovTermOptCode>
+    <CovTermPatternCode>TerritoryDefinition</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermLookup public-id="z21jqqbn9d8g91ohusuubqf3fvb">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>NamedCountries</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+</import>

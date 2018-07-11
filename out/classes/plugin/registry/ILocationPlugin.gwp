@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<plugin
+  name="ILocationPlugin">
+  <plugin-gosu
+    gosuclass="gw.plugin.location.impl.LocationPlugin"/>
+</plugin>

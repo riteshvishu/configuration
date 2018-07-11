@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7FedCoveredEmployee"
+  desc="A Workers' Comp Federal Covered Employee"
+  supertype="WC7CoveredEmployeeBase">
+  <implementsInterface
+    iface="gw.lob.wc7.schedule.WC7SpecificScheduledItem"
+    impl="gw.lob.wc7.schedule.WC7FedEmpLiabilityCovScheduledItemImpl"/>
+  <foreignkey
+    name="FedEmpLiabCoverage"
+    desc="The parent coverage for federal covered employees"
+    columnName="WC7FedEmpLiabScheduleCov"
+    fkentity="WC7WorkersCompCov"
+    setterScriptability="doesNotExist"
+    nullok="false"/>
+  <array
+    name="WC7Costs"
+    arrayentity="WC7FELACovEmpCost"
+    cascadeDelete="true"/>
+</subtype>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7LaborContact"
+  abstract="true"
+  supertype="WC7PolicyContactRole">
+    <implementsInterface
+      iface="gw.api.domain.account.Mergeable"
+      impl="gw.lob.wc7.contact.WC7LaborContactMergeableImpl"/>
+    <array
+      name="WC7Details"
+      arrayentity="WC7LaborContactDetail"
+      cascadeDelete="true"/>
+  <fulldescription>A WC7PolicyContactRole for WC Labor containing WC7LaborContactDetails.</fulldescription>
+</subtype>

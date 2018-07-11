@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="The type of employee for the employee leasing plan."
+  name="WC7ProfessionalEmployeeType"
+  tableName="WC7ProfessionalEmpType"
+  final="false">
+  <typecode
+    code="PEO"
+    desc="A firm that provides a service under which client companies can outsource employee management tasks, like workers' compensation."
+    name="Professional Employer Organization (PEO)"/>
+  <typecode
+    code="Client"
+    desc="A company that hires a PEO to provide management tasks for its employee"
+    name="Client Company"/>
+</typelist>

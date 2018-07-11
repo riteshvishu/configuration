@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<entity xmlns="http://guidewire.com/datamodel" subpackage="archiving" entity="ArchiveFailureDetails" platform="true" table="archivefailuredetails" type="keyable"
+        extendable="false" final="true" loadable="false">
+  <column name="ArchiveFailureDetails" type="text" desc="Full details of archive failure" nullok="false"/>
+</entity>

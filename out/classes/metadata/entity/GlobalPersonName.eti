@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<delegate xmlns="http://guidewire.com/datamodel" extendable="true" name="GlobalPersonName" platform="true" subpackage="contact">
+  <fulldescription>
+    This is a shared delegate/interface that allows multiple entities to share definitions of removable globalization fields associated with Persons.
+  </fulldescription>
+</delegate>

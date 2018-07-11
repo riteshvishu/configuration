@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><subtype xmlns="http://guidewire.com/datamodel" entity="WC7PolicyOwnerOfficer" supertype="WC7PolicyContactRole">
+  <implementsInterface iface="gw.api.domain.account.AccountSyncable" impl="gw.lob.wc7.contact.WC7PolicyOwnerOfficerAccountSyncableImpl"/>
+  <column desc="Ownership percentage" name="WC7OwnershipPct" nullok="true" type="integer"/>
+  <typekey columnName="WC7RelationshipTitleInternal" desc="The relationship" getterScriptability="doesNotExist" name="RelationshipTitleInternal" nullok="true" setterScriptability="doesNotExist" typefilter="WC7OwnerOfficerRelationship" typelist="Relationship"/>
+  <typekey columnName="WC7Jurisdiction" desc="The jurisdiction in which this contact is defined" name="Jurisdiction" nullok="true" typelist="Jurisdiction"/>
+  <fulldescription>
+    A person who has a meaningful equity/ownership interest in an insured
+    business entity.
+  </fulldescription>
+</subtype>

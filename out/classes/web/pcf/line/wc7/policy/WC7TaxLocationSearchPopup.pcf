@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <Popup
+    canEdit="false"
+    countsAsWork="false"
+    id="WC7TaxLocationSearchPopup"
+    returnType="TaxLocation"
+    title="displaykey.Web.TaxLocationSearch.PageTitle">
+    <LocationEntryPoint
+      signature="WC7TaxLocationSearchPopup(policyPeriod : PolicyPeriod, state : Jurisdiction)"/>
+    <Variable
+      name="policyPeriod"
+      type="PolicyPeriod"/>
+    <Variable
+      name="state"
+      type="Jurisdiction"/>
+    <Screen
+      editable="true"
+      id="TaxLocationSearchScreen">
+      <SearchPanel
+        clearInvisibleInputs="true"
+        criteriaName="searchCriteria"
+        resultsName="searchResults"
+        search="TaxLocation.executeSearch(searchCriteria)"
+        searchCriteria="newTaxLocationSearchCriteria(state)"
+        searchResultsType="TaxLocation[]">
+        <PanelRef
+          def="WC7TaxLocationSearchDV(searchCriteria)"
+          editable="true"/>
+        <PanelRef
+          def="WC7TaxLocationSearchResultsLV(searchResults)">
+          <TitleBar
+            appendListViewPaging="true"
+            title="displaykey.Web.Search.Results"/>
+          <Toolbar/>
+        </PanelRef>
+      </SearchPanel>
+    </Screen>
+    <Code><![CDATA[function newTaxLocationSearchCriteria(_state: Jurisdiction): TaxLocationSearchCriteria {
+        var criteria = new TaxLocationSearchCriteria()
+        criteria.State = _state
+        criteria.EffectiveOnDate = policyPeriod.PeriodStart
+        return criteria
+      }]]></Code>
+  </Popup>
+</PCF>

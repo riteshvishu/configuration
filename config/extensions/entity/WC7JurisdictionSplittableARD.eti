@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<entity xmlns="http://guidewire.com/datamodel" entity="WC7JurisdictionSplittableARD" exportable="true" ignoreForEvents="true" loadable="false" platform="false" readOnly="true" table="wc7jurisdictionspliteARD" type="keyable">
+  <fulldescription>
+    Jurisdiction with splittableARD flag.
+  </fulldescription>
+  <typekey
+    name="Jurisdiction"
+    typelist="Jurisdiction"
+    desc="The jurisdiction for which this SplittableARD flag is defined."
+    nullok="true"/>
+  <implementsEntity
+    name="SimpleEffDated"/>
+  <column
+    name="SplittableARD"
+    type="bit"
+    desc="Defines whether the Jurisdiction is splittableARD."
+    default="true"
+    nullok="true"/>
+</entity>

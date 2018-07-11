@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" desc="Container for jurisdiction-level elements: coverages, modifiers, etc." displayName="Jurisdiction" effDatedBranchType="PolicyPeriod" entity="WC7Jurisdiction" exportable="true" extendable="true" loadable="false" platform="false" table="wc7jurisdiction" type="effdated">
+  <implementsInterface iface="gw.api.copier.EffDatedCopyable" impl="gw.lob.wc7.WC7JurisdictionCopier"/>
+  <implementsInterface iface="gw.api.logicalmatch.EffDatedLogicalMatcher" impl="gw.lob.wc7.WC7JurisdictionMatcher"/>
+  <implementsEntity adapter="gw.lob.wc7.WC7JurisdictionCoverableAdapter" name="Coverable"/>
+  <implementsEntity adapter="gw.lob.wc7.WC7JurisdictionModifiableAdapter" name="Modifiable"/>
+  <column desc="Anniversary date for this jurisdiction" getterScriptability="doesNotExist" name="AnniversaryDateInternal" nullok="true" setterScriptability="doesNotExist" type="datetime"/>
+  <column desc="Internal field for storing the reference date of this entity on bound policy periods." getterScriptability="doesNotExist" name="ReferenceDateInternal" nullok="true" setterScriptability="doesNotExist" type="datetime"/>
+  <typekey desc="The jurisdiction that is covered" name="Jurisdiction" nullok="true" typelist="Jurisdiction"/>
+  <foreignkey fkentity="WC7WorkersCompLine" name="WCLine" nullok="true"/>
+  <array arrayentity="WC7JurisdictionCost" cascadeDelete="true" name="Costs"/>
+  <array arrayentity="WC7JurisdictionCov" cascadeDelete="true" desc="All Coverages on this Jurisdiction" name="Coverages" owner="false" setterScriptability="all"/>
+  <array arrayentity="WC7RatingPeriodStartDate" desc="Sub-periods within which basis amounts of basis-scalable exposures cannot change." name="WC7RatingPeriodStartDates" owner="true"/>
+  <array arrayentity="WC7PremiumDiscount" desc="Premium discount rate calculated based on last promoted job. " name="WC7PremiumDiscounts" owner="true"/>
+  <array arrayentity="WC7Modifier" cascadeDelete="true" desc="Rating info for the jurisdiction." name="WC7Modifiers" owner="false"/>
+  <checkconstraint desc="Both effective date and expiration date should always be set to null (indicating that the entity spans the whole period)." predicate="EffectiveDate IS NULL AND ExpirationDate IS NULL"/>
+</entity>

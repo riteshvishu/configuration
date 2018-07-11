@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <!-- Page for showing the details of a particular Group. For example, when the user performs a
+    Group search and then selects one of the Groups in the search result, the app navigates to
+    this page. -->
+  <Page
+    beforeCommit="gw.admin.wc7.WC7AffinityGroupValidation.validate(wc7AffinityGroup)"
+    canEdit="true"
+    canVisit="true"
+    id="WC7AffinityGroupDetailPage"
+    parent="Admin(wc7AffinityGroup)"
+    showUpLink="true"
+    title="displaykey.Web.Admin.WC7AffinityGroupDetail(wc7AffinityGroup.DisplayName)">
+    <LocationEntryPoint
+      signature="WC7AffinityGroupDetailPage(wc7AffinityGroup : WC7AffinityGroup)"/>
+    <Variable
+      name="wc7AffinityGroup"
+      type="WC7AffinityGroup"/>
+    <ScreenRef
+      def="WC7AffinityGroupDetailScreen(wc7AffinityGroup)"/>
+  </Page>
+</PCF>

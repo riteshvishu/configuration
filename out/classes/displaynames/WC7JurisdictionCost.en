@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7JurisdictionCost">
+  <Columns>
+    <Column
+      beanPath="WC7JurisdictionCost.JurisdictionCostType"
+      name="Type"/>
+  </Columns>
+  <DisplayName><![CDATA[
+Type
+  ]]></DisplayName>
+</Entity>

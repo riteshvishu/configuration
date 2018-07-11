@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <PanelSet
+    id="PolicyLineSummaryPanelSet"
+    mode="WC7Line">
+    <Require
+      name="line"
+      type="PolicyLine"/>
+    <Require
+      name="jobWizardHelper"
+      type="web.job.JobWizardHelper"/>
+    <Variable
+      initialValue="line.Branch"
+      name="period"/>
+    <Variable
+      initialValue="line as WC7WorkersCompLine"
+      name="wcLine"/>
+    <DetailViewPanel>
+      <Variable
+        initialValue="wcLine.Pattern.getCoverageCategory(&quot;WC7WorkCompLineCategory&quot;).coveragePatternsForEntity(WC7WorkersCompLine).where(\ c -&gt; wcLine.isCoverageSelectedOrAvailable(c))"
+        name="wcLineCoveragePatterns"
+        recalculateOnRefresh="true"/>
+      <InputColumn>
+        <Input
+          boldLabel="true"
+          id="CoveredStates"
+          label="displaykey.Web.Policy.WC.CoveredStates"
+          value="wcLine.WC7Jurisdictions*.Jurisdiction.join(&quot;,&quot;)"
+          visible="wcLine.WC7Jurisdictions.Count &gt; 15"/>
+        <Input
+          boldLabel="true"
+          id="GoverningClass"
+          label="displaykey.Web.Policy.WC.GoverningClass"
+          value="wcLine.WC7GoverningClass.Code"/>
+        <Label
+          label="displaykey.Web.Policy.BOP.Quote.Coverages.Line.Title"/>
+        <InputIterator
+          elementName="linecov"
+          id="lineCovIterator"
+          value="wcLine.CoveragesFromCoverable">
+          <IteratorSort
+            sortBy="linecov.Pattern.Priority"
+            sortOrder="1"/>
+          <IteratorSort
+            sortBy="linecov.DisplayName"
+            sortOrder="2"/>
+          <InputSetRef
+            def="CoverageInputSet(linecov.Pattern, wcLine, false)"
+            mode="linecov.PatternCode"/>
+        </InputIterator>
+        <Label
+          label="displaykey.Web.Policy.Coverages.Exclusions"
+          visible="not wcLine.WC7LineExclusions.IsEmpty"/>
+        <InputIterator
+          elementName="lineexcl"
+          id="lineExclIterator"
+          value="wcLine.ExclusionsFromCoverable">
+          <IteratorSort
+            sortBy="lineexcl.Pattern.Priority"
+            sortOrder="1"/>
+          <IteratorSort
+            sortBy="lineexcl.DisplayName"
+            sortOrder="2"/>
+          <InputSetRef
+            def="CoverageInputSet(lineexcl.Pattern, wcLine, false)"
+            mode="lineexcl.PatternCode"/>
+        </InputIterator>
+        <Label
+          label="displaykey.Web.Policy.Coverages.PolicyConditions"
+          visible="not wcLine.WC7LineConditions.IsEmpty"/>
+        <InputIterator
+          elementName="linecond"
+          id="lineCondIterator"
+          value="wcLine.ConditionsFromCoverable">
+          <IteratorSort
+            sortBy="linecond.Pattern.Priority"
+            sortOrder="1"/>
+          <IteratorSort
+            sortBy="linecond.DisplayName"
+            sortOrder="2"/>
+          <InputSetRef
+            def="CoverageInputSet(linecond.Pattern, wcLine, false)"
+            mode="linecond.PatternCode"/>
+        </InputIterator>
+      </InputColumn>
+    </DetailViewPanel>
+    <PanelRef>
+      <Toolbar/>
+      <ListDetailPanel
+        selectionName="selectedJurisdiction"
+        selectionType="WC7Jurisdiction">
+        <ListViewPanel
+          available="selectedJurisdiction != null"
+          id="PolicyLinePerStateConfig_LV"
+          visible="true">
+          <RowIterator
+            editable="false"
+            elementName="covJuris"
+            value="wcLine.WC7Jurisdictions">
+            <IteratorSort
+              sortBy="covJuris.Jurisdiction.DisplayName"
+              sortOrder="1"/>
+            <Row>
+              <TextCell
+                id="StateName"
+                label="displaykey.Web.Policy.LocationContainer.Location.State"
+                numCols="16"
+                value="covJuris.Jurisdiction"/>
+            </Row>
+          </RowIterator>
+        </ListViewPanel>
+        <CardViewPanel>
+          <Card
+            id="GeneralInfoCard"
+            title="displaykey.Web.Policy.PolicyLine.PerState.Panel.GeneralInfo.Title">
+            <PanelRef
+              def="WC7PolicyLinePerStateConfigDV(wcLine, selectedJurisdiction, false)"/>
+            <PanelRef>
+              <TitleBar
+                title="displaykey.Web.Policy.WC.CoveredEmployees"/>
+              <DetailViewPanel>
+                <InputColumn>
+                  <InputSetRef
+                    def="WC7ClassesInputSet(selectedJurisdiction, wcLine)"/>
+                </InputColumn>
+              </DetailViewPanel>
+            </PanelRef>
+          </Card>
+        </CardViewPanel>
+      </ListDetailPanel>
+    </PanelRef>
+    <!-- options list -->
+    <PanelRef
+      def="WC7OptionsPanelSet(period, false)"/>
+    <Code><![CDATA[function getOfficialIDs(covJuris : entity.WC7Jurisdiction) : entity.OfficialID[] {
+  var officialIDs = period.PrimaryNamedInsured.AccountContactRole.AccountContact.Contact.OfficialIDs
+        .where( \ o -> o.State == covJuris.Jurisdiction)
+  return officialIDs
+}
+
+function officialIDOutputConverter(VALUE : entity.OfficialID[]) : String {
+  if (VALUE == null) {return ""}
+  var officialIDValues = VALUE.map(\ id -> id.getOfficialIDValue()!=null ? id.getOfficialIDValue() : "")
+  return officialIDValues.where(\ val -> val!=null).join(",")
+}]]></Code>
+  </PanelSet>
+</PCF>

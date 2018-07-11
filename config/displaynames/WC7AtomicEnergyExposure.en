@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7AtomicEnergyExposure">
+  <Columns>
+    <Column
+      beanPath="WC7AtomicEnergyExposure.Location.LocationNum"
+      name="Location"/>
+    <Column
+      beanPath="WC7AtomicEnergyExposure.ClassCode.Code"
+      name="ClassCode"/>
+  </Columns>
+  <DisplayName><![CDATA[
+return (ClassCode == null) ? 
+  displaykey.EntityName.WC7AtomicEnergyExposure.ByLocationOnly(Location) :
+  displaykey.EntityName.WC7AtomicEnergyExposure.ByLocationAndClass(Location, ClassCode)]]></DisplayName>
+</Entity>

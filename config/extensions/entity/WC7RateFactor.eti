@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7RateFactor"
+  type="effdated"
+  desc="A rate factor is a risk characteristic and its associated numeric value which might have an impact on premium. As used here rate factors are applied to base premium rather than rates. A common example of Rate Factors are the components of IRPM (individual risk premium modifier)."
+  effDatedBranchType="PolicyPeriod"
+  exportable="true"
+  extendable="true"
+  loadable="false"
+  table="wc7ratefactor">
+  <implementsEntity
+    name="RateFactor"
+    adapter="gw.lob.wc7.WC7RateFactorAdapter"/>
+  <implementsInterface
+    iface="gw.api.copier.EffDatedCopyable"
+    impl="gw.api.copier.EffDatedCopier"/>
+  <implementsInterface
+    iface="gw.api.logicalmatch.EffDatedLogicalMatcher"
+    impl="gw.lob.wc7.WC7RateFactorMatcher"/>
+  <foreignkey
+    name="WC7Modifier"
+    fkentity="WC7Modifier"
+    nullok="false"/>
+</entity>

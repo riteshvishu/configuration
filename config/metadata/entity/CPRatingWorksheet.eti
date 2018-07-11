@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<entity
+    xmlns="http://guidewire.com/datamodel"
+    entity="CPRatingWorksheet"
+    type="effdated"
+    desc="A commercial property rating worksheet"
+    abstract="false"
+    effDatedBranchType="PolicyPeriod"
+    exportable="true"
+    extendable="true"
+    final="false"
+    platform="false"
+    loadable="false"
+  subpackage="lob.cp"
+    table="cpworksheet">
+  <implementsEntity
+    name="RatingWorksheet" />
+  <foreignkey
+    name="CPCost"
+    fkentity="CPCost"
+    nullok="false"/>
+</entity>

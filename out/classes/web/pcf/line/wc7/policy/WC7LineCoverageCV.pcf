@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <CardViewPanel
+    id="WC7LineCoverageCV">
+    <Require
+      name="wcLine"
+      type="WC7WorkersCompLine"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <Variable
+      initialValue="wcLine.Pattern.getCoverageCategory(&quot;WC7WorkCompLineCategoryCond&quot;).availableConditionPatternsForCoverable(wcLine).partition(\ c -&gt; gw.lob.wc7.WC7EmployeeLeasingClauseIdentifier.isEmployeeLeasingClause(c))"
+      name="conditionPatternsEmployeeLeasingPartition"
+      recalculateOnRefresh="true"/>
+    <Variable
+      initialValue="wcLine.Pattern.getCoverageCategory(&quot;WC7WorkCompLineCategoryExcl&quot;).availableexclusionPatternsForCoverable(wcLine).partition(\ c -&gt; gw.lob.wc7.WC7EmployeeLeasingClauseIdentifier.isEmployeeLeasingClause(c))"
+      name="exclusionPatternsEmployeeLeasingPartition"
+      recalculateOnRefresh="true"/>
+    <Card
+      id="WC7Coverages"
+      title="displaykey.Web.Policy.WC7.Coverages">
+      <PanelRef>
+        <Toolbar>
+          <ToolbarButton
+            action="updateAllBasis()"
+            hideIfReadOnly="true"
+            id="SplitBases"
+            label="displaykey.Web.Policy.WC.SplitBases"/>
+        </Toolbar>
+        <DetailViewPanel
+          id="WC7PolicyCoveragesDV">
+          <Variable
+            initialValue="wcLine.Pattern.getCoverageCategory(&quot;WC7WorkCompLineCategory&quot;).availableCoveragePatternsForCoverable(wcLine)"
+            name="wc7GroupCoveragePatterns"
+            recalculateOnRefresh="true"/>
+          <InputColumn>
+            <Label
+              label="displaykey.Web.Policy.WC.WCCoveredStates"/>
+            <Input
+              id="CoveredStates"
+              label="displaykey.Web.Policy.WC.CoveredStates"
+              value="wcLine.CoveredStates.join(&quot;,&quot;)"/>
+            <InputIterator
+              elementName="coveragePattern"
+              forceRefreshDespiteChangedEntries="true"
+              id="WC7CoverageGroupIterator"
+              value="wc7GroupCoveragePatterns">
+              <IteratorSort
+                sortBy="coveragePattern.Priority"
+                sortOrder="1"/>
+              <InputSetRef
+                def="CoverageInputSet(coveragePattern, wcLine, openForEdit)"
+                mode="coveragePattern.Code"/>
+            </InputIterator>
+          </InputColumn>
+        </DetailViewPanel>
+      </PanelRef>
+    </Card>
+    <Card
+      id="WC7Conditions"
+      title="displaykey.Web.Policy.WC7.Conditions">
+      <PanelRef>
+        <Toolbar>
+          <ToolbarButton
+            action="updateAllBasis()"
+            hideIfReadOnly="true"
+            id="SplitBases"
+            label="displaykey.Web.Policy.WC.SplitBases"/>
+        </Toolbar>
+        <DetailViewPanel
+          id="WC7ConditionsDV">
+          <Variable
+            initialValue="conditionPatternsEmployeeLeasingPartition.get(false)"
+            name="wc7GroupConditionPatterns"
+            recalculateOnRefresh="true"/>
+          <InputColumn>
+            <Label
+              label="displaykey.Web.Policy.Coverages.PolicyConditions"/>
+            <InputIterator
+              elementName="conditionPattern"
+              forceRefreshDespiteChangedEntries="true"
+              id="WC7ConditionGroupIterator"
+              value="wc7GroupConditionPatterns">
+              <IteratorSort
+                sortBy="conditionPattern.Priority"
+                sortOrder="1"/>
+              <InputSetRef
+                def="CoverageInputSet(conditionPattern, wcLine, openForEdit)"
+                mode="conditionPattern.Code"/>
+            </InputIterator>
+          </InputColumn>
+        </DetailViewPanel>
+      </PanelRef>
+    </Card>
+    <Card
+      id="WC7Exclusions"
+      title="displaykey.Web.Policy.WC7.Exclusions">
+      <DetailViewPanel
+        id="WC7ExclusionsDV">
+        <Variable
+          initialValue="exclusionPatternsEmployeeLeasingPartition.get(false)"
+          name="wc7GroupExclusionPatterns"
+          recalculateOnRefresh="true"/>
+        <InputColumn>
+          <Label
+            label="displaykey.Web.Policy.Coverages.Exclusions"/>
+          <InputIterator
+            elementName="exclusionPattern"
+            forceRefreshDespiteChangedEntries="true"
+            id="WC7ExclusionGroupIterator"
+            value="wc7GroupExclusionPatterns">
+            <IteratorSort
+              sortBy="exclusionPattern.Priority"
+              sortOrder="1"/>
+            <InputSetRef
+              def="CoverageInputSet(exclusionPattern, wcLine, openForEdit)"
+              mode="exclusionPattern.Code"/>
+          </InputIterator>
+        </InputColumn>
+      </DetailViewPanel>
+    </Card>
+    <Card
+      id="WC7EmployeeLeasing"
+      title="displaykey.Web.Policy.WC7.EmployeeLeasing">
+      <PanelRef>
+        <DetailViewPanel
+          id="WC7EmployeeLeasingDV">
+          <Variable
+            initialValue="conditionPatternsEmployeeLeasingPartition.get(true)"
+            name="employeeLeasingConditionPatterns"
+            recalculateOnRefresh="true"/>
+          <Variable
+            initialValue="exclusionPatternsEmployeeLeasingPartition.get(true)"
+            name="employeeLeasingExclusionPatterns"
+            recalculateOnRefresh="true"/>
+          <InputColumn>
+            <Input
+              boldLabel="true"
+              editable="wcLine.Branch.EditEffectiveDate == wcLine.Branch.PeriodStart"
+              id="ProfessionalEmployeeType"
+              label="displaykey.Web.Policy.WC7.ProfessionalEmployeeType"
+              required="false"
+              value="wcLine.EmployeeLeasingPlan.ProfessionalEmployeeType">
+              <PostOnChange/>
+            </Input>
+            <Input
+              boldLabel="true"
+              editable="wcLine.Branch.EditEffectiveDate == wcLine.Branch.PeriodStart"
+              id="PolicyType"
+              label="displaykey.Web.Policy.WC7.PolicyType"
+              required="false"
+              value="wcLine.EmployeeLeasingPlan.PolicyType">
+              <PostOnChange/>
+            </Input>
+            <Label
+              label="displaykey.Web.Policy.WC7.Conditions"
+              visible="employeeLeasingConditionPatterns.HasElements"/>
+            <InputIterator
+              elementName="conditionPattern"
+              forceRefreshDespiteChangedEntries="true"
+              id="WC7ConditionGroupIterator"
+              value="employeeLeasingConditionPatterns">
+              <IteratorSort
+                sortBy="conditionPattern.Priority"
+                sortOrder="1"/>
+              <InputSetRef
+                def="CoverageInputSet(conditionPattern, wcLine, openForEdit)"
+                mode="conditionPattern.Code"/>
+            </InputIterator>
+            <Label
+              label="displaykey.Web.Policy.WC7.Exclusions"
+              visible="employeeLeasingExclusionPatterns.HasElements"/>
+            <InputIterator
+              elementName="exclusionPattern"
+              forceRefreshDespiteChangedEntries="true"
+              id="WC7ExclusionGroupIterator"
+              value="employeeLeasingExclusionPatterns">
+              <IteratorSort
+                sortBy="exclusionPattern.Priority"
+                sortOrder="1"/>
+              <InputSetRef
+                def="CoverageInputSet(exclusionPattern, wcLine, openForEdit)"
+                mode="exclusionPattern.Code"/>
+            </InputIterator>
+          </InputColumn>
+        </DetailViewPanel>
+      </PanelRef>
+    </Card>
+    <Code><![CDATA[uses gw.api.util.StateJurisdictionMappingUtil
+
+function dummyCreateAndAdd() : WC7Jurisdiction {
+  return null
+}
+
+function updateAllBasis(){
+  if((CurrentLocation as api.Wizard).saveDraft()){
+    wcLine.updateWCExposuresAndModifiers()
+  }
+}
+      
+property get JurisdictionsThatCanBeAdded(): Jurisdiction[] {
+  var existingJurisdictions = wcLine.WC7Jurisdictions.map(\j -> j.Jurisdiction).toSet()
+  var possibleJurisdicitons = wcLine.Branch.LocationStates.toSet()
+  possibleJurisdicitons.removeAll(existingJurisdictions)
+  return possibleJurisdicitons.toTypedArray()
+}
+
+function getOfficalIDsForJurisdictionThatMatchPNIContactsOfficialIDs(covJuris : WC7Jurisdiction) : entity.OfficialID[] {
+  return wcLine.Branch.PrimaryNamedInsured.AccountContactRole.AccountContact.Contact.OfficialIDs
+        .where(\ officialID ->
+          officialID.State == covJuris.Jurisdiction)
+}
+
+function outputConverterForOfficialIDs(VALUE : OfficialID[]) : String {
+  var str = ""
+  var first = true
+  for (var Item in VALUE) {
+    var idValue = Item.getOfficialIDValue()
+    if(idValue != null) {
+      if(!first) {
+        str = str + ", "
+      }
+      first = false
+      str = str + idValue
+    }
+  }
+  return str
+}]]></Code>
+  </CardViewPanel>
+</PCF>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" desc="Workers' comp class codes.  Premium calculations are driven by class codes and both premium and losses are reported by class codes to rating bureaus." entity="WC7ClassCode" exportable="true" extendable="true" ignoreForEvents="true" loadable="false" platform="false" readOnly="true" table="wc7classcode" type="retireable">
+  <implementsEntity name="SimpleEffDated"/>
+  <column desc="The Classification of the code" name="Classification" nullok="true" type="mediumtext">
+    <localization nullok="true" tableName="wc7clcode_class"/>
+  </column>
+  <column desc="The Class Code for a line of insurance" name="Code" nullok="false" type="shorttext"/>
+  <column desc="Short description for the class code" name="ShortDesc" nullok="false" type="shorttext">
+    <localization nullok="true" tableName="wc7clcode_desc"/>
+  </column>
+  <typekey desc="The jurisdiction for which this class code value is allowed." name="Jurisdiction" nullok="true" typelist="Jurisdiction"/>
+  <typekey desc="Type of this classcode" name="ClassCodeType" nullok="true" typelist="WC7ClassCodeType"/>
+  <column default="false" desc="Specify whether class code is of construction type as well" name="ConstructionType" nullok="true" type="bit"/>
+  <column default="false" desc="Specify whether class code is of disease type as well" name="DiseaseType" nullok="true" type="bit"/>
+  <column default="false" desc="Specify whether class code is of coal mine disease type as well" name="CoalMineType" nullok="true" type="bit"/>
+  <column default="false" desc="Specify whether class code is A Rated" name="ARatedType" nullok="true" type="bit"/>
+  <typekey desc="Type of program" name="ProgramType" nullok="true" typelist="WC7ClassCodeProgramType"/>
+  <foreignkey columnName="BasisID" desc="Rating basis for this class code." fkentity="ClassCodeBasis" name="Basis" nullok="true"/>
+</entity>

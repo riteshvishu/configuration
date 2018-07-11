@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Page
+    afterEnter="gw.api.web.PebblesUtil.addWebMessages(CurrentLocation, policyPeriod.PolicyFileMessages)"
+    canVisit="perm.PolicyPeriod.view(policyPeriod) and perm.System.pfilebilling"
+    countsAsWork="false"
+    id="PolicyFile_Billing"
+    onResume="billingSummary = gw.web.policy.PolicyBillingUIHelper.retrieveAndValidateBillingSummary(billingPlugin, policyPeriod, sortedTermNumbers[termNumberIndex], sortedTermNumbers.Count)"
+    title="displaykey.Web.PolicyFile.Billing">
+    <LocationEntryPoint
+      signature="PolicyFile_Billing(policyPeriod : PolicyPeriod, asOfDate : DateTime)"/>
+    <Variable
+      name="policyPeriod"
+      type="PolicyPeriod"/>
+    <Variable
+      name="asOfDate"
+      type="DateTime"/>
+    <Variable
+      initialValue="gw.plugin.Plugins.get( gw.plugin.billing.IBillingSummaryPlugin )"
+      name="billingPlugin"/>
+    <Variable
+      initialValue="gw.web.policy.PolicyBillingUIHelper.getSortedTermNumbers(policyPeriod.Policy)"
+      name="sortedTermNumbers"/>
+    <Variable
+      initialValue="gw.web.policy.PolicyBillingUIHelper.getTermNumberIndex(policyPeriod, sortedTermNumbers)"
+      name="termNumberIndex"/>
+    <Variable
+      initialValue="gw.web.policy.PolicyBillingUIHelper.retrieveAndValidateBillingSummary(billingPlugin, policyPeriod, sortedTermNumbers[termNumberIndex], sortedTermNumbers.Count)"
+      name="billingSummary"/>
+    <ScreenRef
+      def="Policy_BillingScreen(policyPeriod, billingPlugin, sortedTermNumbers, termNumberIndex, billingSummary)"/>
+  </Page>
+</PCF>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<import xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.guidewire.com/cc/import/cc_import.xsd">
+  <QuestionLookup public-id="zrijeuj65nbj4a1rsmulscvkaq8">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <QuestionCode>WC7DeepFry</QuestionCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </QuestionLookup>
+  <QuestionLookup public-id="z74gsiouf1jbdf5smcpejl11pb8">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <QuestionCode>WC7FuelsAndExplosives</QuestionCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </QuestionLookup>
+  <QuestionLookup public-id="z1dgg8pv5dglqas72ujubisml4e">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <QuestionCode>WC7MotorVehOperation</QuestionCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </QuestionLookup>
+  <QuestionLookup public-id="z1dgg8pv5dglqas72ujubisml3d">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <QuestionCode>WC7Operates24Hours</QuestionCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </QuestionLookup>
+  <QuestionLookup public-id="z1dgg8pv5dglqas72ujubisml2c">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <QuestionCode>WC7TotalAnnualPayroll</QuestionCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </QuestionLookup>
+  <QuestionLookup public-id="z1dgg8pv5dglqas72ujubisml1b">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <QuestionCode>WC7Unionized</QuestionCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </QuestionLookup>
+  <QuestionSetLookup public-id="z1dgg8pv5dglqas72ujubisml0a">
+    <Availability>Available</Availability>
+    <JobType>Submission</JobType>
+    <QuestionSetCode>WC7WorkersCompPreQualA</QuestionSetCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+  </QuestionSetLookup>
+  <QuestionSetLookup public-id="zg8jqfgrmmv4v2j0kge76sjskg9">
+    <Availability>Available</Availability>
+    <JobType>Rewrite</JobType>
+    <QuestionSetCode>WC7WorkersCompPreQualA</QuestionSetCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+  </QuestionSetLookup>
+</import>

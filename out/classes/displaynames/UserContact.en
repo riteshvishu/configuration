@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Entity
+  name="UserContact">
+  <Columns>
+    <Column
+      beanPath="UserContact.LastName"
+      name="LastName"
+      sortBeanPath="UserContact.LastNameDenorm"
+      sortOrder="1"/>
+    <Column
+      beanPath="UserContact.FirstName"
+      name="FirstName"
+      sortBeanPath="UserContact.FirstNameDenorm"
+      sortOrder="2"/>
+    <Column
+      beanPath="UserContact.Suffix"
+      name="Suffix"
+      sortOrder="3"/>
+  </Columns>
+  <DisplayName><![CDATA[
+var sb = new java.lang.StringBuffer()
+if (FirstName.HasContent) {
+  sb.append(FirstName).append(" ")
+}
+if (LastName.HasContent) {
+  sb.append(LastName).append(" ")
+}
+if (Suffix != null) {
+  sb.append(Suffix)
+}
+return sb.toString()
+    
+  ]]></DisplayName>
+</Entity>

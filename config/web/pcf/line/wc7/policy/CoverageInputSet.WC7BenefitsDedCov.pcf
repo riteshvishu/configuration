@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <InputSet
+    id="CoverageInputSet"
+    mode="WC7BenefitsDedCov">
+    <Require
+      name="coveragePattern"
+      type="gw.api.productmodel.ClausePattern"/>
+    <Require
+      name="coverable"
+      type="Coverable"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <Variable
+      initialValue="coverable as WC7Jurisdiction"
+      name="wc7Jurisdiction"/>
+    <Variable
+      initialValue="wc7Jurisdiction.RatingPeriods"
+      name="ratingPeriods"
+      recalculateOnRefresh="true"/>
+    <HiddenInput
+      id="CovPatternDisplayName"
+      value="coveragePattern.DisplayName"/>
+    <InputIterator
+      elementName="ratingPeriod"
+      id="ratingperiod"
+      value="ratingPeriods.toTypedArray()">
+      <!-- Iterator for split coverages in subperiod 1 -->
+      <Label
+        label="displaykey.Web.Policy.WC.Period(ratingPeriod.Number)"
+        visible="ratingPeriods.Count &gt; 1"/>
+      <InputSet
+        id="WC7SplitableInputSet"
+        visible="wc7Jurisdiction.isCoverageConditionOrExclusionAvailable(coveragePattern )">
+        <Variable
+          initialValue="new gw.pcf.WC7CoverageInputSetUIHelper()"
+          name="coverageInputSetHelper"/>
+        <Variable
+          initialValue="coverageInputSetHelper.getBenefitsDeductibleCovInRatingPeriod(ratingPeriod)"
+          name="benefitsDedCov"/>
+        <InputGroup
+          allowToggle="true"
+          childrenVisible="benefitsDedCov != null and wc7Jurisdiction.getSlice(ratingPeriod.Start).WC7BenefitsDedCovExists"
+          id="CovPatternInputGroup"
+          label="coveragePattern.DisplayName"
+          onToggle="benefitsDedCov = coverageInputSetHelper.setBenefitsDedCovOnToggle(VALUE, ratingPeriod)">
+          <CovTermPackageInput
+            editable="gw.web.productmodel.ChoiceCovTermUtil.isEditable(benefitsDedCov.WC7DeductibleTerm)"
+            id="WC7DeductibleTermInput"
+            label="benefitsDedCov.WC7DeductibleTerm.DisplayName"
+            required="benefitsDedCov.WC7DeductibleTerm.Pattern.Required"
+            value="benefitsDedCov.WC7DeductibleTerm"
+            visible="wc7Jurisdiction.getSlice(ratingPeriod.Start).isCovTermAvailable(&quot;WC7Deductible&quot;)"/>
+        </InputGroup>
+      </InputSet>
+    </InputIterator>
+    <InputDivider
+      visible="openForEdit or coverable.getCoverageConditionOrExclusion(coveragePattern) != null"/>
+  </InputSet>
+</PCF>

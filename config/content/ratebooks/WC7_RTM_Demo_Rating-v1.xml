@@ -1,0 +1,757 @@
+<?xml version="1.0"?>
+<import>
+  <RateBook public-id="pc:5000000004">
+    <BookCode>WC7_RTM_Demo_Rating</BookCode>
+    <BookDesc>Sample rate book</BookDesc>
+    <BookDesc_L10N_ARRAY/>
+    <BookEdition>1</BookEdition>
+    <BookJurisdiction/>
+    <BookName>WC7 RTM Demo Rating</BookName>
+    <BookName_L10N_ARRAY/>
+    <BookOffering/>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <ExpirationDate/>
+    <LastStatusChangeDate>2000-01-01 00:00:00.000</LastStatusChangeDate>
+    <PolicyLine>WC7Line</PolicyLine>
+    <RateBookCalcRoutines/>
+    <RateTables>
+      <RateTable public-id="pc:5000000036">
+        <Definition public-id="pc:5000000023"/>
+        <QueryStrategy>Memory</QueryStrategy>
+        <RateBook public-id="pc:5000000004"/>
+        <RefTable/>
+      </RateTable>
+      <RateTable public-id="pc:5000000037">
+        <Definition public-id="pc:5000000024"/>
+        <QueryStrategy>Memory</QueryStrategy>
+        <RateBook public-id="pc:5000000004"/>
+        <RefTable/>
+      </RateTable>
+      <RateTable public-id="pc:5000000038">
+        <Definition public-id="pc:5000000025"/>
+        <QueryStrategy>Memory</QueryStrategy>
+        <RateBook public-id="pc:5000000004"/>
+        <RefTable/>
+      </RateTable>
+      <RateTable public-id="pc:5000000039">
+        <Definition public-id="pc:5000000026"/>
+        <QueryStrategy>Memory</QueryStrategy>
+        <RateBook public-id="pc:5000000004"/>
+        <RefTable/>
+      </RateTable>
+    </RateTables>
+    <RenewalEffectiveDate>2001-01-01 00:00:00.000</RenewalEffectiveDate>
+    <Status>Active</Status>
+    <UWCompany/>
+  </RateBook>
+  <RateTableDefinition public-id="pc:5000000023">
+    <ArgumentSourceSets/>
+    <EntityName>DefaultRateFactorRow</EntityName>
+    <Factors>
+      <RateTableColumn public-id="pc:5000000074">
+        <ColumnLabel>Rate</ColumnLabel>
+        <ColumnLabel_L10N_ARRAY/>
+        <ColumnName>Rate</ColumnName>
+        <ColumnScale>3</ColumnScale>
+        <ColumnType>Decimal</ColumnType>
+        <DefinitionForFactor public-id="pc:5000000023"/>
+        <DefinitionForParam/>
+        <DependsOn/>
+        <DisplayType>Small</DisplayType>
+        <MatchOp/>
+        <PhysicalColumnName>dec5</PhysicalColumnName>
+        <SortOrder>0</SortOrder>
+        <ValueProvider/>
+      </RateTableColumn>
+    </Factors>
+    <MatchOps>
+      <RateTableMatchOp public-id="pc:5000000045">
+        <Definition public-id="pc:5000000023"/>
+        <MatchOpDefinition public-id="rtm:ExactMatchOpDef"/>
+        <Name>CLASSCODE</Name>
+        <DisplayText>CLASSCODE</DisplayText>
+        <Params>
+          <RateTableColumn public-id="pc:5000000073">
+            <ColumnLabel>ClassCode</ColumnLabel>
+            <ColumnLabel_L10N_ARRAY/>
+            <ColumnName>ClassCode</ColumnName>
+            <ColumnScale>3</ColumnScale>
+            <ColumnType>String</ColumnType>
+            <DefinitionForFactor/>
+            <DefinitionForParam public-id="pc:5000000023"/>
+            <DependsOn/>
+            <DisplayType>Normal</DisplayType>
+            <MatchOp public-id="pc:5000000045"/>
+            <PhysicalColumnName>str1</PhysicalColumnName>
+            <SortOrder>10</SortOrder>
+            <ValueProvider/>
+          </RateTableColumn>
+        </Params>
+      </RateTableMatchOp>
+    </MatchOps>
+    <PolicyLine>WC7Line</PolicyLine>
+    <TableCode>WC7_ClassCode_Rate</TableCode>
+    <TableDesc/>
+    <TableDesc_L10N_ARRAY/>
+    <TableName>WC7 ClassCode Rate</TableName>
+    <TableName_L10N_ARRAY/>
+  </RateTableDefinition>
+  <DefaultRateFactorRow public-id="pc:5000000332">
+    <RateTable public-id="pc:5000000036"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1/>
+    <dec2/>
+    <dec3/>
+    <dec4/>
+    <dec5>4.9900000</dec5>
+    <dec6/>
+    <int1/>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1>0005</str1>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <DefaultRateFactorRow public-id="pc:5000000333">
+    <RateTable public-id="pc:5000000036"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1/>
+    <dec2/>
+    <dec3/>
+    <dec4/>
+    <dec5>2.9900000</dec5>
+    <dec6/>
+    <int1/>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1>0035</str1>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <DefaultRateFactorRow public-id="pc:5000000334">
+    <RateTable public-id="pc:5000000036"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1/>
+    <dec2/>
+    <dec3/>
+    <dec4/>
+    <dec5>0.2000000</dec5>
+    <dec6/>
+    <int1/>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1>6251</str1>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <DefaultRateFactorRow public-id="pc:5000000335">
+    <RateTable public-id="pc:5000000036"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1/>
+    <dec2/>
+    <dec3/>
+    <dec4/>
+    <dec5>5.6900000</dec5>
+    <dec6/>
+    <int1/>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1>6258</str1>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <DefaultRateFactorRow public-id="pc:5000000336">
+    <RateTable public-id="pc:5000000036"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1/>
+    <dec2/>
+    <dec3/>
+    <dec4/>
+    <dec5>5.6900000</dec5>
+    <dec6/>
+    <int1/>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1>U709F</str1>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <RateTableDefinition public-id="pc:5000000024">
+    <ArgumentSourceSets/>
+    <EntityName>DefaultRateFactorRow</EntityName>
+    <Factors>
+      <RateTableColumn public-id="pc:5000000076">
+        <ColumnLabel>MinimumPremium</ColumnLabel>
+        <ColumnLabel_L10N_ARRAY/>
+        <ColumnName>MinimumPremium</ColumnName>
+        <ColumnScale>3</ColumnScale>
+        <ColumnType>Decimal</ColumnType>
+        <DefinitionForFactor public-id="pc:5000000024"/>
+        <DefinitionForParam/>
+        <DependsOn/>
+        <DisplayType>Small</DisplayType>
+        <MatchOp/>
+        <PhysicalColumnName>dec5</PhysicalColumnName>
+        <SortOrder>0</SortOrder>
+        <ValueProvider/>
+      </RateTableColumn>
+    </Factors>
+    <MatchOps>
+      <RateTableMatchOp public-id="pc:5000000046">
+        <Definition public-id="pc:5000000024"/>
+        <MatchOpDefinition public-id="rtm:ExactMatchOpDef"/>
+        <Name>CLASSCODE</Name>
+        <DisplayText>CLASSCODE</DisplayText>
+        <Params>
+          <RateTableColumn public-id="pc:5000000075">
+            <ColumnLabel>ClassCode</ColumnLabel>
+            <ColumnLabel_L10N_ARRAY/>
+            <ColumnName>ClassCode</ColumnName>
+            <ColumnScale>3</ColumnScale>
+            <ColumnType>String</ColumnType>
+            <DefinitionForFactor/>
+            <DefinitionForParam public-id="pc:5000000024"/>
+            <DependsOn/>
+            <DisplayType>Normal</DisplayType>
+            <MatchOp public-id="pc:5000000046"/>
+            <PhysicalColumnName>str1</PhysicalColumnName>
+            <SortOrder>10</SortOrder>
+            <ValueProvider/>
+          </RateTableColumn>
+        </Params>
+      </RateTableMatchOp>
+    </MatchOps>
+    <PolicyLine>WC7Line</PolicyLine>
+    <TableCode>WC7_MinimumPremium_Rate</TableCode>
+    <TableDesc/>
+    <TableDesc_L10N_ARRAY/>
+    <TableName>WC7 MinimumPremium Rate</TableName>
+    <TableName_L10N_ARRAY/>
+  </RateTableDefinition>
+  <DefaultRateFactorRow public-id="pc:5000000337">
+    <RateTable public-id="pc:5000000037"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1/>
+    <dec2/>
+    <dec3/>
+    <dec4/>
+    <dec5>574.0000000</dec5>
+    <dec6/>
+    <int1/>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1>0005</str1>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <DefaultRateFactorRow public-id="pc:5000000338">
+    <RateTable public-id="pc:5000000037"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1/>
+    <dec2/>
+    <dec3/>
+    <dec4/>
+    <dec5>627.0000000</dec5>
+    <dec6/>
+    <int1/>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1>6251</str1>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <RateTableDefinition public-id="pc:5000000025">
+    <ArgumentSourceSets/>
+    <EntityName>DefaultRateFactorRow</EntityName>
+    <Factors>
+      <RateTableColumn public-id="pc:5000000079">
+        <ColumnLabel>Factor</ColumnLabel>
+        <ColumnLabel_L10N_ARRAY/>
+        <ColumnName>Factor</ColumnName>
+        <ColumnScale>3</ColumnScale>
+        <ColumnType>Decimal</ColumnType>
+        <DefinitionForFactor public-id="pc:5000000025"/>
+        <DefinitionForParam/>
+        <DependsOn/>
+        <DisplayType>Small</DisplayType>
+        <MatchOp/>
+        <PhysicalColumnName>dec5</PhysicalColumnName>
+        <SortOrder>0</SortOrder>
+        <ValueProvider/>
+      </RateTableColumn>
+    </Factors>
+    <MatchOps>
+      <RateTableMatchOp public-id="pc:5000000047">
+        <Definition public-id="pc:5000000025"/>
+        <MatchOpDefinition public-id="rtm:ExactMatchOpDef"/>
+        <Name>EACHACCIDENTLIMIT</Name>
+        <DisplayText>EACHACCIDENTLIMIT</DisplayText>
+        <Params>
+          <RateTableColumn public-id="pc:5000000077">
+            <ColumnLabel>EachAccidentLimit</ColumnLabel>
+            <ColumnLabel_L10N_ARRAY/>
+            <ColumnName>EachAccidentLimit</ColumnName>
+            <ColumnScale>3</ColumnScale>
+            <ColumnType>Decimal</ColumnType>
+            <DefinitionForFactor/>
+            <DefinitionForParam public-id="pc:5000000025"/>
+            <DependsOn/>
+            <DisplayType>Normal</DisplayType>
+            <MatchOp public-id="pc:5000000047"/>
+            <PhysicalColumnName>Dec1</PhysicalColumnName>
+            <SortOrder>10</SortOrder>
+            <ValueProvider/>
+          </RateTableColumn>
+        </Params>
+      </RateTableMatchOp>
+      <RateTableMatchOp public-id="pc:5000000048">
+        <Definition public-id="pc:5000000025"/>
+        <MatchOpDefinition public-id="rtm:ExactMatchOpDef"/>
+        <Name>DISEASEPOLICYLIMIT</Name>
+        <DisplayText>DISEASEPOLICYLIMIT</DisplayText>
+        <Params>
+          <RateTableColumn public-id="pc:5000000078">
+            <ColumnLabel>DiseasePolicyLimit</ColumnLabel>
+            <ColumnLabel_L10N_ARRAY/>
+            <ColumnName>DiseasePolicyLimit</ColumnName>
+            <ColumnScale>3</ColumnScale>
+            <ColumnType>Decimal</ColumnType>
+            <DefinitionForFactor/>
+            <DefinitionForParam public-id="pc:5000000025"/>
+            <DependsOn/>
+            <DisplayType>Normal</DisplayType>
+            <MatchOp public-id="pc:5000000048"/>
+            <PhysicalColumnName>Dec2</PhysicalColumnName>
+            <SortOrder>20</SortOrder>
+            <ValueProvider/>
+          </RateTableColumn>
+        </Params>
+      </RateTableMatchOp>
+    </MatchOps>
+    <PolicyLine>WC7Line</PolicyLine>
+    <TableCode>WC7_Employers_Liability_Increase_Limits_Percent</TableCode>
+    <TableDesc/>
+    <TableDesc_L10N_ARRAY/>
+    <TableName>WC7 Employers Liability Increase Limits Percent</TableName>
+    <TableName_L10N_ARRAY/>
+  </RateTableDefinition>
+  <DefaultRateFactorRow public-id="pc:5000000327">
+    <RateTable public-id="pc:5000000038"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1>1000000.0000000</dec1>
+    <dec2>500000.0000000</dec2>
+    <dec3/>
+    <dec4/>
+    <dec5>0E-7</dec5>
+    <dec6/>
+    <int1/>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1/>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <DefaultRateFactorRow public-id="pc:5000000328">
+    <RateTable public-id="pc:5000000038"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1>1000000.0000000</dec1>
+    <dec2>1000000.0000000</dec2>
+    <dec3/>
+    <dec4/>
+    <dec5>2.8000000</dec5>
+    <dec6/>
+    <int1/>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1/>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <DefaultRateFactorRow public-id="pc:5000000329">
+    <RateTable public-id="pc:5000000038"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1>1000000.0000000</dec1>
+    <dec2>10000000.0000000</dec2>
+    <dec3/>
+    <dec4/>
+    <dec5>5.3000000</dec5>
+    <dec6/>
+    <int1/>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1/>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <DefaultRateFactorRow public-id="pc:5000000330">
+    <RateTable public-id="pc:5000000038"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1>10000000.0000000</dec1>
+    <dec2>10000000.0000000</dec2>
+    <dec3/>
+    <dec4/>
+    <dec5>9.0000000</dec5>
+    <dec6/>
+    <int1/>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1/>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <DefaultRateFactorRow public-id="pc:5000000331">
+    <RateTable public-id="pc:5000000038"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1>20000000.0000000</dec1>
+    <dec2>20000000.0000000</dec2>
+    <dec3/>
+    <dec4/>
+    <dec5>11.3000000</dec5>
+    <dec6/>
+    <int1/>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1/>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <RateTableDefinition public-id="pc:5000000026">
+    <ArgumentSourceSets/>
+    <EntityName>DefaultRateFactorRow</EntityName>
+    <Factors>
+      <RateTableColumn public-id="pc:5000000082">
+        <ColumnLabel>Factor</ColumnLabel>
+        <ColumnLabel_L10N_ARRAY/>
+        <ColumnName>Factor</ColumnName>
+        <ColumnScale>3</ColumnScale>
+        <ColumnType>Decimal</ColumnType>
+        <DefinitionForFactor public-id="pc:5000000026"/>
+        <DefinitionForParam/>
+        <DependsOn/>
+        <DisplayType>Small</DisplayType>
+        <MatchOp/>
+        <PhysicalColumnName>dec5</PhysicalColumnName>
+        <SortOrder>0</SortOrder>
+        <ValueProvider/>
+      </RateTableColumn>
+    </Factors>
+    <MatchOps>
+      <RateTableMatchOp public-id="pc:5000000049">
+        <Definition public-id="pc:5000000026"/>
+        <MatchOpDefinition public-id="rtm:RangeMatchOpDefMaxIncl"/>
+        <Name>PREMIUM</Name>
+        <DisplayText>PREMIUM</DisplayText>
+        <Params>
+          <RateTableColumn public-id="pc:5000000080">
+            <ColumnLabel>Min (&gt;=)</ColumnLabel>
+            <ColumnLabel_L10N_ARRAY/>
+            <ColumnName>MIN</ColumnName>
+            <ColumnScale>3</ColumnScale>
+            <ColumnType>Integer</ColumnType>
+            <DefinitionForFactor/>
+            <DefinitionForParam public-id="pc:5000000026"/>
+            <DependsOn/>
+            <DisplayType>Normal</DisplayType>
+            <MatchOp public-id="pc:5000000049"/>
+            <PhysicalColumnName>int1</PhysicalColumnName>
+            <SortOrder>10</SortOrder>
+            <ValueProvider/>
+          </RateTableColumn>
+          <RateTableColumn public-id="pc:5000000081">
+            <ColumnLabel>Max (&lt;=)</ColumnLabel>
+            <ColumnLabel_L10N_ARRAY/>
+            <ColumnName>MAX</ColumnName>
+            <ColumnScale>3</ColumnScale>
+            <ColumnType>Integer</ColumnType>
+            <DefinitionForFactor/>
+            <DefinitionForParam public-id="pc:5000000026"/>
+            <DependsOn/>
+            <DisplayType>Normal</DisplayType>
+            <MatchOp public-id="pc:5000000049"/>
+            <PhysicalColumnName>int2</PhysicalColumnName>
+            <SortOrder>20</SortOrder>
+            <ValueProvider/>
+          </RateTableColumn>
+        </Params>
+      </RateTableMatchOp>
+    </MatchOps>
+    <PolicyLine>WC7Line</PolicyLine>
+    <TableCode>WC7_PremiumDiscount_Rate</TableCode>
+    <TableDesc/>
+    <TableDesc_L10N_ARRAY/>
+    <TableName>WC7 PremiumDiscount Rate</TableName>
+    <TableName_L10N_ARRAY/>
+  </RateTableDefinition>
+  <DefaultRateFactorRow public-id="pc:5000000339">
+    <RateTable public-id="pc:5000000039"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1/>
+    <dec2/>
+    <dec3/>
+    <dec4/>
+    <dec5>0E-7</dec5>
+    <dec6/>
+    <int1>0</int1>
+    <int2>5000</int2>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1/>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <DefaultRateFactorRow public-id="pc:5000000340">
+    <RateTable public-id="pc:5000000039"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1/>
+    <dec2/>
+    <dec3/>
+    <dec4/>
+    <dec5>-0.0950000</dec5>
+    <dec6/>
+    <int1>5001</int1>
+    <int2>95000</int2>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1/>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <DefaultRateFactorRow public-id="pc:5000000341">
+    <RateTable public-id="pc:5000000039"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1/>
+    <dec2/>
+    <dec3/>
+    <dec4/>
+    <dec5>-0.1190000</dec5>
+    <dec6/>
+    <int1>95001</int1>
+    <int2>400000</int2>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1/>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+  <DefaultRateFactorRow public-id="pc:5000000342">
+    <RateTable public-id="pc:5000000039"/>
+    <bit1/>
+    <bit2/>
+    <date1/>
+    <date2/>
+    <dec1/>
+    <dec2/>
+    <dec3/>
+    <dec4/>
+    <dec5>-0.1240000</dec5>
+    <dec6/>
+    <int1>400001</int1>
+    <int2/>
+    <int3/>
+    <int4/>
+    <int5/>
+    <int6/>
+    <int7/>
+    <int8/>
+    <str1/>
+    <str2/>
+    <str3/>
+    <str4/>
+    <str5/>
+    <str6/>
+    <str7/>
+    <str8/>
+  </DefaultRateFactorRow>
+</import>

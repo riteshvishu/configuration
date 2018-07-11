@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<delegate xmlns="http://guidewire.com/datamodel" subpackage="persistence.core.effdate" name="EffDatedBase" platform="true">
+  <implementsEntity name="Editable"/>
+  <implementsEntity name="Extractable"/>
+</delegate>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<import>
+  <WC7JurisdictionPremLevelOrder public-id="zc7ii489tuer26ffm7g73563qp8">
+    <Jurisdiction>FL</Jurisdiction>
+    <PremiumLevelType>TotalManualPremium</PremiumLevelType>
+    <PremiumLevelCalcOrder>10</PremiumLevelCalcOrder>
+  </WC7JurisdictionPremLevelOrder>
+  <WC7JurisdictionPremLevelOrder public-id="zadje51t49sh818dfa60qtse34b">
+    <Jurisdiction>FL</Jurisdiction>
+    <PremiumLevelType>SubjectPremium</PremiumLevelType>
+    <PremiumLevelCalcOrder>20</PremiumLevelCalcOrder>
+  </WC7JurisdictionPremLevelOrder>
+  <WC7JurisdictionPremLevelOrder public-id="zgsi8vm7503bl23jqjge1o1j7r8">
+    <Jurisdiction>FL</Jurisdiction>
+    <PremiumLevelType>TotalSubjectPremium</PremiumLevelType>
+    <PremiumLevelCalcOrder>30</PremiumLevelCalcOrder>
+  </WC7JurisdictionPremLevelOrder>
+  <WC7JurisdictionPremLevelOrder public-id="zh6go77b34e2k3fpgmmgfcnak1b">
+    <Jurisdiction>FL</Jurisdiction>
+    <PremiumLevelCalcOrder>40</PremiumLevelCalcOrder>
+    <PremiumLevelType>TotalModifiedPremium</PremiumLevelType>
+  </WC7JurisdictionPremLevelOrder>
+  <WC7JurisdictionPremLevelOrder public-id="z1og2566kq83p7amf4bi3a5anh9">
+    <Jurisdiction>FL</Jurisdiction>
+    <PremiumLevelCalcOrder>50</PremiumLevelCalcOrder>
+    <PremiumLevelType>TotalStandardPremium</PremiumLevelType>
+  </WC7JurisdictionPremLevelOrder>
+  <WC7JurisdictionPremLevelOrder public-id="zqshgnlquliao7o20amocj3g639">
+    <Jurisdiction>FL</Jurisdiction>
+    <PremiumLevelCalcOrder>60</PremiumLevelCalcOrder>
+    <PremiumLevelType>EstimatedAnnualPremium</PremiumLevelType>
+  </WC7JurisdictionPremLevelOrder>
+  <WC7JurisdictionPremLevelOrder public-id="zq7hgnlquliao7o20amocj3g639">
+    <Jurisdiction>FL</Jurisdiction>
+    <PremiumLevelCalcOrder>70</PremiumLevelCalcOrder>
+    <PremiumLevelType>TotalAmountDue</PremiumLevelType>
+  </WC7JurisdictionPremLevelOrder>
+  <WC7JurisdictionPremLevelOrder public-id="z4bggfj7fm28m0pr2ccl13965ba">
+    <Jurisdiction/>
+    <PremiumLevelCalcOrder>10</PremiumLevelCalcOrder>
+    <PremiumLevelType>TotalManualPremium</PremiumLevelType>
+  </WC7JurisdictionPremLevelOrder>
+  <WC7JurisdictionPremLevelOrder public-id="z5gj0u16ug59n2a2g1vslnv67j9">
+    <Jurisdiction/>
+    <PremiumLevelCalcOrder>20</PremiumLevelCalcOrder>
+    <PremiumLevelType>TotalSubjectPremium</PremiumLevelType>
+  </WC7JurisdictionPremLevelOrder>
+  <WC7JurisdictionPremLevelOrder public-id="z6kik5epu6gtq4n6nrdbflqdq6a">
+    <Jurisdiction/>
+    <PremiumLevelCalcOrder>40</PremiumLevelCalcOrder>
+    <PremiumLevelType>TotalModifiedPremium</PremiumLevelType>
+  </WC7JurisdictionPremLevelOrder>
+  <WC7JurisdictionPremLevelOrder public-id="z73i6mu8lnkopcb5ur8anhfil58">
+    <Jurisdiction/>
+    <PremiumLevelCalcOrder>50</PremiumLevelCalcOrder>
+    <PremiumLevelType>TotalStandardPremium</PremiumLevelType>
+  </WC7JurisdictionPremLevelOrder>
+  <WC7JurisdictionPremLevelOrder public-id="z8ghe838kv6989qqog73nt187h9">
+    <Jurisdiction/>
+    <PremiumLevelCalcOrder>60</PremiumLevelCalcOrder>
+    <PremiumLevelType>EstimatedAnnualPremium</PremiumLevelType>
+  </WC7JurisdictionPremLevelOrder>
+  <WC7JurisdictionPremLevelOrder public-id="zq5gnlquliao7o20amocj3g639">
+    <Jurisdiction/>
+    <PremiumLevelCalcOrder>70</PremiumLevelCalcOrder>
+    <PremiumLevelType>TotalAmountDue</PremiumLevelType>
+  </WC7JurisdictionPremLevelOrder>
+</import>

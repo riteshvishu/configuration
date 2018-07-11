@@ -1,0 +1,43 @@
+package gw.lob.wc7.schedule
+
+uses gw.lob.common.AbstractScheduledItemAdapter
+uses gw.api.productmodel.Schedule
+uses gw.api.domain.Clause
+uses gw.policy.PolicyLineConfiguration
+
+/**
+ * An implementation of {@link gw.api.productmodel.ScheduledItemAdapter} for {@link entity.WC7LineScheduleExclItem}
+ */
+@Export
+class WC7LineScheduleExclItemAdapter extends AbstractScheduledItemAdapter {
+
+  var _owner : WC7LineScheduleExclItem  as readonly Owner
+
+  construct(item : WC7LineScheduleExclItem) {
+    _owner = item
+  }
+  
+  override property get ScheduleParent() : Schedule {
+    return _owner.Schedule
+  }
+
+  override property get PolicyLine() : PolicyLine {
+    return _owner.Schedule.WCLine
+  }
+
+  override property get Clause() : Clause {
+    return null
+  }
+
+  override function hasClause() : boolean {
+    return false
+  }
+
+  override property get DefaultCurrency() : Currency {
+    return _owner.Schedule.WCLine.PreferredCoverageCurrency
+  }
+
+  override property get AllowedCurrencies() : List<Currency> {
+    return PolicyLineConfiguration.get(InstalledPolicyLine.TC_WC7).AllowedCurrencies
+  }
+}

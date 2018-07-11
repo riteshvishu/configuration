@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ConditionPattern
+  conditionSubtype="WC7WorkersCompCond"
+  coverageCategory="WC7WorkCompLineCategoryCond"
+  existence="Electable"
+  lookupTableName="WC7Cond"
+  owningEntityType="WC7WorkersCompLine"
+  priority="1180"
+  public-id="WC7EmployeeLeasingClientEndorsementCond"
+  referenceDateByType="PolicyTerm">
+  <AvailabilityScript><![CDATA[return WC7WorkersCompLine.EmployeeLeasingPlan.ProfessionalEmployeeType == "PEO"]]></AvailabilityScript>
+  <CovTerms/>
+</ConditionPattern>

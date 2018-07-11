@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="RateTable"
+  subpackage="rating"
+  type="retireable"
+  desc="Identifies logical rate table.  Logical rate table is associated with a single rate books and may either own or reference rate factors."
+  platform="false"
+  table="ratetable"
+  loadable="false">
+  <typekey
+    name="QueryStrategy"
+    typelist="FactorQueryStrategy"
+    desc="Define the factor query strategy for this table"
+    default="Memory"
+    nullok="false"/>
+  <foreignkey
+    name="RateBook"
+    fkentity="RateBook"
+    nullok="false"/>
+  <foreignkey
+    name="Definition"
+    fkentity="RateTableDefinition"
+    nullok="false"/>
+  <edgeForeignKey
+    name="RefTable"
+    desc="Defines ownership of the factors in this table. Null value indicate tha factors are owned by the table."
+    edgeTableName="rtrefownership"
+    fkentity="RateTable"
+    nullok="true"/>
+</entity>

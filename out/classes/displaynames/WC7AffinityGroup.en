@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7AffinityGroup">
+  <Columns>
+    <Column
+      beanPath="WC7AffinityGroup.Name"
+      name="name"
+      sortOrder="0"/>
+  </Columns>
+  <DisplayName><![CDATA[name]]></DisplayName>
+</Entity>

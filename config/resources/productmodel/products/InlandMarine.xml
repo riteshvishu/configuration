@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Product
+  abbreviation="IM"
+  daysUntilQuoteNeeded="14"
+  defaultTermType="Annual"
+  priority="55"
+  productAccountType="Any"
+  productType="Commercial"
+  public-id="InlandMarine"
+  quoteRoundingLevel="0"
+  quoteRoundingMode="HALF_UP">
+  <AvailablePolicyTerms>
+    <AvailablePolicyTerm
+      public-id="wKgEXgbw8poAAAAA"
+      termType="Annual"/>
+    <AvailablePolicyTerm
+      public-id="wKgEXntdySIAAAAA"
+      termType="Other"/>
+  </AvailablePolicyTerms>
+  <ProductPolicyLinePatterns>
+    <ProductPolicyLinePattern
+      policyLinePattern="IMLine"
+      public-id="wKgEXlDXYRMAAAAA"/>
+  </ProductPolicyLinePatterns>
+  <ProductQuestionSetPatterns>
+    <ProductQuestionSetPattern
+      public-id="wKgEG_4hlpUAAAAA"
+      questionSet="ContractorsEquipmentQuestion"/>
+  </ProductQuestionSetPatterns>
+</Product>

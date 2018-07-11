@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ConditionPattern
+  conditionSubtype="WC7WorkersCompCond"
+  coverageCategory="WC7WorkCompLineCategoryCond"
+  existence="Electable"
+  lookupTableName="WC7Cond"
+  owningEntityType="WC7WorkersCompLine"
+  priority="1600"
+  public-id="WC7MultipleCoordinatedPolicyEndorsementCond"
+  referenceDateByType="PolicyTerm">
+  <AvailabilityScript><![CDATA[return WC7WorkersCompLine.EmployeeLeasingPlan.ProfessionalEmployeeType == "Client"
+  and WC7WorkersCompLine.EmployeeLeasingPlan.PolicyType == "MCP"]]></AvailabilityScript>
+  <ExistenceScript/>
+  <InitializeScript/>
+  <OnRemovalScript/>
+</ConditionPattern>

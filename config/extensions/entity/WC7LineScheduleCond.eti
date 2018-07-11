@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7LineScheduleCond"
+  desc="WC7 Line Condition with a schedule"
+  final="false"
+  supertype="WC7WorkersCompCond">
+  <implementsInterface
+    iface="gw.api.productmodel.Schedule"
+    impl="gw.lob.wc7.schedule.WC7LineScheduleCondImpl"/>
+  <implementsEntity name="ScheduleAutoNumberSequence"/>
+  <array
+    arrayentity="WC7LineScheduleCondItem"
+    name="WC7LineScheduleCondItems"
+    cascadeDelete="true"
+    desc="Condition scheduled items"
+    setterScriptability="all"/>
+</subtype>

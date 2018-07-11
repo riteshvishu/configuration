@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><delegate xmlns="http://guidewire.com/datamodel" effdatedOnly="true" extendable="true" name="WC7ScheduledItem">
+  <fulldescription>A Workers Comp specific scheduled item</fulldescription>
+  <column desc="String field3" getterScriptability="doesNotExist" name="StringCol3" nullok="true" setterScriptability="doesNotExist" type="shorttext"/>
+  <column desc="String field4" getterScriptability="doesNotExist" name="StringCol4" nullok="true" setterScriptability="doesNotExist" type="shorttext"/>
+  <column desc="Integer field2" getterScriptability="doesNotExist" name="IntCol2" nullok="true" setterScriptability="doesNotExist" type="integer"/>
+</delegate>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Page
+    canEdit="perm.System.prodcodeeditbasic"
+    canVisit="perm.System.prodcodeviewbasic"
+    id="ProducerCodeDetail"
+    parent="ProducerCodeSearch()"
+    startInEditMode="true"
+    title="displaykey.Web.ProducerCode.Detail(producerCode)">
+    <LocationEntryPoint
+      signature="ProducerCodeDetail(producerCode : ProducerCode)"/>
+    <Variable
+      name="producerCode"
+      type="ProducerCode"/>
+    <Screen
+      id="ProducerCodeDetailScreen">
+      <PanelRef
+        def="ProducerCodeDetailDV(producerCode)">
+        <Toolbar
+          visible="perm.System.prodcodeeditprefuw">
+          <EditButtons/>
+        </Toolbar>
+      </PanelRef>
+    </Screen>
+  </Page>
+</PCF>

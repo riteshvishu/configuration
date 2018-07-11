@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7MaritimeCovEmpCost"
+  desc="A unit of price for a period of time, not to be broken up any further, for a Maritime Workers' Comp employee coverage"
+  supertype="WC7Cost">
+  <implementsInterface
+    iface="gw.lob.wc7.financials.WC7CostMethods"
+    impl="gw.lob.wc7.financials.WC7MaritimeCovEmpCostMethodsImpl"/>
+  <implementsEntity
+    name="Cost"
+    adapter="gw.lob.wc7.financials.WC7CostAdapter"/>
+  <foreignkey
+    name="WC7MaritimeCoveredEmployee"
+    fkentity="WC7MaritimeCoveredEmployee"
+    nullok="false"/>
+  <foreignkey
+    name="WC7MaritimeCov"
+    fkentity="WC7WorkersCompCov"
+    nullok="false"/>
+  <typekey
+    name="WC7MaritimeCovEmpCostType"
+    typelist="WC7MaritimeCovEmpCostType"
+    nullok="false"/>
+</subtype>

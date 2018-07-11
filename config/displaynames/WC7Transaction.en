@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7Transaction">
+  <Columns>
+    <Column
+      beanPath="WC7Transaction.WC7Cost"
+      name="cost"/>
+  </Columns>
+  <DisplayName><![CDATA[
+cost
+  ]]></DisplayName>
+</Entity>

@@ -1,0 +1,155 @@
+<DiffTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/difftree.xsd">
+  <Section label="displaykey.Web.Differences.LOB.Common.PolicyInfo" sortorder="1">
+    <RootProperties includefromtype="PolicyPeriod" sortorder="1"/>
+    <RootEntity type="PolicyPriNamedInsured" label="displaykey.Web.Differences.LOB.Common.PolicyPriNamedInsured(ENTITY.DisplayName)" sortorder="2"/>
+    <RootEntity type="PolicyAddlNamedInsured" label="displaykey.Web.Differences.LOB.Common.PolicyAddlNamedInsured(ENTITY.DisplayName)" sortorder="3"/>
+    <RootEntity type="PolicyBillingContact" label="displaykey.Web.Differences.LOB.Common.PolicyBillingContact(ENTITY.DisplayName)" sortorder="4"/>
+    <RootEntity type="PolicyAddress" label="displaykey.Web.Differences.LOB.Common.PolicyAddress(ENTITY.AddressType)" sortorder="5"/>
+    <RootProperties includefromtype="EffectiveDatedFields" sortorder="6"/>
+  </Section>
+  <Section label="displaykey.Web.Differences.LOB.Common.Locations" sortorder="2">
+    <RootEntity type="PolicyLocation">
+      <Properties includefromtype="PolicyLocation" parentpath="ENTITY" sortorder="1"/>
+      <Entity type="LocationNamedInsured" parentpath="ENTITY.Location" label="displaykey.Web.Differences.LOB.WC.LocationNamedInsured(ENTITY.DisplayName)" sortorder="2"/>
+    </RootEntity>
+  </Section>
+  <Section label="displaykey.Web.Differences.LOB.WC.Clauses" sortorder="3">
+    <RootEntity type="WC7WorkersCompCov" sortorder="1">
+      <Entity type="WC7MaritimeCoveredEmployee" parentpath="ENTITY.MaritimeCoverage" label="displaykey.Web.Differences.LOB.WC7.MaritimeCoveredEmployee(ENTITY.DisplayName)" showadds="false" showremoves="false">
+            <Properties includefromtype="WC7MaritimeCoveredEmployee" parentpath="ENTITY">
+              <PropertyDisplay propertyname="ClassCode" label="displaykey.Web.Differences.LOB.WC7.ClassCode" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="1"/>
+              <PropertyDisplay propertyname="BasisAmount" label="displaykey.Web.Differences.LOB.WC.Basis" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="2"/>
+              <PropertyDisplay propertyname="IfAnyExposure" label="displaykey.Web.Differences.LOB.WC.IfAny" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="3"/>
+              <PropertyDisplay propertyname="NumEmployees" label="displaykey.Web.Differences.LOB.WC.NumEmployees" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="4"/>
+            </Properties>
+        </Entity>
+      <Entity type="WC7MaritimeCoveredEmployee" parentpath="ENTITY.MaritimeCoverage" label="displaykey.Web.Differences.LOB.WC.CoveredEmployee(ENTITY.DisplayName, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" showchanges="false"/>
+      <Entity type="WC7FedCoveredEmployee" parentpath="ENTITY.FedEmpLiabCoverage" label="displaykey.Web.Differences.LOB.WC7.FedCoveredEmployee(ENTITY.DisplayName)" showadds="false" showremoves="false">
+          <Properties includefromtype="WC7FedCoveredEmployee" parentpath="ENTITY">
+            <PropertyDisplay propertyname="ClassCode" label="displaykey.Web.Differences.LOB.WC7.ClassCode" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="1"/>
+            <PropertyDisplay propertyname="BasisAmount" label="displaykey.Web.Differences.LOB.WC.Basis" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="2"/>
+            <PropertyDisplay propertyname="IfAnyExposure" label="displaykey.Web.Differences.LOB.WC.IfAny" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="3"/>
+            <PropertyDisplay propertyname="NumEmployees" label="displaykey.Web.Differences.LOB.WC.NumEmployees" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="4"/>
+          </Properties>
+      </Entity>
+      <Entity type="WC7FedCoveredEmployee" parentpath="ENTITY.FedEmpLiabCoverage" label="displaykey.Web.Differences.LOB.WC.CoveredEmployee(ENTITY.DisplayName, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" showchanges="false"/>
+    </RootEntity>
+    <RootEntity type="WC7LineScheduleCov" sortorder="1">
+      <Entity type="WC7LineScheduleCovItem" parentpath="ENTITY.Schedule"/>
+    </RootEntity>
+    <RootEntity type="WC7WorkersCompCond" sortorder="2">
+      <Entity type="WC7AircraftSeat" parentpath="ENTITY.AircraftSeatCondition" 	            label="displaykey.Web.Differences.LOB.WC7.AircraftSeat(ENTITY.DisplayName)"/>
+      <Entity type="WC7IncludedLaborContactDetail" parentpath="ENTITY.LaborContactCondition" 
+      			label="ENTITY.WC7LaborContact typeis WC7PolicyLaborClient ?
+                                            displaykey.Web.Differences.LOB.WC7.LaborClient(ENTITY.DisplayName) :
+                                            displaykey.Web.Differences.LOB.WC7.LaborContractor(ENTITY.DisplayName)"/>
+	  <Entity type="WC7CoordinatedPolicy" parentpath="ENTITY.MultipleCoordindatedPolicyCond" label="displaykey.Web.Differences.LOB.WC7.MultipleCoordinatedPolicy(ENTITY.DisplayName)"/>
+      <Entity type="WC7IncludedOwnerOfficer" parentpath="ENTITY.OwnerOfficerCondition" label="displaykey.Web.Differences.LOB.WC7.OwnerOfficer(ENTITY.DisplayName)">
+          <Properties includefromtype="WC7IncludedOwnerOfficer" parentpath="ENTITY">
+            <PropertyDisplay propertyname="RelationshipTitleInternal" label="displaykey.Web.Differences.LOB.WC7.OwnerOfficer.RelationshipTitle"/>
+          </Properties>
+        </Entity>
+      <Entity type="WC7WaiverOfSubro" parentpath="ENTITY.WaiverCondition" label="displaykey.Web.Differences.LOB.WC7.WaiverOfSubro(ENTITY.DisplayName)" showadds="false" showremoves="false">
+        <Properties includefromtype="WC7WaiverOfSubro" parentpath="ENTITY">
+          <PropertyDisplay propertyname="ClassCode" label="displaykey.Web.Differences.LOB.WC7.ClassCode" value="displaykey.Web.Differences.LOB.WC7.WaiverSubroPropWithDates(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="1"/>
+          <PropertyDisplay propertyname="BasisAmount" label="displaykey.Web.Differences.LOB.WC7.Basis" value="displaykey.Web.Differences.LOB.WC7.WaiverSubroPropWithDates(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="2"/>
+          <PropertyDisplay propertyname="Description" label="displaykey.Web.Differences.LOB.WC7.Description" value="displaykey.Web.Differences.LOB.WC7.WaiverSubroPropWithDates(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="3"/>
+          <PropertyDisplay propertyname="NumEmployees" label="displaykey.Web.Differences.LOB.WC7.JobID" value="displaykey.Web.Differences.LOB.WC7.WaiverSubroPropWithDates(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="4"/>
+          <PropertyDisplay propertyname="GoverningLaw" label="displaykey.Web.Differences.LOB.WC7.GovLaw" value="displaykey.Web.Differences.LOB.WC7.WaiverSubroPropWithDates(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="5"/>
+        </Properties>
+      </Entity>
+      <Entity type="WC7WaiverOfSubro" parentpath="ENTITY.WaiverCondition" label="displaykey.Web.Differences.LOB.WC7.WaiverSubroEntityWithDates(ENTITY.DisplayName, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" showchanges="false"/>
+   </RootEntity>
+    <RootEntity type="WC7LineScheduleCond" sortorder="2">
+      <Entity type="WC7LineScheduleCondItem" parentpath="ENTITY.Schedule"/>
+    </RootEntity>
+    <RootEntity type="WC7WorkersCompExcl" sortorder="3">
+      <Entity type="WC7ExcludedWorkplace" parentpath="ENTITY.DesignatedWorkplacesExcl" label="displaykey.Web.Differences.LOB.WC7.ExcludedWorkplace(ENTITY.DisplayName)"/>
+      <Entity type="WC7ExcludedLaborContactDetail" parentpath="ENTITY.LaborContactExclusion" 
+      			label="ENTITY.WC7LaborContact typeis WC7PolicyLaborClient ?
+                                            displaykey.Web.Differences.LOB.WC7.LaborClient(ENTITY.DisplayName) :
+                                            displaykey.Web.Differences.LOB.WC7.LaborContractor(ENTITY.DisplayName)"/>
+      <Entity type="WC7ExcludedOwnerOfficer" parentpath="ENTITY.OwnerOfficerExclusion" label="displaykey.Web.Differences.LOB.WC7.OwnerOfficer(ENTITY.DisplayName)">
+          <Properties includefromtype="WC7ExcludedOwnerOfficer" parentpath="ENTITY">
+            <PropertyDisplay propertyname="RelationshipTitleInternal" label="displaykey.Web.Differences.LOB.WC7.OwnerOfficer.RelationshipTitle"/>
+          </Properties>
+        </Entity>
+    </RootEntity>
+    <RootEntity type="WC7LineScheduleExcl" sortorder="3">
+      <Entity type="WC7LineScheduleExclItem" parentpath="ENTITY.Schedule"/>
+    </RootEntity>
+  </Section>
+  <Section label="displaykey.Web.Differences.LOB.WC.Jurisdictions" sortorder="4">
+    <RootEntity type="WC7Jurisdiction">
+      <Properties includefromtype="WC7Jurisdiction" parentpath="ENTITY">
+        <PropertyDisplay propertyname="AnniversaryDateInternal" label="displaykey.Web.Differences.LOB.WC.AnniversaryDate" sortorder="1"/>    
+      </Properties>
+      <SubSection label="displaykey.Web.Differences.LOB.WC.CoveredEmployees" sortorder="2">
+        <Entity type="WC7CoveredEmployee" parentpath="ENTITY.Jurisdiction" showadds="false" showremoves="false">
+          <Properties includefromtype="WC7CoveredEmployee" parentpath="ENTITY">
+            <PropertyDisplay propertyname="ClassCode" label="displaykey.Web.Differences.LOB.WC7.ClassCode" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="1"/>
+            <PropertyDisplay propertyname="BasisAmount" label="displaykey.Web.Differences.LOB.WC.Basis" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="2"/>
+            <PropertyDisplay propertyname="IfAnyExposure" label="displaykey.Web.Differences.LOB.WC.IfAny" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="3"/>
+            <PropertyDisplay propertyname="NumEmployees" label="displaykey.Web.Differences.LOB.WC.NumEmployees" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="4"/>
+            <PropertyDisplay propertyname="GoverningLaw" label="displaykey.Web.Differences.LOB.WC.GovLaw" value="displaykey.Web.Differences.LOB.WC.CoveredEmpValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="5"/>
+          </Properties>
+        </Entity>
+        <Entity type="WC7CoveredEmployee" parentpath="ENTITY.Jurisdiction" label="displaykey.Web.Differences.LOB.WC.CoveredEmployee(ENTITY.DisplayName, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" showchanges="false"/>
+      </SubSection>
+      <SubSection label="displaykey.Web.Differences.LOB.WC7.SupplementaryDisease" sortorder="3">
+        <Entity type="WC7SupplDiseaseExposure" parentpath="ENTITY.Jurisdiction" showadds="false" showremoves="false">
+          <Properties includefromtype="WC7SupplDiseaseExposure" parentpath="ENTITY">
+            <PropertyDisplay propertyname="DiseaseCode" label="displaykey.Web.Differences.LOB.WC7.DiseaseCode" value="displaykey.Web.Differences.LOB.WC7.SupplementaryDiseasePropWithDates(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="1"/>
+            <PropertyDisplay propertyname="BasisAmount" label="displaykey.Web.Differences.LOB.WC7.Basis" value="displaykey.Web.Differences.LOB.WC7.SupplementaryDiseasePropWithDates(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="2"/>
+            <PropertyDisplay propertyname="IfAnyExposure" label="displaykey.Web.Differences.LOB.WC7.IfAny" value="displaykey.Web.Differences.LOB.WC7.SupplementaryDiseasePropWithDates(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="3"/>
+          </Properties>
+        </Entity>
+        <Entity type="WC7SupplDiseaseExposure" parentpath="ENTITY.Jurisdiction" label="displaykey.Web.Differences.LOB.WC7.SupplementaryDiseaseEntityWithDates(ENTITY.DisplayName, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" showchanges="false"/>
+      </SubSection>
+      <SubSection label="displaykey.Web.Differences.LOB.WC7.AtomicEnergy" sortorder="4">
+         <Entity type="WC7AtomicEnergyExposure" parentpath="ENTITY.Jurisdiction" showadds="false" showremoves="false">
+               <Properties includefromtype="WC7AtomicEnergyExposure" parentpath="ENTITY">
+                 <PropertyDisplay propertyname="ClassCode" label="displaykey.Web.Differences.LOB.WC7.ClassCode" value="displaykey.Web.Differences.LOB.WC7.AtomicEnergyPropWithDates(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="1"/>
+                 <PropertyDisplay propertyname="BasisAmount" label="displaykey.Web.Differences.LOB.WC7.Basis" value="displaykey.Web.Differences.LOB.WC7.AtomicEnergyPropWithDates(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="2"/>
+                 <PropertyDisplay propertyname="IfAnyExposure" label="displaykey.Web.Differences.LOB.WC7.IfAny" value="displaykey.Web.Differences.LOB.WC7.AtomicEnergyPropWithDates(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" sortorder="3"/>
+               </Properties>
+             </Entity>
+             <Entity type="WC7AtomicEnergyExposure" parentpath="ENTITY.Jurisdiction" label="displaykey.Web.Differences.LOB.WC7.AtomicEnergyEntityWithDates(ENTITY.DisplayName, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" showchanges="false"/>
+      </SubSection>
+      <SubSection label="displaykey.Web.Differences.LOB.Common.Coverages" sortorder="5">
+        <Entity type="WC7JurisdictionCov" parentpath="ENTITY.WC7Jurisdiction" showadds="false" showremoves="false">
+        <!-- TODO WC7 Coverage
+        <Properties includefromtype="WC7JurisdictionCov" parentpath="ENTITY">
+            <PropertyDisplay propertyname="ChoiceTerm1" label="displaykey.Web.Differences.LOB.WC.Deductible" value="VALUE != null ? displaykey.Web.Differences.LOB.WC.DeductibleValue(ENTITY.getCovTerm(&quot;WCDeductible&quot;).DisplayValue, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat) : &quot;&quot;"/>
+          </Properties>
+         -->
+        </Entity>
+        <Entity type="WC7JurisdictionCov" parentpath="ENTITY.WC7Jurisdiction" label="displaykey.Web.Differences.LOB.WC.WCStateCov(ENTITY.DisplayName, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" showchanges="false"/>
+      </SubSection>
+      <SubSection label="displaykey.Web.Differences.LOB.Common.Modifiers" sortorder="6">
+        <Entity type="WC7Modifier" parentpath="ENTITY.WC7Jurisdiction" showadds="false" showremoves="false">
+          <Properties includefromtype="WC7Modifier" parentpath="ENTITY">
+            <PropertyDisplay propertyname="RateModifier" label="displaykey.Web.Differences.LOB.WC.RateModifier" value="VALUE != null ? displaykey.Web.Differences.LOB.WC.RateModifierValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat) : &quot;&quot;" sortorder="1"/>
+            <PropertyDisplay propertyname="DateModifier" label="displaykey.Web.Differences.LOB.WC.DateModifier" value="VALUE != null ? displaykey.Web.Differences.LOB.WC.DateModifierValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat): &quot;&quot;" sortorder="2"/>
+            <PropertyDisplay propertyname="TypeKeyModifier" label="displaykey.Web.Differences.LOB.WC.TypeKeyModifier" value="VALUE != null ? displaykey.Web.Differences.LOB.WC.TypeKeyModifierValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat): &quot;&quot;" sortorder="3"/>
+            <PropertyDisplay propertyname="BooleanModifier" label="displaykey.Web.Differences.LOB.WC.BooleanModifier" value="VALUE != null ? displaykey.Web.Differences.LOB.WC.BooleanModifierValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat): &quot;&quot;" sortorder="4"/>
+            <PropertyDisplay propertyname="ValueFinal" label="displaykey.Web.Differences.LOB.WC.ValueFinal" value="VALUE != null ? displaykey.Web.Differences.LOB.WC.ValueFinalValue(VALUE, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat): &quot;&quot;" sortorder="5"/>
+            <ExcludedProperty propertyname="Eligible"/>  
+          </Properties>
+        </Entity>
+        <Entity type="WC7Modifier" parentpath="ENTITY.WC7Jurisdiction" label="displaykey.Web.Differences.LOB.WC.WCModifier(ENTITY.DisplayName, ENTITY.EffectiveDate.ShortFormat, ENTITY.ExpirationDate.ShortFormat)" showchanges="false"/>
+      </SubSection>
+    </RootEntity>
+  </Section>
+  <Section label="displaykey.Web.Differences.LOB.WC.WCOptions" sortorder="6">
+    <RootEntity type="WC7RetrospectiveRatingPlan" label="displaykey.Web.Differences.LOB.WC.RetrospectiveRating(ENTITY.DisplayName)" sortorder="10">
+      <Entity type="WC7JurisdictionMultiplier" parentpath="ENTITY.WC7RetrospectiveRatingPlan" label="displaykey.Web.Differences.LOB.WC7.RRStateMultiplier(ENTITY.DisplayName)"/>
+      <Entity type="WC7RetroRatingLetterOfCredit" parentpath="ENTITY.WC7RetrospectiveRatingPlan" label="displaykey.Web.Differences.LOB.WC7.RRLetterOfCredit(ENTITY.IssuerName)"/>
+    </RootEntity>
+    <RootEntity type="WC7ParticipatingPlan" label="displaykey.Web.Differences.LOB.WC.ParticipatingPlan(ENTITY.DisplayName)" sortorder="12"/>
+    <RootProperties includefromtype="entity.WC7WorkersCompLine" sortorder="13">
+      <ExcludedProperty propertyname="ParticipatingPlan"/>
+      <ExcludedProperty propertyname="WC7GoverningClass"/>
+    </RootProperties>
+  </Section>
+</DiffTree>

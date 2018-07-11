@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7WaiverOfSubro">
+  <Columns>
+    <Column
+      beanPath="WC7WaiverOfSubro.Description"
+      name="Description"
+      sortOrder="1"/>
+    <Column
+      beanPath="WC7WaiverOfSubro.Jurisdiction"
+      name="jurisdiction"
+      sortOrder="2"/>
+    <Column
+      beanPath="WC7WaiverOfSubro.ClassCode"
+      name="ClassCode"/>
+  </Columns>
+  <DisplayName><![CDATA[
+return (ClassCode == null) ? 
+  displaykey.EntityName.WCWaiverOfSubro.Blanket(Description, jurisdiction) :
+  displaykey.EntityName.WCWaiverOfSubro.Specific(ClassCode, jurisdiction)
+
+    
+  ]]></DisplayName>
+</Entity>

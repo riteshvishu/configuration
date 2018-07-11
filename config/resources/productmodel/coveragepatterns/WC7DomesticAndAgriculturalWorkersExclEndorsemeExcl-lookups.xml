@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<import>
+  <ExclusionLookup public-id="zc8hu9abu0fqhcsvep5a3c1i9ba">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <ExclusionPatternCode>WC7DomesticAndAgriculturalWorkersExclEndorsemeExcl</ExclusionPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </ExclusionLookup>
+</import>

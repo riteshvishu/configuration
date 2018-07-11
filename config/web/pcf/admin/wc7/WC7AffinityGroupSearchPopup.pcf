@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <Popup
+    id="WC7AffinityGroupSearchPopup"
+    returnType="WC7AffinityGroup"
+    title="displaykey.Web.Admin.AffinityGroupSearch">
+    <LocationEntryPoint
+      signature="WC7AffinityGroupSearchPopup(product : gw.api.productmodel.Product, organization : String, producerCode : String)"/>
+    <Variable
+      name="organization"
+      type="String"/>
+    <Variable
+      name="producerCode"
+      type="String"/>
+    <Variable
+      name="product"
+      type="gw.api.productmodel.Product"/>
+    <Screen
+      id="WC7AffinityGroupSearchScreen">
+      <SearchPanel
+        criteriaName="searchCriteria"
+        resultsName="affinityGroups"
+        search="searchCriteria.performSearch()"
+        searchCriteria="createAffinityGroupSearchCriteria()"
+        searchOnEnter="true"
+        searchResultsType="WC7AffinityGroupQuery">
+        <DetailViewPanel
+          editable="true"
+          id="AffinityGroupSearchDV"
+          visible="true">
+          <Variable
+            initialValue="com.guidewire.pc.system.dependency.PCDependencies.getProductModel().getAllInstances(gw.api.productmodel.Product) as gw.api.productmodel.Product[]"
+            name="products"/>
+          <InputColumn>
+            <Input
+              editable="true"
+              id="GroupName"
+              label="displaykey.Web.GroupSearch.GroupName"
+              value="searchCriteria.AffinityGroupName"/>
+            <TypeKeyInput
+              editable="true"
+              id="GroupType"
+              label="displaykey.Web.GroupSearch.GroupType"
+              value="searchCriteria.AffinityGroupType"/>
+          </InputColumn>
+          <InputFooterSection>
+            <InputSetRef
+              def="SearchAndResetInputSet()"/>
+          </InputFooterSection>
+        </DetailViewPanel>
+        <PanelRef>
+          <TitleBar
+            appendListViewPaging="true"
+            title="displaykey.Web.Search.Results"/>
+          <Toolbar/>
+          <!-- ListView that displays the results of a Group search. The group name is a hyperlink
+    that navigates to the GroupDetailPage. -->
+          <ListViewPanel
+            id="AffinityGroupSearchResultsLV">
+            <RowIterator
+              editable="false"
+              elementName="group"
+              pickValue="group"
+              value="affinityGroups">
+              <Row>
+                <Cell
+                  action="WC7AffinityGroupDetailPage.go(group)"
+                  id="Name"
+                  label="displaykey.Web.Admin.GroupSearchResults.Name"
+                  sortOrder="1"
+                  value="group"/>
+                <Cell
+                  id="Type"
+                  label="displaykey.Web.Admin.GroupSearchResults.Type"
+                  value="group.AffinityGroupType"/>
+                <Cell
+                  action="OrganizationDetail.go(group.Organization)"
+                  id="Organization"
+                  label="displaykey.Web.Admin.GroupSearchResults.Organization"
+                  value="group.Organization"/>
+                <DateCell
+                  id="StartDate"
+                  label="displaykey.Web.Admin.WC7AffinityGroupDetail.BasicsDV.StartDate"
+                  value="group.StartDate"/>
+                <DateCell
+                  id="EndDate"
+                  label="displaykey.Web.Admin.WC7AffinityGroupDetail.BasicsDV.EndDate"
+                  value="group.EndDate"/>
+              </Row>
+            </RowIterator>
+          </ListViewPanel>
+        </PanelRef>
+      </SearchPanel>
+    </Screen>
+    <Code><![CDATA[function createAffinityGroupSearchCriteria() : gw.lob.wc7.WC7AffinityGroupSearchCriteria {
+  var criteria = new gw.lob.wc7.WC7AffinityGroupSearchCriteria()
+  criteria.Organization = organization
+  criteria.ProducerCode = producerCode
+  criteria.Product = product
+  criteria.OnlyAvailableGroups = true
+  
+  return criteria
+}]]></Code>
+  </Popup>
+</PCF>

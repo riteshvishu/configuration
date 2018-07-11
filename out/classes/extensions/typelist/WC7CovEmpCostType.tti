@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="The type of cost for a covered employees' cost: e.g. Manual Premium, USLH"
+  name="WC7CovEmpCostType">
+  <typecode
+    code="ManualPremium"
+    desc="Manual Premium"
+    name="Manual Premium"/>
+  <typecode
+    code="USLH"
+    desc="United States Longshoremans &amp; Harbor Works Act"
+    name="USLH"/>
+  <typecode
+    code="CoalMineDisCharge"
+    desc="Coal Mine Disease Charge"
+    name="Coal Mine Disease Charge"/>
+  <typecode
+    code="CatastropheLoading"
+    desc="Catastrophe Loading"
+    name="Catastrophe Loading"/>
+  <typecode
+    code="SupplementalDisease"
+    desc="Supplemental Disease"
+    name="Supplemental Disease"
+    priority="50"/>
+</typelist>

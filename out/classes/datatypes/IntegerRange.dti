@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<DataTypeDef xmlns="http://guidewire.com/datatype" type="gw.lob.common.datatypes.IntegerRangeDataTypeDef" valueType="java.lang.Integer">
+  <ParameterDef name="validator" desc="The name of a ValidatorDef (fieldvalidators.xml) that should be used to validate values of this data type." required="false" type="java.lang.String"/>
+  <ParameterDef name="minimum" desc="The minimum integer allowed by this data type's constraints." required="true" type="java.lang.Integer"/>
+  <ParameterDef name="maximum" desc="The maximum integer allowed by this data type's constraints." required="true" type="java.lang.Integer"/>
+</DataTypeDef>

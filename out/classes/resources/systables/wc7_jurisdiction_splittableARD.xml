@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<import>
+  <WC7JurisdictionSplittableARD public-id="zjfggignf1j50em2hbmcjp41gk9">
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>FL</Jurisdiction>
+    <SplittableARD>true</SplittableARD>
+  </WC7JurisdictionSplittableARD>
+  <WC7JurisdictionSplittableARD public-id="z9egqth6okj4b08df92jpccq69a">
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>GA</Jurisdiction>
+    <SplittableARD>false</SplittableARD>
+  </WC7JurisdictionSplittableARD>
+  <WC7JurisdictionSplittableARD public-id="zijjkfib7m3257c5ak5mo1u2t2a">
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CA</Jurisdiction>
+    <SplittableARD>true</SplittableARD>
+  </WC7JurisdictionSplittableARD>
+  <WC7JurisdictionSplittableARD public-id="zhtj2vpvi98h92habbharptjcab">
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NJ</Jurisdiction>
+    <SplittableARD>true</SplittableARD>
+  </WC7JurisdictionSplittableARD>
+</import>

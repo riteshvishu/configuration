@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<import>
+  <ExclusionLookup public-id="z9njkg6f0h79ddu7ei6dqvq3co8">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <ExclusionPatternCode>ExludeDesigSiteOpsSubContractWork</ExclusionPatternCode>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </ExclusionLookup>
+  <CovTermLookup public-id="zjijaik6edk463pbtv5t96aqp3a">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>DesignateSiteOps</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="zudhg4dpbqkmv2nq7g2qks0pvj9">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>DesigSiteOpsDescription</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="z2qgcqmpatp1u3ev34fkfilpsua">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z85g00dtldqkk0jaoneani1j8f8</CovTermOptCode>
+    <CovTermPatternCode>DesignateSiteOps</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z9bigq3e3n65ab5neblj4djfl49">
+    <Availability>Available</Availability>
+    <CovTermOptCode>ze3hke1rmnfkh4eo3isdisdgb6b</CovTermOptCode>
+    <CovTermPatternCode>DesignateSiteOps</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+</import>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="solrserver-config">
+    <xsd:complexType>
+      <xsd:sequence minOccurs="0" maxOccurs="1">
+        <xsd:element ref="param" minOccurs="1" maxOccurs="unbounded"/>
+        <xsd:element ref="solrserver" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="document" minOccurs="1" maxOccurs="1"/>
+      </xsd:sequence>
+      <xsd:attribute name="version" type="xsd:integer" default="1"/>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="param">
+    <xsd:complexType>
+      <xsd:attribute name="name" type="xsd:string"/>
+      <xsd:attribute name="value" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="solrserver">
+    <xsd:complexType>
+      <xsd:sequence minOccurs="1" maxOccurs="1">
+        <xsd:element ref="param" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attribute name="name" type="xsd:string"/>
+      <xsd:attribute name="type" type="ServerType" default="http"/>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:simpleType name="ServerType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="embedded"/>
+      <xsd:enumeration value="http"/>
+      <xsd:enumeration value="cloud"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+
+  <xsd:element name="document">
+    <xsd:complexType>
+      <xsd:attribute name="name" type="xsd:string" use="required"/>
+      <xsd:attribute name="archive" type="xsd:boolean" use="required"/>
+      <xsd:attribute name="servername" type="xsd:string" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

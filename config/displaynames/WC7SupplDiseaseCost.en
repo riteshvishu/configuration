@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7SupplDiseaseCost">
+  <Columns>
+    <Column
+      beanPath="WC7SupplDiseaseCost.WC7SupplDiseaseExposure"
+      name="exposure"/>
+  </Columns>
+  <DisplayName><![CDATA[displaykey.EntityName.WCSupplDiseaseCost(exposure.Location, exposure.DiseaseCode.Code)]]></DisplayName>
+</Entity>

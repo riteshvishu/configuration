@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="The type of employee leasing policy."
+  name="WC7EmployeeLeasingPolicyType"
+  tableName="WC7EmpLeasingPolicyType"
+  final="false">
+  <typecode
+    code="Master"
+    desc="A policy written in the name of the PEO covering its direct workers, and the leased workers of multiple client companies."
+    name="Master Policy">
+  </typecode>
+  <typecode
+    code="MCP"
+    desc="Multiple coordinated policies where the PEO has a policy covering its direct workers and each client company has a policy covering its leased workers.  Endorsements are used to coordinate between the client companies and the PEO."
+    name="Multiple Coordinated Policy (MCP)"/>
+  <typecode
+    code="MultiplePEO"
+    desc="Multiple policies where each client company has a policy covering its leased workers with the PEO as the primary named insured with reference to the name of the client company."
+    name="Multiple PEO Policies"/>
+  <typecode
+    code="ClientDirect"
+    desc="A policy obtained by the client for both the client's leased and direct workers."
+    name="Client Direct Policy"/>
+</typelist>

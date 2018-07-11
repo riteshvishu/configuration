@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <PanelSet
+    id="WC7OptionsPanelSet">
+    <Require
+      name="period"
+      type="PolicyPeriod"/>
+    <Variable
+      initialValue="period.WC7Line.WC7Options"
+      name="wc7Options"
+      type="java.util.List&lt;gw.lob.wc7.options.WC7Option&gt;"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <PanelRef>
+      <Toolbar>
+        <AddButton
+          id="OptionIteratorButton"
+          iterator="OptionsLV"
+          label="displaykey.Web.Policy.WC.AddOption"
+          visible="openForEdit">
+          <AddMenuItemIterator
+            elementName="wc7Option"
+            id="wc7Option"
+            type="gw.lob.wc7.options.WC7Option"
+            value="wc7Options.where(\ option -&gt; option.ShowOnMenu).toTypedArray()">
+            <AddMenuItem
+              id="WC7OptionItem"
+              iterator="OptionsLV"
+              label="wc7Option.Label"
+              toCreateAndAdd="wc7Option.moveFromMenuToActiveList(); return wc7Option"/>
+          </AddMenuItemIterator>
+        </AddButton>
+        <IteratorButtons
+          addVisible="false"
+          iterator="OptionsLV"
+          removeVisible="true"/>
+      </Toolbar>
+      <ListDetailPanel
+        selectionName="selectedWC7Option"
+        selectionType="gw.lob.wc7.options.WC7Option">
+        <ListViewPanel
+          id="OptionsLV"
+          visible="true">
+          <RowIterator
+            editable="true"
+            elementName="wc7Option"
+            hideCheckBoxesIfReadOnly="true"
+            toRemove="wc7Option.moveToMenuFromActiveList()"
+            type="gw.lob.wc7.options.WC7Option"
+            value="wc7Options.where(\ option -&gt; not option.ShowOnMenu).toTypedArray()">
+            <Row>
+              <TextCell
+                id="OptionName"
+                label="displaykey.Web.Policy.Merge.WorkersCompLine.WCOptions"
+                numCols="16"
+                value="wc7Option.Label"/>
+            </Row>
+          </RowIterator>
+        </ListViewPanel>
+        <CardViewPanel>
+          <Card
+            id="OptionCard"
+            title="selectedWC7Option.Label">
+            <PanelRef
+              def="WC7OptionCardPanelSet(period.WC7Line, openForEdit)"
+              mode="selectedWC7Option.Mode"/>
+          </Card>
+        </CardViewPanel>
+      </ListDetailPanel>
+    </PanelRef>
+  </PanelSet>
+</PCF>

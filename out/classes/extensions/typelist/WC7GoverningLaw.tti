@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  name="WC7GoverningLaw"
+  desc="What kind of special coverage does this group of employees have?"
+  final="false">
+  <typecode
+    code="state"
+    desc=""
+    name="State Act"
+    priority="1">
+    <category
+      code="WorkersComp"
+      typelist="WC7LiabilityAct"/>
+  </typecode>
+  <typecode
+    code="defenseBaseAct"
+    desc="WC 00 01 01 A 04 92"
+    name="Defense Base Act"
+    priority="2">
+    <category
+      code="WorkersComp"
+      typelist="WC7LiabilityAct"/>
+  </typecode>
+  <typecode
+    code="fedCoalMine"
+    desc="WC 00 01 02 A 07 11"
+    name="Federal Coal Mine Health And Safety Act"
+    priority="3">
+    <category
+      code="WorkersComp"
+      typelist="WC7LiabilityAct"/>
+  </typecode>
+  <typecode
+    code="longshoreAndHarbor"
+    desc="WC 00 01 06 A 04 92"
+    name="Longshore And Harbor Workers Compensation Act"
+    priority="4">
+    <category
+      code="WorkersComp"
+      typelist="WC7LiabilityAct"/>
+  </typecode>
+  <typecode
+    code="migrantAndSeasonalAgricultural"
+    desc="WC 00 01 11 07 92"
+    name="Migrant And Seasonal Agricultural Worker Protection Act"
+    priority="5">
+    <category
+      code="WorkersComp"
+      typelist="WC7LiabilityAct"/>
+  </typecode>
+  <typecode
+    code="nonappropriatedFundInstrumentalities"
+    desc="WC 00 01 08 A 04 92"
+    name="Nonappropriated Fund Instrumentalities Act"
+    priority="6">
+    <category
+      code="WorkersComp"
+      typelist="WC7LiabilityAct"/>
+  </typecode>
+  <typecode
+    code="outerContinentalShelfLands"
+    desc="WC 00 01 09 B 07 11"
+    name="Outer Continental Shelf Lands Act"
+    priority="7">
+    <category
+      code="WorkersComp"
+      typelist="WC7LiabilityAct"/>
+  </typecode>
+  <typecode
+    code="voluntaryComp"
+    desc="WC 00 03 11 A 08 91"
+    name="Voluntary Compensation and Employers Liability"
+    priority="8">
+    <category
+      code="WorkersComp"
+      typelist="WC7LiabilityAct"/>
+  </typecode>
+  <typecode
+    code="voluntaryCompForResidenceEmp"
+    desc="WC 00 03 12 A 07 11"
+    name="Voluntary Compensation and Employers Liability For Residence Employees"
+    priority="9">
+    <category
+      code="WorkersComp"
+      typelist="WC7LiabilityAct"/>
+  </typecode>
+  <typecode
+    code="limitedMaritime"
+    desc="WC 00 02 04"
+    name="Limited Maritime"
+    priority="11">
+    <category
+      code="WorkersComp"
+      typelist="WC7LiabilityAct"/>
+  </typecode>
+  <typecode
+     code="stopGap"
+     desc="Exposure rated stop gap"
+     name="Exposure Rated Stop Gap"
+     priority="12">
+     <category
+       code="WorkersComp"
+       typelist="WC7LiabilityAct"/>
+   </typecode>
+  <typefilter
+    desc="Applicable Federal Employee Liability Law"
+    name="WC7FedEmpLiabLaw">
+    <include
+      code="state"/>
+    <include
+      code="longshoreAndHarbor"/>
+  </typefilter>
+</typelist>

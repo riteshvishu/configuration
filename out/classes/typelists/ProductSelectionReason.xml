@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typelist name="ProductSelectionReason" desc="Reason for making a product offer (filtered by ProductSelectionStatus)" final="false">
+
+  <typecode code="NotOffered" name="NotOffered" desc="Product not offered">
+    <category typelist="ProductSelectionStatus" code="Unavailable"/>
+    <category typelist="ProductSelectionStatus" code="AutoDeclined"/>
+  </typecode>
+  <typecode code="LossHistory" name="Loss history" desc="Loss history">
+    <category typelist="ProductSelectionStatus" code="AutoDeclined"/>
+  </typecode>
+  <typecode code="PaymentHistory" name="Payment history" desc="Payment history">
+    <category typelist="ProductSelectionStatus" code="AutoDeclined"/>
+  </typecode>
+
+</typelist>

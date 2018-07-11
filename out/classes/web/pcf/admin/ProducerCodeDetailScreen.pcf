@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Screen
+    editable="true"
+    id="ProducerCodeDetailScreen">
+    <Require
+      name="producerCode"
+      type="ProducerCode"/>
+    <Toolbar>
+      <EditButtons/>
+      <ToolbarButton
+        action="gw.api.admin.ProducerCodeUtil.deleteProducerCode(producerCode); AdminProducerCodeSearch.go()"
+        confirmMessage="displaykey.Web.Admin.ProducerCodeDetail.DeleteConfirm"
+        hideIfEditable="true"
+        id="DeleteButton"
+        label="displaykey.Button.Delete"
+        shortcut="L"
+        visible="perm.System.prodcodedelete"/>
+    </Toolbar>
+    <CardViewPanel>
+      <Card
+        id="ProducerCodeDetail_BasicCard"
+        title="displaykey.Web.Admin.ProducerCodeDetail.Basic">
+        <PanelRef
+          def="ProducerCodeDetail_BasicDV(producerCode)"/>
+        <PanelRef
+          def="LocalizedValuesDV(producerCode, { &quot;Description&quot;}, { displaykey.Web.Admin.ProducerCodeLocalizedLV.Description })"/>
+      </Card>
+      <Card
+        id="ProducerCodeDetail_RolesCard"
+        title="displaykey.Web.Admin.ProducerCodeDetail.Roles">
+        <PanelRef
+          def="ProducerCodeDetail_RolesLV(producerCode)">
+          <Toolbar>
+            <AddButton
+              hideIfReadOnly="true"
+              id="AddRoleButton"
+              iterator="ProducerCodeDetail_RolesLV.ProducerCodeDetail_RolesLV"
+              label="displaykey.Button.Add"/>
+            <CheckedValuesToolbarButton
+              allCheckedRowsAction="CheckedValues.each(\ p -&gt; removeProducerCodeRole(p)); gw.api.web.PebblesUtil.invalidateIterators(CurrentLocation, ProducerCodeRole);"
+              hideIfReadOnly="true"
+              id="RemoveRoleButton"
+              iterator="ProducerCodeDetail_RolesLV.ProducerCodeDetail_RolesLV"
+              label="displaykey.Button.Remove"/>
+          </Toolbar>
+        </PanelRef>
+      </Card>
+      <Card
+        hideIfEditable="true"
+        id="ProducerCodeDetail_GroupsCard"
+        title="displaykey.Web.Admin.ProducerCodeDetail.Groups">
+        <PanelRef
+          def="ProducerCodeDetail_GroupsLV(producerCode)">
+          <Toolbar/>
+          <Verbatim
+            label="displaykey.Web.Admin.ProducerCodeDetail.UserGroupLabel"
+            warning="true"/>
+        </PanelRef>
+      </Card>
+      <Card
+        hideIfEditable="true"
+        id="ProducerCodeDetail_UsersCard"
+        title="displaykey.Web.Admin.ProducerCodeDetail.Users">
+        <PanelRef
+          def="ProducerCodeDetail_UsersLV(producerCode)">
+          <Toolbar/>
+          <Verbatim
+            label="displaykey.Web.Admin.ProducerCodeDetail.UserLabel"
+            warning="true"/>
+        </PanelRef>
+      </Card>
+    </CardViewPanel>
+    <Code><![CDATA[function removeProducerCodeRole(p : ProducerCodeRole) {
+  if (p.Role == null) {
+    p.remove()  
+  } else {
+    p.ProducerCode.removeRole(p.Role)
+  }
+}]]></Code>
+  </Screen>
+</PCF>

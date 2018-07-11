@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7JurisdictionMultiplier">
+  <Columns>
+    <Column
+      beanPath="WC7JurisdictionMultiplier.FederalTaxMultiplier"
+      name="FedMultiplier"/>
+  </Columns>
+  <DisplayName><![CDATA[FedMultiplier]]></DisplayName>
+</Entity>

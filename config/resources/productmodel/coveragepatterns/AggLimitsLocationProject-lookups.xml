@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<import>
+  <ConditionLookup public-id="zevj26afk3n253on8t60ajjjv1b">
+    <Availability>Available</Availability>
+    <ConditionPatternCode>AggLimitsLocationProject</ConditionPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </ConditionLookup>
+  <CovTermLookup public-id="z9kg49ok2hmfsfdmuqvndhiap58">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>AggLimitApplicability</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="z6jje9l8jrqgd3a23nkikq6u2nb">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>AggLimitLocProjectDescription</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="z6ciuu34qvcmdcfcrc2ccrlv7db">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zq3g62568p5jvdb940d12sq9n69</CovTermOptCode>
+    <CovTermPatternCode>AggLimitApplicability</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z43gc0mitse72fk9sboria14uka">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zs4hgk70k76c51btjfdrhip0j7b</CovTermOptCode>
+    <CovTermPatternCode>AggLimitApplicability</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+</import>

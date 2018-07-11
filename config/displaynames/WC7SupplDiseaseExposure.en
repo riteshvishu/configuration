@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7SupplDiseaseExposure">
+  <Columns>
+    <Column
+      beanPath="WC7SupplDiseaseExposure.Location.LocationNum"
+      name="Location"/>
+    <Column
+      beanPath="WC7SupplDiseaseExposure.DiseaseCode.Code"
+      name="DiseaseCode"/>
+  </Columns>
+  <DisplayName><![CDATA[
+return (DiseaseCode == null) ? 
+  displaykey.EntityName.WC7SupplDiseaseExposure.ByLocationOnly(Location) :
+  displaykey.EntityName.WC7SupplDiseaseExposure.ByLocationAndClass(Location, DiseaseCode)
+
+    
+  ]]></DisplayName>
+</Entity>

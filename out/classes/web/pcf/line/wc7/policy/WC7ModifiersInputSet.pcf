@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <InputSet
+    id="WC7ModifiersInputSet">
+    <Require
+      name="modifiers"
+      type="List&lt;Modifier&gt;"/>
+    <Require
+      name="policyPeriod"
+      type="PolicyPeriod"/>
+    <Variable
+      initialValue="modifiers?.where( \ mod -&gt; mod.DataType != &quot;rate&quot; or mod.ScheduleRate)?.toTypedArray()"
+      name="nonRateOrSchedRateModifiers"
+      type="Modifier[]"/>
+    <InputIterator
+      elementName="rateModifier"
+      id="ModIteratorEligible"
+      value="modifiers.where( \ mod -&gt; mod.DataType == &quot;rate&quot; and not mod.ScheduleRate).toTypedArray()">
+      <IteratorSort
+        sortBy="rateModifier.Pattern.Priority"
+        sortOrder="1"/>
+      <IteratorSort
+        sortBy="rateModifier.Pattern.Name"
+        sortDirection="descending"
+        sortOrder="2"/>
+      <InputGroup
+        allowToggle="gw.pcf.WC7ModifiersInputSetUIHelper.rateModifierAvailable(rateModifier, policyPeriod)"
+        childrenVisible="rateModifier.Eligible"
+        id="EligibilityInputGroup"
+        label="displaykey.Web.Policy.Modifiers.Eligibility(rateModifier.Pattern.Name)"
+        onToggle="toggleEligible(rateModifier)">
+        <HiddenInput
+          id="ModifierName"
+          value="rateModifier.Pattern.Name"/>
+        <TextInput
+          action="WC7ScheduleCreditPopup.push(rateModifier, policyPeriod.OpenForEdit)"
+          actionAvailable="rateModifier.Pattern.Code == &quot;WC7ScheduleMod&quot;"
+          editable="rateModifier.Pattern.Code != &quot;WC7ScheduleMod&quot;"
+          id="ModifierInput"
+          label="rateModifier.Pattern.Name"
+          numCols="5"
+          requestValidationExpression="rateModifier.getModifierValidation(VALUE as String)"
+          value="rateModifier.RateWithinLimits"/>
+        <BooleanRadioInput
+          editable="true"
+          id="ValueFinal"
+          label="displaykey.Web.Policy.Modifiers.ExModFinal"
+          value="rateModifier.ValueFinal"
+          visible="rateModifier.PatternCode == &quot;WC7ExpMod&quot;"/>
+        <PostOnChange
+          disablePostOnEnter="gw.pcf.WC7ModifiersInputSetUIHelper.rateModifierDisablePostOnChange(rateModifier)"/>
+      </InputGroup>
+    </InputIterator>
+    <InputIterator
+      elementName="modifier"
+      id="ModIterator"
+      value="modifiers.where( \ mod -&gt; mod.DataType != &quot;rate&quot; or mod.ScheduleRate).toTypedArray()">
+      <IteratorSort
+        sortBy="modifier.Pattern.Priority"
+        sortOrder="1"/>
+      <IteratorSort
+        sortBy="modifier.Pattern.Name"
+        sortDirection="descending"
+        sortOrder="2"/>
+      <HiddenInput
+        id="ModifierName"
+        value="modifier.Pattern.Name"/>
+      <TextInput
+        action="WC7ScheduleCreditPopup.push(modifier, policyPeriod.OpenForEdit)"
+        actionAvailable="policyPeriod.CanViewModifiers and modifier.Pattern.Code == &quot;WC7ScheduleMod&quot;"
+        editable="modifier.Pattern.Code != &quot;WC7ScheduleMod&quot;"
+        id="ModifierInput_Rate"
+        label="modifier.Pattern.Name"
+        numCols="5"
+        requestValidationExpression="modifier.getModifierValidation(VALUE as String)"
+        value="modifier.RateWithinLimits"
+        visible="modifier.DataType == ModifierDataType.TC_RATE"/>
+      <BooleanRadioInput
+        editable="true"
+        id="ModifierInput_Boolean"
+        label="modifier.Pattern.Name"
+        numCols="5"
+        value="modifier.BooleanModifier"
+        visible="modifier.DataType == ModifierDataType.TC_BOOLEAN"/>
+      <RangeInput
+        available="gw.pcf.WC7ModifiersInputSetUIHelper.typekeyModifierAvailable(modifier, policyPeriod)"
+        editable="true"
+        id="ModifierInput_TypeKey"
+        label="modifier.Pattern.Name"
+        numCols="5"
+        value="modifier.TypeKeyModifier"
+        valueRange="gw.pcf.WC7ModifiersInputSetUIHelper.filterTypekeyModifier(modifier)"
+        visible="modifier.DataType == ModifierDataType.TC_TYPEKEY">
+        <PostOnChange
+          disablePostOnEnter="gw.pcf.WC7ModifiersInputSetUIHelper.typekeyModifierDisablePostOnChange(modifier)"/>
+      </RangeInput>
+      <DateInput
+        editable="true"
+        id="ModifierInput_Date"
+        label="modifier.Pattern.Name"
+        numCols="5"
+        value="modifier.DateModifier"
+        visible="modifier.DataType == ModifierDataType.TC_DATE"/>
+    </InputIterator>
+    <Code><![CDATA[function toggleEligible(mod : Modifier) {
+  if (mod.Eligible) {
+    mod.RateModifier = null
+    mod.Eligible = false
+  } else {
+    mod.Eligible = true
+  }
+}]]></Code>
+  </InputSet>
+</PCF>

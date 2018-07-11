@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7ELIncreasedLimitCost">
+  <Columns>
+    <Column
+      beanPath="WC7ELIncreasedLimitCost.WC7ELIncreasedLimitCostType"
+      name="Type"/>
+  </Columns>
+  <DisplayName><![CDATA[Type]]></DisplayName>
+</Entity>

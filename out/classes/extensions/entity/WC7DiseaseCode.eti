@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" desc="Workers' comp disease stat codes.  Premium calculations are driven by disease stat codes and both premium and losses are reported by disease stat codes to rating bureaus." entity="WC7DiseaseCode" exportable="true" extendable="true" ignoreForEvents="true" loadable="false" platform="false" readOnly="true" table="wc7diseasecode" type="retireable">
+  <implementsEntity name="SimpleEffDated"/>
+  <column desc="The Disease Code for a line of insurance" name="Code" nullok="false" type="shorttext"/>
+  <column desc="Description for the code" name="SupplDiseaseLoadingType" nullok="false" type="shorttext">
+    <localization nullok="true" tableName="wc7disstatdesc"/>
+  </column>
+  <typekey desc="The jurisdiction for which this code value is allowed." name="Jurisdiction" nullok="true" typelist="Jurisdiction"/>
+</entity>

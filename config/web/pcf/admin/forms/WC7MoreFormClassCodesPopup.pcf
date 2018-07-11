@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <Popup
+    canEdit="true"
+    countsAsWork="false"
+    id="WC7MoreFormClassCodesPopup"
+    returnType="WC7FormPatternClassCode[]"
+    startInEditMode="true"
+    title="displaykey.Web.Policy.WC7.ClassCode.MoreClassCodeSelection">
+    <LocationEntryPoint
+      signature="WC7MoreFormClassCodesPopup(formPattern : FormPattern,  formClassCodes : WC7ClassCode[])"/>
+    <Variable
+      name="formPattern"
+      type="FormPattern"/>
+    <Variable
+      name="formClassCodes"
+      type="WC7ClassCode[]"/>
+    <Screen>
+      <SearchPanel
+        cachingEnabled="false"
+        criteriaName="searchCriteria"
+        resultsName="wc7ClassCodes"
+        search="searchCriteria.performSearch()"
+        searchCriteria="createCriteria()"
+        searchOnEnter="true"
+        searchResultsType="WC7ClassCodeQuery">
+        <PanelRef>
+          <DetailViewPanel
+            id="WCClassCodeSearchDV">
+            <InputColumn>
+              <Input
+                editable="true"
+                id="Code"
+                label="displaykey.Web.ClassCodeSearch.Code"
+                required="false"
+                value="searchCriteria.Code"/>
+              <Input
+                editable="true"
+                id="Classification"
+                label="displaykey.Web.ClassCodeSearch.Classification"
+                required="false"
+                value="searchCriteria.Classification"/>
+            </InputColumn>
+            <InputFooterSection>
+              <InputSetRef
+                def="SearchAndResetInputSet()"/>
+            </InputFooterSection>
+          </DetailViewPanel>
+        </PanelRef>
+        <PanelRef>
+          <TitleBar
+            appendListViewPaging="true"
+            title="displaykey.Web.Search.Results"/>
+          <Toolbar>
+            <CheckedValuesToolbarButton
+              allCheckedRowsAction="addWC7ClassCodes(CheckedValues)"
+              id="AddSelectedClassCodes"
+              iterator="wc7ClassCodeIterator"
+              label="displaykey.Web.Policy.WC7.ClassCode.AddSelectedClassCodes"/>
+            <EditButtons
+              updateVisible="false"/>
+          </Toolbar>
+          <ListViewPanel
+            id="ClassCodeSearchResultsLV">
+            <RowIterator
+              checkBoxVisible="true"
+              editable="true"
+              elementName="wc7ClassCode"
+              hasCheckBoxes="true"
+              id="wc7ClassCodeIterator"
+              value="wc7ClassCodes">
+              <Row>
+                <TextCell
+                  id="Code"
+                  label="displaykey.Web.Policy.WC7.ClassCode.Code"
+                  numCols="8"
+                  value="wc7ClassCode.Code"
+                  wrap="false"/>
+                <Cell
+                  align="left"
+                  id="Classification"
+                  label="displaykey.Web.Policy.WC7.ClassCode.Classification"
+                  value="wc7ClassCode.Classification"/>
+                <Cell
+                  align="left"
+                  id="Jurisidiction"
+                  label="displaykey.Web.Policy.WC7.ClassCode.Jurisdiction"
+                  value="wc7ClassCode.Jurisdiction"/>
+              </Row>
+            </RowIterator>
+          </ListViewPanel>
+        </PanelRef>
+      </SearchPanel>
+    </Screen>
+    <Code><![CDATA[uses gw.lob.wc7.WC7ClassCodeSearchCriteria
+
+function addWC7ClassCodes(codes : WC7ClassCode[]) {
+  var addedFormPatternClassCodes = formPattern.WC7FormPatternClassCodes
+  for (classCode in codes) {
+    if(!addedFormPatternClassCodes?.hasMatch(\ fpcc -> fpcc.Code == classCode.Code and fpcc.Classification == classCode.Classification and fpcc.Jurisdiction == classCode.Jurisdiction)) {
+      var formPatternClassCode = new WC7FormPatternClassCode()
+      formPatternClassCode.Code = classCode.Code
+      formPatternClassCode.Classification = classCode.Classification
+      formPatternClassCode.Jurisdiction = classCode.Jurisdiction
+      formPattern.addToWC7FormPatternClassCodes(formPatternClassCode)
+    }
+  }
+  CurrentLocation.commit()
+}
+
+function createCriteria() : WC7ClassCodeSearchCriteria {
+  var criteria = new WC7ClassCodeSearchCriteria()
+  return criteria
+}]]></Code>
+  </Popup>
+</PCF>

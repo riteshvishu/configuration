@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<import>
+  <CovTermLookup public-id="zs5j6383jqbmrc0vb53c8coq59a">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>PIPMI_OtherProvider</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BusinessAutoLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="z3bh0utbfv1kdcr90k3h0h7qd4a">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zmfh0b3ft80876ijddkpv21ftdb</CovTermOptCode>
+    <CovTermPatternCode>PIPMI_OtherProvider</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zkkge6rjso0hvapam87jabk0so9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z6ui20o61g1169kli48tta2lfn9</CovTermOptCode>
+    <CovTermPatternCode>PIPMI_OtherProvider</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zdajq15f7qu0tdvgn1hg6j5ed7b">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zlgj463lmid10blbdt4jfpmekeb</CovTermOptCode>
+    <CovTermPatternCode>PIPMI_OtherProvider</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermLookup public-id="z8ehs78j4rmus8u4obf3j27cll8">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>PIPMI_DEDUCTIBLE</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BusinessAutoLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="zjrjokhkpujv06mvoc4ruib61p8">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zaej8ed33rrqfd9haako4usm8b8</CovTermOptCode>
+    <CovTermPatternCode>PIPMI_DEDUCTIBLE</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zc1gsasub0e2mdk5fe72m872o1b">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z8vgekvumorucap4el3ammco6ub</CovTermOptCode>
+    <CovTermPatternCode>PIPMI_DEDUCTIBLE</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zi9gat93t1tor85jd0tgpm54hi9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z7shsicp66d9b3bg0fkud60nao8</CovTermOptCode>
+    <CovTermPatternCode>PIPMI_DEDUCTIBLE</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermLookup public-id="zo2h4ien6i8gsb5mjgc93q0heg8">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>PIPMI_MED</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BusinessAutoLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="zc2hgo3kuflt7fh9efsbgv961ta">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>PIPMI_FUNERAL</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BusinessAutoLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="zgvgmpf9fq3sjand9b985atvb4b">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>PIPMI_INCOME</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BusinessAutoLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="zj7hos0s1l6jk25dvkqcbip1c39">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>PIPMI_SURVIVOR</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BusinessAutoLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="zh5jed4japulm3igsjhf50b1488">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>PIPMI_SERVICES</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BusinessAutoLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="zqih05sp0bkea4e7ud9hg1qqcv8">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z6ajm1keioekl5kop8di36hk5h9</CovTermOptCode>
+    <CovTermPatternCode>PIPMI_FUNERAL</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z5og8p72mg8456sh40kpe1j7jh9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z7ug40gcafpj723jgqj4809fcma</CovTermOptCode>
+    <CovTermPatternCode>PIPMI_SERVICES</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <BACovLookup public-id="zbpj2tvrc0see5a3cmcnjg7asbb">
+    <Availability>Available</Availability>
+    <CoveragePatternCode>CAPIP_MI</CoveragePatternCode>
+    <PolicyLinePatternCode>BusinessAutoLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State>MI</State>
+  </BACovLookup>
+</import>

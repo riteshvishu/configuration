@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<extension xmlns="http://guidewire.com/datamodel" entityName="ProducerCode">
+  <array
+    name="AffinityGroupProducerCodes"
+    desc="Available groups to a producer code."
+    arrayentity="WC7AffinityGroupProducerCode"
+    owner="true"
+    triggersValidation="true"/>
+</extension>

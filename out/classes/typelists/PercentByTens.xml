@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typelist name="PercentByTens" desc="Percentage values from 0 to 100 by 10" final="false">
+  <typecode code="100" name="100%" desc="100%" priority="0"/>
+  <typecode code="90" name="90%" desc="90%" priority="1"/>
+  <typecode code="80" name="80%" desc="80%" priority="2"/>
+  <typecode code="70" name="70%" desc="70%" priority="3"/>
+  <typecode code="60" name="60%" desc="60%" priority="4"/>
+  <typecode code="50" name="50%" desc="50%" priority="5"/>
+  <typecode code="40" name="40%" desc="40%" priority="6"/>
+  <typecode code="30" name="30%" desc="30%" priority="7"/>
+  <typecode code="20" name="20%" desc="20%" priority="8"/>
+  <typecode code="10" name="10%" desc="10%" priority="9"/>
+  <typecode code="0" name="0%" desc="0%" priority="10"/>
+</typelist>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7LaborContactDetail">
+  <Columns>
+    <Column
+      beanPath="WC7LaborContactDetail.WC7LaborContact"
+      name="wcLaborContact"/>
+  </Columns>
+  <DisplayName><![CDATA[wcLaborContact]]></DisplayName>
+</Entity>

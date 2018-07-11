@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<import>
+  <ConditionLookup public-id="z5fj6fud1d69d6l1h7kqf5d7qh8">
+    <Availability>Unavailable</Availability>
+    <ConditionPatternCode>WC7MedicalBenefitsReimbursementEndorsementCond</ConditionPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+  </ConditionLookup>
+</import>

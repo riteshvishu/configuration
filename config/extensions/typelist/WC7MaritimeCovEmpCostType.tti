@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="The type of cost for a maritime covered employees' cost"
+  name="WC7MaritimeCovEmpCostType">
+  <typecode
+    code="MaritimeCovEmp"
+    desc="Maritime Covered Employee"
+    name="Maritime Covered Employee"/>
+  <typecode
+    code="IncreasedLimitsFactor"
+    desc="Increased Limit Factor(Maritime)"
+    name="Increased Limit Factor(Maritime)"/>
+  <typecode
+    code="SupplementalDisease"
+    desc="Supplemental Disease(Maritime)"
+    name="SupplementalDisease(Maritime)"/>
+</typelist>

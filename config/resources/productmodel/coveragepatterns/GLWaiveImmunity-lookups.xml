@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<import>
+  <ConditionLookup public-id="zfugsdc062j16aheuf0b37inqb9">
+    <Availability>Available</Availability>
+    <ConditionPatternCode>GLWaiveImmunity</ConditionPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </ConditionLookup>
+  <CovTermLookup public-id="z5ij46gc8vvm29r5cocpsr1fe8a">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>ImmunityType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>GLLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="zc0ig8ed0svbgabna672j1gm279">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zpfjal0h04b07f8qqogbr62kfab</CovTermOptCode>
+    <CovTermPatternCode>ImmunityType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z2kiqdh7essghdd96gl06l60718">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zgegk9h2vgnn340elpvnrh1rp39</CovTermOptCode>
+    <CovTermPatternCode>ImmunityType</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermOptLookup>
+</import>

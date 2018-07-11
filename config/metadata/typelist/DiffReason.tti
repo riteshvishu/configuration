@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" desc="Reason for calling Diff code" final="false" subpackage="policy.period" name="DiffReason">
+  <typecode code="PolicyReview" desc="Displaying policy review screen" name="PolicyReview"/>
+  <typecode code="ApplyChanges" desc="Determine changes to apply from this branch" name="ApplyChanges"/>
+  <typecode code="Integration" desc="Determine integration changes" name="Integration"/>
+  <typecode code="MultiVersionJob" desc="Multi-version comparison" name="MultiVersionJob"/>
+  <typecode code="CompareJobs" desc="Compare jobs" name="CompareJobs"/>
+</typelist>

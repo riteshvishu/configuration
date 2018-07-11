@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" desc="Custom history event types, used to support once-only execution of rules" final="false" subpackage="history" name="CustomHistoryType" platform="true"/>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  name="WC7ParticipatingPlanID"
+  desc="The type of WC participating plan."
+  final="false">
+  <typecode
+    code="1ystd"
+    desc="One year standard"
+    name="1Y-STD"
+    priority="1">
+    <category
+      code="CA"
+      typelist="Jurisdiction"/>
+    <category
+      code="NY"
+      typelist="Jurisdiction"/>
+    <category
+      code="FL"
+      typelist="Jurisdiction"/>
+    <category
+      code="NJ"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode
+    code="2ystd"
+    desc="Two years standard"
+    name="2Y-STD"
+    priority="2">
+    <category
+      code="WI"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode
+    code="3ystd"
+    desc="Three years standard"
+    name="3Y-STD"
+    priority="3">
+    <category
+      code="WI"
+      typelist="Jurisdiction"/>
+  </typecode>
+</typelist>

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<import xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.guidewire.com/cc/import/cc_import.xsd">
+  <CovTermOptLookup public-id="wKjIlT3MWnAAAAAA">
+    <Availability>Available</Availability>
+    <CovTermOptCode>wKjIleOck_kAAAAA</CovTermOptCode>
+    <CovTermPatternCode>BOPOrdLawCov1yesno</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="wKjIlVze_jsAAAAA">
+    <Availability>Available</Availability>
+    <CovTermOptCode>wKjIlapbUY8AAAAA</CovTermOptCode>
+    <CovTermPatternCode>BOPOrdLawCov1yesno</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermLookup public-id="wKjIlROf870AAAAA">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>BOPOrdLawCov23Lim</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermLookup>
+  <CovTermLookup public-id="wKjIlSOVGLcAAAAA">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>BOPOrdLawCov2Lim</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermLookup>
+  <CovTermLookup public-id="wKjIlXTtLjsAAAAA">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>BOPOrdLawCov1yesno</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermLookup>
+  <CovTermLookup public-id="wKjIlZp0cv0AAAAA">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>BOPOrdLawCov3Lim</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermLookup>
+  <CoverageLookup public-id="wKjIlVfbYqMAAAAA">
+    <Availability>Available</Availability>
+    <CoveragePatternCode>BOPOrdinanceCov</CoveragePatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CoverageLookup>
+  <CovTermLookup public-id="wKgUYqgF64cAAAAA">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>BOPOrdLawIncomeExpense</CovTermPatternCode>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+  </CovTermLookup>
+  <CovTermLookup public-id="wKgUYre1gWEAAAAA">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>BOPOrdLawIncomeExpenseDeduct</CovTermPatternCode>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="wKgUYjnahIkAAAAA">
+    <Availability>Available</Availability>
+    <CovTermOptCode>wKgUYhLHJz4AAAAA</CovTermOptCode>
+    <CovTermPatternCode>BOPOrdLawIncomeExpenseDeduct</CovTermPatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="wKgUYqVC71IAAAAA">
+    <Availability>Available</Availability>
+    <CovTermOptCode>wKgUYhM8A9cAAAAA</CovTermOptCode>
+    <CovTermPatternCode>BOPOrdLawIncomeExpenseDeduct</CovTermPatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="wKgUYnt8K9sAAAAA">
+    <Availability>Available</Availability>
+    <CovTermOptCode>wKgUYv7xNHQAAAAA</CovTermOptCode>
+    <CovTermPatternCode>BOPOrdLawIncomeExpenseDeduct</CovTermPatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+  </CovTermOptLookup>
+</import>

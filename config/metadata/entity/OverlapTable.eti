@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<delegate xmlns="http://guidewire.com/datamodel" subpackage="archiving" name="OverlapTable" platform="true">
+  <column desc="If the entity belongs to the admin graph" exportable="false" loadable="false" name="Admin" nullok="true" type="bit"
+          getterScriptability="doesNotExist" setterScriptability="doesNotExist" createhistogram="true"/>
+</delegate>

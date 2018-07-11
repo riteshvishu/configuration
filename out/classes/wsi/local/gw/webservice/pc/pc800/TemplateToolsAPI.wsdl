@@ -1,0 +1,498 @@
+<?xml version="1.0"?>
+<!-- Generated WSDL for gw.webservice.pc.pc800.TemplateToolsAPI web service -->
+<wsdl:definitions targetNamespace="http://guidewire.com/pc/ws/gw/webservice/pc/pc800/TemplateToolsAPI" name="TemplateToolsAPI" xmlns:gwsoap="http://guidewire.com/ws/soapheaders" xmlns:gwwsdl="http://guidewire.com/pl/wsdl" xmlns:pogo="http://guidewire.com/gw/api/webservice/templateTools" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://guidewire.com/pc/ws/gw/webservice/pc/pc800/TemplateToolsAPI" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://guidewire.com/pc/ws/gw/webservice/pc/pc800/TemplateToolsAPI" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://guidewire.com/ws/soapheaders" schemaLocation="../../../../../../gw/xsd/guidewire/soapheaders.xsd"/>
+      <xs:import namespace="http://guidewire.com/gw/api/webservice/templateTools"/>
+      <!-- validateTemplate(String) : String -->
+      <xs:element name="validateTemplate">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="templateID" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="validateTemplateResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SOAPException">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="BadIdentifierException">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="WebServiceException">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="WsiAuthenticationException">
+        <xs:complexType/>
+      </xs:element>
+      <!-- validateTemplateInLocale(String, String) : String -->
+      <xs:element name="validateTemplateInLocale">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="templateID" type="xs:string" minOccurs="0"/>
+            <xs:element name="locale" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="validateTemplateInLocaleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- validateAllTemplates() : String -->
+      <xs:element name="validateAllTemplates">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="validateAllTemplatesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- validateAllTemplatesInLocale(String) : String -->
+      <xs:element name="validateAllTemplatesInLocale">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="locale" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="validateAllTemplatesInLocaleResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- listTemplates() : String -->
+      <xs:element name="listTemplates">
+        <xs:complexType/>
+      </xs:element>
+      <xs:element name="listTemplatesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <!-- importFormFields(String, String, String, String) : TemplateImportResults -->
+      <xs:element name="importFormFields">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="contextObjectFileContents" type="xs:string" minOccurs="0"/>
+            <xs:element name="fieldGroupFileContents" type="xs:string" minOccurs="0"/>
+            <xs:element name="fieldFileContents" type="xs:string" minOccurs="0"/>
+            <xs:element name="descriptorFileContents" type="xs:string" minOccurs="0"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="importFormFieldsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" minOccurs="0" type="pogo:TemplateImportResults"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema targetNamespace="http://guidewire.com/gw/api/webservice/templateTools" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="TemplateImportResults">
+        <xs:sequence>
+          <xs:element name="FileContents" type="xs:string" minOccurs="0"/>
+          <xs:element name="Output" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:portType name="TemplateToolsAPIPortType">
+    <wsdl:operation name="validateTemplate">
+      <wsdl:input name="validateTemplate" message="tns:validateTemplate"/>
+      <wsdl:output name="validateTemplateResponse" message="tns:validateTemplateResponse"/>
+      <!-- If a communication error occurs -->
+      <wsdl:fault name="SOAPException" message="tns:SOAPException"/>
+      <!-- If templateID is null -->
+      <wsdl:fault name="BadIdentifierException" message="tns:BadIdentifierException"/>
+      <wsdl:fault name="WebServiceException" message="tns:WebServiceException"/>
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+    </wsdl:operation>
+    <wsdl:operation name="validateTemplateInLocale">
+      <wsdl:input name="validateTemplateInLocale" message="tns:validateTemplateInLocale"/>
+      <wsdl:output name="validateTemplateInLocaleResponse" message="tns:validateTemplateInLocaleResponse"/>
+      <!-- If a communication error occurs -->
+      <wsdl:fault name="SOAPException" message="tns:SOAPException"/>
+      <!-- If templateID or locale are null -->
+      <wsdl:fault name="BadIdentifierException" message="tns:BadIdentifierException"/>
+      <wsdl:fault name="WebServiceException" message="tns:WebServiceException"/>
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+    </wsdl:operation>
+    <wsdl:operation name="validateAllTemplates">
+      <wsdl:input name="validateAllTemplates" message="tns:validateAllTemplates"/>
+      <wsdl:output name="validateAllTemplatesResponse" message="tns:validateAllTemplatesResponse"/>
+      <!-- If a communication error occurs -->
+      <wsdl:fault name="SOAPException" message="tns:SOAPException"/>
+      <wsdl:fault name="WebServiceException" message="tns:WebServiceException"/>
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+    </wsdl:operation>
+    <wsdl:operation name="validateAllTemplatesInLocale">
+      <wsdl:input name="validateAllTemplatesInLocale" message="tns:validateAllTemplatesInLocale"/>
+      <wsdl:output name="validateAllTemplatesInLocaleResponse" message="tns:validateAllTemplatesInLocaleResponse"/>
+      <!-- If a communication error occurs -->
+      <wsdl:fault name="SOAPException" message="tns:SOAPException"/>
+      <!-- If locale is null -->
+      <wsdl:fault name="BadIdentifierException" message="tns:BadIdentifierException"/>
+      <wsdl:fault name="WebServiceException" message="tns:WebServiceException"/>
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+    </wsdl:operation>
+    <wsdl:operation name="listTemplates">
+      <wsdl:input name="listTemplates" message="tns:listTemplates"/>
+      <wsdl:output name="listTemplatesResponse" message="tns:listTemplatesResponse"/>
+      <!-- If a communication error occurs -->
+      <wsdl:fault name="SOAPException" message="tns:SOAPException"/>
+      <wsdl:fault name="WebServiceException" message="tns:WebServiceException"/>
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+    </wsdl:operation>
+    <wsdl:operation name="importFormFields">
+      <wsdl:input name="importFormFields" message="tns:importFormFields"/>
+      <wsdl:output name="importFormFieldsResponse" message="tns:importFormFieldsResponse"/>
+      <!-- If a communication error occurs -->
+      <wsdl:fault name="SOAPException" message="tns:SOAPException"/>
+      <wsdl:fault name="WebServiceException" message="tns:WebServiceException"/>
+      <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TemplateToolsAPISoap12Binding" type="tns:TemplateToolsAPIPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="validateTemplate">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="validateTemplate">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateTemplateResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPException">
+        <soap12:fault name="SOAPException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="BadIdentifierException">
+        <soap12:fault name="BadIdentifierException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap12:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateTemplateInLocale">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="validateTemplateInLocale">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateTemplateInLocaleResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPException">
+        <soap12:fault name="SOAPException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="BadIdentifierException">
+        <soap12:fault name="BadIdentifierException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap12:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateAllTemplates">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="validateAllTemplates">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateAllTemplatesResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPException">
+        <soap12:fault name="SOAPException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap12:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateAllTemplatesInLocale">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="validateAllTemplatesInLocale">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateAllTemplatesInLocaleResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPException">
+        <soap12:fault name="SOAPException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="BadIdentifierException">
+        <soap12:fault name="BadIdentifierException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap12:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listTemplates">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="listTemplates">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listTemplatesResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPException">
+        <soap12:fault name="SOAPException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap12:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="importFormFields">
+      <soap12:operation soapActionRequired="false" style="document"/>
+      <wsdl:input name="importFormFields">
+        <soap12:body use="literal"/>
+        <soap12:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap12:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="importFormFieldsResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPException">
+        <soap12:fault name="SOAPException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap12:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap12:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TemplateToolsAPISoap11Binding" type="tns:TemplateToolsAPIPortType">
+    <soap11:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="validateTemplate">
+      <soap11:operation style="document"/>
+      <wsdl:input name="validateTemplate">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateTemplateResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPException">
+        <soap11:fault name="SOAPException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="BadIdentifierException">
+        <soap11:fault name="BadIdentifierException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap11:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateTemplateInLocale">
+      <soap11:operation style="document"/>
+      <wsdl:input name="validateTemplateInLocale">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateTemplateInLocaleResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPException">
+        <soap11:fault name="SOAPException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="BadIdentifierException">
+        <soap11:fault name="BadIdentifierException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap11:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateAllTemplates">
+      <soap11:operation style="document"/>
+      <wsdl:input name="validateAllTemplates">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateAllTemplatesResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPException">
+        <soap11:fault name="SOAPException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap11:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="validateAllTemplatesInLocale">
+      <soap11:operation style="document"/>
+      <wsdl:input name="validateAllTemplatesInLocale">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateAllTemplatesInLocaleResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPException">
+        <soap11:fault name="SOAPException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="BadIdentifierException">
+        <soap11:fault name="BadIdentifierException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap11:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listTemplates">
+      <soap11:operation style="document"/>
+      <wsdl:input name="listTemplates">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listTemplatesResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPException">
+        <soap11:fault name="SOAPException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap11:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="importFormFields">
+      <soap11:operation style="document"/>
+      <wsdl:input name="importFormFields">
+        <soap11:body use="literal"/>
+        <soap11:header message="tns:gw-authentication" part="gw-authentication" use="literal"/>
+        <soap11:header message="tns:gw-locale" part="gw-locale" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="importFormFieldsResponse">
+        <soap11:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPException">
+        <soap11:fault name="SOAPException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WebServiceException">
+        <soap11:fault name="WebServiceException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="WsiAuthenticationException">
+        <soap11:fault name="WsiAuthenticationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TemplateToolsAPI">
+    <wsdl:port name="TemplateToolsAPISoap12Port" binding="tns:TemplateToolsAPISoap12Binding">
+      <soap12:address location="local:///gw/webservice/pc/pc800/TemplateToolsAPI"/>
+    </wsdl:port>
+    <wsdl:port name="TemplateToolsAPISoap11Port" binding="tns:TemplateToolsAPISoap11Binding">
+      <soap11:address location="local:///gw/webservice/pc/pc800/TemplateToolsAPI/soap11"/>
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:message name="validateTemplate">
+    <wsdl:part name="parameters" element="tns:validateTemplate"/>
+  </wsdl:message>
+  <wsdl:message name="validateTemplateResponse">
+    <wsdl:part name="parameters" element="tns:validateTemplateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SOAPException">
+    <wsdl:part name="SOAPException" element="tns:SOAPException"/>
+  </wsdl:message>
+  <wsdl:message name="BadIdentifierException">
+    <wsdl:part name="BadIdentifierException" element="tns:BadIdentifierException"/>
+  </wsdl:message>
+  <wsdl:message name="WebServiceException">
+    <wsdl:part name="WebServiceException" element="tns:WebServiceException"/>
+  </wsdl:message>
+  <wsdl:message name="WsiAuthenticationException">
+    <wsdl:part name="WsiAuthenticationException" element="tns:WsiAuthenticationException"/>
+  </wsdl:message>
+  <wsdl:message name="validateTemplateInLocale">
+    <wsdl:part name="parameters" element="tns:validateTemplateInLocale"/>
+  </wsdl:message>
+  <wsdl:message name="validateTemplateInLocaleResponse">
+    <wsdl:part name="parameters" element="tns:validateTemplateInLocaleResponse"/>
+  </wsdl:message>
+  <wsdl:message name="validateAllTemplates">
+    <wsdl:part name="parameters" element="tns:validateAllTemplates"/>
+  </wsdl:message>
+  <wsdl:message name="validateAllTemplatesResponse">
+    <wsdl:part name="parameters" element="tns:validateAllTemplatesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="validateAllTemplatesInLocale">
+    <wsdl:part name="parameters" element="tns:validateAllTemplatesInLocale"/>
+  </wsdl:message>
+  <wsdl:message name="validateAllTemplatesInLocaleResponse">
+    <wsdl:part name="parameters" element="tns:validateAllTemplatesInLocaleResponse"/>
+  </wsdl:message>
+  <wsdl:message name="listTemplates">
+    <wsdl:part name="parameters" element="tns:listTemplates"/>
+  </wsdl:message>
+  <wsdl:message name="listTemplatesResponse">
+    <wsdl:part name="parameters" element="tns:listTemplatesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="importFormFields">
+    <wsdl:part name="parameters" element="tns:importFormFields"/>
+  </wsdl:message>
+  <wsdl:message name="importFormFieldsResponse">
+    <wsdl:part name="parameters" element="tns:importFormFieldsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="gw-authentication">
+    <wsdl:part name="gw-authentication" element="gwsoap:authentication"/>
+  </wsdl:message>
+  <wsdl:message name="gw-locale">
+    <wsdl:part name="gw-locale" element="gwsoap:locale"/>
+  </wsdl:message>
+</wsdl:definitions>

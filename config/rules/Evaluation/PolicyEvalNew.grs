@@ -1,0 +1,13 @@
+package rules.Evaluation
+
+@gw.rules.RuleName("PolicyEvalNew")
+@gw.rules.RuleSetDescription("Policy Evaluation (New)")
+class PolicyEvalNew extends gw.rules.RuleSetBase {
+  static function invoke(bean : gw.policy.PolicyEvalContext) : gw.rules.ExecutionSession {
+    return invoke( new gw.rules.ExecutionSession(), bean )
+  }
+
+  static function invoke(exeSession : gw.rules.ExecutionSession, bean : gw.policy.PolicyEvalContext) : gw.rules.ExecutionSession {
+    return _invoke( exeSession, bean, "PolicyEvalNew", PolicyEvalNew )
+  }
+}

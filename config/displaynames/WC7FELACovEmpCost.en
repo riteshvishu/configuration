@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7FELACovEmpCost">
+  <Columns>
+    <Column
+      beanPath="WC7FELACovEmpCost.WC7FELACov"
+      name="cov"/>
+    <Column
+      beanPath="WC7FELACovEmpCost.WC7FELACoveredEmployee"
+      name="emp"/>
+    <Column
+      beanPath="WC7FELACovEmpCost.WC7FELACovEmpCostType"
+      name="type"/>
+  </Columns>
+  <DisplayName><![CDATA[if (type == WC7FELACovEmpCostType.TC_INCREASEDLIMITSFACTOR) {
+ return type
+} else if (type == WC7FELACovEmpCostType.TC_SUPPLEMENTALDISEASE) {
+  return displaykey.EntityName.WC7SupplementalDiseaseFELACovEmpCost(emp)
+}
+return displaykey.EntityName.WCCovEmpCost(cov.Pattern, emp)
+
+    
+  ]]></DisplayName>
+</Entity>

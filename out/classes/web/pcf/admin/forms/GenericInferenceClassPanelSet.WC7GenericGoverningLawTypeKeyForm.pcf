@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <PanelSet
+    id="GenericInferenceClassPanelSet"
+    mode="WC7GenericGoverningLawTypeKeyForm"
+    visible="formPattern.PolicyLinePatternRef.Code == &quot;WC7Line&quot;">
+    <Require
+      name="formPattern"
+      type="FormPattern"/>
+    <Variable
+      initialValue=" WC7GoverningLaw.getTypeKeys( false ).where( \typeKey -&gt; typeKey.hasCategory(&quot;WorkersComp&quot; as WC7LiabilityAct) ).toTypedArray()"
+      name="governingLaw"
+      recalculateOnRefresh="true"
+      type="WC7GoverningLaw[]"/>
+    <DetailViewPanel>
+      <InputColumn>
+        <TypeKeyInput
+          editable="true"
+          id="SelectedGoverningLaw"
+          label="displaykey.Web.Policy.WC7.Forms.SelectedGovLawLabel"
+          required="true"
+          value="formPattern.GoverningLawType"/>
+      </InputColumn>
+    </DetailViewPanel>
+  </PanelSet>
+</PCF>

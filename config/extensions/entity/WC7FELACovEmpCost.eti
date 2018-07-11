@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7FELACovEmpCost"
+  desc="A unit of price for a period of time, not to be broken up any further, for a FELA Workers' Comp employee coverage"
+  supertype="WC7Cost">
+  <implementsInterface
+    iface="gw.lob.wc7.financials.WC7CostMethods"
+    impl="gw.lob.wc7.financials.WC7FELACovEmpCostMethodsImpl"/>
+  <implementsEntity
+    name="Cost"
+    adapter="gw.lob.wc7.financials.WC7CostAdapter"/>
+  <foreignkey
+    name="WC7FELACoveredEmployee"
+    fkentity="WC7FedCoveredEmployee"
+    nullok="false"/>
+  <foreignkey
+    name="WC7FELACov"
+    fkentity="WC7WorkersCompCov"
+    nullok="false"/>
+  <typekey
+    name="WC7FELACovEmpCostType"
+    typelist="WC7FELACovEmpCostType"
+    nullok="false"/>
+</subtype>

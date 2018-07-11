@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7RetroRatingLetterOfCredit">
+  <Columns>
+    <Column
+      beanPath="WC7RetroRatingLetterOfCredit.IssuerName"
+      name="RetroRatingLOCName"/>
+  </Columns>
+  <DisplayName><![CDATA[RetroRatingLOCName]]></DisplayName>
+</Entity>

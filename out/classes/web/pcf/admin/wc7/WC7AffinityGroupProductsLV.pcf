@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <ListViewPanel
+    id="WC7AffinityGroupProductsLV">
+    <Require
+      name="wc7AffinityGroup"
+      type="WC7AffinityGroup"/>
+    <ExposeIterator
+      valueType="WC7AffinityGroupProduct"
+      widget="WC7AffinityGroupProductsLV"/>
+    <RowIterator
+      checkBoxVisible="true"
+      editable="true"
+      elementName="wc7AffinityGroupProduct"
+      hasCheckBoxes="true"
+      hideCheckBoxesIfReadOnly="true"
+      toRemove="wc7AffinityGroup.removeFromProducts(wc7AffinityGroupProduct)"
+      value="wc7AffinityGroup.Products">
+      <Row>
+        <Cell
+          align="left"
+          id="Product"
+          label="displaykey.Web.Admin.WC7AffinityGroupDetail.Products.Product"
+          outputConversion="gw.api.productmodel.Product.getByCode(VALUE).DisplayName"
+          required="true"
+          unique="true"
+          value="wc7AffinityGroupProduct.ProductCode"/>
+      </Row>
+    </RowIterator>
+  </ListViewPanel>
+</PCF>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<entity xmlns="http://guidewire.com/datamodel" subpackage="clusterinfo" lockable="true" entity="BatchServer" platform="true" table="batchserver" type="keyable"
+        extendable="false" final="true" loadable="false">
+  <column desc="Service id of the batch server" name="ServerId" type="mediumtext" nullok="true" />
+  <column desc="Startup time of the batch server" name="StartupTime" type="datetime" nullok="true" />
+  <column desc="UUID of the batch server" name="UUID" type="varchar" nullok="true" >
+    <columnParam name="size" value="36"/>
+  </column>
+  <column desc="Artificial field to enforce that this table has at most one row" name="Constant" type="bit" nullok="false" default="false" setterScriptability="hidden" getterScriptability="hidden"/>
+  <index name="batchserver1" desc="Guarantee that this table has at most one row" unique="true">
+    <indexcol name="Constant" keyposition="1"/>
+  </index>
+</entity>

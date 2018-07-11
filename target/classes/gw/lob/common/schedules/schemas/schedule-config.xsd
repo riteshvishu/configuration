@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- simple types -->
+  
+  <xs:simpleType name="TypeListType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z_$][a-zA-Z\d_$]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="ScheduledItemTypeType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z_$][a-zA-Z\d_$]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="NameType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z\d_$])*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="ColumnNameType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z_$][a-zA-Z\d_$]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="ItemPatternType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z_$][a-zA-Z\d_$]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="PatternType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z_$][a-zA-Z\d_$]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="ScheduleConfigType">
+    <xs:sequence>
+      <xs:element ref="Clause" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!-- complex types -->
+  
+  <xs:complexType name="ClauseType">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:element ref="AutoNumberPropertyInfo" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="IntegerPropertyInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="StringPropertyInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="BooleanPropertyInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="DatePropertyInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="TypeKeyPropertyInfo" minOccurs="0" maxOccurs="unbounded"/>      
+      <xs:element ref="ForeignKeyPropertyInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="PolicyLocationPropertyInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="NamedInsuredPropertyInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:choice>
+    <xs:attribute ref="pattern" use="required"/>
+    <xs:attribute ref="itemPattern" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="PropertyInfoType" abstract="true">
+    <xs:sequence>      
+      <xs:element ref="Name" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="ScheduledItemType" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="ColumnName" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="ColumnLabel" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="Required" minOccurs="1" maxOccurs="1"/>      
+    </xs:sequence>
+    <xs:attribute ref="priority" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="IntegerPropertyInfoType">
+    <xs:complexContent>
+      <xs:extension base="PropertyInfoType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="AutoNumberPropertyInfoType">
+    <xs:complexContent>
+      <xs:extension base="IntegerPropertyInfoType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="StringPropertyInfoType">
+    <xs:complexContent>
+      <xs:extension base="PropertyInfoType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="BooleanPropertyInfoType">
+    <xs:complexContent>
+      <xs:extension base="PropertyInfoType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="DatePropertyInfoType">
+    <xs:complexContent>
+      <xs:extension base="PropertyInfoType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="ForeignKeyPropertyInfoType">
+    <xs:complexContent>
+      <xs:extension base="PropertyInfoType">
+        <xs:sequence>
+          <xs:element ref="ValueRangeGetter" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  
+  <xs:complexType name="PolicyLocationPropertyInfoType">
+    <xs:complexContent>
+      <xs:extension base="ForeignKeyPropertyInfoType"/>
+    </xs:complexContent>
+  </xs:complexType>  
+  
+  <xs:complexType name="NamedInsuredPropertyInfoType">
+    <xs:complexContent>
+      <xs:extension base="ForeignKeyPropertyInfoType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="TypeKeyPropertyInfoType">
+    <xs:complexContent>
+      <xs:extension base="PropertyInfoType">
+        <xs:sequence>
+          <xs:element ref="TypeList" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="TypeFilter" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:attribute name="priority" type="xs:int"/>
+  <xs:attribute name="pattern" type="PatternType"/>
+  <xs:attribute name="itemPattern" type="ItemPatternType"/>
+  <xs:element name="ValueRangeGetter" type="xs:string"/>
+  <xs:element name="ScheduledItemType" type="ScheduledItemTypeType"/>
+  <xs:element name="TypeFilter" type="xs:string"/>
+  <xs:element name="TypeList" type="TypeListType"/>
+  <xs:element name="ScheduleConfig" type="ScheduleConfigType"/>
+  <xs:element name="Required" type="xs:boolean"/>
+  <xs:element name="PropertyInfo" type="PropertyInfoType"/>
+  <xs:element name="IntegerPropertyInfo" type="IntegerPropertyInfoType"/>
+  <xs:element name="AutoNumberPropertyInfo" type="AutoNumberPropertyInfoType"/>
+  <xs:element name="StringPropertyInfo" type="StringPropertyInfoType"/>
+  <xs:element name="BooleanPropertyInfo" type="BooleanPropertyInfoType"/>
+  <xs:element name="DatePropertyInfo" type="DatePropertyInfoType"/>
+  <xs:element name="ForeignKeyPropertyInfo" type="ForeignKeyPropertyInfoType"/>
+  <xs:element name="PolicyLocationPropertyInfo" type="PolicyLocationPropertyInfoType"/>
+  <xs:element name="NamedInsuredPropertyInfo" type="NamedInsuredPropertyInfoType"/>
+  <xs:element name="TypeKeyPropertyInfo" type="TypeKeyPropertyInfoType"/>
+  <xs:element name="Name" type="NameType"/>
+  <xs:element name="ColumnName" type="ColumnNameType"/>
+  <xs:element name="ColumnLabel" type="xs:string"/>
+  <xs:element name="Clause" type="ClauseType"/>
+  
+</xs:schema>

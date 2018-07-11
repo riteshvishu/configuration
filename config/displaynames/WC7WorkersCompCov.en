@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7WorkersCompCov">
+  <Columns>
+    <Column
+      beanPath="WC7WorkersCompCov.Pattern"
+      name="pattern"/>
+  </Columns>
+  <DisplayName><![CDATA[pattern]]></DisplayName>
+</Entity>

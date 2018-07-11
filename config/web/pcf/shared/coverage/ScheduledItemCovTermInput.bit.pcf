@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <ModalCell
+    id="ScheduledItemCovTermInput"
+    mode="bit">
+    <Require
+      name="covTerm"
+      type="gw.api.domain.covterm.CovTerm"/>
+    <Variable
+      initialValue="covTerm as gw.api.domain.covterm.GenericCovTerm&lt;Boolean&gt;"
+      name="bitCovTerm"
+      type="gw.api.domain.covterm.GenericCovTerm&lt;Boolean&gt;"/>
+    <Variable
+      initialValue="bitCovTerm.Pattern"
+      name="bitCovTermPattern"/>
+    <RangeRadioCell
+      editable="true"
+      enableSort="false"
+      id="TermValue"
+      optionLabel="getLabel(VALUE)"
+      required="bitCovTermPattern.Required"
+      sortValueRange="false"
+      value="bitCovTerm.Value"
+      valueRange="{true, false} as Boolean[]"/>
+    <Code><![CDATA[function getLabel(value : boolean) : String {
+  return value ? displaykey.Java.NameValueView.Boolean.True : displaykey.Java.NameValueView.Boolean.False
+}]]></Code>
+  </ModalCell>
+</PCF>

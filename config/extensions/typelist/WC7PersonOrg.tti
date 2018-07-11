@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  name="WC7PersonOrg"
+  desc="Person or Organization?"
+  final="false">
+  <typecode
+    code="per"
+    desc="A person"
+    name="Person"
+    priority="1"/>
+  <typecode
+    code="org"
+    desc="An organization"
+    name="Organization"
+    priority="2"/>
+</typelist>

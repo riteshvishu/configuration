@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7RatingPeriodStartDate">
+  <Columns>
+    <Column
+      beanPath="WC7RatingPeriodStartDate.StartDate"
+      name="StartDate"/>
+    <Column
+      beanPath="WC7RatingPeriodStartDate.Type"
+      name="Type"/>
+  </Columns>
+  <DisplayName><![CDATA[
+displaykey.EntityName.RatingPeriodStartDate(StartDate, Type)
+    
+  ]]></DisplayName>
+</Entity>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  name="WC7WorkerKind"
+  desc="What kind of worker?"
+  final="false">
+  <typecode
+    code="farmag"
+    desc="Farm or agricultural worker"
+    name="Farm or Agricultural Worker"
+    priority="1"/>
+  <typecode
+    code="domhos"
+    desc="Domestic or household Worker"
+    name="Domestic or Household Worker"
+    priority="2"/>
+</typelist>

@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" desc="Type of the note for access-restriction purposes" final="false" subpackage="note" name="NoteSecurityType" platform="true"/>

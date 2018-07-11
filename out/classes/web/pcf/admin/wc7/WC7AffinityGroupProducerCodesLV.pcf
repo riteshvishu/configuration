@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <ListViewPanel
+    id="WC7AffinityGroupProducerCodesLV">
+    <ExposeIterator
+      valueType="entity.WC7AffinityGroupProducerCode"
+      widget="WC7AffinityGroupProducerCodesLV"/>
+    <Require
+      name="wc7AffinityGroup"
+      type="WC7AffinityGroup"/>
+    <RowIterator
+      conversionExpression="gw.admin.wc7.WC7AffinityGroupUtil.createAffinityGroupProducerCode(wc7AffinityGroup, PickedValue)"
+      editable="true"
+      elementName="affinityGroupProducerCode"
+      hasCheckBoxes="true"
+      hideCheckBoxesIfReadOnly="true"
+      pickLocation="AdminProducerCodeSearchPopup.push(getOrganization())"
+      toAdd="gw.admin.wc7.WC7AffinityGroupUtil.addAffinityGroupProducerCode(wc7AffinityGroup, affinityGroupProducerCode)"
+      toRemove="gw.admin.wc7.WC7AffinityGroupUtil.remove(wc7AffinityGroup, affinityGroupProducerCode)"
+      type="WC7AffinityGroupProducerCode"
+      value="wc7AffinityGroup.AffinityGroupProducerCodes">
+      <Row>
+        <Cell
+          action="AdminProducerCodeDetail.go(affinityGroupProducerCode.ProducerCode)"
+          id="ProducerCode"
+          label="displaykey.Web.Admin.RoleProducerCodes.ProducerCode"
+          sortOrder="2"
+          unique="true"
+          value="affinityGroupProducerCode.ProducerCode.Code"/>
+        <Cell
+          action="OrganizationDetail.go(affinityGroupProducerCode.ProducerCode.Organization)"
+          id="Organization"
+          label="displaykey.Web.Admin.RoleProducerCodes.Organization"
+          sortOrder="1"
+          value="affinityGroupProducerCode.ProducerCode.Organization"/>
+      </Row>
+    </RowIterator>
+    <Code><![CDATA[function getOrganization() : Organization {
+  if (wc7AffinityGroup.AffinityGroupType == WC7AffinityGroupType.TC_CLOSED) {
+    return wc7AffinityGroup.Organization
+  }
+  return null
+}]]></Code>
+  </ListViewPanel>
+</PCF>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<delegate xmlns="http://guidewire.com/datamodel" subpackage="persistence.core.effdate" name="EffDatedContainer" platform="true">
+  <implementsEntity name="Retireable"/>
+</delegate>

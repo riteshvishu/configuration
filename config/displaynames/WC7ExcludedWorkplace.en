@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7ExcludedWorkplace">
+  <Columns>
+    <Column
+      beanPath="WC7ExcludedWorkplace.ExcludedItem"
+      name="excludedItem"/>
+    <Column
+      beanPath="WC7ExcludedWorkplace.Jurisdiction"
+      name="jurisdiction"/>
+  </Columns>
+  <DisplayName><![CDATA[displaykey.Web.Policy.WC.ExcludedWorkplace(excludedItem, jurisdiction)]]></DisplayName>
+</Entity>

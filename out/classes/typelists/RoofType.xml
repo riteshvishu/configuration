@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<typelist
+  desc="Type of roof"
+  name="RoofType">
+  <typecode
+    code="A"
+    desc="A"
+    name="A"
+    priority="1"/>
+  <typecode
+    code="B"
+    desc="B"
+    name="B"
+    priority="2"/>
+  <typecode
+    code="C"
+    desc="C"
+    name="C"
+    priority="3"/>
+</typelist>

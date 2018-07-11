@@ -1,0 +1,29 @@
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7FormPatternClassCode"
+  type="retireable"
+  desc="A property (datamodel field) of a WC7ClassCode associated with a form pattern."
+  exportable="true"
+  loadable="false"
+  table="wc7formpatternclasscode">
+  <column
+    name="Code"
+    type="shorttext"
+    desc="The class code."
+    nullok="false"/>
+  <column
+    name="Classification"
+    type="mediumtext"
+    desc="The description of the class code."
+    nullok="false"/>
+  <typekey
+      name="Jurisdiction"
+      typelist="Jurisdiction"
+      desc="The jurisdiction for which this class code value is allowed."
+      nullok="true"/>
+  <foreignkey
+    name="FormPattern"
+    desc="The form pattern associated with this coverable property."
+    fkentity="FormPattern"
+    nullok="false"/>
+</entity>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        >
+
+    <xsd:element name="document">
+        <xsd:complexType>
+            <xsd:sequence minOccurs="1" maxOccurs="1">
+                <xsd:element ref="param" minOccurs="8" maxOccurs="9"/>
+                <xsd:element ref="dataSource" minOccurs="1" maxOccurs="1"/>
+                <xsd:element ref="entity" minOccurs="1" maxOccurs="1"/>
+                <xsd:element ref="mvField" minOccurs="0" maxOccurs="unbounded"/>
+                <xsd:element ref="transformer" minOccurs="0" maxOccurs="unbounded"/>
+                <xsd:element ref="postprocessor" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+            <xsd:attribute name="version" type="xsd:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:simpleType name="paramType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="debug"/>
+            <xsd:enumeration value="appPrefix"/>
+            <xsd:enumeration value="solrServerConfigFile"/>
+            <xsd:enumeration value="absolutePathToWorkDir"/>
+            <xsd:enumeration value="absolutePathToSortExe"/>
+            <xsd:enumeration value="sortType"/>
+            <xsd:enumeration value="sortFieldArgStyle"/>
+            <xsd:enumeration value="entitySortMemSize"/>
+            <xsd:enumeration value="numTransformThreads"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:element name="param">
+        <xsd:complexType>
+            <xsd:attribute name="name" type="paramType" use="required"/>
+            <xsd:attribute name="value" type="xsd:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="dataSource">
+        <xsd:complexType>
+            <xsd:attribute name="driver" type="xsd:string" use="required"/>
+            <xsd:attribute name="name" type="xsd:string" use="required"/>
+            <xsd:attribute name="url" type="xsd:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="entity">
+        <xsd:complexType>
+            <xsd:attribute name="name" type="xsd:string" use="required"/>
+            <xsd:attribute name="query" type="xsd:string" use="required"/>
+            <xsd:attribute name="keys" type="xsd:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="mvField">
+        <xsd:complexType>
+            <xsd:attribute name="name" type="xsd:string" use="required"/>
+            <xsd:attribute name="query" type="xsd:string" use="required"/>
+            <xsd:attribute name="entityKey" type="xsd:string" use="required"/>
+            <xsd:attribute name="keys" type="xsd:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:attribute name="algorithm" type="xsd:string"/>
+    <xsd:attribute name="ignoreElems" type="xsd:string"/>
+
+    <xsd:element name="transformer">
+        <xsd:complexType>
+            <xsd:attribute name="name" type="xsd:string" use="required"/>
+            <xsd:attribute name="class" type="xsd:string" use="required"/>
+            <xsd:anyAttribute/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="postprocessor">
+        <xsd:complexType>
+            <xsd:attribute name="name" type="xsd:string" use="required"/>
+            <xsd:attribute name="absolutePathToPostprocessorExe" type="xsd:string" use="required"/>
+            <xsd:anyAttribute/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

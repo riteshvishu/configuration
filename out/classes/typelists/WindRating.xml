@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<typelist
+  desc="Wind rating"
+  name="WindRating">
+  <typecode
+    code="SC"
+    desc="Superior Construction"
+    name="Superior Construction"
+    priority="0"/>
+  <typecode
+    code="WRC"
+    desc="Wind Resistive Construction"
+    name="Wind Resistive Construction"
+    priority="1"/>
+  <typecode
+    code="SWRC"
+    desc="Semi Wind Resistive Construction"
+    name="Semi Wind Resistive Construction"
+    priority="2"/>
+  <typecode
+    code="OC"
+    desc="Ordinary Construction"
+    name="Ordinary Construction"
+    priority="3"/>
+</typelist>

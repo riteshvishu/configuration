@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7Transaction"
+  type="effdated"
+  desc="A transaction for the Workers' Comp line"
+  effDatedBranchType="PolicyPeriod"
+  exportable="true"
+  extendable="true"
+  platform="false"
+  loadable="false"
+  table="wc7transaction">
+  <implementsEntity
+    name="Transaction"
+    adapter="gw.lob.wc7.financials.WC7TransactionAdapter"/>
+  <foreignkey
+    name="WC7Cost"
+    desc="The cost this transaction modifies."
+    fkentity="WC7Cost"
+    nonEffDated="true"
+    nullok="false"/>
+</entity>

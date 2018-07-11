@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<entity xmlns="http://guidewire.com/datamodel" desc="Queue of statistics to run. This is a system-internal entity." entity="DBStatisticsWorkItem" subpackage="checker"
+        loadable="false" final="true" extendable="true" platform="true" table="dbstatsworkitem" type="keyable">
+  <implementsEntity name="WorkItem"/>
+  <column desc="The table on which to run statistics" name="TableName" nullok="false" type="shorttext"/>
+</entity>

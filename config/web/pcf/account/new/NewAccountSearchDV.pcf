@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <DetailViewPanel
+    id="NewAccountSearchDV">
+    <Require
+      name="searchCriteria"
+      type="gw.account.AccountSearchCriteria"/>
+    <Variable
+      initialValue="new gw.account.AccountSearchCriteriaDelegate(searchCriteria)"
+      name="accountSearchDelegate"
+      recalculateOnRefresh="true"/>
+    <Variable
+      initialValue="new gw.search.AccountAddressSearchDelegate(searchCriteria)"
+      name="addrAreaDelegate"
+      recalculateOnRefresh="true"/>
+    <InputColumn>
+      <Label
+        label="displaykey.Web.AccountSearch.ApplicantInfo"/>
+      <InputSetRef
+        def="GlobalContactNameInputSet(new gw.search.BasicNameOwner(accountSearchDelegate as gw.api.name.ContactNameFields))"
+        mode="gw.api.name.NameLocaleSettings.PCFMode"/>
+      <CheckBoxInput
+        editable="true"
+        id="CompanyNameExact"
+        label="displaykey.Web.AccountSearch.CompanyNameExactMatch"
+        required="false"
+        value="searchCriteria.CompanyNameExact"/>
+      <InputSetRef
+        def="GlobalPersonNameInputSet(new gw.search.BasicNameOwner(accountSearchDelegate))"
+        mode="gw.api.name.NameLocaleSettings.PCFMode"/>
+      <CheckBoxInput
+        editable="true"
+        id="FirstNameExact"
+        label="displaykey.Web.AccountSearch.FirstNameExactMatch"
+        required="false"
+        value="searchCriteria.FirstNameExact"/>
+      <CheckBoxInput
+        editable="true"
+        id="LastNameExact"
+        label="displaykey.Web.AccountSearch.LastNameExactMatch"
+        required="false"
+        value="searchCriteria.LastNameExact"/>
+      <InputSetRef
+        def="AddressOwnerAddressInputSet(new gw.pcf.contacts.AddressAreaOwner(addrAreaDelegate))"
+        mode="gw.pcf.AccountSearchHelper.getCountry(searchCriteria)"/>
+    </InputColumn>
+    <InputFooterSection>
+      <InputSetRef
+        def="SearchAndResetInputSet()"/>
+    </InputFooterSection>
+  </DetailViewPanel>
+</PCF>

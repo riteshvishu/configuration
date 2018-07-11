@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" desc="The type of contact search" final="false" subpackage="contact" name="ContactSearchType" platform="true">
+  <typecode code="internal" desc="Address Book" name="Address Book" priority="1"/>
+</typelist>

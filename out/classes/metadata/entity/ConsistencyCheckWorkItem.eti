@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<entity xmlns="http://guidewire.com/datamodel" desc="Queue of Consistency Checks to run. This is a system-internal entity." entity="ConsistencyCheckWorkItem" subpackage="checker"
+        loadable="false" final="true" extendable="true" platform="true" table="checkerworkitem" type="keyable">
+  <implementsEntity name="WorkItem"/>
+  <column desc="The table on which to run consistency checks" name="TableName" nullok="false" type="shorttext"/>
+  <typekey name="CheckType" typelist="ConsistencyCheckType" nullok="false"/>
+</entity>

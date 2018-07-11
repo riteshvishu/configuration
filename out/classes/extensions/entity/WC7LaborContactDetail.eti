@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" effDatedBranchType="PolicyPeriod" entity="WC7LaborContactDetail" exportable="true" final="false" loadable="false" platform="false" table="wc7laborcontactdetail" type="effdated">
+  <implementsInterface iface="gw.api.copier.EffDatedCopyable" impl="gw.api.copier.EffDatedCopier"/>
+  <implementsInterface iface="gw.api.logicalmatch.EffDatedLogicalMatcher" impl="gw.lob.wc7.contact.WC7LaborContactDetailMatcher"/>
+  <implementsInterface iface="gw.api.domain.account.Mergeable" impl="gw.account.EffDatedDefaultMergeableImpl"/>
+  <column desc="The address at which the employees are working" name="WorkLocation" nullok="true" type="addressline"/>
+  <column desc="Description of Duties" name="DescriptionOfDuties" nullok="true" type="shorttext"/>
+  <column desc="Number of employees" name="NumberOfEmployees" nullok="true" type="positiveinteger"/>
+  <column desc="Effective Date" name="ContractEffectiveDate" nullok="true" type="dateonly"/>
+  <column desc="Expiration Date" name="ContractExpirationDate" nullok="true" type="dateonly"/>
+  <column desc="Contract or Project" name="ContractProject" nullok="true" type="shorttext"/>
+  <column name="LaborContractorPolicyNumber" nullok="true" type="shorttext"/>
+  <typekey desc="The jurisdiction in which this contact is defined" name="Jurisdiction" nullok="true" typelist="Jurisdiction"/>
+  <typekey desc="Entity status" name="EntityStatus" nullok="true" typelist="OrganizationType"/>
+  <foreignkey fkentity="WC7LaborContact" name="WC7LaborContact" nullok="false"/>
+  <datetimeordering firstcolumnname="ContractEffectiveDate" operator="LT" secondcolumnname="ContractExpirationDate"/>
+  <fulldescription>
+    The details about the WC labor contact (e.g. labor client or labor contractor). 
+
+  </fulldescription>
+</entity>

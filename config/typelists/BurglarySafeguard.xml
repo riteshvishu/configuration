@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<typelist
+  desc="Burglary safeguard"
+  name="BurglarySafeguard">
+  <typecode
+    code="WatchmanSignal"
+    desc="Watchman w/signal"
+    name="Watchman w/signal"
+    priority="3"/>
+  <typecode
+    code="WatchmanClock"
+    desc="Watchman w/clock"
+    name="Watchman w/clock"
+    priority="2"/>
+  <typecode
+    code="Watchman"
+    desc="Watchman"
+    name="Watchman"
+    priority="1"/>
+</typelist>

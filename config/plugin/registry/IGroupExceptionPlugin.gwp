@@ -1,0 +1,4 @@
+<plugin name="IGroupExceptionPlugin">
+  <plugin-osgi servicepid="com.guidewire.pl.domain.escalation.internal.RulesBasedGroupExceptionPlugin"
+               temporaryBundle="false"/>
+</plugin>

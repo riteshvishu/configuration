@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><extension xmlns="http://guidewire.com/datamodel" entityName="PolicyTerm">
+  <foreignkey columnName="AffinityGroupID" desc="The affinity group assigned to this term" fkentity="WC7AffinityGroup" name="AffinityGroup" nullok="true"/>
+</extension>

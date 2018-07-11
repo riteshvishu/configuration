@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <Popup
+    countsAsWork="false"
+    id="WC7ClassCodeSearchPopup"
+    returnType="WC7ClassCode"
+    title="displaykey.Web.ClassCodeSearch">
+    <LocationEntryPoint
+      signature="WC7ClassCodeSearchPopup(locationWM : PolicyLocation, wcLine : WC7WorkersCompLine, previousWC7ClassCode : WC7ClassCode, excludedClassCodeTypes : List&lt;WC7ClassCodeType&gt;)"/>
+    <LocationEntryPoint
+      signature="WC7ClassCodeSearchPopup(locationWM : PolicyLocation, wcLine : WC7WorkersCompLine, previousWC7ClassCode : WC7ClassCode, classCodeType : WC7ClassCodeType, programType : WC7ClassCodeProgramType)"/>
+    <LocationEntryPoint
+      signature="WC7ClassCodeSearchPopup(locationWM : PolicyLocation, wcLine : WC7WorkersCompLine,  classCodeType : WC7ClassCodeType)"/>
+    <Variable
+      name="locationWM"
+      type="PolicyLocation"/>
+    <Variable
+      name="wcLine"
+      type="WC7WorkersCompLine"/>
+    <Variable
+      name="previousWC7ClassCode"
+      type="WC7ClassCode"/>
+    <Variable
+      name="classCodeType"
+      type="WC7ClassCodeType"/>
+    <Variable
+      name="programType"
+      type="WC7ClassCodeProgramType"/>
+    <Variable
+      name="excludedClassCodeTypes"
+      type="List&lt;WC7ClassCodeType&gt;"/>
+    <Screen
+      id="WC7ClassCodeSearchScreen">
+      <DetailViewPanel>
+        <InputColumn>
+          <Input
+            boldValue="true"
+            id="LocationLabel"
+            value="displaykey.Web.Policy.WC.ClassCode.Location( locationWM.DisplayName )"/>
+        </InputColumn>
+      </DetailViewPanel>
+      <SearchPanel
+        cachingEnabled="false"
+        criteriaName="searchCriteria"
+        resultsName="wcClassCodes"
+        search="searchCriteria.performSearch()"
+        searchCriteria="createCriteria()"
+        searchOnEnter="true"
+        searchResultsType="WC7ClassCodeQuery">
+        <PanelRef>
+          <DetailViewPanel
+            id="WC7ClassCodeSearchDV">
+            <InputColumn>
+              <Input
+                editable="true"
+                id="Code"
+                label="displaykey.Web.ClassCodeSearch.Code"
+                required="false"
+                value="searchCriteria.Code"/>
+              <Input
+                editable="true"
+                id="Classification"
+                label="displaykey.Web.ClassCodeSearch.Classification"
+                required="false"
+                value="searchCriteria.Classification"/>
+            </InputColumn>
+            <InputFooterSection>
+              <InputSetRef
+                def="SearchAndResetInputSet()"/>
+            </InputFooterSection>
+          </DetailViewPanel>
+        </PanelRef>
+        <PanelRef>
+          <TitleBar
+            appendListViewPaging="true"
+            title="displaykey.Web.Search.Results"/>
+          <Toolbar/>
+          <ListViewPanel
+            id="ClassCodeSearchResultsLV">
+            <RowIterator
+              editable="false"
+              elementName="wcClassCode"
+              pickValue="wcClassCode"
+              value="wcClassCodes">
+              <Row>
+                <TextCell
+                  id="Code"
+                  label="displaykey.Web.ClassCodeSearch.Code"
+                  numCols="8"
+                  value="wcClassCode.Code"
+                  wrap="false"/>
+                <Cell
+                  align="left"
+                  id="Classification"
+                  label="displaykey.Web.ClassCodeSearch.Classification"
+                  value="wcClassCode.Classification"
+                  width="100%"/>
+                <Cell
+                  id="WC7ClassCodeType"
+                  label="displaykey.Web.Policy.WC7.ClassCode.ClassCodeType"
+                  value="wcClassCode.ClassCodeType"/>
+              </Row>
+            </RowIterator>
+          </ListViewPanel>
+        </PanelRef>
+      </SearchPanel>
+    </Screen>
+    <Code><![CDATA[uses java.lang.String
+uses gw.api.util.JurisdictionMappingUtil
+uses gw.lob.wc7.WC7ClassCodeSearchCriteria
+
+function createCriteria() : WC7ClassCodeSearchCriteria {
+  var criteria = new WC7ClassCodeSearchCriteria()
+  criteria.EffectiveAsOfDate = wcLine.getReferenceDateForCurrentJob(JurisdictionMappingUtil.getJurisdictionMappingForPolicyLocation(locationWM))
+  if (previousWC7ClassCode != null) {
+    criteria.PreviousSelectedClassCode = previousWC7ClassCode
+  }
+  if (classCodeType != null) {
+    criteria.ClassCodeType = classCodeType
+  } 
+  if (programType != null) {
+    criteria.ProgramType = programType
+  }
+  criteria.Jurisdiction = JurisdictionMappingUtil.getJurisdictionMappingForPolicyLocation(locationWM) as String
+  criteria.ExcludedClassCodeTypes = excludedClassCodeTypes
+
+  return criteria
+}]]></Code>
+  </Popup>
+</PCF>

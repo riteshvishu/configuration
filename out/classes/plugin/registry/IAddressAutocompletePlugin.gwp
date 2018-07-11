@@ -1,0 +1,3 @@
+<plugin name="IAddressAutocompletePlugin">
+  <plugin-java javaclass="gw.api.address.DefaultAddressAutocompletePlugin"/>
+</plugin>

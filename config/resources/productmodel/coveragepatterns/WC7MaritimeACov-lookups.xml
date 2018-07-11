@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<import>
+  <CoverageLookup public-id="zbnggmh1lcrul1bjbus08c72248">
+    <Availability>Available</Availability>
+    <CoveragePatternCode>WC7MaritimeACov</CoveragePatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+  </CoverageLookup>
+  <CovTermLookup public-id="zmjh41vqihbdk3afrcfknrfno28">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>WC7MaritimeLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="zajgir1fhitrt3igscutn6p2fqa">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>WC7MaritimeAggLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="zlcik5jh989hd2anuiqf0br5u8b">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>WC7MaritimeProgram</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="zq1icpnjeho3b7ho813nlqaqkcb">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>WC7MaritimeLiabLaw</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="znljoofr225p6a74qokddr3m2g9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zv4gsq2vd250l9uatddilsfhlia</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z63ju7h5bvc6b5jpt22sm8jr078">
+    <Availability>Available</Availability>
+    <CovTermOptCode>znggoc46lkjde7gvte4l6qdopj9</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z8fiqmtpldtus046rpra9m6t4f9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zfcgkje3ld4al6e3q1p0bnsm6ia</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z7rhcq8uug5ancesi6hft3dsf6b">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z6hi8tilc1695aoespbigd8s2h9</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zlbhimul4tro32b8cp6a3n0sk6b">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zjqge3hcnc7ec4p91pk1s3h75mb</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zhaierjlhlj27d2diclke4i0638">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zs7g0422m9j6a8bghao21ogkmn9</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zrrh0plmoc2hndgi9r59ui41088">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z34isttke62nbcbh6lum9g980ea</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zeqg863amsgq63or9rpdid7fqma">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zlbhqbve1sjen3epa7sg90lono9</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeAggLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zscio27k4tb3rdkacpdh2ma0qna">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zepi2qa2c0jr1ao2mr48hdj2ega</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeAggLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z5ej0oqujge2i0k58k8je46ah19">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zraj6rd3f2i0200tafnpmamor38</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeAggLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zv9jmijqasnnqbo8cs0fbmma969">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zvjhs1p5o82b894jm52mred954b</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeAggLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z9djg40k3e56r521naguppp3oi8">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zj0ioi3ghk5bs87f7e3tkl81kva</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeAggLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zqgjmqvprvau0cmdp032t3skeha">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zl9gqk9ri5j3o5vvmeg71a249ea</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeAggLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="ztgj0ph0m4vrr8mr6r6k6gn8728">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z1uhk16f5pdev9e0ir7ehjaj628</CovTermOptCode>
+    <CovTermPatternCode>WC7MaritimeAggLimit</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <Currency>usd</Currency>
+  </CovTermOptLookup>
+  <CovTermLookup public-id="z97jo7iisijvj63qdsgbbbokdfb">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>WC7MaritimeManualPremium</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2013-07-18 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+</import>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<plugin name="WebservicesAuthenticationPlugin">
+  <plugin-osgi servicepid="com.guidewire.pl.security.internal.DefaultWebservicesAuthenticationPlugin" temporaryBundle="false"/>
+</plugin>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" desc="Premium level calculation order for a given jurisdiction on Workers' comp policy." entity="WC7JurisdictionPremLevelOrder" exportable="true" ignoreForEvents="true" loadable="false" platform="false" readOnly="true" table="wc7jurpremlevelorder" type="keyable">
+  <typekey desc="The jurisdiction for which this premium level belongs to." name="Jurisdiction" nullok="true" typelist="Jurisdiction"/>
+  <typekey columnName="WC7PremiumLevelType" name="PremiumLevelType" nullok="false" typelist="WC7PremiumLevelType"/>
+  <column desc="The order in which the premium levels for calculated for a given jurisdiction." name="PremiumLevelCalcOrder" nullok="false" type="integer"/>
+  <index desc="Jurisdiction, Premium Level type and CalcOrder must be unique" name="wc7jurpremlvlord1" unique="true">
+    <indexcol keyposition="1" name="Jurisdiction"/>
+    <indexcol keyposition="2" name="WC7PremiumLevelType"/>
+    <indexcol keyposition="3" name="PremiumLevelCalcOrder"/>
+  </index>
+</entity>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!-- ********************************************************************************************************************
+    USERPREFERENCE TYPELISTS
+  ******************************************************************************************************************** -->
+<typelist xmlns="http://guidewire.com/typelists" desc="The startup page for the user" final="false" subpackage="community" name="StartupPage" platform="true"/>

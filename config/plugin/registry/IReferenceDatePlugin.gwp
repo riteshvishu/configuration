@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<plugin
+  interface="IReferenceDatePlugin"
+  name="IReferenceDatePlugin">
+  <plugin-gosu
+    gosuclass="gw.plugin.productmodel.impl.WC7ReferenceDatePlugin"/>
+</plugin>

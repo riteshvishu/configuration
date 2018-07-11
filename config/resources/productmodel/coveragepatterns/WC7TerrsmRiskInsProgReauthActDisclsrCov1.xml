@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<CoveragePattern
+  coverageCategory="WC7WorkCompLineCategory"
+  coverageSubtype="WC7WorkersCompCov"
+  coveredPartyType="ThirdParty"
+  existence="Electable"
+  lookupTableName="WC7LineCov"
+  owningEntityType="WC7WorkersCompLine"
+  priority="1940"
+  public-id="WC7TerrsmRiskInsProgReauthActDisclsrCov1"
+  referenceDateByType="PolicyTerm">
+  <CovTerms/>
+</CoveragePattern>

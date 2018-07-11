@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- ====================================================================  PaymentMethod  ==================================================================== -->
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  name="AccountPaymentMethod"
+  desc="Defines available payment methods"
+  subpackage="billing">
+  <typecode
+    name="ACH/EFT"
+    desc="ACH/EFT"
+    code="ach"/>
+  <typecode
+    name="Credit Card"
+    desc="Credit Card"
+    code="creditcard"/>
+  <typecode
+    name="Send Invoice"
+    desc="Send Invoice"
+    code="responsive"/>
+  <typecode
+    name="Wire"
+    desc="Wire"
+    code="wire"/>
+</typelist>

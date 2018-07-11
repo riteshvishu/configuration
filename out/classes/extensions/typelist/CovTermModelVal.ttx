@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<typelistextension
+  xmlns="http://guidewire.com/typelists"
+  desc="Coverage term model value type"
+  name="CovTermModelVal">
+  <typecode
+    code="money"
+    desc="Money"
+    name="Money"/>
+  <typecode
+    code="percent"
+    desc="Percent"
+    name="Percent"/>
+  <typecode
+    code="days"
+    desc="Days"
+    name="Days"/>
+  <typecode
+    code="hours"
+    desc="Hours"
+    name="Hours"/>
+  <typecode
+    code="count"
+    desc="Integer number of things (e.g., people, etc.)"
+    name="Count"/>
+  <typecode
+    code="other"
+    desc="other "
+    name="Other"/>
+  <typecode
+    code="boolean"
+    desc="boolean"
+    name="Boolean"/>
+</typelistextension>

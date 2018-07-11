@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!-- ===== Costs ===== -->
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  subpackage="lob.pa"
+  entity="PACost"
+  type="effdated"
+  desc="A PersonalAuto unit of price for a period of time that should not be broken up any further."
+  abstract="true"
+  effDatedBranchType="PolicyPeriod"
+  exportable="true"
+  extendable="true"
+  final="false"
+  platform="false"
+  loadable="false"
+  table="pacost">
+  <implementsInterface
+    iface="gw.lob.pa.financials.PACostMethods"
+    impl="gw.lob.pa.financials.PACostMethodsImpl"/>
+  <implementsEntity
+    name="Cost"
+    adapter="gw.lob.pa.financials.PACostAdapter"/>
+  <foreignkey
+    name="PersonalAutoLine"
+    fkentity="PersonalAutoLine"
+    nullok="false"/>
+  <array
+    name="Transactions"
+    arrayentity="PATransaction"
+    setterScriptability="hidden"
+    getterScriptability="doesNotExist"
+    cascadeDelete="true"/>
+  <onetoone
+    fkentity="PARatingWorksheet"
+    name="PARatingWorksheet"
+    owner="true"
+    cascadeDelete="true"
+    nullok="true"
+    desc="The associated rating worksheet"/>
+</entity>

@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <!-- The reason a specific input set is used for this coverage is that the
+coverage requires a list view of the schedule items. -->
+  <InputSet
+    id="CoverageInputSet"
+    mode="WC7SoleProprietorsPartnersOfficersAndOthersCovCond">
+    <Require
+      name="conditionPattern"
+      type="gw.api.productmodel.ClausePattern"/>
+    <Require
+      name="coverable"
+      type="Coverable"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <Variable
+      initialValue="coverable.PolicyLine as WC7Line"
+      name="theWC7Line"/>
+    <Variable
+      initialValue="gw.plugin.Plugins.get(gw.plugin.contact.IContactConfigPlugin)"
+      name="contactConfigPlugin"/>
+    <Variable
+      initialValue="theWC7Line.UnassignedOwnerOfficers"
+      name="unassignedOwnerOfficers"
+      recalculateOnRefresh="true"/>
+    <Variable
+      initialValue="theWC7Line.OwnerOfficerOtherCandidates"
+      name="otherContacts"
+      recalculateOnRefresh="true"/>
+    <HiddenInput
+      id="ConditionPatternDisplayName"
+      value="conditionPattern.DisplayName"/>
+    <InputGroup
+      allowToggle="conditionPattern.allowToggle(coverable)"
+      childrenVisible="coverable.getCoverageConditionOrExclusion(conditionPattern) != null"
+      id="ConditionInputGroup"
+      label="conditionPattern.DisplayName"
+      onToggle="executeOnToggleActions(VALUE); ">
+      <ListViewInput
+        id="OwnerOfficersLV"
+        label="displaykey.Web.Policy.Contact.OwnerOfficers"
+        labelAbove="true">
+        <Toolbar>
+          <AddButton
+            hideIfReadOnly="true"
+            id="AddContactsButton"
+            iterator="ContactLV"
+            label="displaykey.Web.Contact.Add">
+            <AddMenuItemIterator
+              elementName="contactType"
+              id="AddNewContact"
+              value="contactConfigPlugin.getAllowedContactTypesForPolicyContactRoleType(typekey.PolicyContactRole.TC_POLICYOWNEROFFICER)">
+              <IteratorSort
+                sortBy="contactType.DisplayName"
+                sortOrder="1"/>
+              <AddMenuItem
+                conversionExpression="PickedValue as WC7IncludedOwnerOfficer"
+                id="ContactType"
+                iterator="ContactLV"
+                label="displaykey.Web.Contact.AddNewOfType(contactType)"
+                pickLocation="WC7NewOwnerOfficerPopup.push(theWC7Line.Branch.WC7Line, contactType, conditionPattern)"/>
+            </AddMenuItemIterator>
+            <AddMenuItem
+              conversionExpression="addOwnerOfficerForContactOnCondition(PickedValue)"
+              id="AddFromSearch"
+              iterator="ContactLV"
+              label="displaykey.Web.Policy.Contact.FromAddressBook"
+              pickLocation="ContactSearchPopup.push(&quot;OwnerOfficer&quot;)"/>
+            <AddMenuItem
+              id="AddExistingContact"
+              iterator="ContactLV"
+              label="displaykey.Web.Policy.Contact.AddExisting(PolicyOwnerOfficer.Type.TypeInfo.DisplayName)"
+              visible="true">
+              <AddMenuItemIterator
+                elementName="ownerOfficer"
+                id="ContactOfSameType"
+                value="unassignedOwnerOfficers">
+                <IteratorSort
+                  sortBy="ownerOfficer.DisplayName"
+                  sortOrder="1"/>
+                <AddMenuItem
+                  id="UnassignedOwnerOfficer"
+                  iterator="ContactLV"
+                  label="ownerOfficer"
+                  toCreateAndAdd="addOwnerOfficerForContactOnCondition(ownerOfficer.Contact)"/>
+              </AddMenuItemIterator>
+              <AddMenuItem
+                id="AddAll"
+                iterator="ContactLV"
+                label="displaykey.Web.Account.Contact.AddAll"
+                toCreateAndAdd="addAllOwnerOfficersOnCondition()"
+                visible="unassignedOwnerOfficers.length &gt; 0"/>
+            </AddMenuItem>
+            <AddMenuItem
+              id="AddOtherContact"
+              iterator="ContactLV"
+              label="displaykey.Web.Policy.Contact.AddOtherContacts"
+              visible="otherContacts.Count &gt; 0">
+              <AddMenuItemIterator
+                elementName="otherContact"
+                id="ContactOfOtherType"
+                value="otherContacts">
+                <IteratorSort
+                  sortBy="otherContact.DisplayName"
+                  sortOrder="1"/>
+                <AddMenuItem
+                  id="OtherContact"
+                  iterator="ContactLV"
+                  label="otherContact"
+                  toCreateAndAdd="addOwnerOfficerForContactOnCondition(otherContact.Contact)"/>
+              </AddMenuItemIterator>
+            </AddMenuItem>
+          </AddButton>
+          <IteratorButtons
+            addVisible="false"
+            iterator="ContactLV"/>
+        </Toolbar>
+        <ListViewPanel
+          editable="true"
+          id="ContactLV">
+          <RowIterator
+            canPick="false"
+            checkBoxVisible="true"
+            editable="openForEdit"
+            elementName="policyOwnerOfficer"
+            hasCheckBoxes="true"
+            hideCheckBoxesIfReadOnly="true"
+            toRemove="theWC7Line.removeFromWC7PolicyOwnerOfficers(policyOwnerOfficer)"
+            value="theWC7Line.IncludedOwnerOfficers">
+            <Row>
+              <TextCell
+                action="EditPolicyContactRolePopup.push(policyOwnerOfficer, openForEdit)"
+                id="DispName"
+                label="displaykey.Web.Policy.NamedInsured.NameOnly"
+                numCols="32"
+                value="policyOwnerOfficer.DisplayName"/>
+              <RangeCell
+                align="left"
+                editable="true"
+                id="State"
+                label="displaykey.Web.Policy.WC.InclExcl.State"
+                required="true"
+                value="policyOwnerOfficer.Jurisdiction"
+                valueRange="theWC7Line.WC7Jurisdictions.map(\j -&gt; j.Jurisdiction)">
+                <PostOnChange/>
+              </RangeCell>
+              <RangeCell
+                align="left"
+                editable="isClassCodeEditable(policyOwnerOfficer)"
+                id="ClassCode"
+                label="displaykey.Web.Policy.WC.CovEmp.ClassCode"
+                optionLabel="VALUE as java.lang.String"
+                required="true"
+                value="policyOwnerOfficer.WC7ClassCode"
+                valueRange="theWC7Line.getClassCodesForWC7CoveredEmployees(gw.api.util.StateJurisdictionMappingUtil.getStateMappingForJurisdiction(policyOwnerOfficer.Jurisdiction))"
+                width="200"/>
+              <TypeKeyCell
+                editable="true"
+                filter="Relationship.TF_WC7OWNEROFFICERRELATIONSHIP.TypeKeys.contains(VALUE)"
+                id="Relationship"
+                label="displaykey.Web.Policy.WC.InclExcl.Relationship"
+                value="policyOwnerOfficer.RelationshipTitle"/>
+              <TextCell
+                align="right"
+                editable="true"
+                id="Ownership"
+                label="displaykey.Web.Policy.WC.InclExcl.Ownership"
+                numCols="4"
+                value="policyOwnerOfficer.WC7OwnershipPct"/>
+              <TextCell
+                align="right"
+                editable="true"
+                id="Payroll"
+                label="displaykey.Web.Policy.WC7.InclExcl.Payroll"
+                numCols="4"
+                value="policyOwnerOfficer.Payroll"/>
+            </Row>
+          </RowIterator>
+        </ListViewPanel>
+      </ListViewInput>
+      <PostOnChange/>
+    </InputGroup>
+    <InputDivider
+      visible="openForEdit or coverable.getCoverageConditionOrExclusion(conditionPattern) != null"/>
+    <Code><![CDATA[function addOwnerOfficerForContactOnCondition(aContact : entity.Contact) : entity.WC7IncludedOwnerOfficer {
+  var newOfficer = theWC7Line.addIncludedOwnerOfficer(aContact, theWC7Line.WC7SoleProprietorsPartnersOfficersAndOthersCovCond)
+  return newOfficer
+}
+
+function addAllOwnerOfficersOnCondition() : WC7IncludedOwnerOfficer[] {
+  var resultOfficers = theWC7Line.addAllExistingOwnerOfficersToCondition(theWC7Line.WC7SoleProprietorsPartnersOfficersAndOthersCovCond)
+  return resultOfficers.toTypedArray()
+}
+
+function isClassCodeEditable(anIncludedOwnerOfficer : WC7IncludedOwnerOfficer) : boolean {
+  return (anIncludedOwnerOfficer.Jurisdiction != null) and 
+    anIncludedOwnerOfficer.WC7WorkersCompLine.getClassCodesForWC7CoveredEmployees(gw.api.util.StateJurisdictionMappingUtil.getStateMappingForJurisdiction(anIncludedOwnerOfficer.Jurisdiction)).HasElements  
+}
+
+function executeOnToggleActions(value : boolean){
+  var uiHelper = new gw.pcf.WC7CoverageInputSetUIHelper()
+  uiHelper.toggleClause(theWC7Line, conditionPattern, value)
+  uiHelper.syncConditionsIfRequired(coverable, openForEdit)
+  
+}]]></Code>
+  </InputSet>
+</PCF>

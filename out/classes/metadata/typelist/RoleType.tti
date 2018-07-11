@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" desc="Defines the role types" final="false" subpackage="security" name="RoleType" platform="true">
+  <typecode code="user" desc="Roles associated with Users" name="User Role"/>
+</typelist>

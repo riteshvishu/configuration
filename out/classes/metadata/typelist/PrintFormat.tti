@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" desc="Different print views; corresponds to the report or template used to create the printable document" final="false" subpackage="print" name="PrintFormat" platform="true"/>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" abstract="true" desc="A Workers' Comp Covered Employee" effDatedBranchType="PolicyPeriod" entity="WC7CoveredEmployeeBase" exportable="true" final="false" loadable="false" platform="false" table="wc7coveredemployee" type="effdated">
+  <implementsEntity name="Auditable"/>
+  <implementsInterface iface="gw.api.copier.EffDatedCopyable" impl="gw.api.copier.EffDatedCopier"/>
+  <implementsInterface iface="gw.api.logicalmatch.EffDatedLogicalMatcher" impl="gw.lob.wc7.WC7CoveredEmployeeBaseMatcher"/>
+  <implementsInterface iface="gw.lob.wc7.WC7RatingEffDated" impl="gw.lob.wc7.WC7CoveredEmployeeBaseRatingEffDated"/>
+  <implementsInterface iface="gw.lob.wc7.WC7RatingEffDatedExposure" impl="gw.lob.wc7.WC7CoveredEmployeeBaseRatingEffDated"/>
+  <column desc="Basis Amount" name="BasisAmount" nullok="true" scalable="true" type="nonnegativeinteger"/>
+  <column default="false" desc="Option to indicate that coverage is provided with precise liability to be determined later (at audit)" name="IfAnyExposure" nullok="true" type="bit"/>
+  <column desc="Number of employees" name="NumEmployees" nullok="true" type="positiveinteger"/>
+  <column default="false" desc="Option to indicate that coverage is specific disease loaded" name="SpecificDiseaseLoaded" nullok="true" type="bit"/>
+  <column default="false" desc="Option to indicate that coverage is supplemental disease loaded" name="SupplementalDiseaseLoaded" nullok="true" type="bit"/>
+  <column desc="Supplemental Disease Loading Rate" name="SupplementalDiseaseLoadingRate" nullok="true" type="decimal">
+      <columnParam name="scale" value="2"/>
+      <columnParam name="precision" value="4"/>
+   </column>
+  <column desc="Rate of Class Code" name="ClassCodeRate" nullok="true" type="decimal">
+       <columnParam name="scale" value="2"/>
+       <columnParam name="precision" value="4"/>
+  </column>
+  <typekey columnName="WC7GoverningLaw" desc="Special Coverage Class for this set of employees" name="GoverningLaw" nullok="false" typelist="WC7GoverningLaw"/>
+  <foreignkey columnName="ClassCodeID" desc="Class Code of covered employees" fkentity="WC7ClassCode" name="ClassCode" nullok="true" setterScriptability="all"/>
+  <foreignkey desc="Location of covered employees." exportable="true" fkentity="PolicyLocation" name="Location" nullok="false" setterScriptability="all"/>
+  <foreignkey fkentity="WC7WorkersCompLine" name="WC7WorkersCompLine" nullok="false"/>
+</entity>

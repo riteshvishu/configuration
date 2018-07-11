@@ -1,0 +1,14 @@
+# Default BND instructions written by osgi-maven-plugin:dump-instructions
+Bundle-Name=configuration
+Bundle-SymbolicName=com.guidewire.pc.appbuild.configuration
+Bundle-Version=1.0.0.SNAPSHOT
+Import-Package=*
+Bundle-DocURL=http\://guidewire.com
+Bundle-License=nourl
+Bundle-RequiredExecutionEnvironment=JavaSE-1.7
+Bundle-Vendor=Guidewire Software, Inc.
+DynamicImport-Package=com.guidewire.commons.metadata.proxy._generated.iface
+-consumer-policy=$<range;[\=\=,\=+)>
+-could-contain=gs,gsx,gsp,gst,xsd,gx
+-include=bnd.bnd
+-removeheaders=Ant-Version,Bnd-LastModified,Built-By,Created-By,Implementation-Title,Implementation-Vendor,Implementation-Version,Originally-Created-By,Include-Resource,Private-Package,Embedded-Artifacts,Embed-Dependency,Consumer-Policy,Remove-Headers

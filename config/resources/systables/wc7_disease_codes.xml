@@ -1,0 +1,1131 @@
+<?xml version="1.0"?>
+<import>
+  <WC7DiseaseCode public-id="zkig06q0pag854q6qffo4377799">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>FL</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="zfaggoaova6abb36pg973ht7b2b">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>FL</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="zobiatqdlo4ap35n8usip5pbdj8">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>FL</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="z6uiglfrb0qhu9ku62m7jtb2u08">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>FL</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="zbrgcef4nhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CA</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="zqfjqm962lohtbr7plhgcg0vebb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="zccgm28dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="zbvj62k71c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AZ_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AZ</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AZ_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AZ</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AZ_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AZ</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AZ_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AZ</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NJ_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NJ</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NJ_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NJ</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NJ_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NJ</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NJ_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NJ</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="UT_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>UT</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="UT_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>UT</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="UT_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>UT</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="UT_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>UT</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MN_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MN</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MN_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MN</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MN_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MN</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MN_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MN</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="ID_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>ID</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="ID_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>ID</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="ID_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>ID</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="ID_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>ID</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="CT_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CT</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="CT_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CT</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="CT_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CT</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="CT_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CT</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MT_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MT</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MT_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MT</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MT_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MT</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MT_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MT</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="GA_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>GA</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="GA_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>GA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="GA_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>GA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="GA_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>GA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="DC_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>DC</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="DC_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>DC</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="DC_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>DC</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="DC_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>DC</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="WV_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>WV</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="WV_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>WV</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="WV_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>WV</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="WV_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>WV</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="CO_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CO</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="CO_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CO</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="CO_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CO</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="CO_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>CO</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="WI_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>WI</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="WI_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>WI</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="WI_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>WI</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="WI_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>WI</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MD_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MD</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MD_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MD</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MD_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MD</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MD_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MD</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NH_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NH</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NH_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NH</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NH_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NH</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NH_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NH</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AK_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AK</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AK_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AK</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AK_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AK</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AK_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AK</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="PA_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>PA</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="PA_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>PA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="PA_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>PA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="PA_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>PA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="VT_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>VT</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="VT_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>VT</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="VT_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>VT</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="VT_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>VT</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="VA_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>VA</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="VA_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>VA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="VA_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>VA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="VA_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>VA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="IN_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>IN</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="IN_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>IN</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="IN_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>IN</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="IN_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>IN</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MI_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MI</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MI_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MI</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MI_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MI</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MI_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MI</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NY_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NY</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NY_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NY</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NY_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NY</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NY_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NY</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="IL_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>IL</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="IL_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>IL</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="IL_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>IL</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="IL_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>IL</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="SC_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>SC</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="SC_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>SC</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="SC_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>SC</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="SC_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>SC</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="OR_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>OR</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="OR_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>OR</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="OR_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>OR</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="OR_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>OR</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AL_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AL</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AL_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AL</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AL_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AL</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AL_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AL</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="IA_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>IA</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="IA_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>IA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="IA_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>IA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="IA_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>IA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MO_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MO</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MO_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MO</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MO_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MO</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MO_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MO</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AR_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AR</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AR_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AR</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AR_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AR</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="AR_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>AR</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="LA_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>LA</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="LA_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>LA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="LA_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>LA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="LA_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>LA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MA_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MA</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MA_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MA_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MA_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MA</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="DE_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>DE</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="DE_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>DE</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="DE_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>DE</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="DE_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>DE</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MS_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MS</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MS_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MS</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MS_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MS</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="MS_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>MS</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NM_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NM</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NM_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NM</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NM_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NM</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NM_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NM</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="OK_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>OK</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="OK_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>OK</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="OK_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>OK</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="OK_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>OK</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="TX_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>TX</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="TX_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>TX</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="TX_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>TX</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="TX_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>TX</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="KY_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>KY</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="KY_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>KY</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="KY_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>KY</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="KY_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>KY</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="KS_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>KS</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="KS_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>KS</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="KS_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>KS</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="KS_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>KS</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NC_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NC</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NC_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NC</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NC_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NC</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NC_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NC</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="TN_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>TN</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="TN_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>TN</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="TN_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>TN</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="TN_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>TN</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="ME_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>ME</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="ME_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>ME</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="ME_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>ME</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="ME_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>ME</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="RI_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>RI</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="RI_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>RI</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="RI_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>RI</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="RI_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>RI</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="SD_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>SD</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="SD_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>SD</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="SD_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>SD</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="SD_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>SD</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NE_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NE</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NE_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NE</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NE_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NE</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NE_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NE</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NV_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NV</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NV_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NV</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NV_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NV</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="NV_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>NV</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="HI_0059Dnhsq01l6m4v9th5l579">
+    <Code>0059D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>HI</Jurisdiction>
+    <SupplDiseaseLoadingType>Abrasives and Sandblasting</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="HI_0066D62lohtbr7plhgcg0veb">
+    <Code>0066D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>HI</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Non-Ferrous</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="HI_0067Dk5ub3aj9116baup743a">
+    <Code>0067D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>HI</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Iron</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+  <WC7DiseaseCode public-id="HI_0065D1c44d23p3ifen6tf739">
+    <Code>0065D</Code>
+    <EffectiveDate>2000-01-01 00:00:00.000</EffectiveDate>
+    <Jurisdiction>HI</Jurisdiction>
+    <SupplDiseaseLoadingType>Foundries - Steel</SupplDiseaseLoadingType>
+  </WC7DiseaseCode>
+</import>

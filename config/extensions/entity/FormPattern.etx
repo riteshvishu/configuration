@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><extension xmlns="http://guidewire.com/datamodel" entityName="FormPattern">
+  <typekey desc="The type of the Governing law" name="GoverningLawType" nullok="true" typelist="WC7GoverningLaw"/>
+  <array arrayentity="WC7FormPatternClassCode" cascadeDelete="true" desc="WC7ClassCodes associated with this form pattern." name="WC7FormPatternClassCodes" owner="true"/>
+</extension>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ExclusionPattern
+  coverageCategory="WC7WorkCompLineCategoryExcl"
+  exclusionSubtype="WC7WorkersCompExcl"
+  existence="Electable"
+  lookupTableName="WC7LineExcl"
+  owningEntityType="WC7WorkersCompLine"
+  priority="1200"
+  public-id="WC7EmployeeLeasingClientExclEndorsementExcl"
+  referenceDateByType="PolicyTerm">
+  <AvailabilityScript><![CDATA[return WC7WorkersCompLine.EmployeeLeasingPlan.ProfessionalEmployeeType == "Client"
+  ]]></AvailabilityScript>
+  <CovTerms/>
+</ExclusionPattern>

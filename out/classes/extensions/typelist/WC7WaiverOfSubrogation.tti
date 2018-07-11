@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  name="WC7WaiverOfSubrogation"
+  desc="The type of waiver of subro."
+  final="false">
+  <typecode
+    code="blanket"
+    desc="A blanket waiver of liability"
+    name="Blanket"/>
+  <typecode
+    code="specific"
+    desc="A specific waiver of liability"
+    name="Specific"/>
+</typelist>

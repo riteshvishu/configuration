@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<extension xmlns="http://guidewire.com/datamodel" entityName="Group">
+  <column desc="The group name in Kanji." name="NameKanji" nullok="true" type="varchar">
+    <columnParam name="size" value="100"/>
+  </column>
+</extension>

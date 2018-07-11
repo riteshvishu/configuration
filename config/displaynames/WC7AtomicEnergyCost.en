@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7AtomicEnergyCost">
+  <Columns>
+    <Column
+      beanPath="WC7AtomicEnergyCost.WC7AtomicEnergyExposure"
+      name="exposure"/>
+  </Columns>
+  <DisplayName><![CDATA[return displaykey.EntityName.WC7AtomicEnergyCost(exposure)]]></DisplayName>
+</Entity>

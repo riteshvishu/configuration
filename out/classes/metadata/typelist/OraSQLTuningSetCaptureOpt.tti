@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" desc="Valid capture options when capturing cusrsor cache" final="true" subpackage="database" name="OraSQLTuningSetCaptureOpt" platform="true">
+  <typecode code="insert" desc="Insert new statements" name="INSERT"/>
+  <typecode code="update" desc="Update existing statements" name="UPDATE"/>
+  <typecode code="merge" desc="Both insert new staements and update existing statements" name="MERGE"/>
+</typelist>

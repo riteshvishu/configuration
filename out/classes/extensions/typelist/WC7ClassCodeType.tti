@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="Types of class codes"
+  name="WC7ClassCodeType">
+  <typecode
+    code="FELA"
+    desc="FELA"
+    name="FELA"
+    priority="1"/>
+  <typecode
+    code="USLH"
+    desc="USLH"
+    name="USLH"
+    priority="2"/>
+  <typecode
+    code="Admiralty"
+    desc="Admiralty"
+    name="Admiralty"
+    priority="3"/>
+  <typecode
+    code="Nonratable"
+    desc="Nonratable"
+    name="Nonratable"
+    priority="4"/>
+  <typecode
+    code="AtomicEnergy"
+    desc="Atomic Energy"
+    name="Atomic Energy"
+    priority="4"/>
+  <typefilter
+    desc="Class code type for Maritime and FELA exposures"
+    name="MaritimeFELA">
+    <include
+      code="Admiralty"/>
+    <include
+      code="FELA"/>
+  </typefilter>
+  <typefilter
+    desc="Class code type for USLH, Maritime and FELA exposures"
+    name="USLHMaritimeFELA">
+    <include
+      code="USLH"/>
+    <include
+      code="Admiralty"/>
+    <include
+      code="FELA"/>
+  </typefilter>
+</typelist>

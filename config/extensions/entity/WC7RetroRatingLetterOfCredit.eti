@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" desc="A Letter Of Credit" effDatedBranchType="PolicyPeriod" entity="WC7RetroRatingLetterOfCredit" exportable="true" extendable="false" loadable="false" platform="false" table="wc7letterofcredit" type="effdated">
+  <column desc="The amount this letter is providing" name="Amount" nullok="true" type="money"/>
+  <column desc="The name of the issuer" name="IssuerName" nullok="true" type="shorttext"/>
+  <column desc="Date (inclusive) from which this letter of credit is valid." name="ValidFrom" nullok="false" type="datetime"/>
+  <column desc="Date (exclusive) at which this letter of credit is no longer valid." name="ValidTo" nullok="false" type="datetime"/>
+  <foreignkey columnName="WC7RetrospectiveRatingPlanID" desc="The retro plan for which this letter applies" fkentity="WC7RetrospectiveRatingPlan" name="WC7RetrospectiveRatingPlan" nullok="false"/>
+</entity>

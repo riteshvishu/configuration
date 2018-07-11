@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="The type of a WC Jurisdiction Cost."
+  name="WC7JurisdictionCostType">
+  <typecode
+    code="MinPrem"
+    desc="Additional premium charged so that standard premium for the policy or jurisdiction meets a minimum amount"
+    name="Minimum Premium Adjustment"/>
+  <typecode
+    code="MinPremFELAMaritime"
+    desc="Additional premium charged so that standard premium for the policy or jurisdiction meets a minimum amount (FELA / Maritime)"
+    name="Minimum Premium Adjustment (FELA, Maritime)"/>
+  <typecode
+    code="CancelShortRatePenalty"
+    desc="Cancellation penalty determined by short-rate."
+    name="Cancellation short-rate penalty"/>
+  <typecode
+    code="Tax"
+    desc="Tax"
+    name="Tax"/>
+  <typecode
+    code="CIGA"
+    desc="CA Insurance Guarantee Assoc surcharge"
+    name="CIGA surcharge"/>
+  <typecode
+    code="ExpenseConst"
+    desc="Expense constant"
+    name="Expense constant"/>
+  <typecode
+    code="PremDis"
+    desc="Premium discount"
+    name="Premium discount"/>
+  <typecode
+    code="TerrorPrem"
+    desc="Terrorism premium"
+    name="Terrorism premium"/>
+  <typecode
+    code="SchedCredit"
+    desc="Premium adjustment based on evaluation of the insured's risk relative to the average risk of others in the same class"
+    name="Schedule credit"/>
+  <typecode
+    code="Waiver"
+    desc="Extra charge for waiver of subrogation"
+    name="Waiver charge"/>
+  <typecode
+    code="WaiverBalance"
+    desc="Balance charge to bring Specific Waiver of Subrogation up to Minimum"
+    name="Waiver Balance charge"/>
+  <typecode
+    code="ExpMod"
+    desc="Workers' comp experience modifier credit or debit"
+    name="Experience modifier"/>
+  <typecode
+    code="WCEL"
+    desc="Premium for workers' comp employers liability limits above the base (standard) amounts"
+    name="Emp liab increased limits"/>
+  <typecode
+    code="CPAP"
+    desc="CPAP Jurisidiction Modifier"
+    name="CPAP Jurisdiction Modifier"/>
+  <typecode
+    code="ScheduleMod"
+    desc="Schedule Modifier"
+    name="Schedule Modifier"/>
+  <typecode
+    code="AircraftSeatSurcharge"
+    desc="Aircraft Seat Surcharge"
+    name="Aircraft Seat Surcharge"/>
+  <typecode
+    code="ELVoluntaryCompFlatCharge"
+    desc="Employers Liability Voluntary Compensation flat charge"
+    name="Employers Liability Voluntary Compensation flat charge"/>
+  <typecode
+    code="SmallDeductible"
+    desc="Small Deductible Credit"
+    name="Small Deductible Credit"/>
+  <typecode
+    code="ModifierAdjustment"
+    desc="Modifier Adjustment"
+    name="Modifier Adjustment"/>
+  <typecode
+    code="CertifiedSafetyCredit"
+    desc="Certified Safety Credit"
+    name="Certified Safety Credit"/>
+  <typecode
+    code="DrugFreeWorkplaceCredit"
+    desc="Drug Free Workplace Credit"
+    name="Drug Free Workplace Credit"/>
+  <typecode
+    code="CatastrophePremium"
+    desc="Catastrophe (Other Than Certified Acts of Terrorism)"
+    name="Catastrophe (Other Than Certified Acts of Terrorism)"/>
+  <typecode
+    code="ManagedCareCredit"
+    desc="Managed Care Credit"
+    name="Managed Care Credit"/>
+  <typecode
+    code="CoinsuranceDeductCredit"
+    desc="Coinsurance &amp;/or Deductible Credit"
+    name="Coinsurance &amp;/or Deductible Credit"/>
+  <typecode
+    code="MaritimeManualPremium"
+    desc="Maritime Manual Premium"
+    name="Maritime Manual Premium"/>
+</typelist>

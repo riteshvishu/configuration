@@ -1,0 +1,21 @@
+package rules.Assignment.GlobalAccountAssignmentRules_dir
+
+@gw.rules.RuleName("Default")
+internal class Default_ {
+  static function doCondition(account : entity.Account) : boolean {
+    
+/*start00rule*/
+return true
+/*end00rule*/
+
+  }
+
+  static function doAction(account : entity.Account, actions : gw.rules.Action) {
+
+/*start00rule*/
+account.CurrentRoleAssignment.assignGroup(Group( 58, "Los Angeles Branch UW" ))
+actions.exit()
+/*end00rule*/
+
+  }
+}

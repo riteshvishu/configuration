@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7LineScheduleCov"
+  desc="WC7 Line Coverage with a schedule"
+  final="false"
+  supertype="WC7WorkersCompCov">
+  <implementsInterface
+    iface="gw.api.productmodel.Schedule"
+    impl="gw.lob.wc7.schedule.WC7LineScheduleCovImpl"/>
+  <implementsEntity name="ScheduleAutoNumberSequence"/>
+  <array
+    arrayentity="WC7LineScheduleCovItem"
+    name="WC7LineScheduleCovItems"
+    cascadeDelete="true"
+    desc="Coverage scheduled items"
+    setterScriptability="all"/>
+</subtype>

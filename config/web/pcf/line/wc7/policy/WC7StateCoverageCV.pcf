@@ -1,0 +1,562 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <CardViewPanel
+    id="WC7StateCoverageCV">
+    <Require
+      name="wcLine"
+      type="WC7WorkersCompLine"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <Variable
+      initialValue="wcLine.InterstateNamedInsuredOfficialIDs"
+      name="namedInsuredOfficialIDs"
+      recalculateOnRefresh="true"
+      type="OfficialID[]"/>
+    <Card
+      id="StateCoverages"
+      title="displaykey.Web.Policy.WC.StateCoverages">
+      <DetailViewPanel
+        available="namedInsuredOfficialIDs.Count &gt; 0"
+        id="NamedInsuredOfficialIDDV"
+        visible="namedInsuredOfficialIDs.Count &gt; 0">
+        <InputColumn>
+          <Label
+            id="InterstateLabel"
+            label="displaykey.Web.Policy.WC.Interstate"/>
+          <InputIterator
+            elementName="officialId"
+            id="officialIDs"
+            value="namedInsuredOfficialIDs">
+            <Input
+              align="left"
+              editable="true"
+              id="ANI_OfficialIDEntry"
+              label="officialId.OfficialIDInsuredAndType"
+              numCols="20"
+              validationExpression="officialId.validateValue()"
+              value="officialId.OfficialIDValue">
+              <PostOnChange/>
+            </Input>
+          </InputIterator>
+        </InputColumn>
+      </DetailViewPanel>
+      <PanelRef>
+        <Toolbar>
+          <AddButton
+            id="AddCoveredJurisdiction"
+            iterator="PolicyLinePerStateConfig_LV"
+            label="displaykey.Web.Policy.WC.AddCoveredJurisdiction">
+            <AddMenuItemIterator
+              elementName="locationState"
+              value="JurisdictionsThatCanBeAdded">
+              <AddMenuItem
+                id="addJurisdiction"
+                iterator="PolicyLinePerStateConfig_LV"
+                label="locationState"
+                toCreateAndAdd="return wcLine.addJurisdiction(locationState)"/>
+            </AddMenuItemIterator>
+          </AddButton>
+          <RemoveButton
+            flags="all removable"
+            id="RemoveJurisdiction"
+            iterator="PolicyLinePerStateConfig_LV"
+            label="displaykey.Web.Policy.WC7.RemoveJurisdiction"
+            visible="true"/>
+          <ToolbarButton
+            action="updateAllBasis()"
+            hideIfReadOnly="true"
+            id="SplitBases"
+            label="displaykey.Web.Policy.WC.SplitBases"/>
+          <CheckedValuesToolbarButton
+            allCheckedRowsAction="WC7SplitPeriodPopup.push( wcLine.Branch.WC7Line, CheckedValues )"
+            hideIfReadOnly="true"
+            id="SplitPeriod"
+            iterator="PolicyLinePerStateConfig_LV"
+            label="displaykey.Web.Policy.WC.SplitPeriod"/>
+        </Toolbar>
+        <ListDetailPanel
+          selectionName="selectedJurisdiction"
+          selectionType="WC7Jurisdiction">
+          <ListViewPanel
+            available="selectedJurisdiction != null"
+            id="PolicyLinePerStateConfig_LV"
+            visible="true">
+            <RowIterator
+              checkBoxVisible="openForEdit"
+              editable="false"
+              elementName="covJuris"
+              toCreateAndAdd="dummyCreateAndAdd()"
+              toRemove="wcLine.removeJurisdiction( covJuris ); util.LocationUtil.addRequestScopedInfoMessage(displaykey.Web.Policy.WC.RemoveJurisdictionWarning) "
+              value="wcLine.WC7Jurisdictions">
+              <IteratorSort
+                sortBy="covJuris.Jurisdiction.DisplayName"
+                sortOrder="1"/>
+              <ToolbarFlag
+                condition="covJuris.CanRemove"
+                name="removable"/>
+              <Row>
+                <TextCell
+                  id="StateName"
+                  label="displaykey.Web.Policy.LocationContainer.Location.State"
+                  numCols="16"
+                  value="covJuris.Jurisdiction"/>
+                <TextCell
+                  id="RiskID"
+                  label="displaykey.Web.Policy.PolicyLine.PerState.OfficialIDs"
+                  numCols="100"
+                  numEntries="5"
+                  outputConversion="outputConverterForOfficialIDs(VALUE)"
+                  value="getOfficalIDsForJurisdictionThatMatchPNIContactsOfficialIDs(covJuris)"/>
+              </Row>
+            </RowIterator>
+          </ListViewPanel>
+          <CardViewPanel>
+            <Card
+              id="GeneralInfoCard"
+              title="displaykey.Web.Policy.PolicyLine.PerState.Panel.GeneralInfo.Title">
+              <PanelRef
+                def="WC7PolicyLinePerStateConfigDV(wcLine, selectedJurisdiction,openForEdit)"/>
+              <PanelRef>
+                <TitleBar
+                  title="displaykey.Web.Policy.WC.CoveredEmployees"/>
+                <DetailViewPanel>
+                  <InputColumn>
+                    <InputSetRef
+                      def="WC7ClassesInputSet(selectedJurisdiction, wcLine)"/>
+                  </InputColumn>
+                </DetailViewPanel>
+              </PanelRef>
+            </Card>
+            <Card
+              id="SupplementaryDiseaseCard"
+              title="displaykey.Web.Policy.WC7.SupplementaryDisease.Title">
+              <PanelRef>
+                <TitleBar
+                  title="displaykey.Web.Policy.WC7.SupplementaryDisease.SupplementaryDiseaseExposure"/>
+                <DetailViewPanel>
+                  <Variable
+                    initialValue="selectedJurisdiction.SplitDates"
+                    name="splitDates"
+                    recalculateOnRefresh="true"/>
+                  <Variable
+                    initialValue="wcLine.getDiseaseCodesForJurisdiction(selectedJurisdiction.Jurisdiction, wcLine.Branch.PeriodStart)"
+                    name="diseaseCodesForJurisdiction"
+                    recalculateOnRefresh="true"
+                    type="List&lt;WC7DiseaseCode&gt;"/>
+                  <InputColumn>
+                    <ListViewInput
+                      editable="true"
+                      labelAbove="true">
+                      <Toolbar>
+                        <IteratorButtons
+                          addLabel="displaykey.Web.Policy.WC7.SupplementaryDisease.Add"
+                          addShortcut="l"
+                          iterator="WC7SuppDiseaseExpLV"/>
+                      </Toolbar>
+                      <ListViewPanel
+                        id="WC7SuppDiseaseExpLV">
+                        <RowIterator
+                          autoAdd="false"
+                          editable="true"
+                          elementName="wc7SupplDiseaseExp1"
+                          hasCheckBoxes="true"
+                          hideCheckBoxesIfReadOnly="true"
+                          id="WC7SupplDiseaseExpList1"
+                          numEntriesRequired="0"
+                          numEntriesToAdd="1"
+                          toCreateAndAdd="wcLine.addSupplementaryDiseaseExposureWM()"
+                          toRemove="wc7SupplDiseaseExp1.removeWM()"
+                          value="wcLine.getWC7SupplementaryDiseaseExposuresWM(selectedJurisdiction.Jurisdiction)">
+                          <Row>
+                            <Cell
+                              enableSort="false"
+                              id="Period1"
+                              label="displaykey.Web.Policy.WC.PeriodHeader"
+                              value="gw.api.web.util.DateRangeUtil.getPeriodNumbers(wc7SupplDiseaseExp1.EffectiveDateRange, splitDates)"
+                              visible="splitDates.Count &gt; 2">
+                              <PostOnChange/>
+                            </Cell>
+                            <RangeCell
+                              align="left"
+                              editable="wc7SupplDiseaseExp1.canEditLocation(splitDates)"
+                              id="Loc"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.Location"
+                              required="true"
+                              sortOrder="1"
+                              value="wc7SupplDiseaseExp1.LocationWM"
+                              valueRange="wcLine.Branch.getPolicyLocationWM(gw.api.util.StateJurisdictionMappingUtil.getStateMappingForJurisdiction(selectedJurisdiction.Jurisdiction))"
+                              width="150"/>
+                            <RangeCell
+                              editable="true"
+                              id="DiseaseCode"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.DiseaseCode"
+                              required="true"
+                              sortOrder="1"
+                              value="wc7SupplDiseaseExp1.DiseaseCode"
+                              valueRange="diseaseCodesForJurisdiction">
+                              <PostOnChange/>
+                            </RangeCell>
+                            <TextCell
+                              align="left"
+                              enableSort="false"
+                              id="Description"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.Description"
+                              numCols="8"
+                              required="true"
+                              value="wc7SupplDiseaseExp1.DiseaseCode.SupplDiseaseLoadingType"/>
+                            <CheckBoxCell
+                              editable="true"
+                              id="IfAnyExposure"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.IfAnyExposure"
+                              value="wc7SupplDiseaseExp1.IfAnyExposureAndClearBasisAmount">
+                              <PostOnChange/>
+                            </CheckBoxCell>
+                            <TextCell
+                              align="right"
+                              available="!wc7SupplDiseaseExp1.IfAnyExposureAndClearBasisAmount"
+                              editable="true"
+                              enableSort="false"
+                              id="AnnualRenum"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.AnnualRenum"
+                              numCols="8"
+                              required="true"
+                              value="wc7SupplDiseaseExp1.BasisAmount"
+                              valueVisible="!wc7SupplDiseaseExp1.IfAnyExposureAndClearBasisAmount"/>
+                            <DateCell
+                              dateFormat="short"
+                              id="effectiveDate"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.EffectiveDate"
+                              required="true"
+                              value="wc7SupplDiseaseExp1.EffectiveDate"
+                              visible="true"/>
+                            <DateCell
+                              dateFormat="short"
+                              id="expirationDate"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.ExpirationDate"
+                              required="true"
+                              value="wc7SupplDiseaseExp1.ExpirationDate"
+                              visible="true"/>
+                          </Row>
+                          <RowIterator
+                            editable="true"
+                            elementName="wc7SupplDiseaseExp2"
+                            id="WC7SupplDiseaseExpList2"
+                            pageSize="0"
+                            value="wc7SupplDiseaseExp1.AdditionalVersions.whereTypeIs(WC7SupplDiseaseExposure)">
+                            <Row>
+                              <Cell
+                                enableSort="false"
+                                id="Period2"
+                                value="gw.api.web.util.DateRangeUtil.getPeriodNumbers(wc7SupplDiseaseExp2.EffectiveDateRange, splitDates)"/>
+                              <RangeCell
+                                align="left"
+                                id="Loc"
+                                required="true"
+                                sortOrder="1"
+                                value="wc7SupplDiseaseExp2.LocationWM"
+                                valueRange="wcLine.Branch.getPolicyLocationWM(gw.api.util.StateJurisdictionMappingUtil.getStateMappingForJurisdiction(selectedJurisdiction.Jurisdiction))"
+                                width="150"/>
+                              <RangeCell
+                                id="DiseaseCode"
+                                required="true"
+                                sortOrder="1"
+                                value="wc7SupplDiseaseExp2.DiseaseCode"
+                                valueRange="diseaseCodesForJurisdiction">
+                                <PostOnChange/>
+                              </RangeCell>
+                              <TextCell
+                                align="left"
+                                enableSort="false"
+                                id="Description"
+                                numCols="8"
+                                required="true"
+                                value="wc7SupplDiseaseExp2.DiseaseCode.SupplDiseaseLoadingType"/>
+                              <CheckBoxCell
+                                editable="true"
+                                id="IfAnyExposure"
+                                value="wc7SupplDiseaseExp2.IfAnyExposureAndClearBasisAmount">
+                                <PostOnChange/>
+                              </CheckBoxCell>
+                              <TextCell
+                                align="right"
+                                available="!wc7SupplDiseaseExp2.IfAnyExposureAndClearBasisAmount"
+                                editable="true"
+                                id="AnnualRenum"
+                                numCols="8"
+                                required="true"
+                                validationLabel="displaykey.Web.Policy.WC.CovEmp.AnnualRenum"
+                                value="wc7SupplDiseaseExp2.BasisAmount"
+                                valueVisible="!wc7SupplDiseaseExp2.IfAnyExposureAndClearBasisAmount"/>
+                              <DateCell
+                                dateFormat="short"
+                                id="effectiveDate"
+                                required="true"
+                                value="wc7SupplDiseaseExp2.EffectiveDate"
+                                visible="true"/>
+                              <DateCell
+                                dateFormat="short"
+                                id="expirationDate"
+                                required="true"
+                                value="wc7SupplDiseaseExp2.ExpirationDate"
+                                visible="true"/>
+                            </Row>
+                          </RowIterator>
+                        </RowIterator>
+                      </ListViewPanel>
+                    </ListViewInput>
+                  </InputColumn>
+                </DetailViewPanel>
+              </PanelRef>
+              <PanelRef>
+                <TitleBar
+                  title="&quot;Atomic Energy Exposure&quot;"/>
+                <DetailViewPanel>
+                  <Variable
+                    initialValue="selectedJurisdiction.SplitDates"
+                    name="splitDates"
+                    recalculateOnRefresh="true"/>
+                  <Variable
+                    initialValue="wcLine.getDiseaseCodesForJurisdiction(selectedJurisdiction.Jurisdiction, wcLine.Branch.PeriodStart)"
+                    name="diseaseCodesForJurisdiction"
+                    recalculateOnRefresh="true"
+                    type="List&lt;WC7DiseaseCode&gt;"/>
+                  <InputColumn>
+                    <ListViewInput
+                      editable="true"
+                      labelAbove="true">
+                      <Toolbar>
+                        <IteratorButtons
+                          addLabel="displaykey.Web.Policy.WC7.SupplementaryDisease.Add"
+                          addShortcut="l"
+                          iterator="WC7AtomicEnergyExpLV"/>
+                      </Toolbar>
+                      <ListViewPanel
+                        id="WC7AtomicEnergyExpLV">
+                        <RowIterator
+                          autoAdd="false"
+                          editable="true"
+                          elementName="wc7AtomicEnergyExp1"
+                          hasCheckBoxes="true"
+                          hideCheckBoxesIfReadOnly="true"
+                          id="WC7AtomicEnergyExpList1"
+                          numEntriesRequired="0"
+                          numEntriesToAdd="1"
+                          toCreateAndAdd="wcLine.addAtomicEnergyExposureWM()"
+                          toRemove="wc7AtomicEnergyExp1.removeWM()"
+                          value="wcLine.getWC7AtomicEnergyExposuresWM(selectedJurisdiction.Jurisdiction)">
+                          <Row>
+                            <Cell
+                              enableSort="false"
+                              id="Period1"
+                              label="displaykey.Web.Policy.WC.PeriodHeader"
+                              value="gw.api.web.util.DateRangeUtil.getPeriodNumbers(wc7AtomicEnergyExp1.EffectiveDateRange, splitDates)"
+                              visible="splitDates.Count &gt; 2">
+                              <PostOnChange/>
+                            </Cell>
+                            <RangeCell
+                              align="left"
+                              editable="wc7AtomicEnergyExp1.canEditLocation(splitDates)"
+                              id="Loc"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.Location"
+                              required="true"
+                              sortOrder="1"
+                              value="wc7AtomicEnergyExp1.LocationWM"
+                              valueRange="wcLine.Branch.getPolicyLocationWM(gw.api.util.StateJurisdictionMappingUtil.getStateMappingForJurisdiction(selectedJurisdiction.Jurisdiction))"
+                              width="150">
+                              <PostOnChange/>
+                            </RangeCell>
+                            <PickerCell
+                              available="wc7AtomicEnergyExp1.LocationWM != null"
+                              editable="true"
+                              id="ClassCode"
+                              inputConversion="gw.pcf.WC7ClassesInputSetUIHelper.findFirstMatchingClassCodeAtomicEnergy(VALUE, wc7AtomicEnergyExp1)"
+                              label="displaykey.Web.Policy.WC.CovEmp.ClassCode"
+                              numCols="6"
+                              outputConversion="VALUE == null ? &quot;&quot; : VALUE.Code"
+                              pickLocation="WC7ClassCodeSearchPopup.push(wc7AtomicEnergyExp1.LocationWM, wc7AtomicEnergyExp1.WCLine, WC7ClassCodeType.TC_ATOMICENERGY)"
+                              required="true"
+                              value="wc7AtomicEnergyExp1.ClassCode">
+                              <PostOnChange/>
+                            </PickerCell>
+                            <TextCell
+                              align="left"
+                              enableSort="false"
+                              id="Description"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.Description"
+                              numCols="8"
+                              required="true"
+                              value="wc7AtomicEnergyExp1.ClassCode.ShortDesc"/>
+                            <CheckBoxCell
+                              editable="true"
+                              enableSort="false"
+                              id="IfAnyExposure"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.IfAnyExposure"
+                              value="wc7AtomicEnergyExp1.IfAnyExposureAndClearBasisAmount">
+                              <PostOnChange/>
+                            </CheckBoxCell>
+                            <TextCell
+                              align="right"
+                              available="!wc7AtomicEnergyExp1.IfAnyExposureAndClearBasisAmount"
+                              editable="true"
+                              enableSort="false"
+                              id="Basis"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.AnnualRenum"
+                              numCols="8"
+                              required="true"
+                              value="wc7AtomicEnergyExp1.BasisAmount"
+                              valueVisible="!wc7AtomicEnergyExp1.IfAnyExposureAndClearBasisAmount"/>
+                            <TextCell
+                              align="right"
+                              editable="true"
+                              id="Rate"
+                              label="displaykey.Web.Policy.WC.AtomicEnergy.Rate"
+                              numCols="8"
+                              required="true"
+                              value="wc7AtomicEnergyExp1.ClassCodeRate">
+                              <PostOnChange/>
+                            </TextCell>
+                            <DateCell
+                              dateFormat="short"
+                              id="effectiveDate"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.EffectiveDate"
+                              required="true"
+                              value="wc7AtomicEnergyExp1.EffectiveDate"
+                              visible="true"/>
+                            <DateCell
+                              dateFormat="short"
+                              id="expirationDate"
+                              label="displaykey.Web.Policy.WC7.SupplementaryDisease.ExpirationDate"
+                              required="true"
+                              value="wc7AtomicEnergyExp1.ExpirationDate"
+                              visible="true"/>
+                          </Row>
+                          <RowIterator
+                            editable="true"
+                            elementName="wc7AtomicEnergyExp2"
+                            id="WC7AtomicEnergyExpList2"
+                            pageSize="0"
+                            value="wc7AtomicEnergyExp1.AdditionalVersions.whereTypeIs(WC7AtomicEnergyExposure)">
+                            <Row>
+                              <Cell
+                                enableSort="false"
+                                id="Period2"
+                                value="gw.api.web.util.DateRangeUtil.getPeriodNumbers(wc7AtomicEnergyExp2.EffectiveDateRange, splitDates)"/>
+                              <RangeCell
+                                align="left"
+                                id="Loc"
+                                required="true"
+                                sortOrder="1"
+                                value="wc7AtomicEnergyExp2.LocationWM"
+                                valueRange="wcLine.Branch.getPolicyLocationWM(gw.api.util.StateJurisdictionMappingUtil.getStateMappingForJurisdiction(selectedJurisdiction.Jurisdiction))"
+                                width="150"/>
+                              <PickerCell
+                                available="wc7AtomicEnergyExp2.LocationWM != null"
+                                id="ClassCode"
+                                numCols="6"
+                                outputConversion="VALUE == null ? &quot;&quot; : VALUE.Code"
+                                pickLocation="WC7ClassCodeSearchPopup.push(wc7AtomicEnergyExp2.LocationWM, wc7AtomicEnergyExp1.WCLine, WC7ClassCodeType.TC_ATOMICENERGY)"
+                                required="true"
+                                value="wc7AtomicEnergyExp2.ClassCode"/>
+                              <TextCell
+                                align="left"
+                                enableSort="false"
+                                id="Description"
+                                numCols="8"
+                                required="true"
+                                value="wc7AtomicEnergyExp2.ClassCode.ShortDesc"/>
+                              <CheckBoxCell
+                                editable="true"
+                                id="IfAnyExposure"
+                                value="wc7AtomicEnergyExp2.IfAnyExposureAndClearBasisAmount">
+                                <PostOnChange/>
+                              </CheckBoxCell>
+                              <TextCell
+                                align="right"
+                                available="!wc7AtomicEnergyExp2.IfAnyExposureAndClearBasisAmount"
+                                editable="true"
+                                id="Basis"
+                                numCols="8"
+                                required="true"
+                                validationLabel="displaykey.Web.Policy.WC.CovEmp.AnnualRenum"
+                                value="wc7AtomicEnergyExp2.BasisAmount"
+                                valueVisible="!wc7AtomicEnergyExp2.IfAnyExposureAndClearBasisAmount"/>
+                              <TextCell
+                                align="right"
+                                available="!wc7AtomicEnergyExp2.IfAnyExposureAndClearBasisAmount"
+                                id="Rate"
+                                numCols="8"
+                                required="true"
+                                value="wc7AtomicEnergyExp2.Rate"
+                                valueVisible="!wc7AtomicEnergyExp2.IfAnyExposureAndClearBasisAmount">
+                                <PostOnChange/>
+                              </TextCell>
+                              <DateCell
+                                dateFormat="short"
+                                id="effectiveDate"
+                                required="true"
+                                value="wc7AtomicEnergyExp2.EffectiveDate"
+                                visible="true"/>
+                              <DateCell
+                                dateFormat="short"
+                                id="expirationDate"
+                                required="true"
+                                value="wc7AtomicEnergyExp2.ExpirationDate"
+                                visible="true"/>
+                            </Row>
+                          </RowIterator>
+                        </RowIterator>
+                      </ListViewPanel>
+                    </ListViewInput>
+                  </InputColumn>
+                </DetailViewPanel>
+              </PanelRef>
+            </Card>
+          </CardViewPanel>
+        </ListDetailPanel>
+      </PanelRef>
+    </Card>
+    <Code><![CDATA[uses pcf.api.Wizard
+
+function dummyCreateAndAdd() : WC7Jurisdiction {
+  return null
+}
+
+function updateAllBasis(){
+  if((CurrentLocation as Wizard).saveDraft()){
+    wcLine.updateWCExposuresAndModifiers()
+  }
+}
+      
+property get JurisdictionsThatCanBeAdded(): Jurisdiction[] {
+  var existingJurisdictions = wcLine.WC7Jurisdictions.map(\j -> j.Jurisdiction).toSet()
+  var possibleJurisdicitons = wcLine.Branch.LocationStates.toSet()
+  possibleJurisdicitons.removeAll(existingJurisdictions)
+  return possibleJurisdicitons.toTypedArray()
+}
+
+function getOfficalIDsForJurisdictionThatMatchPNIContactsOfficialIDs(covJuris : WC7Jurisdiction) : entity.OfficialID[] {
+  return wcLine.Branch.PrimaryNamedInsured.AccountContactRole.AccountContact.Contact.OfficialIDs
+        .where(\ officialID ->
+          officialID.State == covJuris.Jurisdiction)
+}
+
+function outputConverterForOfficialIDs(VALUE : OfficialID[]) : String {
+  var str = ""
+  var first = true
+  for (var Item in VALUE) {
+    var idValue = Item.getOfficialIDValue()
+    if(idValue != null) {
+      if(!first) {
+        str = str + ", "
+      }
+      first = false
+      str = str + idValue
+    }
+  }
+  return str
+}]]></Code>
+  </CardViewPanel>
+</PCF>

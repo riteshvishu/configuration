@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Page
+    alwaysInEditMode="true"
+    canEdit="true"
+    countsAsWork="false"
+    id="ExcelImport"
+    parent="RateTableFactorList(gw.rating.rtm.domain.RateTableFactorListController.createDatabaseBasedController(), rateTable, rateTable.RateBook)"
+    showUpLink="true"
+    startInEditMode="true"
+    title="displaykey.Web.Rating.Import.Title">
+    <LocationEntryPoint
+      signature="ExcelImport(rateTable : RateTable, excelFile : gw.rating.rtm.util.WebFileWrapper)"/>
+    <Variable
+      name="rateTable"
+      type="RateTable"/>
+    <Variable
+      name="excelFile"
+      type="gw.rating.rtm.util.WebFileWrapper"/>
+    <Variable
+      name="testPath"
+      type="String"/>
+    <Screen>
+      <PanelRef
+        id="fileUpdate">
+        <Toolbar>
+          <ToolbarButton
+            action="doImport()"
+            available="excelFile.File != null or testPath != null"
+            id="OKButton"
+            label="displaykey.Web.Rating.Import.OK"/>
+          <ToolbarButton
+            action="RateTableFactorList.go(gw.rating.rtm.domain.RateTableFactorListController.createDatabaseBasedController(), rateTable, rateTable.RateBook)"
+            id="CancelButton"
+            label="displaykey.Web.Rating.Import.Cancel"
+            showConfirmMessage="false"/>
+        </Toolbar>
+        <DetailViewPanel>
+          <InputColumn
+            id="inputColumn">
+            <Input
+              editable="true"
+              id="inputFile"
+              value="excelFile.File"/>
+            <HiddenInput
+              editable="true"
+              id="HiddenTestInput"
+              value="testPath"/>
+          </InputColumn>
+        </DetailViewPanel>
+      </PanelRef>
+    </Screen>
+    <Code><![CDATA[/**
+ * This code enables testing of the import feature. It checks if we are in 'Test' mode
+ * and if so reads the path from a different widget (HIdden Input) that is accessible
+ * to our smoke tests.
+ */
+function doImport() : pcf.api.Location {
+  checkValidPath()
+  var populator = createPopulator()
+  validateStructure(populator)
+  var controller = createController(populator)
+  return RateTableFactorList.go(controller, rateTable, rateTable.RateBook)     
+}
+
+private function validateStructure(populator : gw.rating.rtm.excel.ExcelPopulator) {
+  if (!populator.isCompatibleTable(rateTable)) {
+    throw new gw.api.util.DisplayableException(displaykey.Web.Rating.Errors.IncompatibleExcelFile(rateTable.Definition.TableName))
+  }
+}
+
+private function createController(populator : gw.rating.rtm.excel.ExcelPopulator) : gw.rating.rtm.domain.RateTableFactorListController {
+  return gw.rating.rtm.domain.RateTableFactorListController.createExcelBasedController(populator)
+}
+
+private function getImportFile() : gw.api.web.WebFile {
+  return excelFile.File  
+}
+
+private function getTestFile() : gw.api.web.WebFile {
+    var is = new java.io.FileInputStream(new java.io.File(testPath))
+    return new gw.rating.rtm.mock.MockWebFile(is)  
+}
+
+private function inTestMode() : boolean {
+  return excelFile.File == null    
+}
+
+private function checkValidPath() {
+  if (testPath.Empty and excelFile.File == null) {
+    throw new gw.api.util.DisplayableException("Import file path is required")
+  }  
+}
+
+function createPopulator() : gw.rating.rtm.excel.ExcelPopulator {
+  var importFile = inTestMode() ? getTestFile() : getImportFile()
+  return gw.rating.rtm.excel.ExcelPopulator.create(importFile.InputStream)
+}
+]]></Code>
+  </Page>
+</PCF>

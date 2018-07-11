@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <PanelSet
+    id="PolicyContactRolePanelSet"
+    mode="WC7IncludedOwnerOfficer">
+    <Require
+      name="policyContactRole"
+      type="PolicyContactRole"/>
+    <Variable
+      initialValue="policyContactRole as WC7PolicyOwnerOfficer"
+      name="wc7OwnerOfficer"/>
+    <PanelRef>
+      <TitleBar
+        id="OwnerOfficerTitle"
+        title="displaykey.Web.Policy.OwnerOfficer"/>
+      <DetailViewPanel
+        id="OwnerOfficerInfoDV">
+        <InputColumn>
+          <InputSetRef
+            def="WC7OwnerOfficerInputSet(wc7OwnerOfficer)"/>
+        </InputColumn>
+      </DetailViewPanel>
+    </PanelRef>
+  </PanelSet>
+</PCF>

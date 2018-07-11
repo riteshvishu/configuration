@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" desc="Topic to which this note belongs" final="false" subpackage="note" name="NoteTopicType" platform="true">
+  <typecode code="general" desc="General" name="General" priority="1"/>
+</typelist>

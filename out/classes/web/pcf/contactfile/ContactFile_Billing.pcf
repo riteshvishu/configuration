@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Page
+    id="ContactFile_Billing"
+    title="displaykey.Web.ContactFile.Billing.Title">
+    <LocationEntryPoint
+      signature="ContactFile_Billing(contact : Contact)"/>
+    <Variable
+      name="contact"
+      type="Contact"/>
+    <Screen>
+      <Variable
+        initialValue="contact.AssociationFinder.createTopLevelAccountToRolesMap()"
+        name="topLevelAccountToRolesMap"
+        type="java.util.Map&lt;String,String&gt;"/>
+      <Variable
+        initialValue="topLevelAccountToRolesMap.Count &lt;= gw.api.system.PCConfigParameters.BillingNumAccountWarningThreshold.Value"
+        name="renderListView"
+        type="boolean"/>
+      <AlertBar
+        action="renderListView = true"
+        allowDismiss="false"
+        id="billingConfirm"
+        label="displaykey.Web.ContactFile.Billing.ReturnLargeNumberOfAccountsWarning"
+        showConfirmMessage="false"
+        visible="topLevelAccountToRolesMap.Count &gt; gw.api.system.PCConfigParameters.BillingNumAccountWarningThreshold.Value"/>
+      <PanelRef>
+        <Toolbar/>
+        <ListViewPanel
+          id="BillingAccountsLV"
+          visible="renderListView">
+          <RowIterator
+            editable="false"
+            elementName="externalAccount"
+            value="contact.AssociationFinder.findHeldAndBilledExternalAccounts(topLevelAccountToRolesMap)">
+            <Row>
+              <Cell
+                action="AccountFileDoRetrievalForward.go(externalAccount.AccountNumber)"
+                actionAvailable="true"
+                available="true"
+                id="AccountNumber"
+                label="displaykey.Web.ContactFile.Billing.AccountNumber"
+                value="externalAccount.AccountNumber"/>
+              <Cell
+                id="Role"
+                label="displaykey.Web.ContactFile.Billing.Role"
+                value="externalAccount.Roles"/>
+              <Cell
+                action="BCAccount.push(gw.api.system.PCConfigParameters.BillingSystemURL.Value, externalAccount.ExternalAccountNumber)"
+                available="gw.api.system.PCConfigParameters.BillingSystemURL.Value.HasContent and perm.System.viewbillingsystem"
+                id="ExternalAccountNumber"
+                label="displaykey.Web.ContactFile.Billing.ExternalAccountNumber"
+                value="externalAccount.ExternalAccountNumber"/>
+              <Cell
+                id="ExternalAccountName"
+                label="displaykey.Web.ContactFile.Billing.ExternalAccountName"
+                value="externalAccount.BillingAccountInfo.AccountName"/>
+              <Cell
+                fontColor="externalAccount.BillingAccountInfo.Delinquent ? &quot;Red&quot; : &quot;&quot;"
+                id="Status"
+                label="displaykey.Web.ContactFile.Billing.Status"
+                value="externalAccount.BillingAccountInfo.Delinquent ? displaykey.Web.Billing.Status.Delinquent : displaykey.Web.Billing.Status.InGoodStanding"/>
+              <Cell
+                formatType="currency"
+                id="BilledOutstanding"
+                label="displaykey.Web.ContactFile.Billing.BilledOutstanding"
+                value="externalAccount.BillingAccountInfo.BilledOutstandingTotal"/>
+              <Cell
+                formatType="currency"
+                id="CurrentDue"
+                label="displaykey.Web.ContactFile.Billing.CurrentDue"
+                value="externalAccount.BillingAccountInfo.BilledOutstandingCurrent"/>
+              <Cell
+                formatType="currency"
+                id="PastDue"
+                label="displaykey.Web.ContactFile.Billing.PastDue"
+                value="externalAccount.BillingAccountInfo.BilledOutstandingPastDue"/>
+              <Cell
+                formatType="currency"
+                id="Unbilled"
+                label="displaykey.Web.ContactFile.Billing.Unbilled"
+                value="externalAccount.BillingAccountInfo.UnbilledTotal"/>
+            </Row>
+          </RowIterator>
+        </ListViewPanel>
+      </PanelRef>
+    </Screen>
+  </Page>
+</PCF>

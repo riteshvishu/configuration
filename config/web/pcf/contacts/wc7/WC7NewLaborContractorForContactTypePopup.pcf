@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <Popup
+    beforeCommit="detail.WC7LaborContact.resetContactAndRoles(duplicateContactsPopupHelper.existingPCContactWithABContactMatch)"
+    beforeValidate="gw.lob.wc7.WC7NewLaborContactValidation.validate(detail)"
+    canEdit="true"
+    countsAsWork="false"
+    id="WC7NewLaborContractorForContactTypePopup"
+    returnType="WC7LaborContactDetail"
+    startInEditMode="true"
+    title="displaykey.Web.Contact.NewContact(entity.WC7PolicyLaborContractor.Type.TypeInfo.DisplayName)">
+    <LocationEntryPoint
+      signature="WC7NewLaborContractorForContactTypePopup(line : WC7Line, contactType : typekey.ContactType, clausePattern : gw.api.productmodel.ClausePattern)"/>
+    <Variable
+      name="line"
+      type="WC7Line"/>
+    <Variable
+      name="contactType"
+      type="typekey.ContactType"/>
+    <Variable
+      name="clausePattern"
+      type="gw.api.productmodel.ClausePattern"/>
+    <Variable
+      initialValue="line.inclusionTypeForClause(clausePattern)"
+      name="theInclusion"
+      type="typekey.Inclusion"/>
+    <Variable
+      initialValue="addNewLaborContractorDetailForContactType()"
+      name="detail"/>
+    <Variable
+      initialValue="line.WC7PolicyLaborContractors.map(\ p -&gt; p.AccountContactRole.AccountContact.Contact)"
+      name="existingContacts"
+      type="Contact[]"/>
+    <Variable
+      initialValue="new gw.pcf.duplicatecontacts.DuplicateContactsPopupHelper(detail.WC7LaborContact.AccountContactRole.AccountContact.Contact, existingContacts)"
+      name="duplicateContactsPopupHelper"/>
+    <Variable
+      initialValue="theInclusion == Inclusion.TC_INCL ? displaykey.Java.ProductModel.Name.Condition : displaykey.Java.ProductModel.Name.Exclusion"
+      name="scheduleLabel"
+      type="String"/>
+    <Screen
+      editable="true"
+      id="ContactDetailScreen">
+      <Toolbar>
+        <ToolbarButton
+          action="duplicateContactsPopupHelper.checkForDuplicatesOrUpdate(\ -&gt; CurrentLocation.pickValueAndCommit(detail))"
+          id="ForceDupCheckUpdate"
+          label="displaykey.Button.OK"
+          visible="duplicateContactsPopupHelper.ShowButton"/>
+        <EditButtons
+          pickValue="detail"
+          updateVisible="not duplicateContactsPopupHelper.ShowButton"/>
+        <ToolbarButton
+          action="duplicateContactsPopupHelper.push()"
+          id="CheckForDuplicates"
+          label="displaykey.Web.Contact.CheckForDuplicates"
+          visible="duplicateContactsPopupHelper.ShowButton"/>
+      </Toolbar>
+      <PanelRef
+        def="WC7LaborContractorInfoDV(detail, theInclusion, getParentClause())"
+        mode="getParentClause().Pattern.Code"/>
+      <PanelRef
+        def="NewPolicyContactRoleDetailsCV(detail.WC7LaborContact, false)"/>
+    </Screen>
+    <Code><![CDATA[uses gw.api.domain.Clause
+uses gw.api.productmodel.ExclusionPattern
+uses gw.api.productmodel.ConditionPattern
+uses java.lang.IllegalArgumentException
+
+function addNewLaborContractorDetailForContactType() : WC7LaborContactDetail {
+  if (theInclusion == TC_EXCL)
+    return line.addNewExcludedLaborContractorDetailForContactType(contactType,
+        line.getExclusion(clausePattern as ExclusionPattern))
+  else if (theInclusion == TC_INCL)
+    return line.addNewIncludedLaborContractorDetailForContactType(contactType,
+        line.getCondition(clausePattern as ConditionPattern))
+  else
+    throw new IllegalArgumentException("Unexpected inclusion type: " + theInclusion)
+}
+
+function getParentClause() : Clause {
+  if (detail typeis WC7IncludedLaborContactDetail)
+    return detail.LaborContactCondition
+  else if (detail typeis WC7ExcludedLaborContactDetail)
+    return detail.LaborContactExclusion
+  else
+    throw new IllegalArgumentException("Unexpected detail type: " + (typeof detail))
+}]]></Code>
+  </Popup>
+</PCF>

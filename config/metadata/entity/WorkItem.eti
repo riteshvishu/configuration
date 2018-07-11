@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<delegate xmlns="http://guidewire.com/datamodel" subpackage="workqueue" name="WorkItem" platform="true">
+  <column name="ProcessHistoryID" type="softentityreference" desc="The writer batch job that created this workitem (ProcessHistory)." nullok="true"/>
+  <typekey default="available" desc="Status of this workitem." name="Status" nullok="false" typelist="WorkItemStatusType" setterScriptability="doesNotExist"/>
+  <column name="LastUpdateTime" nullok="true" type="datetime"/>
+  <column name="AvailableSince" desc="The time after which the work item can be tried. Must be null on failed work items" nullok="true" type="datetime"/>
+  <column default="0" name="Priority" nullok="false" type="integer"/>
+  <!-- machine ID of which this items is checked out by -->
+  <column name="CheckedOutBy" nullok="true" type="varchar">
+    <columnParam name="size" value="50"/>
+  </column>
+  <column name="CreationTime" nullok="false" type="datetime" setterScriptability="doesNotExist"/>
+  <column default="0" name="Attempts" nullok="false" type="integer"/>
+  <column desc="Stack trace of the exception" name="Exception" nullok="true" setterScriptability="hidden" type="longtext"/>
+  <index desc="Covering index to speed up searches done by the distributed worker controller for open and orphaned work items" name="WorkItemIndex1" unique="true">
+    <indexcol keyposition="1" name="Status"/>
+    <indexcol keyposition="2" name="CreationTime"/>
+    <indexcol keyposition="3" name="ID"/>
+    <indexcol keyposition="4" name="LastUpdateTime"/>
+  </index>
+  <index desc="Covering index to speed up checking-out of work items and they involve search on status" name="WorkItemIndex2" unique="true">
+    <indexcol keyposition="1" name="AvailableSince"/>
+    <indexcol keyposition="2" name="Priority" sortascending="false"/>
+    <indexcol keyposition="3" name="CreationTime"/>
+    <indexcol keyposition="4" name="ID"/>
+  </index>
+  <index name="WorkItemIndex3" desc="ProcessHistoryID index" unique="false">
+    <indexcol name="ProcessHistoryID" keyposition="1"/>
+  </index>
+</delegate>

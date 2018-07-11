@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <Screen
+    id="WC7AffinityGroupDetailScreen">
+    <Require
+      name="wc7AffinityGroup"
+      type="WC7AffinityGroup"/>
+    <Toolbar>
+      <EditButtons
+        editVisible="perm.System.affinitygroupadmin"/>
+    </Toolbar>
+    <CardViewPanel>
+      <Card
+        id="WC7AffinityGroupDetail_BasicCard"
+        title="displaykey.Web.Admin.WC7AffinityGroupDetail.Basics">
+        <PanelRef
+          def="WC7AffinityGroupDetailDV(wc7AffinityGroup)"/>
+      </Card>
+      <Card
+        id="WC7AffinityGroupDetail_Jurisdictions"
+        title="displaykey.Web.Admin.WC7AffinityGroupDetail.Jurisdictions">
+        <PanelRef
+          def="WC7AffinityGroupJurisdictionsLV(wc7AffinityGroup)">
+          <Toolbar>
+            <IteratorButtons
+              addVisible="true"
+              iterator="WC7AffinityGroupJurisdictionsLV.WC7AffinityGroupJurisdictionsLV"
+              removeVisible="true"/>
+          </Toolbar>
+        </PanelRef>
+      </Card>
+      <Card
+        id="WC7AffinityGroupDetail_ProductsCard"
+        title="displaykey.Web.Admin.WC7AffinityGroupDetail.Products">
+        <PanelRef
+          def="WC7AffinityGroupProductsLV(wc7AffinityGroup)">
+          <Toolbar
+            visible="true">
+            <AddButton
+              hideIfReadOnly="true"
+              id="AddProduct"
+              iterator="WC7AffinityGroupProductsLV.WC7AffinityGroupProductsLV"
+              label="displaykey.Web.Admin.WC7AffinityGroupDetail.Products.Add"
+              shortcut="A">
+              <AddMenuItemIterator
+                elementName="product"
+                value="gw.api.productmodel.Product.getAll().toTypedArray()">
+                <AddMenuItem
+                  id="Product"
+                  iterator="WC7AffinityGroupProductsLV.WC7AffinityGroupProductsLV"
+                  label="product.DisplayName"
+                  toCreateAndAdd="addNewProductToAffinityGroup(product.Code)"/>
+              </AddMenuItemIterator>
+            </AddButton>
+            <IteratorButtons
+              addVisible="false"
+              iterator="WC7AffinityGroupProductsLV.WC7AffinityGroupProductsLV"
+              removeLabel="&quot;Remove&quot;"/>
+          </Toolbar>
+        </PanelRef>
+      </Card>
+      <Card
+        id="WC7AffinityGroupDetail_ProducerCodeCard"
+        title="displaykey.Web.Admin.WC7AffinityGroupDetail.ProducerCodes">
+        <PanelRef
+          def="WC7AffinityGroupProducerCodesLV(wc7AffinityGroup)">
+          <Toolbar>
+            <IteratorButtons
+              addVisible="true"
+              iterator="WC7AffinityGroupProducerCodesLV.WC7AffinityGroupProducerCodesLV"
+              removeVisible="true"/>
+          </Toolbar>
+        </PanelRef>
+      </Card>
+    </CardViewPanel>
+    <Code><![CDATA[function addNewProductToAffinityGroup(productcode : String) : WC7AffinityGroupProduct {
+    if (wc7AffinityGroup.Products.hasMatch(\ w -> w.ProductCode.equals(productcode))) {
+      throw new gw.api.util.DisplayableException(displaykey.Web.Admin.WC7AffinityGroupDetail.Products.Error.AlreadyExists(productcode))
+    }
+    var agp = new WC7AffinityGroupProduct()
+    agp.ProductCode = productcode
+    wc7AffinityGroup.addToProducts(agp)
+  return agp
+}]]></Code>
+  </Screen>
+</PCF>

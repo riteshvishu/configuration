@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><subtype xmlns="http://guidewire.com/datamodel" desc="Workers' Comp line of business." displayName="Workers' Comp" entity="WC7WorkersCompLine" supertype="PolicyLine">
+  <implementsInterface iface="gw.api.policy.PolicyLineMethods" impl="gw.lob.wc7.WC7PolicyLineMethods"/>
+  <implementsEntity adapter="gw.lob.wc7.WC7LineCoverableAdapter" name="Coverable"/>
+  <column columnName="WC7ReferenceDateInternal" desc="Internal field for storing the reference date of this entity on bound policy periods." name="ReferenceDateInternal" nullok="true" type="datetime"/>
+  <foreignkey desc="Governing Class Code of policy line." fkentity="WC7ClassCode" name="WC7GoverningClass" nullok="true"/>
+  <onetoone fkentity="WC7EmployeeLeasingPlan" name="EmployeeLeasingPlan" nullok="true"/>
+  <onetoone fkentity="WC7ParticipatingPlan" name="ParticipatingPlan" nullok="true"/>
+  <array arrayentity="WC7Jurisdiction" cascadeDelete="true" name="WC7Jurisdictions"/>
+  <array arrayentity="WC7AircraftSeat" name="WC7AircraftSeats" owner="true"/>
+  <array arrayentity="WC7Cost" cascadeDelete="true" name="WC7Costs"/>
+  <array arrayentity="WC7CoveredEmployee" name="WC7CoveredEmployees" owner="true"/>
+  <array arrayentity="WC7CoveredEmployeeBase" name="WC7CoveredEmployeeBases" owner="true"/>
+  <array arrayentity="WC7PolicyLaborClient" cascadeDelete="true" desc="Employees that are leased by a company/person from another." name="WC7PolicyLaborClients"/>
+  <array arrayentity="WC7PolicyLaborContractor" cascadeDelete="true" desc="Employees that are contracted by a company/person to another." name="WC7PolicyLaborContractors"/>
+  <array arrayentity="WC7PolicyOwnerOfficer" cascadeDelete="true" desc="Owner/officers on this line." name="WC7PolicyOwnerOfficers"/>
+  <array arrayentity="WC7ExcludedWorkplace" name="WC7ExcludedWorkplaces" owner="true"/>
+  <array arrayentity="WC7CoordinatedPolicy" name="MultipleCoordinatedPolicies" owner="true"/>
+  <array arrayentity="WC7FedCoveredEmployee" name="WC7FedCoveredEmployees" owner="true"/>
+  <array arrayentity="WC7MaritimeCoveredEmployee" name="WC7MaritimeCoveredEmployees" owner="true"/>
+  <array arrayentity="WC7WorkersCompCov" cascadeDelete="true" desc="Line-level coverages for Workers' Comp." name="WC7LineCoverages" setterScriptability="all"/>
+  <array arrayentity="WC7WorkersCompExcl" cascadeDelete="true" desc="Line-level exclusions for Workers' Comp." name="WC7LineExclusions" setterScriptability="all"/>
+  <array arrayentity="WC7WorkersCompCond" cascadeDelete="true" desc="Line-level conditions for Workers' Comp." name="WC7LineConditions" setterScriptability="all"/>
+  <array arrayentity="WC7WaiverOfSubro" name="WC7WaiverOfSubros" owner="true"/>
+  <array arrayentity="WC7ManuscriptOption" name="WC7ManuscriptOptions" owner="true"/>
+  <array arrayentity="WC7SupplDiseaseExposure" name="WC7SupplDiseaseExposures" owner="true"/>
+  <array arrayentity="WC7AtomicEnergyExposure" name="WC7AtomicEnergyExposures" owner="true"/>
+  <onetoone fkentity="WC7RetrospectiveRatingPlan" name="RetrospectiveRatingPlan" nullok="true"/>
+</subtype>

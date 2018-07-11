@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7CovEmpCost">
+  <Columns>
+    <Column
+      beanPath="WC7CovEmpCost.WC7WorkersCompCov"
+      name="cov"/>
+    <Column
+      beanPath="WC7CovEmpCost.WC7CoveredEmployee"
+      name="emp"/>
+    <Column
+      beanPath="WC7CovEmpCost.StatCode"
+      name="statCode"/>
+    <Column
+      beanPath="WC7CovEmpCost.WC7CovEmpCostType"
+      name="covEmpCostType"/>
+  </Columns>
+  <DisplayName><![CDATA[if (WC7CovEmpCostType.TC_CATASTROPHELOADING.equals(covEmpCostType)) {
+  return displaykey.EntityName.WC7CatastropheLoadingCovEmpCost(emp, statCode)
+}
+if (WC7CovEmpCostType.TC_SUPPLEMENTALDISEASE.equals(covEmpCostType)) {
+  return displaykey.EntityName.WC7SupplementalDiseaseCovEmpCost(emp)
+}
+
+return displaykey.EntityName.WCCovEmpCost(cov.Pattern, emp)
+]]></DisplayName>
+</Entity>

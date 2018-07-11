@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<entity
+    xmlns="http://guidewire.com/datamodel"
+    entity="WC7RatingWorksheet"
+    type="effdated"
+    desc="A Workers Comp (v7) rating worksheet"
+    abstract="false"
+    effDatedBranchType="PolicyPeriod"
+    exportable="true"
+    extendable="true"
+    final="false"
+    platform="false"
+    loadable="false"
+    table="wc7worksheet">
+  <implementsEntity
+    name="RatingWorksheet"/>
+  <foreignkey
+    name="WC7Cost"
+    fkentity="WC7Cost"
+    nullok="false"/>
+</entity>

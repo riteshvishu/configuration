@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7ExcludedLaborContactDetail"
+  supertype="WC7LaborContactDetail">
+  <implementsInterface
+    iface="gw.lob.wc7.schedule.WC7SpecificScheduledItem"
+    impl="gw.lob.wc7.schedule.WC7ExcludedLaborContactDetailScheduledItemImpl"/>
+  <foreignkey
+    name="LaborContactExclusion"
+    desc="The parent exclusion for this specific scheduled item"
+    columnName="WC7LaborContactScheduleExcl"
+    fkentity="WC7WorkersCompExcl"
+    setterScriptability="doesNotExist"
+    nullok="false"/>
+  <fulldescription>
+    The details about the labor contact (e.g. labor client or labor contractor) on an exclusion.
+  </fulldescription>
+</subtype>

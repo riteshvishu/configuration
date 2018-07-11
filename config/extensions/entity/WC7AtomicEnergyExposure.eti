@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" desc="A Workers' Comp Atomic Energy Exposure" effDatedBranchType="PolicyPeriod" entity="WC7AtomicEnergyExposure" exportable="true" final="false" loadable="false" platform="false" table="wc7atomicenergyexp" type="effdated">
+  <implementsEntity name="Auditable"/>
+  <implementsInterface iface="gw.api.copier.EffDatedCopyable" impl="gw.api.copier.EffDatedCopier"/>
+  <implementsInterface iface="gw.api.logicalmatch.EffDatedLogicalMatcher" impl="gw.lob.wc7.WC7AtomicEnergyExposureMatcher"/>
+  <implementsInterface iface="gw.lob.wc7.WC7RatingEffDated" impl="gw.lob.wc7.WC7AtomicEnergyRatingEffDated"/>
+  <implementsInterface iface="gw.lob.wc7.WC7RatingEffDatedExposure" impl="gw.lob.wc7.WC7AtomicEnergyRatingEffDated"/>
+  <column desc="Basis Amount" name="BasisAmount" nullok="true" scalable="true" type="integer"/>
+  <column default="false" desc="Option to indicate that coverage is provided with precise liability to be determined later (at audit)" name="IfAnyExposure" nullok="true" type="bit"/>
+  <column desc="Rate" name="Rate" nullok="true" type="decimal">
+     <columnParam name="scale" value="2"/>
+     <columnParam name="precision" value="4"/>
+  </column>
+  <foreignkey columnName="ClassCodeID" desc="Class Code of exposure" fkentity="WC7ClassCode" name="ClassCode" nullok="true" setterScriptability="all"/>
+  <foreignkey desc="Location of exposure." exportable="true" fkentity="PolicyLocation" name="Location" nullok="false" setterScriptability="all"/>
+  <foreignkey fkentity="WC7WorkersCompLine" name="WCLine" nullok="false"/>
+  <array arrayentity="WC7AtomicEnergyCost" cascadeDelete="true" name="WC7Costs"/>
+</entity>

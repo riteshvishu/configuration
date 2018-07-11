@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="JobDateType"
+  name="JobDateType">
+  <typecode
+    code="Effective"
+    desc="Effective Date"
+    name="Effective Date"
+    priority="10"/>
+  <typecode
+    code="Written"
+    desc="Written Date"
+    name="Written Date"
+    priority="20"/>
+  <typecode
+    code="Reference"
+    desc="Reference Date"
+    name="Reference Date"
+    priority="30"/>
+</typelist>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <InputSet
+    id="CoverageInputSet"
+    mode="WC7OtherStatesInsurance">
+    <Require
+      name="coveragePattern"
+      type="gw.api.productmodel.ClausePattern"/>
+    <Require
+      name="coverable"
+      type="Coverable"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <Variable
+      initialValue="coverable as entity.WC7WorkersCompLine"
+      name="wc7Line"/>
+    <Variable
+      initialValue="wc7Line.WC7OtherStatesInsurance"
+      name="otherStatesInsurance"
+      recalculateOnRefresh="true"/>
+    <HiddenInput
+      id="CovPatternDisplayName"
+      value="coveragePattern.DisplayName"/>
+    <InputGroup
+      allowToggle="coveragePattern.allowToggle(coverable)"
+      childrenVisible="coverable.getCoverageConditionOrExclusion(coveragePattern) != null"
+      id="CovPatternInputGroup"
+      label="coveragePattern.DisplayName"
+      onToggle="coverable.setCoverageConditionOrExclusionExists(coveragePattern, VALUE)">
+      <CovTermTypekeyInput
+        editable="true"
+        id="OtherStatesTermInput"
+        label="otherStatesInsurance.WC7OtherStatesOptTerm.Pattern.DisplayName"
+        required="otherStatesInsurance.WC7OtherStatesOptTerm.Pattern.Required"
+        value="otherStatesInsurance.WC7OtherStatesOptTerm"
+        visible="otherStatesInsurance.hasCovTerm(&quot;WC7OtherStatesOpt&quot;)">
+        <PostOnChange
+          onChange="wc7Line.setDefaultExcludedStates(otherStatesInsurance)"/>
+      </CovTermTypekeyInput>
+      <InputSet
+        visible="otherStatesInsurance.hasCovTerm(&quot;WC7IncludedStates&quot;) and otherStatesInsurance.WC7OtherStatesOptTerm.Value == &quot;ListedOnly&quot;">
+        <TextInput
+          editable="true"
+          id="WC7IncludedStatesTermInput"
+          label="otherStatesInsurance.WC7IncludedStatesTerm.Pattern.DisplayName"
+          required="otherStatesInsurance.WC7IncludedStatesTerm.Pattern.Required"
+          validationExpression="wc7Line.validateIncludedStates(otherStatesInsurance.WC7IncludedStatesTerm.Value)"
+          value="(otherStatesInsurance.WC7IncludedStatesTerm as gw.api.domain.covterm.GenericCovTerm&lt;String&gt;).Value"/>
+      </InputSet>
+      <InputSet
+        visible="otherStatesInsurance.hasCovTerm(&quot;WC7ExcludedStates&quot;) and otherStatesInsurance.WC7OtherStatesOptTerm.Value == &quot;AllExcept&quot;">
+        <TextInput
+          editable="true"
+          id="WC7ExcludedStatesTermInput"
+          label="otherStatesInsurance.WC7ExcludedStatesTerm.Pattern.DisplayName"
+          required="otherStatesInsurance.WC7ExcludedStatesTerm.Pattern.Required"
+          validationExpression="wc7Line.validateExcludedStatesContainMonopolisticStates(otherStatesInsurance.WC7ExcludedStatesTerm.Value)"
+          value="(otherStatesInsurance.WC7ExcludedStatesTerm as gw.api.domain.covterm.GenericCovTerm&lt;String&gt;).Value"/>
+      </InputSet>
+      <PostOnChange/>
+    </InputGroup>
+    <InputDivider
+      visible="openForEdit or coverable.getCoverageConditionOrExclusion(coveragePattern) != null"/>
+  </InputSet>
+</PCF>

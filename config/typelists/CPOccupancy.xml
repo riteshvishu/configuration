@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<typelist
+  desc="Occupancy/Operations"
+  name="CPOccupancy">
+  <typecode
+    code="Manufacturing"
+    desc="Manufacturing"
+    name="Manufacturing"
+    priority="1"/>
+  <typecode
+    code="Merchantile"
+    desc="Merchantile"
+    name="Merchantile"
+    priority="2"/>
+  <typecode
+    code="Rental"
+    desc="Rental"
+    name="Rental"
+    priority="3"/>
+  <typecode
+    code="Combination"
+    desc="Combination"
+    name="Combination"
+    priority="4"/>
+</typelist>

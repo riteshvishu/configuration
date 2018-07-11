@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<entity xmlns="http://guidewire.com/datamodel" subpackage="archiving" entity="UpgradeDatamodelInfo" platform="true" type="keyable" table="upgradedatamodelinfo" desc="Capture info at time of each deployment" final="true" extendable="false" instrumentationtable="true">
+  <column desc="Platform Major Schema Version at time of deployment" name="PlatformMajorVers" type="integer" nullok="false"/>
+  <column desc="Platform Minor Schema Version at time of deployment" name="PlatformMinorVers" type="integer" nullok="false"/>
+  <column desc="Application Major Schema Version at time of deployment" name="ApplicationMajorVers" type="integer" nullok="false"/>
+  <column desc="Application Minor Schema Version at time of deployment" name="ApplicationMinorVers" type="integer" nullok="false"/>
+  <column desc="Extensions Version at time of deployment" name="ExtensionsVers" type="integer" nullok="false"/>
+
+  <index name="datamodel" unique="true" desc="Unique index across all version info">
+    <indexcol keyposition="1" name="PlatformMajorVers"/>
+    <indexcol keyposition="2" name="PlatformMinorVers"/>
+    <indexcol keyposition="3" name="ApplicationMajorVers"/>
+    <indexcol keyposition="4" name="ApplicationMinorVers"/>
+    <indexcol keyposition="5" name="ExtensionsVers"/>
+  </index>
+</entity>

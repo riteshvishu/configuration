@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  name="Coinsurance"
+  desc="Coinsurance percentage values"
+  final="false"
+  subpackage="policy"/>

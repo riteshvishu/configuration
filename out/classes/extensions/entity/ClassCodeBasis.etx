@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+ <extension xmlns="http://guidewire.com/datamodel" entityName="ClassCodeBasis">
+    <column
+        name="Proratable"
+        type="bit"
+        desc="Defines whether the basis is proratable."
+        default="false"
+        nullok="false"/>
+ </extension>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- ====================================================================  Submission Group  ==================================================================== -->
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="SubmissionGroup"
+  desc="A grouping of Submission jobs"
+  subpackage="job.group"
+  supertype="JobGroup">
+  <array
+    name="Submissions"
+    desc="The array of submissions in this submission group."
+    arrayentity="Submission"
+    setterScriptability="doesNotExist"/>
+</subtype>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <Popup
+    beforeCommit="wcLine.addRPSD( splitDate, splitType, jurisdictions )"
+    canEdit="true"
+    countsAsWork="false"
+    id="WC7SplitPeriodPopup"
+    startInEditMode="true"
+    title="displaykey.Web.Policy.WC.SplitPeriod">
+    <LocationEntryPoint
+      signature="WC7SplitPeriodPopup(wcLine : productmodel.WC7Line, jurisdictions : WC7Jurisdiction[])"/>
+    <Variable
+      name="wcLine"
+      type="productmodel.WC7Line"/>
+    <Variable
+      name="jurisdictions"
+      type="WC7Jurisdiction[]"/>
+    <Variable
+      initialValue="wcLine.Branch.EditEffectiveDate"
+      name="splitDate"
+      type="java.util.Date"/>
+    <Variable
+      name="splitType"
+      type="RPSDType"/>
+    <Screen>
+      <Toolbar>
+        <EditButtons
+          editVisible="false"
+          updateLabel="displaykey.Button.Split"/>
+      </Toolbar>
+      <DetailViewPanel
+        editable="true">
+        <InputColumn>
+          <DateInput
+            editable="true"
+            id="SplitDate"
+            label="displaykey.Web.Policy.WC.SplitDate"
+            requestValidationExpression="validateSplitDate(VALUE)"
+            required="true"
+            value="splitDate"/>
+          <RangeInput
+            editable="true"
+            id="splitType"
+            label="displaykey.Web.Policy.WC.SplitType"
+            required="true"
+            value="splitType"
+            valueRange="{RPSDType.TC_FORCEDRERATING, RPSDType.TC_LATEMOD}"/>
+        </InputColumn>
+      </DetailViewPanel>
+    </Screen>
+    <Code><![CDATA[function validateSplitDate(date : java.util.Date) : String{
+  for(j in jurisdictions){
+    var dateTime = com.guidewire.pl.system.util.DateTimeUtil.setHourMinuteSecondFromDate(date, wcLine.Branch.PeriodStart)
+    var error = j.canAddRPSD(dateTime)
+    if(error <> null){
+      return error
+    }
+  }
+  return null
+}]]></Code>
+  </Popup>
+</PCF>

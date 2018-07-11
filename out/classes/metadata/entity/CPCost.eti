@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="CPCost"
+  type="effdated"
+  desc="A CommercialProperty unit of price for a period of time, not to be broken up any further"
+  abstract="true"
+  effDatedBranchType="PolicyPeriod"
+  exportable="true"
+  extendable="true"
+  final="false"
+  platform="false"
+  loadable="false"
+  subpackage="lob.cp"
+  table="cpcost">
+  <implementsInterface
+    iface="gw.lob.cp.financials.CPCostMethods"
+    impl="gw.lob.cp.financials.CPCostMethodsImpl"/>
+  <implementsEntity
+    name="Cost"
+    adapter="gw.lob.cp.financials.CPCostAdapter"/>
+  <foreignkey
+    name="CommercialPropertyLine"
+    fkentity="CommercialPropertyLine"
+    nullok="false"/>
+  <array
+    name="Transactions"
+    arrayentity="CPTransaction"
+    setterScriptability="hidden"
+    getterScriptability="doesNotExist"
+    cascadeDelete="true"/>
+  <onetoone
+    fkentity="CPRatingWorksheet"
+    name="CPRatingWorksheet"
+    owner="true"
+    cascadeDelete="true"
+    nullok="true"
+    desc="The associated rating worksheet"/>
+</entity>

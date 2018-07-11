@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typelist name="ContractorType" desc="Contractor Type" final="false">
+    <typecode code="SmallContractor" name="SmallContractor" desc="Small Contractor" priority="1"/>
+    <typecode code="BuildingContractor" name="BuildingContractor" desc="Building Contractor" priority="2"/>
+    <typecode code="HeavyConstruction" name="HeavyConstruction" desc="Heavy Construction" priority="3"/>
+    <typecode code="RoadBuilding" name="RoadBuilding" desc="Road Building" priority="4"/>
+</typelist>

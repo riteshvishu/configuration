@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><entity xmlns="http://guidewire.com/datamodel" desc="A Workers' Comp Disease Exposure" effDatedBranchType="PolicyPeriod" entity="WC7SupplDiseaseExposure" exportable="true" final="false" loadable="false" platform="false" table="wc7suppldiseaseexp" type="effdated">
+  <implementsEntity name="Auditable"/>
+  <implementsInterface iface="gw.api.copier.EffDatedCopyable" impl="gw.api.copier.EffDatedCopier"/>
+  <implementsInterface iface="gw.api.logicalmatch.EffDatedLogicalMatcher" impl="gw.lob.wc7.WC7SupplDiseaseExposureMatcher"/>
+  <implementsInterface iface="gw.lob.wc7.WC7RatingEffDated" impl="gw.lob.wc7.WC7SupplDiseaseRatingEffDated"/>
+  <implementsInterface iface="gw.lob.wc7.WC7RatingEffDatedExposure" impl="gw.lob.wc7.WC7SupplDiseaseRatingEffDated"/>
+  <column desc="Basis Amount" name="BasisAmount" nullok="true" scalable="true" type="integer"/>
+  <column default="false" desc="Option to indicate that coverage is provided with precise liability to be determined later (at audit)" name="IfAnyExposure" nullok="true" type="bit"/>
+  <array arrayentity="WC7SupplDiseaseCost" cascadeDelete="true" name="Costs"/>
+  <foreignkey columnName="DiseaseCodeID" desc="Disease Code of exposure" fkentity="WC7DiseaseCode" name="DiseaseCode" nullok="true" setterScriptability="all"/>
+  <foreignkey desc="Location of exposure." exportable="true" fkentity="PolicyLocation" name="Location" nullok="false" setterScriptability="all"/>
+  <foreignkey fkentity="WC7WorkersCompLine" name="WCLine" nullok="false"/>
+</entity>

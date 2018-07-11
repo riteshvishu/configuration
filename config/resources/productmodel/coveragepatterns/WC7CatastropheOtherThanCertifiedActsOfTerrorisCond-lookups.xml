@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<import>
+  <ConditionLookup public-id="z29i6vifg6pg0b6jdj6ht2o42ta">
+    <Availability>Available</Availability>
+    <ConditionPatternCode>WC7CatastropheOtherThanCertifiedActsOfTerrorisCond</ConditionPatternCode>
+    <PolicyLinePatternCode>WC7Line</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+  </ConditionLookup>
+</import>

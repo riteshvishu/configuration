@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <Popup
+    beforeCommit="detail.WC7LaborContact.resetContactAndRoles(duplicateContactsPopupHelper.existingPCContactWithABContactMatch)"
+    beforeValidate="gw.lob.wc7.WC7NewLaborContactValidation.validate(detail)"
+    canEdit="true"
+    countsAsWork="false"
+    id="WC7NewLaborClientForContactTypePopup"
+    returnType="WC7LaborContactDetail"
+    startInEditMode="true"
+    title="presenter.PopupTitle">
+    <LocationEntryPoint
+      signature="WC7NewLaborClientForContactTypePopup(presenter : gw.lob.wc7.schedule.WC7ScheduleClientPresenter)"/>
+    <Variable
+      name="presenter"
+      type="gw.lob.wc7.schedule.WC7ScheduleClientPresenter"/>
+    <Variable
+      initialValue="presenter.addNewDetail()"
+      name="detail"/>
+    <Variable
+      initialValue="presenter.Line.WC7PolicyLaborClients.map(\ p -&gt; p.AccountContactRole.AccountContact.Contact)"
+      name="existingContacts"
+      type="Contact[]"/>
+    <Variable
+      initialValue="new gw.pcf.duplicatecontacts.DuplicateContactsPopupHelper(detail.WC7LaborContact.AccountContactRole.AccountContact.Contact, existingContacts)"
+      name="duplicateContactsPopupHelper"/>
+    <Screen
+      editable="true"
+      id="ContactDetailScreen">
+      <Toolbar>
+        <ToolbarButton
+          action="duplicateContactsPopupHelper.checkForDuplicatesOrUpdate(\ -&gt; CurrentLocation.pickValueAndCommit(detail))"
+          id="ForceDupCheckUpdate"
+          label="displaykey.Button.OK"
+          visible="duplicateContactsPopupHelper.ShowButton"/>
+        <EditButtons
+          pickValue="detail"
+          updateVisible="not duplicateContactsPopupHelper.ShowButton"/>
+        <ToolbarButton
+          action="duplicateContactsPopupHelper.push()"
+          id="CheckForDuplicates"
+          label="displaykey.Web.Contact.CheckForDuplicates"
+          visible="duplicateContactsPopupHelper.ShowButton"/>
+      </Toolbar>
+      <DetailViewPanel
+        id="WC7NewLaborClientDV">
+        <InputColumn>
+          <Input
+            id="ScheduleParent"
+            label="presenter.ScheduleLabel"
+            value="presenter.ParentClause"/>
+          <RangeInput
+            align="left"
+            editable="true"
+            id="State"
+            label="displaykey.Web.Policy.WC.EmployeeLeasing.Supplier.State"
+            required="true"
+            value="detail.Jurisdiction"
+            valueRange="detail.Branch.WC7Line.WC7Jurisdictions.map(\j -&gt; j.Jurisdiction)"
+            visible="presenter.ShowState">
+            <PostOnChange/>
+          </RangeInput>
+          <DateInput
+            editable="true"
+            id="EffectiveDate"
+            label="displaykey.Web.PolicyLine.LeasedEmployee.ContractEffectiveDate"
+            required="true"
+            value="detail.ContractEffectiveDate"
+            visible="presenter.ShowContractDates"/>
+          <DateInput
+            editable="true"
+            id="ExpirationDate"
+            label="displaykey.Web.PolicyLine.LeasedEmployee.ContractExpirationDate"
+            required="true"
+            value="detail.ContractExpirationDate"
+            visible="presenter.ShowContractDates"/>
+        </InputColumn>
+      </DetailViewPanel>
+      <PanelRef
+        def="NewPolicyContactRoleDetailsCV(detail.WC7LaborContact, false)"/>
+    </Screen>
+  </Popup>
+</PCF>

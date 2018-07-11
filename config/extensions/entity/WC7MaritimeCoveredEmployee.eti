@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><subtype xmlns="http://guidewire.com/datamodel" desc="A Workers' Comp Maritime Covered Employee" entity="WC7MaritimeCoveredEmployee" supertype="WC7CoveredEmployeeBase">
+  <implementsInterface iface="gw.lob.wc7.schedule.WC7SpecificScheduledItem" impl="gw.lob.wc7.schedule.WC7MaritimeCovScheduledItemImpl"/>
+  <foreignkey columnName="WC7MaritimeScheduleCov" desc="The parent coverage for maritime covered employees" fkentity="WC7WorkersCompCov" name="MaritimeCoverage" nullok="false" setterScriptability="doesNotExist"/>
+  <column desc="Its the vessel associated with this exposure" name="Vessel" nullok="true" type="shorttext"/>
+  <array arrayentity="WC7MaritimeCovEmpCost" cascadeDelete="true" name="WC7Costs"/>
+</subtype>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Entity
+  name="WC7ClassCode">
+  <Columns>
+    <Column
+      beanPath="WC7ClassCode.Code"
+      name="code"
+      sortOrder="1"/>
+    <Column
+      beanPath="WC7ClassCode.ShortDesc"
+      name="shortDesc"
+      sortOrder="0"/>
+  </Columns>
+  <DisplayName><![CDATA[
+if (shortDesc == null) {
+  return code
+}
+var len = shortDesc.length()
+if (len > 40) {
+  len = 40
+}
+return displaykey.EntityName.WCClassCode(code, gw.api.util.StringUtil.substring(shortDesc, 0, len))
+    
+  ]]></DisplayName>
+</Entity>

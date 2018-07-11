@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<import xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.guidewire.com/cc/import/cc_import.xsd">
+  <CovTermLookup public-id="CgAAZid_KLwAAAAA">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>BOPUtilDirectComm</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="CgAAZgtC8ssAAAAA">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>BOPUtilDirectCommOH</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="CgAAZugOE4cAAAAA">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>BOPUtilDirectLim</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="CgAAZs3B2tQAAAAA">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>BOPUtilDirectPower</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="CgAAZo1u3LAAAAAA">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>BOPUtilDirectPowerOH</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CovTermLookup public-id="CgAAZq_EdRAAAAAA">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>BOPUtilDirectWater</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CovTermLookup>
+  <CoverageLookup public-id="CgAAZkb1QeIAAAAA">
+    <Availability>Available</Availability>
+    <CoveragePatternCode>BOPUtilDirectCov</CoveragePatternCode>
+    <EndEffectiveDate/>
+    <PolicyLinePatternCode>BOPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+  </CoverageLookup>
+  <CovTermOptLookup public-id="zh7i05dojpp12febuf74jieq4sa">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zjkg85g5k8nvkeffi4bmsa860m9</CovTermOptCode>
+    <CovTermPatternCode>BOPUtilDirectComm</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zkpic407qkmeqe3317onokkrlv9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z88ho8svavg5qbipb54as94f0fb</CovTermOptCode>
+    <CovTermPatternCode>BOPUtilDirectComm</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z9sho05d5vqpu5sp14ftsbcenha">
+    <Availability>Available</Availability>
+    <CovTermOptCode>ztli6la571ddsc7gk3skdq3hf48</CovTermOptCode>
+    <CovTermPatternCode>BOPUtilDirectCommOH</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="ztqga1pe1mn8r5o3ogql4sc7it9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>znbjgibapvafr3m59p0d0fugdb8</CovTermOptCode>
+    <CovTermPatternCode>BOPUtilDirectCommOH</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zdcjo270ashhtc7494vsu240hp9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zf7gk3n8nmrqj5l6e3klrpkr338</CovTermOptCode>
+    <CovTermPatternCode>BOPUtilDirectPower</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z3mj41jbnn5hb4pbp5rdkugirua">
+    <Availability>Available</Availability>
+    <CovTermOptCode>za7gkd7h5d4f10eeli1frlh9vl8</CovTermOptCode>
+    <CovTermPatternCode>BOPUtilDirectPower</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z1oigl76qbebcev1q7ajjbd9rda">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zs5i8t8sjk5ei89gdjoaradgjk8</CovTermOptCode>
+    <CovTermPatternCode>BOPUtilDirectPowerOH</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zm0js0kngbq016cd08dm2i7ot79">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z5ijcc045odj4ee5l483rq3072a</CovTermOptCode>
+    <CovTermPatternCode>BOPUtilDirectPowerOH</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z3thii2o64sbt8b06iiikh7vtj9">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zinj040sa0blf1gnsb3rmjej9ba</CovTermOptCode>
+    <CovTermPatternCode>BOPUtilDirectWater</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z7gjag06f7mig8ekifdik35vceb">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zivgccb67u9s9fvp1rpl3o521oa</CovTermOptCode>
+    <CovTermPatternCode>BOPUtilDirectWater</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2000-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+</import>

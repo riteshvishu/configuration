@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7LineScheduleCovItem"
+  table="wc7lineschedcovitem"
+  desc="WC7 Line level coverage scheduled item"
+  exportable="true"
+  final="false"
+  loadable="false"
+  type="effdated"
+  platform="false"
+  effDatedBranchType="PolicyPeriod">
+  <implementsEntity
+    name="ScheduledItem"
+    adapter="gw.lob.wc7.schedule.WC7LineScheduleCovItemAdapter"/>
+  <implementsEntity
+    name="Coverable"
+    adapter="gw.lob.wc7.schedule.WC7LineScheduleCovItemAdapter"/>
+  <foreignkey
+    name="Schedule"
+    fkentity="WC7LineScheduleCov"
+    nullok="false"/>
+</entity>

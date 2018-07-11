@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <Page
+    canEdit="false"
+    countsAsWork="false"
+    id="UpgradeInfo"
+    parent="InfoPages()"
+    title="displaykey.Web.InternalTools.InfoPages.UpgradeInfo">
+    <Variable
+      initialValue="new gw.api.tools.UpgradeInfoPageHelper()"
+      name="Page"/>
+    <Screen
+      id="UpgradeInfoScreen">
+      <Toolbar/>
+      <Verbatim
+        label="displaykey.Web.InternalTools.InfoPages.UpgradeInfo.TopDescription"/>
+      <ListViewPanel
+        editable="false"
+        id="UpgradeInfoLV">
+        <RowIterator
+          checkBoxVisible="true"
+          editable="true"
+          elementName="UpgradeRow"
+          id="UgradeInstanceIterator"
+          pageSize="0"
+          value="asList(Page.findAllUpgradeInstancesDateDescending())">
+          <Variable
+            initialValue="UpgradeRow.findUpgradeRowCounts() as UpgradeRowCountQuery"
+            name="RowCountsQuery"
+            type="UpgradeRowCountQuery"/>
+          <Variable
+            initialValue="UpgradeRow.findUpgradeTableRegistries() as UpgradeTableRegistryQuery"
+            name="TableRegistryQuery"
+            type="UpgradeTableRegistryQuery"/>
+          <Variable
+            initialValue="UpgradeRow.findUpgradeDBStorageSets(false) as UpgradeDBStorageSetQuery"
+            name="StorageSetQueryBefore"
+            type="UpgradeDBStorageSetQuery"/>
+          <Row
+            editable="false">
+            <LinkCell
+              align="center"
+              available="UpgradeRow.ProfilerData != null"
+              label="displaykey.Web.InternalTools.InfoPages.UpgradeInfo.Download"
+              width="120">
+              <Link
+                action="Page.download(UpgradeRow)"
+                download="true"
+                id="Download"
+                label="displaykey.Web.InternalTools.InfoPages.UpgradeInfo.Download"
+                visible="UpgradeRow.ProfilerData != null"/>
+            </LinkCell>
+            <ButtonCell
+              action="UpgradeRow.deleteAllChildren()"
+              available="UpgradeRow.ProfilerData != null"
+              id="DeleteDetails"
+              label="displaykey.Web.InternalTools.InfoPages.UpgradeInfo.DeleteDetails"
+              showHeaderIcon="false"
+              value="displaykey.Web.InternalTools.InfoPages.UpgradeInfo.DeleteDetails"/>
+            <Cell
+              id="SourceMajorVersion"
+              label="displaykey.Web.InternalTools.InfoPages.UpgradeInfo.SourceVersion"
+              value="UpgradeRow.SourceVersionString"/>
+            <Cell
+              id="TargetMajorVersion"
+              label="displaykey.Web.InternalTools.InfoPages.UpgradeInfo.TargetVersion"
+              value="UpgradeRow.TargetVersionString"/>
+            <DateCell
+              dateFormat="short"
+              id="UpgradeStartTime"
+              label="displaykey.Web.InternalTools.InfoPages.UpgradeInfo.StartTime"
+              timeFormat="short"
+              value="UpgradeRow.StartTime"
+              width="150"
+              wrapLabel="true"/>
+            <DateCell
+              dateFormat="short"
+              id="UpgradeEndTime"
+              label="displaykey.Web.InternalTools.InfoPages.UpgradeInfo.EndTime"
+              timeFormat="short"
+              value="UpgradeRow.EndTime"
+              wrapLabel="true"/>
+            <Cell
+              align="left"
+              id="UpgradeExecDuration"
+              label="displaykey.Web.InternalTools.InfoPages.UpgradeInfo.Duration"
+              value="UpgradeRow.ExecDuration"
+              wrapLabel="true"/>
+            <Cell
+              align="left"
+              id="DeferredUpgradeCompleted"
+              label="displaykey.Web.InternalTools.InfoPages.UpgradeInfo.DeferredUpgrade"
+              value="UpgradeRow.DefdTasksCompleted"
+              width="150"
+              wrapLabel="true"/>
+          </Row>
+        </RowIterator>
+      </ListViewPanel>
+      <PanelSet>
+        <Verbatim
+          label="Page.LatestUpgrade.UpdateStatistics ? displaykey.Web.InternalTools.InfoPages.UpgradeInfo.StatsUpdated : (Page.hasRecentUpdateStatisticsProcessRun() ? displaykey.Web.InternalTools.InfoPages.UpgradeInfo.StatsNotUpdatedRecentRuns : displaykey.Web.InternalTools.InfoPages.UpgradeInfo.StatsNotUpdatedNoRecentRuns)"/>
+        <ListViewPanel
+          visible="Page.hasRecentUpdateStatisticsProcessRun()">
+          <RowIterator
+            editable="false"
+            elementName="processHistory"
+            pageSize="5"
+            value="Page.findUpdateStatisticsProcessesAfterLatestUpgrade()"
+            visible="!Page.LatestUpgrade.UpdateStatistics and Page.hasRecentUpdateStatisticsProcessRun()">
+            <Row>
+              <Cell
+                id="BatchProcess"
+                label="displaykey.Web.InternalTools.BatchProcessInfo.BatchProcess"
+                value="processHistory.ProcessType"/>
+              <DateCell
+                dateFormat="short"
+                id="StartDate"
+                label="displaykey.Web.InternalTools.BatchProcessInfo.ProcessHistoryLV.StartDate"
+                sortDirection="descending"
+                sortOrder="1"
+                timeFormat="short"
+                value="processHistory.StartDate"/>
+              <DateCell
+                dateFormat="short"
+                enableSort="false"
+                id="CompleteDate"
+                label="displaykey.Web.InternalTools.BatchProcessInfo.ProcessHistoryLV.CompleteDate"
+                timeFormat="short"
+                value="processHistory.RanToCompletion ? processHistory.CompleteDate : null"/>
+              <Cell
+                id="OpsPerformed"
+                label="displaykey.Web.InternalTools.BatchProcessInfo.ProcessHistoryLV.OpsPerformed"
+                value="processHistory.OpsPerformed"/>
+              <Cell
+                id="FailedOps"
+                label="displaykey.Web.InternalTools.BatchProcessInfo.ProcessHistoryLV.FailedOps"
+                value="processHistory.FailedOps"/>
+              <Cell
+                enableSort="false"
+                id="FailureReason"
+                label="displaykey.Web.InternalTools.BatchProcessInfo.ProcessHistoryLV.FailedReason"
+                value="processHistory.FailureReason"/>
+            </Row>
+          </RowIterator>
+        </ListViewPanel>
+      </PanelSet>
+    </Screen>
+    <Code><![CDATA[function asList(query : UpgradeInstanceQuery) : List<UpgradeInstance> {
+  var list = new java.util.ArrayList<UpgradeInstance>();
+  for (u in query) {
+    list.add(u)
+  }
+  return list
+}]]></Code>
+  </Page>
+</PCF>

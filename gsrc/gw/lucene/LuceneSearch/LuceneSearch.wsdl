@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<definitions targetNamespace="http://lucene.guidewire.com/" name="LuceneSearchService" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://lucene.guidewire.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://lucene.guidewire.com/" schemaLocation="LuceneSearch2.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="close">
+    <part name="parameters" element="tns:close"/>
+  </message>
+  <message name="closeResponse">
+    <part name="parameters" element="tns:closeResponse"/>
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception"/>
+  </message>
+  <message name="delete">
+    <part name="parameters" element="tns:delete"/>
+  </message>
+  <message name="deleteResponse">
+    <part name="parameters" element="tns:deleteResponse"/>
+  </message>
+  <message name="search">
+    <part name="parameters" element="tns:search"/>
+  </message>
+  <message name="searchResponse">
+    <part name="parameters" element="tns:searchResponse"/>
+  </message>
+  <message name="getHost">
+    <part name="parameters" element="tns:getHost"/>
+  </message>
+  <message name="getHostResponse">
+    <part name="parameters" element="tns:getHostResponse"/>
+  </message>
+  <message name="getPort">
+    <part name="parameters" element="tns:getPort"/>
+  </message>
+  <message name="getPortResponse">
+    <part name="parameters" element="tns:getPortResponse"/>
+  </message>
+  <message name="index">
+    <part name="parameters" element="tns:index"/>
+  </message>
+  <message name="indexResponse">
+    <part name="parameters" element="tns:indexResponse"/>
+  </message>
+  <message name="getUrl">
+    <part name="parameters" element="tns:getUrl"/>
+  </message>
+  <message name="getUrlResponse">
+    <part name="parameters" element="tns:getUrlResponse"/>
+  </message>
+  <message name="setCommitInterval">
+    <part name="parameters" element="tns:setCommitInterval"/>
+  </message>
+  <message name="setCommitIntervalResponse">
+    <part name="parameters" element="tns:setCommitIntervalResponse"/>
+  </message>
+  <message name="setDebug">
+    <part name="parameters" element="tns:setDebug"/>
+  </message>
+  <message name="setDebugResponse">
+    <part name="parameters" element="tns:setDebugResponse"/>
+  </message>
+  <message name="doIndex">
+    <part name="parameters" element="tns:doIndex"/>
+  </message>
+  <message name="doIndexResponse">
+    <part name="parameters" element="tns:doIndexResponse"/>
+  </message>
+  <message name="searchInternal">
+    <part name="parameters" element="tns:searchInternal"/>
+  </message>
+  <message name="searchInternalResponse">
+    <part name="parameters" element="tns:searchInternalResponse"/>
+  </message>
+  <portType name="LuceneSearch">
+    <operation name="close">
+      <input message="tns:close"/>
+      <output message="tns:closeResponse"/>
+      <fault name="Exception" message="tns:Exception"/>
+    </operation>
+    <operation name="delete">
+      <input message="tns:delete"/>
+      <output message="tns:deleteResponse"/>
+      <fault name="Exception" message="tns:Exception"/>
+    </operation>
+    <operation name="search">
+      <input message="tns:search"/>
+      <output message="tns:searchResponse"/>
+      <fault name="Exception" message="tns:Exception"/>
+    </operation>
+    <operation name="getHost">
+      <input message="tns:getHost"/>
+      <output message="tns:getHostResponse"/>
+    </operation>
+    <operation name="getPort">
+      <input message="tns:getPort"/>
+      <output message="tns:getPortResponse"/>
+    </operation>
+    <operation name="index">
+      <input message="tns:index"/>
+      <output message="tns:indexResponse"/>
+      <fault name="Exception" message="tns:Exception"/>
+    </operation>
+    <operation name="getUrl">
+      <input message="tns:getUrl"/>
+      <output message="tns:getUrlResponse"/>
+    </operation>
+    <operation name="setCommitInterval">
+      <input message="tns:setCommitInterval"/>
+      <output message="tns:setCommitIntervalResponse"/>
+    </operation>
+    <operation name="setDebug">
+      <input message="tns:setDebug"/>
+      <output message="tns:setDebugResponse"/>
+    </operation>
+    <operation name="doIndex">
+      <input message="tns:doIndex"/>
+      <output message="tns:doIndexResponse"/>
+      <fault name="Exception" message="tns:Exception"/>
+    </operation>
+    <operation name="searchInternal">
+      <input message="tns:searchInternal"/>
+      <output message="tns:searchInternalResponse"/>
+      <fault name="Exception" message="tns:Exception"/>
+    </operation>
+  </portType>
+  <binding name="LuceneSearchPortBinding" type="tns:LuceneSearch">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="close">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="delete">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="search">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="getHost">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getPort">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="index">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="getUrl">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="setCommitInterval">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="setDebug">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="doIndex">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="searchInternal">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="LuceneSearchService">
+    <port name="LuceneSearchPort" binding="tns:LuceneSearchPortBinding">
+      <soap:address location="http://192.168.4.26:8199/LuceneSearch"/>
+    </port>
+  </service>
+</definitions>

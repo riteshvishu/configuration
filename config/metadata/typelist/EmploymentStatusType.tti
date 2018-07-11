@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!-- employee-related typelists -->
+<typelist xmlns="http://guidewire.com/typelists" desc="Status of employment" final="false" subpackage="contact" name="EmploymentStatusType" platform="true"/>

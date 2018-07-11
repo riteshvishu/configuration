@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="WC7CoordinatedPolicy"
+  type="effdated"
+  effDatedBranchType="PolicyPeriod"
+  exportable="true"
+  extendable="true"
+  platform="false"
+  loadable="false"
+  table="wc7coordinatedpolicy">
+  <implementsInterface
+    iface="gw.api.copier.EffDatedCopyable"
+    impl="gw.api.copier.EffDatedCopier"/>
+  <implementsInterface
+    iface="gw.api.logicalmatch.EffDatedLogicalMatcher"
+    impl="gw.lob.wc7.WC7CoordinatedPolicyMatcher"/>
+  <implementsInterface
+    iface="gw.lob.wc7.schedule.WC7SpecificScheduledItem"
+    impl="gw.lob.wc7.schedule.WC7CoordinatedPolicyCondlScheduledItemImpl"/>
+  <column
+    name="LaborContractorPolicyNumber"
+    type="shorttext"
+    nullok="true"/>
+  <column
+    name="ContractProject"
+    desc="Contract or Project"
+    type="shorttext"
+    nullok="true"/>
+  <typekey
+    name="StatePerformed"
+    typelist="Jurisdiction"
+    nullok="true"/>
+  <foreignkey
+    name="WCLine"
+    fkentity="WC7WorkersCompLine"
+    nullok="false"/>
+  <foreignkey
+    name="LaborContractor"
+    fkentity="LaborContractor"
+    nullok="false"/>
+  <foreignkey
+    name="MultipleCoordindatedPolicyCond"
+    desc="The parent condition for coordinated policies"
+    fkentity="WC7WorkersCompCond"
+    setterScriptability="doesNotExist"
+    nullok="false"/>
+  <fulldescription>Defines one of multiple coordinated policy endorsements.</fulldescription>
+</entity>

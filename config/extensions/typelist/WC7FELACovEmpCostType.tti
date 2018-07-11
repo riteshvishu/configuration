@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="The type of cost for a FELA covered employees' cost"
+  name="WC7FELACovEmpCostType">
+  <typecode
+    code="FELACovEmp"
+    desc="FELA Covered Employee"
+    name="FELA Covered Employee"/>
+  <typecode
+    code="IncreasedLimitsFactor"
+    desc="Increased Limit Factor(FELA)"
+    name="Increased Limit Factor(FELA)"/>
+  <typecode
+    code="SupplementalDisease"
+    desc="Supplemental Disease(FELA)"
+    name="Supplemental Disease(FELA)"/>
+</typelist>

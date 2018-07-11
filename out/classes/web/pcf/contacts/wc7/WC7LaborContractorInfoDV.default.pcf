@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <DetailViewPanel
+    id="WC7LaborContractorInfoDV"
+    mode="default">
+    <Require
+      name="detail"
+      type="entity.WC7LaborContactDetail"/>
+    <Require
+      name="inclusionType"
+      type="Inclusion"/>
+    <Require
+      name="clause"
+      type="gw.api.domain.Clause"/>
+    <Variable
+      initialValue="inclusionType == Inclusion.TC_INCL ? displaykey.Java.ProductModel.Name.Condition : displaykey.Java.ProductModel.Name.Exclusion"
+      name="scheduleLabel"
+      type="String"/>
+    <InputColumn>
+      <Input
+        id="ScheduleParent"
+        label="scheduleLabel"
+        value="clause"/>
+      <Input
+        id="Inclusion"
+        label="displaykey.Web.Policy.WC.EmployeeLeasing.Supplier.Include"
+        required="true"
+        value="inclusionType"/>
+      <RangeInput
+        align="left"
+        editable="true"
+        id="State"
+        label="displaykey.Web.Policy.WC.EmployeeLeasing.Supplier.State"
+        required="true"
+        value="detail.Jurisdiction"
+        valueRange="detail.Branch.WC7Line.WC7Jurisdictions.map(\j -&gt; j.Jurisdiction)">
+        <PostOnChange/>
+      </RangeInput>
+      <DateInput
+        editable="true"
+        id="EffectiveDate"
+        label="displaykey.Web.PolicyLine.LeasedEmployee.ContractEffectiveDate"
+        required="true"
+        value="detail.ContractEffectiveDate"/>
+      <DateInput
+        editable="true"
+        id="ExpirationDate"
+        label="displaykey.Web.PolicyLine.LeasedEmployee.ContractExpirationDate"
+        required="true"
+        value="detail.ContractExpirationDate"/>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

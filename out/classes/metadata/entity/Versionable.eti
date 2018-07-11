@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><delegate xmlns="http://guidewire.com/datamodel" name="Versionable" platform="true" subpackage="persistence.core">
+  <implementsEntity name="KeyableBean"/>
+  <column default="0" desc="Auto-incremented object version" ignoreforevents="true" loadable="false" name="BeanVersion" nullok="true" setterScriptability="hidden" type="version"/>
+</delegate>

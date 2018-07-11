@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  name="WC7CovProgramType"
+  desc="WC Coverage program type"
+  final="false">
+  <typecode
+    code="ProgramI"
+    desc="Program I"
+    name="Program I"
+    priority="1"/>
+  <typecode
+    code="ProgramII"
+    desc="Program II"
+    name="Program II"
+    priority="2"/>
+</typelist>

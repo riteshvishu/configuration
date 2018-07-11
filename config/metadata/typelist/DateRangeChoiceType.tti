@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" desc="The predetermined list of date ranges we can search for" final="false" subpackage="custom" name="DateRangeChoiceType" platform="true"/>
